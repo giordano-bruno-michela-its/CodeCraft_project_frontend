@@ -1,5 +1,11 @@
 import { BookingForm } from "../Types/types";
 
+/**
+ * Extracts the values from the form and activities container and returns them as a BookingForm
+ * @param form the form element
+ * @param activitiesContainer the activities container div element
+ * @returns the BookingForm with the values from the form and activities container
+ */
 export function getFormData(form: HTMLFormElement, activitiesContainer: HTMLDivElement): BookingForm {
   const name = (form.querySelector("name") as HTMLInputElement).value;
   const surname = (form.querySelector("surname") as HTMLInputElement).value;
