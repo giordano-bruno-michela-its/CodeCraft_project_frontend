@@ -3,12 +3,118 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="CodeCraft" />
-    <meta name="description" content="landing page" />
-    <script type="module" src="./src/main.ts"></script>
+    <meta name="author" content="Code Craft" />
+    <meta name="description" content="" />
+    <script defer type="module" src="./src/main.ts"></script>
     <link rel="stylesheet" href="./src/style.css" />
     <title>Cascina Caccia</title>
   </head>
 
-  <body></body>
+  <body>
+    <div class="container">
+      <!-- Info Form -->
+      <h2>Richiedi Informazioni</h2>
+      <form id="bookingForm" method="post">
+        <div class="row">
+          <div class="input-group">
+            <label for="name">Nome</label>
+            <input placeholder="Inserisci il tuo nome" type="text" id="name" name="name" aria-labelledby="name" required />
+          </div>
+          <div class="input-group">
+            <label for="surname">Cognome</label>
+            <input placeholder="Inserisci il tuo cognome" type="text" id="surname" name="surname" aria-labelledby="surname" required />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-group">
+            <label for="phoneNumber">Telefono</label>
+            <input
+              placeholder="Inserisci un numero di telefono"
+              type="tel"
+              id="phoneNumber"
+              name="phoneNumber"
+              aria-labelledby="phoneNumber"
+              required
+            />
+          </div>
+          <div class="input-group">
+            <label for="email">Email</label>
+            <input placeholder="Inserisci la tua e-mail" type="email" id="email" name="email" aria-labelledby="email" required />
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label for="association">Ente</label>
+          <input
+            placeholder="Ente/Associazione di cui fai parte"
+            type="text"
+            id="association"
+            name="association"
+            aria-labelledby="association"
+            required
+          />
+        </div>
+
+        <div class="input-group">
+          <label for="activitiesToggle">Attività:</label>
+          <button id="activitiesToggle" type="button" aria-expanded="false" aria-controls="activitiesContainer">Mostra Attività</button>
+          <div id="activitiesContainer" role="group" aria-labelledby="activitiesToggle" style="display: none">
+            <label><input type="checkbox" name="activities" value="1" /> Storia della cascina Carla e Bruno Caccia</label>
+            <label><input type="checkbox" name="activities" value="2" /> Bruno Caccia</label>
+            <label><input type="checkbox" name="activities" value="3" /> Regolegalità</label>
+            <label><input type="checkbox" name="activities" value="4" /> I beni confiscati</label>
+            <label><input type="checkbox" name="activities" value="5" /> Le mafie e il cibo</label>
+            <label><input type="checkbox" name="activities" value="6" /> Miele e Api</label>
+            <label><input type="checkbox" name="activities" value="7" /> Ricicliamo attività artistiche e manuali</label>
+            <label><input type="checkbox" name="activities" value="8" /> La mafia attraverso il cinema: percezioni culturali</label>
+            <label><input type="checkbox" name="activities" value="9" /> Il gioco non è un azzardo</label>
+            <label><input type="checkbox" name="activities" value="10" /> Chi non gioca vince</label>
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label for="nAdults">Numero adulti</label>
+          <input type="number" min="1" max="5" id="nAdults" name="nAdults" aria-labelledby="nAdults" required />
+        </div>
+
+        <div class="input-group">
+          <label for="nChildren">Numero Bambini</label>
+          <input type="number" min="1" max="25" id="nChildren" name="nChildren" aria-labelledby="nChildren" required />
+        </div>
+
+        <div class="input-group">
+          <label for="duration"> Durata Visita</label>
+          <select name="duration" id="duration" aria-labelledby="duration" required>
+            <option value="1" disabled selected>Seleziona una durata</option>
+            <option value="2">1/2 Giornata</option>
+            <option value="3">1 Giornata</option>
+            <option value="4">2 Giornat2</option>
+          </select>
+        </div>
+
+        <div class="input-group">
+          <label for="startDate">Data di inizio</label>
+          <input type="date" id="startDate" name="startDate" aria-labelledby="startDate" required />
+        </div>
+
+        <div>
+          <label for="endDate">Data di inizio</label>
+          <input type="date" id="endDate" name="endDate" aria-labelledby="endDate" required />
+        </div>
+
+        <div class="input-group">
+          <label for="additionalInfo">Informazioni Aggiuntive:</label>
+          <textarea
+            placeholder="Descrivi in questo campo esigenze o richieste particolari"
+            id="additionalInfo"
+            name="additionalInfo"
+            aria-labelledby="additionalInfo"
+          ></textarea>
+        </div>
+
+        <button type="submit" aria-label="Invia la tua richiesta">Invia Richiesta</button>
+      </form>
+    </div>
+  </body>
 </html>
