@@ -10,5 +10,75 @@
     <title>Cascina Caccia</title>
   </head>
 
-  <body></body>
+  <body>
+    <div class="container">
+      <!-- Info Form -->
+      <h2>Richiedi Informazioni</h2>
+      <form id="infoForm" method="post">
+        <div class="row">
+          <div class="input-group">
+            <label for="name">Nome</label>
+            <input placeholder="Inserisci il tuo nome" type="text" id="name" name="name" aria-labelledby="name" required />
+          </div>
+          <div class="input-group">
+            <label for="surname">Cognome</label>
+            <input placeholder="Inserisci il tuo cognome" type="text" id="surname" name="surname" aria-labelledby="surname" required />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-group">
+            <label for="phoneNumber">Telefono</label>
+            <input
+              placeholder="Inserisci un numero di telefono"
+              type="tel"
+              id="phoneNumber"
+              name="phoneNumber"
+              aria-labelledby="phoneNumber"
+              required
+            />
+          </div>
+          <div class="input-group">
+            <label for="email">Email</label>
+            <input placeholder="Inserisci la tua e-mail" type="email" id="email" name="email" aria-labelledby="email" required />
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label for="association">Ente</label>
+          <input
+            placeholder="Ente/Associazione di cui fai parte"
+            type="text"
+            id="association"
+            name="association"
+            aria-labelledby="association"
+            required
+          />
+        </div>
+
+        <div class="input-group">
+          <label for="ageGroup">Fascia di Età:</label>
+          <select id="ageGroup" name="ageGroup" aria-labelledby="ageGroup" required>
+            <option value="Seleziona">Seleziona</option>
+            <option value="1">Fascia 1 (3-5 anni)</option>
+            <option value="2">Fascia 2 (6-10 anni)</option>
+            <option value="3">Fascia 3 (11-13 anni)</option>
+            <option value="4">Fascia 4 (14-18+) anni</option>
+          </select>
+        </div>
+
+        <div class="input-group">
+          <label for="activities">Attività:</label>
+          <div id="activitiesContainer" role="group" aria-labelledby="activities"></div>
+        </div>
+
+        <div class="input-group">
+          <label for="additionalInfo">Informazioni Aggiuntive:</label>
+          <textarea placeholder="Descrivi in questo campo esigenze o richieste particolari" id="additionalInfo" name="additionalInfo"></textarea>
+        </div>
+
+        <button type="submit" aria-label="Invia la tua richiesta">Invia Richiesta</button>
+      </form>
+    </div>
+  </body>
 </html>
