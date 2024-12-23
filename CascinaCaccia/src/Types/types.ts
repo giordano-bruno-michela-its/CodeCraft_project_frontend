@@ -1,14 +1,26 @@
 export interface BookingForm {
-  name: string;
-  surname: string;
-  phoneNumber: string;
   email: string;
-  association: string;
-  activities: string[];
-  nAdults: number;
-  nChildren: number;
-  duration: string;
-  startDate: string;
-  endDate: string;
-  additionalInfo?: string;
+  nome: string;
+  cognome: string;
+  ente: string;
+  telefono: string;
+  dataContatto: string; 
+  descrizione: string; 
+ /*  fasciaEta: {
+    id: number; 
+    denominazione: string; 
+    descrizione: string; 
+    etaMin: number; 
+    etaMax: number; 
+  }; */
+  tipoRichiesta: string; 
+  dataInizio: string; 
+  dataFine: string; 
+  numPartecipanti: number; 
+  numInsegnanti: number; 
+  tipoAttivita: {
+    id: number; 
+    denominazione: string; 
+    descrizione: string | null; 
+  }[]; // Array dei tipi di attività
 }

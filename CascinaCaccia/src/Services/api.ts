@@ -18,8 +18,7 @@ export async function submitBookingForm(formData: BookingForm): Promise<void> {
   });
 
   if (!response.ok) {
-    throw new Error(`Errore nella richiesta: ${response.status}`);
-  }
-
-  return response.json();
+    const errorDetails = await response.json();
+    throw new Error(`Errore nella richiesta: ${response.status} - ${errorDetails.message}`);  }
+      return response.json();
 }
