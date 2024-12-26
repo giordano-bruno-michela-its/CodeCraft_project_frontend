@@ -10,5 +10,36 @@
     <title>Cascina Caccia</title>
   </head>
 
-  <body></body>
+  <body>
+    <div class="newsletter-container">
+      <p class="newsletter-title">Non perderti nulla,</p>
+      <p class="newsletter-title">
+        con la nostra <span id="newsletter-highlight">newsletter</span>.
+      </p>
+      <p id="newsletter-text-info">
+        Storie di impegno al contrasto della criminalità organizzata, materiale
+        esclusivo e aggiornamenti sulle novità.
+      </p>
+
+      <form id="newsletter-email-form">
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          placeholder="inserisci la tua email"
+          title="Inserisci un'email valida"
+        />
+        <div>
+          <input type="checkbox" id="newsletter-checkbox" />
+          <label for="newsletter-checkbox"
+            >accetta il modo in cui trattiamo i tuoi dati...</label
+          >
+        </div>
+        <div class="newsletter-containerBTN">
+        <button type="submit" id="newsletter-submit">Iscriviti</button>
+      </div>
+      </form>
+    </div>
+  </body>
 </html>
