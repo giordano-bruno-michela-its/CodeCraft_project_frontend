@@ -3,16 +3,22 @@
  * Author: CodeCraft
  * Content: css files import
  */
- 
- @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap");
- 
- @import "./styles/newsletter.css";
- @import "./styles/faqSection.css";
- @import "./styles/footer.css";
 
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap");
 
+@import "./styles/newsletter.css";
+@import "./styles/faqSection.css";
+@import "./styles/footer.css";
 
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
 
-
-
-
+body{
+    margin: 0;
+}
