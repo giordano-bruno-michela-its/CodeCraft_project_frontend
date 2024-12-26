@@ -1,0 +1,74 @@
+/*
+ * File Name: faqSection.css
+ * Author: CodeCraft
+ * Content: faq section styles
+ */
+
+.faq-section {
+  padding: 20px;
+  font-family: "Montserrat", Arial, sans-serif;
+  background-color: #ffde07bc;
+}
+
+.faq-section h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.faq-card {
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  overflow: hidden; /* to hide the oerflow of the div Card wit border radius*/
+  transition: all 0.3s ease-in-out;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  cursor: pointer;
+  background-color: white;
+  color: #333333;
+  font-size: 0.8rem;
+}
+
+.faq-answer {
+  display: none;
+  padding: 15px;
+  background-color: #f4f4f4;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.faq-arrow {
+  font-size: 1.5rem;
+  transform: rotate(0deg);
+  transition: transform 0.3s ease-in-out;
+}
+.faq-arrow-icon {
+  width: 1rem;
+}
+
+.faq-card.open .faq-answer {
+  display: block;
+}
+
+.faq-card.open .faq-arrow {
+  transform: rotate(180deg);
+}
+
+.faq-brand-activities {
+  color: #e3007e;
+  font-weight: 500;
+}
+.faq-activity-link {
+  color: #e3007e;
+  font-weight: 500;
+}
+.faq-iva {
+  font-size: smaller;
+}
