@@ -18,11 +18,33 @@
         <div class="row">
           <div class="input-group">
             <label for="name">Nome</label>
-            <input placeholder="Inserisci il tuo nome" type="text" id="name" name="name" aria-labelledby="name" required />
+            <input
+              placeholder="Inserisci il tuo nome"
+              type="text"
+              id="name"
+              name="name"
+              aria-labelledby="name"
+              minlength="2"
+              maxlength="50"
+              pattern="[A-Za-zÀ-ÿ\s]+"
+              required
+              title="Inserisci il tuo nome. Deve contenere almeno 2 caratteri e massimo 50."
+            />
           </div>
           <div class="input-group">
             <label for="surname">Cognome</label>
-            <input placeholder="Inserisci il tuo cognome" type="text" id="surname" name="surname" aria-labelledby="surname" required />
+            <input
+              placeholder="Inserisci il tuo cognome"
+              type="text"
+              id="surname"
+              name="surname"
+              aria-labelledby="surname"
+              minlength="2"
+              maxlength="50"
+              pattern="[A-Za-zÀ-ÿ\s]+"
+              required
+              title="Inserisci il tuo cognome. Deve contenere almeno 2 caratteri e massimo 50."
+            />
           </div>
         </div>
 
@@ -35,12 +57,23 @@
               id="phoneNumber"
               name="phoneNumber"
               aria-labelledby="phoneNumber"
+              pattern="^(\+(\d{1,4})\s?(\d{4,15}))?(\d{10})$"
+              title="Inserisci un numero di telefono valido"
               required
             />
           </div>
           <div class="input-group">
             <label for="email">Email</label>
-            <input placeholder="Inserisci la tua e-mail" type="email" id="email" name="email" aria-labelledby="email" required />
+            <input
+              placeholder="Inserisci la tua e-mail"
+              type="email"
+              id="email"
+              name="email"
+              aria-labelledby="email"
+              maxlength="50"
+              required
+              title="Inserisci un'email valida"
+            />
           </div>
         </div>
 
@@ -52,33 +85,89 @@
             id="association"
             name="association"
             aria-labelledby="association"
+            minlength="2"
+            maxlength="100"
+            pattern="[A-Za-zÀ-ÿ0-9\s\-]+"
             required
+            title="Inserire nome dell'ente"
           />
         </div>
 
         <div class="input-group">
           <label for="activitiesToggle">Attività:</label>
-          <button id="activitiesToggle" type="button" aria-expanded="false" aria-controls="activitiesContainer">Mostra Attività</button>
-          <div id="activitiesContainer" role="group" aria-labelledby="activitiesToggle" style="display: none">
-            <label><input type="checkbox" name="activities" value="1" /> Storia della cascina Carla e Bruno Caccia</label>
-            <label><input type="checkbox" name="activities" value="2" /> Bruno Caccia</label>
-            <label><input type="checkbox" name="activities" value="3" /> Regolegalità</label>
-            <label><input type="checkbox" name="activities" value="4" /> I beni confiscati</label>
-            <label><input type="checkbox" name="activities" value="5" /> Le mafie e il cibo</label>
-            <label><input type="checkbox" name="activities" value="6" /> Miele e Api</label>
-            <label><input type="checkbox" name="activities" value="7" /> Ricicliamo attività artistiche e manuali</label>
-            <label><input type="checkbox" name="activities" value="8" /> La mafia attraverso il cinema: percezioni culturali</label>
-            <label><input type="checkbox" name="activities" value="9" /> Il gioco non è un azzardo (6-14 anni)</label>
-            <label><input type="checkbox" name="activities" value="10" /> Chi non gioca vince</label>
+          <button
+            id="activitiesToggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="activitiesContainer"
+            title="Clicca per selezionare una o più attività disponibili."
+          >
+            Mostra Attività
+          </button>
+          <div
+            id="activitiesContainer"
+            role="group"
+            aria-labelledby="activitiesToggle"
+            style="display: none"
+          >
+            <label
+              ><input type="checkbox" name="activities" value="1" /> Storia
+              della cascina Carla e Bruno Caccia</label
+            >
+            <label
+              ><input type="checkbox" name="activities" value="2" /> Bruno
+              Caccia</label
+            >
+            <label
+              ><input type="checkbox" name="activities" value="3" />
+              Regolegalità</label
+            >
+            <label
+              ><input type="checkbox" name="activities" value="4" /> I beni
+              confiscati</label
+            >
+            <label
+              ><input type="checkbox" name="activities" value="5" /> Le mafie e
+              il cibo</label
+            >
+            <label
+              ><input type="checkbox" name="activities" value="6" /> Miele e
+              Api</label
+            >
+            <label
+              ><input type="checkbox" name="activities" value="7" /> Ricicliamo
+              attività artistiche e manuali</label
+            >
+            <label
+              ><input type="checkbox" name="activities" value="8" /> La mafia
+              attraverso il cinema: percezioni culturali</label
+            >
+            <label
+              ><input type="checkbox" name="activities" value="9" /> Il gioco
+              non è un azzardo (6-14 anni)</label
+            >
+            <label
+              ><input type="checkbox" name="activities" value="10" /> Chi non
+              gioca vince</label
+            >
           </div>
         </div>
 
         <div class="input-group">
           <label for="additionalInfo">Informazioni Aggiuntive:</label>
-          <textarea placeholder="Descrivi in questo campo esigenze o richieste particolari" id="additionalInfo" name="additionalInfo"></textarea>
+          <textarea
+            placeholder="Descrivi in questo campo esigenze o richieste particolari"
+            id="additionalInfo"
+            name="additionalInfo"
+            title="Inserisci eventuali richieste o esigenze particolari. Deve contenere almeno 10 caratteri e massimo 500."
+            minlength="10"
+            maxlength="500"
+          ></textarea>
         </div>
 
-        <button type="submit" aria-label="Invia la tua richiesta">Invia Richiesta</button>
+        <button type="submit" aria-label="Invia la tua richiesta">
+          Invia Richiesta
+        </button>
       </form>
     </div>
   </body>
