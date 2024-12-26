@@ -9,111 +9,206 @@
     <script type="module" src="./src/main.ts"></script>
     <title>Cascina Caccia</title>
   </head>
-  
+
   <body>
-    
+    <!-- newsletter section -->
+    <section class="newsletter-container">
+      <p class="newsletter-title">Non perderti nulla,</p>
+      <p class="newsletter-title">
+        con la nostra <span id="newsletter-highlight">newsletter</span>.
+      </p>
+      <p id="newsletter-text-info">
+        Storie di impegno al contrasto della criminalità organizzata, materiale
+        esclusivo e aggiornamenti sulle novità.
+      </p>
+
+      <form id="newsletter-email-form">
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          placeholder="inserisci la tua email"
+          title="Inserisci un'email valida"
+        />
+        <div>
+          <input type="checkbox" id="newsletter-checkbox" />
+          <label for="newsletter-checkbox"
+            >accetta il modo in cui trattiamo i tuoi dati...</label
+          >
+        </div>
+        <div class="newsletter-containerBTN">
+          <button type="submit" id="newsletter-submit">Iscriviti</button>
+        </div>
+      </form>
+    </section>
 
     <!-- FAQ section -->
     <section class="faq-section">
       <h2>Domande frequenti</h2>
-  
+
       <div class="faq-card">
         <div class="faq-question">
           <h3>Perché scegliere Cascina Caccia per la tua uscita didattica?</h3>
           <span class="faq-arrow">
-            <img class="faq-arrow-icon" src="./assets/faqSection/dropdown-icon.svg" alt="arrow drop down" />
+            <img
+              class="faq-arrow-icon"
+              src="./assets/faqSection/dropdown-icon.svg"
+              alt="arrow drop down"
+            />
           </span>
         </div>
         <div class="faq-answer">
           <p>
-            Cascina Caccia offre un'<strong>opportunità educativa</strong> unica per le scuole. Gli studenti avranno modo di scoprire la storia e il
-            valore di un luogo simbolo di <strong>legalità</strong> , approfondendo temi fondamentali come la lotta alle mafie e l'impegno sociale.
+            Cascina Caccia offre un'<strong>opportunità educativa</strong> unica
+            per le scuole. Gli studenti avranno modo di scoprire la storia e il
+            valore di un luogo simbolo di <strong>legalità</strong> ,
+            approfondendo temi fondamentali come la lotta alle mafie e l'impegno
+            sociale.
           </p>
         </div>
       </div>
-  
+
       <div class="faq-card">
         <div class="faq-question">
           <h3>Quante persone possono visitare Cascina Caccia?</h3>
-          <span class="faq-arrow"><img class="faq-arrow-icon" src="./assets/faqSection/dropdown-icon.svg" alt="arrow drop down" /></span>
+          <span class="faq-arrow"
+            ><img
+              class="faq-arrow-icon"
+              src="./assets/faqSection/dropdown-icon.svg"
+              alt="arrow drop down"
+          /></span>
         </div>
         <div class="faq-answer">
           <p>
-            Cascina Caccia ospita massimo due gruppi, per un totale di circa <strong>50 persone</strong> . Ogni <strong>gruppo</strong> è composto
-            all'incirca da <strong>25 persone</strong>. Classi e gruppi piccoli possono essere accorpate in un unico gruppo interclasse di 25 persone.
+            Cascina Caccia ospita massimo due gruppi, per un totale di circa
+            <strong>50 persone</strong> . Ogni <strong>gruppo</strong> è
+            composto all'incirca da <strong>25 persone</strong>. Classi e gruppi
+            piccoli possono essere accorpate in un unico gruppo interclasse di
+            25 persone.
           </p>
         </div>
       </div>
-  
+
       <div class="faq-card">
         <div class="faq-question">
           <h3>Quali attività consigliamo per una prima visita?</h3>
-          <span class="faq-arrow"><img class="faq-arrow-icon" src="./assets/faqSection/dropdown-icon.svg" alt="arrow drop down" /></span>
+          <span class="faq-arrow"
+            ><img
+              class="faq-arrow-icon"
+              src="./assets/faqSection/dropdown-icon.svg"
+              alt="arrow drop down"
+          /></span>
         </div>
         <div class="faq-answer">
           <p>
-            Per chi non è mai venuto in Cascina e non ha affrontato un percorso in classe sul tema della mafie, proponiamo le attività
-            <span class="faq-brand-activities">“Storia di Cascina Carla e Bruno Caccia”</span> e
-            <span class="faq-brand-activities">“Introduzione al tema mafia”</span> . Puoi trovarle descritte nella sezione
+            Per chi non è mai venuto in Cascina e non ha affrontato un percorso
+            in classe sul tema della mafie, proponiamo le attività
+            <span class="faq-brand-activities"
+              >“Storia di Cascina Carla e Bruno Caccia”</span
+            >
+            e
+            <span class="faq-brand-activities"
+              >“Introduzione al tema mafia”</span
+            >
+            . Puoi trovarle descritte nella sezione
             <span class="faq-brand-activities"
               >"
               <!-- TODO : link -->
-              <a href="#attivita-section" class="faq-activity-link">Le nostre attività</a>
+              <a href="#attivita-section" class="faq-activity-link"
+                >Le nostre attività</a
+              >
               "
             </span>
           </p>
         </div>
       </div>
-  
+
       <div class="faq-card">
         <div class="faq-question">
           <h3>Come ci si organizza per i pasti?</h3>
-          <span class="faq-arrow"><img class="faq-arrow-icon" src="./assets/faqSection/dropdown-icon.svg" alt="arrow drop down" /></span>
+          <span class="faq-arrow"
+            ><img
+              class="faq-arrow-icon"
+              src="./assets/faqSection/dropdown-icon.svg"
+              alt="arrow drop down"
+          /></span>
         </div>
         <div class="faq-answer">
           <p>
-            <strong>Soggiorno di mezza giornata:</strong> Se la classe lo desidera, sarà possibile consumare il pranzo al sacco portato autonomamente
-            in loco.
+            <strong>Soggiorno di mezza giornata:</strong> Se la classe lo
+            desidera, sarà possibile consumare il pranzo al sacco portato
+            autonomamente in loco.
           </p>
-          <p><strong>Soggiorno di una giornata:</strong> La classe dovrà organizzarsi per consumare il pranzo al sacco portato autonomamente.</p>
           <p>
-            <strong>Soggiorno di più giorni:</strong> Cascina Caccia fornirà i pasti richiesti dal gruppo. Il costo è di <strong>8 €</strong> a
-            persona <span class="faq-iva">+ IVA al 10% con fattura (anche elettronica)</span>.
+            <strong>Soggiorno di una giornata:</strong> La classe dovrà
+            organizzarsi per consumare il pranzo al sacco portato autonomamente.
+          </p>
+          <p>
+            <strong>Soggiorno di più giorni:</strong> Cascina Caccia fornirà i
+            pasti richiesti dal gruppo. Il costo è di <strong>8 €</strong> a
+            persona
+            <span class="faq-iva"
+              >+ IVA al 10% con fattura (anche elettronica)</span
+            >.
           </p>
         </div>
       </div>
-  
+
       <div class="faq-card">
         <div class="faq-question">
           <h3>Come arrivare a Cascina Caccia?</h3>
-          <span class="faq-arrow"><img class="faq-arrow-icon" src="./assets/faqSection/dropdown-icon.svg" alt="arrow drop down" /></span>
+          <span class="faq-arrow"
+            ><img
+              class="faq-arrow-icon"
+              src="./assets/faqSection/dropdown-icon.svg"
+              alt="arrow drop down"
+          /></span>
         </div>
         <div class="faq-answer">
           <p>
-            Cascina Caccia si trova in <strong>Via Serra Alta 6, San Sebastiano da Po (TO)</strong>. I bus superiori a
-            <strong>25 posti</strong> devono fermarsi al <strong>cimitero di San Sebastiano</strong> (lungo la statale per Casalborgone). Da lì,
-            proseguite a <strong>piedi</strong> per circa <strong>15 minuti</strong>, seguendo le indicazioni per Via Rigonda e poi Via Serra Alta.
+            Cascina Caccia si trova in
+            <strong>Via Serra Alta 6, San Sebastiano da Po (TO)</strong>. I bus
+            superiori a <strong>25 posti</strong> devono fermarsi al
+            <strong>cimitero di San Sebastiano</strong> (lungo la statale per
+            Casalborgone). Da lì, proseguite a <strong>piedi</strong> per circa
+            <strong>15 minuti</strong>, seguendo le indicazioni per Via Rigonda
+            e poi Via Serra Alta.
           </p>
-          <p>Per persone con <strong>difficoltà motorie</strong>, è possibile organizzare il trasporto in auto concordando in anticipo.</p>
+          <p>
+            Per persone con <strong>difficoltà motorie</strong>, è possibile
+            organizzare il trasporto in auto concordando in anticipo.
+          </p>
         </div>
       </div>
     </section>
 
-
-
-
     <!-- Footer -->
     <footer id="footer">
-      <img class="logo-azienda" src="./assets/footer/Logo-agora.svg" alt="Logo azienda" />
+      <img
+        class="logo-azienda"
+        src="./assets/footer/Logo-agora.svg"
+        alt="Logo azienda"
+      />
       <div class="footer-section">
         <!-- left Block -->
         <div class="block">
           <h3>Contatti</h3>
           <ul>
-            <li><img src="./assets/footer/email-icon.svg" alt="Email" />cascina.caccia@acmos.it</li>
+            <li>
+              <img
+                src="./assets/footer/email-icon.svg"
+                alt="Email"
+              />cascina.caccia@acmos.it
+            </li>
             <!-- TODO: add telephone number (?) -->
             <!--  <li><img src="./assets/footer/telephone-icon.svg" alt="Telefono"" /></li> -->
-            <li><img src="./assets/footer/location-pin-icon.svg" alt="Indirizzo" />Via Serra Alta, 6, San Sebastiano da Po (TO)</li>
+            <li>
+              <img
+                src="./assets/footer/location-pin-icon.svg"
+                alt="Indirizzo"
+              />Via Serra Alta, 6, San Sebastiano da Po (TO)
+            </li>
           </ul>
         </div>
 
@@ -148,7 +243,5 @@
         ></iframe>
       </div>
     </footer>
-
-
   </body>
 </html>
