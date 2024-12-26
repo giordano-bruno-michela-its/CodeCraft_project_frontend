@@ -5,10 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="CodeCraft" />
     <meta name="description" content="landing page" />
-    <script type="module" src="./src/main.ts"></script>
     <link rel="stylesheet" href="./src/style.css" />
+    <script type="module" src="./src/main.ts"></script>
     <title>Cascina Caccia</title>
   </head>
 
-  <body></body>
+  <body>
+    <!-- Footer -->
+    <footer id="footer">
+      <img class="logo-azienda" src="./assets/footer/Logo-agora.svg" alt="Logo azienda" />
+      <div class="footer-section">
+        <!-- left Block -->
+        <div class="block">
+          <h3>Contatti</h3>
+          <ul>
+            <li><img src="./assets/footer/email-icon.svg" alt="Email" />cascina.caccia@acmos.it</li>
+            <!-- TODO: add telephone number (?) -->
+            <!--  <li><img src="./assets/footer/telephone-icon.svg" alt="Telefono"" /></li> -->
+            <li><img src="./assets/footer/location-pin-icon.svg" alt="Indirizzo" />Via Serra Alta, 6, San Sebastiano da Po (TO)</li>
+          </ul>
+        </div>
+
+        <!-- right block -->
+        <div class="block">
+          <h3>Seguici su</h3>
+          <div class="footer-social-icons">
+            <a href="https://www.facebook.com/cascinacaccia">
+              <img src="./assets/footer/facebook-vector.svg" alt="Facebook" />
+            </a>
+            <a href="https://www.instagram.com/cascina_caccia/">
+              <img src="./assets/footer/instagram-vector.svg" alt="Instagram" />
+            </a>
+            <!-- TODO: add tiktok social link -->
+            <a href="">
+              <img src="./assets/footer/tiktok-vector.svg" alt="TikTok" />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Map -->
+      <div class="footer-map-section">
+        <h3>Ci trovi qui</h3>
+        <a
+          href="https://www.google.com/maps/place/Cascina+Caccia/@45.1585358,7.930946,16.07z/data=!4m6!3m5!1s0x4787d83975557773:0xce98a033bd811358!8m2!3d45.1594467!4d7.9342105!16s%2Fg%2F12hldxhty?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D"
+          target="_blank"
+        >
+          <img src="./assets/footer/mappa.png" alt="Mappa di Cascina Caccia" class="footer-map" />
+        </a>
+      </div>
+    </footer>
+  </body>
 </html>
