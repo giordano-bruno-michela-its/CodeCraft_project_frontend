@@ -9,6 +9,7 @@
 @import "./styles/newsletter.css";
 @import "./styles/faqSection.css";
 @import "./styles/footer.css";
+@import "./styles/bookingForm.css";
 
 html {
   box-sizing: border-box;
