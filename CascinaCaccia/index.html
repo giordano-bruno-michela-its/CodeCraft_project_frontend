@@ -1,365 +1,312 @@
 <!DOCTYPE html>
 <html lang="it">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="CodeCraft" />
-    <meta name="description" content="landing page" />
-    <link rel="stylesheet" href="./src/style.css" />
-    <script type="module" src="./src/main.ts"></script>
-    <title>Cascina Caccia</title>
-  </head>
 
-  <body>
-    <!-- hero Section -->
-    <section class="hero-section">
-      <img src="./assets/heroSection/main-img-cont.png" alt="Sfondo Cascina Caccia" class="hero-bg" />
-      <div class="hero-content">
-        <h1 class="hero-title">
-          Visita <br />
-          Cascina Caccia: Educazione, Natura e Memoria.
-        </h1>
-        <p class="hero-subtitle">Prenota un'esperienza educativa unica per scuole, scout e gruppi organizzati.</p>
-        <div class="hero-buttons">
-          <a class="hero-btn hero-btn-book" href="#booking-form-container">Prenota</a>
-          <!-- TODO add anchor link to info form btn -->
-          <a class="hero-btn hero-btn-info" href="#">Chiedi informazioni</a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="CodeCraft" />
+  <meta name="description" content="landing page" />
+  <link rel="stylesheet" href="./src/style.css" />
+  <script type="module" src="./src/main.ts"></script>
+  <title>Cascina Caccia</title>
+</head>
+
+<body>
+  <!-- hero Section -->
+  <section class="hero-section">
+    <img src="./assets/heroSection/main-img-cont.png" alt="Sfondo Cascina Caccia" class="hero-bg" />
+    <div class="hero-content">
+      <h1 class="hero-title">
+        Visita <br />
+        Cascina Caccia: Educazione, Natura e Memoria.
+      </h1>
+      <p class="hero-subtitle">Prenota un'esperienza educativa unica per scuole, scout e gruppi organizzati.</p>
+      <div class="hero-buttons">
+        <a class="hero-btn hero-btn-book" href="#booking-form-container">Prenota</a>
+        <!-- TODO add anchor link to info form btn -->
+        <a class="hero-btn hero-btn-info" href="#">Chiedi informazioni</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking form -->
+  <div id="booking-form-container">
+    <form class="bookingForm" method="post">
+      <h2 class="booking-form-title">Prenota una visita</h2>
+      <div class="input-container">
+        <input type="date" id="startDate" class="booking-form-input" name="startDate" aria-labelledby="startDate"
+          required />
+      </div>
+
+      <div class="input-container">
+        <input type="date" id="endDate" class="booking-form-input" name="endDate" aria-labelledby="endDate" required />
+      </div>
+
+      <div class="booking-form-name-surname-container">
+        <div class="input-container" id="booking-form-name-field">
+          <input placeholder="Nome" type="text" id="name" class="booking-form-input" name="name" aria-labelledby="name"
+            minlength="2" maxlength="50" pattern="[A-Za-zÀ-ÿ\s]+" required
+            title="Il nome deve contenere solo lettere" />
+        </div>
+        <div class="input-container" id="booking-form-surname-field">
+          <input placeholder="Cognome" type="text" id="surname" class="booking-form-input" name="surname"
+            aria-labelledby="surname" minlength="2" maxlength="50" pattern="[A-Za-zÀ-ÿ\s]+" required
+            title="Il cognome deve contenere solo lettere" />
         </div>
       </div>
-    </section>
 
-    <!-- Booking form -->
-    <div id="booking-form-container">
-      <form class="bookingForm" method="post">
-        <h2 class="booking-form-title">Prenota una visita</h2>
+      <div class="input-container">
+        <input placeholder="Indirizzo email" type="email" id="boking-form-email" class="booking-form-input" name="email"
+          aria-labelledby="email" maxlength="50" required title="Inserisci un'email valida" />
+      </div>
+
+      <div class="input-container">
+        <input placeholder="ente" type="text" id="association" class="booking-form-input" name="association"
+          aria-labelledby="association" minlength="2" maxlength="100" pattern="[A-Za-zÀ-ÿ0-9\s\-]+" required
+          title="Inserire nome dell'ente" />
+      </div>
+
+      <div class="booking-form-tel-duration-container">
         <div class="input-container">
-          <input type="date" id="startDate" class="booking-form-input" name="startDate" aria-labelledby="startDate" required />
-        </div>
-
-        <div class="input-container">
-          <input type="date" id="endDate" class="booking-form-input" name="endDate" aria-labelledby="endDate" required />
-        </div>
-
-        <div class="booking-form-name-surname-container">
-          <div class="input-container" id="booking-form-name-field">
-            <input
-              placeholder="Nome"
-              type="text"
-              id="name"
-              class="booking-form-input"
-              name="name"
-              aria-labelledby="name"
-              minlength="2"
-              maxlength="50"
-              pattern="[A-Za-zÀ-ÿ\s]+"
-              required
-              title="Il nome deve contenere solo lettere"
-            />
-          </div>
-          <div class="input-container" id="booking-form-surname-field">
-            <input
-              placeholder="Cognome"
-              type="text"
-              id="surname"
-              class="booking-form-input"
-              name="surname"
-              aria-labelledby="surname"
-              minlength="2"
-              maxlength="50"
-              pattern="[A-Za-zÀ-ÿ\s]+"
-              required
-              title="Il cognome deve contenere solo lettere"
-            />
-          </div>
+          <input placeholder="tel" type="tel" id="phoneNumber" class="booking-form-input" name="phoneNumber"
+            aria-labelledby="phoneNumber" pattern="^(\+(\d{1,4})\s?(\d{4,15}))?(\d{10})$"
+            title="Inserisci un numero di telefono valido" required />
         </div>
 
         <div class="input-container">
-          <input
-            placeholder="Indirizzo email"
-            type="email"
-            id="boking-form-email"
-            class="booking-form-input"
-            name="email"
-            aria-labelledby="email"
-            maxlength="50"
-            required
-            title="Inserisci un'email valida"
-          />
+          <select name="duration" id="duration" class="booking-form-input" aria-labelledby="duration" required>
+            <option value="1" disabled selected>Durata visita</option>
+            <option value="2">1/2 Giornata</option>
+            <option value="3">1 Giornata</option>
+            <option value="4">2 Giornate</option>
+          </select>
         </div>
+      </div>
 
-        <div class="input-container">
-          <input
-            placeholder="ente"
-            type="text"
-            id="association"
-            class="booking-form-input"
-            name="association"
-            aria-labelledby="association"
-            minlength="2"
-            maxlength="100"
-            pattern="[A-Za-zÀ-ÿ0-9\s\-]+"
-            required
-            title="Inserire nome dell'ente"
-          />
+      <div class="input-container">
+        <input type="number" placeholder="numero minori" min="1" max="35" id="nChildren" class="booking-form-input"
+          name="nChildren" aria-labelledby="nChildren" required />
+      </div>
+
+      <div class="input-container">
+        <input type="number" placeholder="numero adulti" min="1" max="10" id="nAdults" class="booking-form-input"
+          name="nAdults" aria-labelledby="nAdults" required />
+      </div>
+
+      <div class="input-container">
+        <textarea placeholder="Descrivi in questo campo esigenze o richieste particolari" id="additionalInfo"
+          class="booking-form-input" name="additionalInfo" aria-labelledby="additionalInfo" maxlength="500"
+          title="Descrivi in questo campo esigenze o richieste particolari"></textarea>
+      </div>
+
+      <div class="input-container">
+        <button id="activitiesToggle" class="booking-form-input" type="button" aria-expanded="false"
+          aria-controls="activitiesContainer">
+          Mostra Attività
+        </button>
+        <div id="activitiesContainer" role="group" aria-labelledby="activitiesToggle">
+          <label><input type="checkbox" name="activities" value="1" /> Storia della cascina Carla e Bruno Caccia</label>
+          <label><input type="checkbox" name="activities" value="2" /> Bruno Caccia</label>
+          <label><input type="checkbox" name="activities" value="3" /> Regolegalità</label>
+          <label><input type="checkbox" name="activities" value="4" /> I beni confiscati</label>
+          <label><input type="checkbox" name="activities" value="5" /> Le mafie e il cibo</label>
+          <label><input type="checkbox" name="activities" value="6" /> Miele e Api</label>
+          <label><input type="checkbox" name="activities" value="7" /> Ricicliamo attività artistiche e manuali</label>
+          <label><input type="checkbox" name="activities" value="8" /> La mafia attraverso il cinema: percezioni
+            culturali</label>
+          <label><input type="checkbox" name="activities" value="9" /> Il gioco non è un azzardo (6-14 anni)</label>
+          <label><input type="checkbox" name="activities" value="10" /> Chi non gioca vince</label>
         </div>
+      </div>
 
-        <div class="booking-form-tel-duration-container">
-          <div class="input-container">
-            <input
-              placeholder="tel"
-              type="tel"
-              id="phoneNumber"
-              class="booking-form-input"
-              name="phoneNumber"
-              aria-labelledby="phoneNumber"
-              pattern="^(\+(\d{1,4})\s?(\d{4,15}))?(\d{10})$"
-              title="Inserisci un numero di telefono valido"
-              required
-            />
-          </div>
+      <p class="booking-form-activity-text">
+        *le attività selezionate rappresentano una manifestazione d'interesse verso le stesse, e verranno confermate
+        solo nel contatto diretto con
+        Cascina Caccia.
+      </p>
 
-          <div class="input-container">
-            <select name="duration" id="duration" class="booking-form-input" aria-labelledby="duration" required>
-              <option value="1" disabled selected>Durata visita</option>
-              <option value="2">1/2 Giornata</option>
-              <option value="3">1 Giornata</option>
-              <option value="4">2 Giornate</option>
-            </select>
-          </div>
+      <div class="consent-checkbox-container">
+        <div>
+          <input type="checkbox" id="option1" name="options" value="option1" />
+          Accetto il modo in cui trattate i miei dati
         </div>
-
-        <div class="input-container">
-          <input
-            type="number"
-            placeholder="numero minori"
-            min="1"
-            max="35"
-            id="nChildren"
-            class="booking-form-input"
-            name="nChildren"
-            aria-labelledby="nChildren"
-            required
-          />
+        <div>
+          <input type="checkbox" id="option2" name="options" value="option2" />
+          Acconsento ad iscrivermi alla newsletter
         </div>
+      </div>
+      <div class="booking-form-container-btn">
+        <button type="submit" id="booking-form-submit-btn" aria-label="Invia la tua richiesta">Invia</button>
+      </div>
+    </form>
+  </div>
 
-        <div class="input-container">
-          <input
-            type="number"
-            placeholder="numero adulti"
-            min="1"
-            max="10"
-            id="nAdults"
-            class="booking-form-input"
-            name="nAdults"
-            aria-labelledby="nAdults"
-            required
-          />
-        </div>
+  <!-- newsletter section -->
+  <section class="newsletter-container">
+    <p class="newsletter-title">Non perderti nulla,</p>
+    <p class="newsletter-title">con la nostra <span id="newsletter-highlight">newsletter</span>.</p>
+    <p id="newsletter-text-info">Storie di impegno al contrasto della criminalità organizzata, materiale esclusivo e
+      aggiornamenti sulle novità.</p>
 
-        <div class="input-container">
-          <textarea
-            placeholder="Descrivi in questo campo esigenze o richieste particolari"
-            id="additionalInfo"
-            class="booking-form-input"
-            name="additionalInfo"
-            aria-labelledby="additionalInfo"
-            maxlength="500"
-            title="Descrivi in questo campo esigenze o richieste particolari"
-          ></textarea>
-        </div>
+    <form id="newsletter-email-form">
+      <input type="email" id="newsletter-email" name="email" required placeholder="inserisci la tua email"
+        title="Inserisci un'email valida" />
+      <div>
+        <input type="checkbox" id="newsletter-checkbox" />
+        <label for="newsletter-checkbox">accetta il modo in cui trattiamo i tuoi dati...</label>
+      </div>
+      <div class="newsletter-containerBTN">
+        <button type="submit" id="newsletter-submit">Iscriviti</button>
+      </div>
+    </form>
+  </section>
 
-        <div class="input-container">
-          <button id="activitiesToggle" class="booking-form-input" type="button" aria-expanded="false" aria-controls="activitiesContainer">
-            Mostra Attività
-          </button>
-          <div id="activitiesContainer" role="group" aria-labelledby="activitiesToggle">
-            <label><input type="checkbox" name="activities" value="1" /> Storia della cascina Carla e Bruno Caccia</label>
-            <label><input type="checkbox" name="activities" value="2" /> Bruno Caccia</label>
-            <label><input type="checkbox" name="activities" value="3" /> Regolegalità</label>
-            <label><input type="checkbox" name="activities" value="4" /> I beni confiscati</label>
-            <label><input type="checkbox" name="activities" value="5" /> Le mafie e il cibo</label>
-            <label><input type="checkbox" name="activities" value="6" /> Miele e Api</label>
-            <label><input type="checkbox" name="activities" value="7" /> Ricicliamo attività artistiche e manuali</label>
-            <label><input type="checkbox" name="activities" value="8" /> La mafia attraverso il cinema: percezioni culturali</label>
-            <label><input type="checkbox" name="activities" value="9" /> Il gioco non è un azzardo (6-14 anni)</label>
-            <label><input type="checkbox" name="activities" value="10" /> Chi non gioca vince</label>
-          </div>
-        </div>
+  <!-- FAQ section -->
+  <section class="faq-section">
+    <h2>Domande frequenti</h2>
 
-        <p class="booking-form-activity-text">
-          *le attività selezionate rappresentano una manifestazione d'interesse verso le stesse, e verranno confermate solo nel contatto diretto con
-          Cascina Caccia.
+    <div class="faq-card">
+      <div class="faq-question">
+        <h3>Perché scegliere Cascina Caccia per la tua uscita didattica?</h3>
+        <span class="faq-arrow">
+          <img class="faq-arrow-icon" src="./assets/faqSection/dropdown-icon.svg" alt="arrow drop down" />
+        </span>
+      </div>
+      <div class="faq-answer">
+        <p>
+          Cascina Caccia offre un'<strong>opportunità educativa</strong> unica per le scuole. Gli studenti avranno modo
+          di scoprire la storia e il
+          valore di un luogo simbolo di <strong>legalità</strong> , approfondendo temi fondamentali come la lotta alle
+          mafie e l'impegno sociale.
         </p>
-
-        <div class="consent-checkbox-container">
-          <div>
-            <input type="checkbox" id="option1" name="options" value="option1" />
-            Accetto il modo in cui trattate i miei dati
-          </div>
-          <div>
-            <input type="checkbox" id="option2" name="options" value="option2" />
-            Acconsento ad iscrivermi alla newsletter
-          </div>
-        </div>
-        <div class="booking-form-container-btn">
-          <button type="submit" id="booking-form-submit-btn" aria-label="Invia la tua richiesta">Invia</button>
-        </div>
-      </form>
+      </div>
     </div>
 
-    <!-- newsletter section -->
-    <section class="newsletter-container">
-      <p class="newsletter-title">Non perderti nulla,</p>
-      <p class="newsletter-title">con la nostra <span id="newsletter-highlight">newsletter</span>.</p>
-      <p id="newsletter-text-info">Storie di impegno al contrasto della criminalità organizzata, materiale esclusivo e aggiornamenti sulle novità.</p>
+    <div class="faq-card">
+      <div class="faq-question">
+        <h3>Quante persone possono visitare Cascina Caccia?</h3>
+        <span class="faq-arrow"><img class="faq-arrow-icon" src="./assets/faqSection/dropdown-icon.svg"
+            alt="arrow drop down" /></span>
+      </div>
+      <div class="faq-answer">
+        <p>
+          Cascina Caccia ospita massimo due gruppi, per un totale di circa
+          <strong>50 persone</strong> . Ogni <strong>gruppo</strong> è composto all'incirca da <strong>25
+            persone</strong>. Classi e gruppi piccoli
+          possono essere accorpate in un unico gruppo interclasse di 25 persone.
+        </p>
+      </div>
+    </div>
 
-      <form id="newsletter-email-form">
-        <input type="email" id="newsletter-email" name="email" required placeholder="inserisci la tua email" title="Inserisci un'email valida" />
-        <div>
-          <input type="checkbox" id="newsletter-checkbox" />
-          <label for="newsletter-checkbox">accetta il modo in cui trattiamo i tuoi dati...</label>
-        </div>
-        <div class="newsletter-containerBTN">
-          <button type="submit" id="newsletter-submit">Iscriviti</button>
-        </div>
-      </form>
-    </section>
-
-    <!-- FAQ section -->
-    <section class="faq-section">
-      <h2>Domande frequenti</h2>
-
-      <div class="faq-card">
-        <div class="faq-question">
-          <h3>Perché scegliere Cascina Caccia per la tua uscita didattica?</h3>
-          <span class="faq-arrow">
-            <img class="faq-arrow-icon" src="./assets/faqSection/dropdown-icon.svg" alt="arrow drop down" />
+    <div class="faq-card">
+      <div class="faq-question">
+        <h3>Quali attività consigliamo per una prima visita?</h3>
+        <span class="faq-arrow"><img class="faq-arrow-icon" src="./assets/faqSection/dropdown-icon.svg"
+            alt="arrow drop down" /></span>
+      </div>
+      <div class="faq-answer">
+        <p>
+          Per chi non è mai venuto in Cascina e non ha affrontato un percorso in classe sul tema della mafie, proponiamo
+          le attività
+          <span class="faq-brand-activities">“Storia di Cascina Carla e Bruno Caccia”</span>
+          e
+          <span class="faq-brand-activities">“Introduzione al tema mafia”</span>
+          . Puoi trovarle descritte nella sezione
+          <span class="faq-brand-activities">"
+            <!-- TODO : link -->
+            <a href="#attivita-section" class="faq-activity-link">Le nostre attività</a>
+            "
           </span>
-        </div>
-        <div class="faq-answer">
-          <p>
-            Cascina Caccia offre un'<strong>opportunità educativa</strong> unica per le scuole. Gli studenti avranno modo di scoprire la storia e il
-            valore di un luogo simbolo di <strong>legalità</strong> , approfondendo temi fondamentali come la lotta alle mafie e l'impegno sociale.
-          </p>
-        </div>
+        </p>
+      </div>
+    </div>
+
+    <div class="faq-card">
+      <div class="faq-question">
+        <h3>Come ci si organizza per i pasti?</h3>
+        <span class="faq-arrow"><img class="faq-arrow-icon" src="./assets/faqSection/dropdown-icon.svg"
+            alt="arrow drop down" /></span>
+      </div>
+      <div class="faq-answer">
+        <p>
+          <strong>Soggiorno di mezza giornata:</strong> Se la classe lo desidera, sarà possibile consumare il pranzo al
+          sacco portato autonomamente
+          in loco.
+        </p>
+        <p><strong>Soggiorno di una giornata:</strong> La classe dovrà organizzarsi per consumare il pranzo al sacco
+          portato autonomamente.</p>
+        <p>
+          <strong>Soggiorno di più giorni:</strong> Cascina Caccia fornirà i pasti richiesti dal gruppo. Il costo è di
+          <strong>8 €</strong> a
+          persona <span class="faq-iva">+ IVA al 10% con fattura (anche elettronica)</span>.
+        </p>
+      </div>
+    </div>
+
+    <div class="faq-card">
+      <div class="faq-question">
+        <h3>Come arrivare a Cascina Caccia?</h3>
+        <span class="faq-arrow"><img class="faq-arrow-icon" src="./assets/faqSection/dropdown-icon.svg"
+            alt="arrow drop down" /></span>
+      </div>
+      <div class="faq-answer">
+        <p>
+          Cascina Caccia si trova in
+          <strong>Via Serra Alta 6, San Sebastiano da Po (TO)</strong>. I bus superiori a <strong>25 posti</strong>
+          devono fermarsi al
+          <strong>cimitero di San Sebastiano</strong> (lungo la statale per Casalborgone). Da lì, proseguite a
+          <strong>piedi</strong> per circa
+          <strong>15 minuti</strong>, seguendo le indicazioni per Via Rigonda e poi Via Serra Alta.
+        </p>
+        <p>Per persone con <strong>difficoltà motorie</strong>, è possibile organizzare il trasporto in auto concordando
+          in anticipo.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <img class="logo-azienda" src="./assets/footer/Logo-agora.svg" alt="Logo azienda" />
+    <div class="footer-section">
+      <!-- left Block -->
+      <div class="block">
+        <h3>Contatti</h3>
+        <ul>
+          <li><img src="./assets/footer/email-icon.svg" alt="Email" />cascina.caccia@acmos.it</li>
+          <!-- TODO: add telephone number (?) -->
+          <!--  <li><img src="./assets/footer/telephone-icon.svg" alt="Telefono"" /></li> -->
+          <li><img src="./assets/footer/location-pin-icon.svg" alt="Indirizzo" />Via Serra Alta, 6, San Sebastiano da Po
+            (TO)</li>
+        </ul>
       </div>
 
-      <div class="faq-card">
-        <div class="faq-question">
-          <h3>Quante persone possono visitare Cascina Caccia?</h3>
-          <span class="faq-arrow"><img class="faq-arrow-icon" src="./assets/faqSection/dropdown-icon.svg" alt="arrow drop down" /></span>
-        </div>
-        <div class="faq-answer">
-          <p>
-            Cascina Caccia ospita massimo due gruppi, per un totale di circa
-            <strong>50 persone</strong> . Ogni <strong>gruppo</strong> è composto all'incirca da <strong>25 persone</strong>. Classi e gruppi piccoli
-            possono essere accorpate in un unico gruppo interclasse di 25 persone.
-          </p>
-        </div>
-      </div>
-
-      <div class="faq-card">
-        <div class="faq-question">
-          <h3>Quali attività consigliamo per una prima visita?</h3>
-          <span class="faq-arrow"><img class="faq-arrow-icon" src="./assets/faqSection/dropdown-icon.svg" alt="arrow drop down" /></span>
-        </div>
-        <div class="faq-answer">
-          <p>
-            Per chi non è mai venuto in Cascina e non ha affrontato un percorso in classe sul tema della mafie, proponiamo le attività
-            <span class="faq-brand-activities">“Storia di Cascina Carla e Bruno Caccia”</span>
-            e
-            <span class="faq-brand-activities">“Introduzione al tema mafia”</span>
-            . Puoi trovarle descritte nella sezione
-            <span class="faq-brand-activities"
-              >"
-              <!-- TODO : link -->
-              <a href="#attivita-section" class="faq-activity-link">Le nostre attività</a>
-              "
-            </span>
-          </p>
+      <!-- right block -->
+      <div class="block">
+        <h3>Seguici su</h3>
+        <div class="footer-social-icons">
+          <a href="https://www.facebook.com/cascinacaccia">
+            <img src="./assets/footer/facebook-vector.svg" alt="Facebook" />
+          </a>
+          <a href="https://www.instagram.com/cascina_caccia/">
+            <img src="./assets/footer/instagram-vector.svg" alt="Instagram" />
+          </a>
+          <!-- TODO: add tiktok social link -->
+          <a href="">
+            <img src="./assets/footer/tiktok-vector.svg" alt="TikTok" />
+          </a>
         </div>
       </div>
+    </div>
 
-      <div class="faq-card">
-        <div class="faq-question">
-          <h3>Come ci si organizza per i pasti?</h3>
-          <span class="faq-arrow"><img class="faq-arrow-icon" src="./assets/faqSection/dropdown-icon.svg" alt="arrow drop down" /></span>
-        </div>
-        <div class="faq-answer">
-          <p>
-            <strong>Soggiorno di mezza giornata:</strong> Se la classe lo desidera, sarà possibile consumare il pranzo al sacco portato autonomamente
-            in loco.
-          </p>
-          <p><strong>Soggiorno di una giornata:</strong> La classe dovrà organizzarsi per consumare il pranzo al sacco portato autonomamente.</p>
-          <p>
-            <strong>Soggiorno di più giorni:</strong> Cascina Caccia fornirà i pasti richiesti dal gruppo. Il costo è di <strong>8 €</strong> a
-            persona <span class="faq-iva">+ IVA al 10% con fattura (anche elettronica)</span>.
-          </p>
-        </div>
-      </div>
+    <!-- Map -->
+    <div class="footer-map-section">
+      <h3>Ci trovi qui</h3>
 
-      <div class="faq-card">
-        <div class="faq-question">
-          <h3>Come arrivare a Cascina Caccia?</h3>
-          <span class="faq-arrow"><img class="faq-arrow-icon" src="./assets/faqSection/dropdown-icon.svg" alt="arrow drop down" /></span>
-        </div>
-        <div class="faq-answer">
-          <p>
-            Cascina Caccia si trova in
-            <strong>Via Serra Alta 6, San Sebastiano da Po (TO)</strong>. I bus superiori a <strong>25 posti</strong> devono fermarsi al
-            <strong>cimitero di San Sebastiano</strong> (lungo la statale per Casalborgone). Da lì, proseguite a <strong>piedi</strong> per circa
-            <strong>15 minuti</strong>, seguendo le indicazioni per Via Rigonda e poi Via Serra Alta.
-          </p>
-          <p>Per persone con <strong>difficoltà motorie</strong>, è possibile organizzare il trasporto in auto concordando in anticipo.</p>
-        </div>
-      </div>
-    </section>
+      <iframe class="footer-map"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d180060.30609044182!2d7.853336533475485!3d45.155361292900125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4787d83975557773%3A0xce98a033bd811358!2sCascina%20Caccia!5e0!3m2!1sit!2sit!4v1735224718795!5m2!1sit!2sit"
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </footer>
+</body>
 
-    <!-- Footer -->
-    <footer id="footer">
-      <img class="logo-azienda" src="./assets/footer/Logo-agora.svg" alt="Logo azienda" />
-      <div class="footer-section">
-        <!-- left Block -->
-        <div class="block">
-          <h3>Contatti</h3>
-          <ul>
-            <li><img src="./assets/footer/email-icon.svg" alt="Email" />cascina.caccia@acmos.it</li>
-            <!-- TODO: add telephone number (?) -->
-            <!--  <li><img src="./assets/footer/telephone-icon.svg" alt="Telefono"" /></li> -->
-            <li><img src="./assets/footer/location-pin-icon.svg" alt="Indirizzo" />Via Serra Alta, 6, San Sebastiano da Po (TO)</li>
-          </ul>
-        </div>
-
-        <!-- right block -->
-        <div class="block">
-          <h3>Seguici su</h3>
-          <div class="footer-social-icons">
-            <a href="https://www.facebook.com/cascinacaccia">
-              <img src="./assets/footer/facebook-vector.svg" alt="Facebook" />
-            </a>
-            <a href="https://www.instagram.com/cascina_caccia/">
-              <img src="./assets/footer/instagram-vector.svg" alt="Instagram" />
-            </a>
-            <!-- TODO: add tiktok social link -->
-            <a href="">
-              <img src="./assets/footer/tiktok-vector.svg" alt="TikTok" />
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Map -->
-      <div class="footer-map-section">
-        <h3>Ci trovi qui</h3>
-
-        <iframe
-          class="footer-map"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d180060.30609044182!2d7.853336533475485!3d45.155361292900125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4787d83975557773%3A0xce98a033bd811358!2sCascina%20Caccia!5e0!3m2!1sit!2sit!4v1735224718795!5m2!1sit!2sit"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
-      </div>
-    </footer>
-  </body>
 </html>
