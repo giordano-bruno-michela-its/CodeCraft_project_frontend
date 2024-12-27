@@ -1,42 +1,105 @@
-
-.booking-form-container{
-    padding: 10px;
+.booking-form-container {
+  padding: 10px;
+  font-family: "Montserrat", Arial, sans-serif;
+  background-image: url("../../public/assets/bookingForm/cascinaIMG.png");
 }
 
-#bookingForm {
+.bookingForm {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  gap: 20px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+ 
 }
-.input-container{
-    margin-top: 10px;
-    width: 100%;
-
-}
-
-.booking-form-input{
-    width: 100%;
-    border-radius: 10px;
-    height: 5vh;
-    border: 2px solid #3d3c3c;
-    font-family: "Montserrat", "Arial", "Helvetica", sans-serif;
-    font-size: medium;
-    padding-left: 15px;
+.input-container {
+  width: 100%;
 }
 
-#additionalInfo{
-    height: 10vh;
+.booking-form-title {
+  margin: 0 auto;
+}
+
+.booking-form-input {
+  width: 100%;
+  border-radius: 10px;
+  height: 5vh;
+  border: 2px solid #3d3c3c;
+  font-family: "Montserrat", "Arial", "Helvetica", sans-serif;
+  font-size: medium;
+  padding-left: 15px;
+}
+
+#additionalInfo {
+  height: 15vh;
 }
 
 .booking-form-tel-duration-container,
 .booking-form-name-surname-container {
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+  gap: 10px;
 }
 
-#boking-form-email {
+#activitiesContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
 }
 
-#booking-form-submit-btn{
-    margin-top: 5px;
+.booking-form-activity-text {
+  margin: 0;
 }
+
+.consent-checkbox-container {
+  display: flex;
+}
+
+.booking-form-container-btn {
+  display: flex;
+  justify-content: center;
+}
+
+#booking-form-submit-btn {
+    height: 4vh;
+    width: 35%;
+    border: solid 2px #e3007e;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 15px;
+    font-family: "Montserrat", "Arial", "Helvetica", sans-serif;
+    background-color: white;
+  }
+
+
+/* Codice per inserire bordo con gradiente al bottone invia 
+ma va in conflitto con backgrounimg e backgroundcolor white dell'intero form */
+
+/* #booking-form-submit-btn {
+    margin-top: 2vh;
+    height: 4vh;
+    width: 35%;
+    position: relative;
+    background-clip: padding-box;
+    border: solid 2px transparent;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 15px;
+    font-family: "Montserrat", "Arial", "Helvetica", sans-serif;
+  }
+
+  #booking-form-submit-btn:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin: -2px;
+    border-radius: inherit;
+    background: linear-gradient(to right, #e3007e, #f1921f, #ffdd07);
+  } */

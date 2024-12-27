@@ -19,8 +19,13 @@ export function toggleAnswer(index: number): void {
 export function setupActivitiesToggle(toggleButton: HTMLButtonElement, container: HTMLDivElement): void {
   toggleButton.addEventListener("click", () => {
     const isHidden = container.style.display === "none";
-    container.style.display = isHidden ? "block" : "none";
+    container.style.display = isHidden ? "flex" : "none";
     toggleButton.textContent = isHidden ? "Nascondi Attività" : "Mostra Attività";
     toggleButton.setAttribute("aria-expanded", isHidden.toString());
   });
+
+
+
+
+  
 }
