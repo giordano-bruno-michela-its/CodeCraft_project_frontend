@@ -1,174 +1,100 @@
 <!DOCTYPE html>
 <html lang="it">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="CodeCraft" />
-    <meta name="description" content="landing page" />
-    <script type="module" src="./src/main.ts"></script>
-    <link rel="stylesheet" href="./src/style.css" />
-    <title>Cascina Caccia</title>
-  </head>
 
-  <body>
-    <div class="container">
-      <!-- Info Form -->
-      <h2>Richiedi Informazioni</h2>
-      <form id="infoForm" method="post">
-        <div class="row">
-          <div class="input-group">
-            <label for="info-form-name">Nome</label>
-            <input
-              placeholder="Inserisci il tuo nome"
-              type="text"
-              id="info-form-name"
-              name="info-form-name"
-              aria-labelledby="info-form-name"
-              minlength="2"
-              maxlength="50"
-              pattern="[A-Za-zÀ-ÿ\s]+"
-              required
-              title="Inserisci il tuo nome. Deve contenere almeno 2 caratteri e massimo 50."
-            />
-          </div>
-          <div class="input-group">
-            <label for="info-form-surname">Cognome</label>
-            <input
-              placeholder="Inserisci il tuo cognome"
-              type="text"
-              id="info-form-surname"
-              name="info-form-surname"
-              aria-labelledby="info-form-surname"
-              minlength="2"
-              maxlength="50"
-              pattern="[A-Za-zÀ-ÿ\s]+"
-              required
-              title="Inserisci il tuo cognome. Deve contenere almeno 2 caratteri e massimo 50."
-            />
-          </div>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="CodeCraft" />
+  <meta name="description" content="landing page" />
+  <script type="module" src="./src/main.ts"></script>
+  <link rel="stylesheet" href="./src/style.css" />
+  <title>Cascina Caccia</title>
+</head>
 
-        <div class="row">
-          <div class="input-group">
-            <label for="info-form-phoneNumber">Telefono</label>
-            <input
-              placeholder="Inserisci un numero di telefono"
-              type="tel"
-              id="info-form-phoneNumber"
-              name="info-form-phoneNumber"
-              aria-labelledby="info-form-phoneNumber"
-              pattern="^(\+(\d{1,4})\s?(\d{4,15}))?(\d{10})$"
-              title="Inserisci un numero di telefono valido"
-              required
-            />
-          </div>
-          <div class="input-group">
-            <label for="info-form-email">Email</label>
-            <input
-              placeholder="Inserisci la tua e-mail"
-              type="email"
-              id="info-form-email"
-              name="info-form-email"
-              aria-labelledby="info-form-email"
-              maxlength="50"
-              required
-              title="Inserisci un'email valida"
-            />
-          </div>
-        </div>
-
+<body>
+  <div class="container">
+    <!-- Info Form -->
+    <h2>Richiedi Informazioni</h2>
+    <form id="infoForm" method="post">
+      <div class="row">
         <div class="input-group">
-          <label for="info-form-association">Ente</label>
-          <input
-            placeholder="Ente/Associazione di cui fai parte"
-            type="text"
-            id="info-form-association"
-            name="info-form-association"
-            aria-labelledby="info-form-association"
-            minlength="2"
-            maxlength="100"
-            pattern="[A-Za-zÀ-ÿ0-9\s\-]+"
-            required
-            title="Inserire nome dell'ente"
-          />
+          <label for="info-form-name">Nome</label>
+          <input placeholder="Inserisci il tuo nome" type="text" id="info-form-name" name="info-form-name"
+            aria-labelledby="info-form-name" minlength="2" maxlength="50" pattern="[A-Za-zÀ-ÿ\s]+" required
+            title="Inserisci il tuo nome. Deve contenere almeno 2 caratteri e massimo 50." />
         </div>
-
         <div class="input-group">
-          <label for="info-form-activitiesToggle">Attività:</label>
-          <button
-            id="info-form-activitiesToggle"
-            type="button"
-            aria-expanded="false"
-            aria-controls="activitiesContainer"
-            title="Clicca per selezionare una o più attività disponibili."
-          >
-            Mostra Attività
-          </button>
-          <div
-            id="activitiesContainer"
-            role="group"
-            aria-labelledby="info-form-activitiesToggle"
-            style="display: none"
-          >
-            <label
-              ><input type="checkbox" name="activities" value="1" /> Storia
-              della cascina Carla e Bruno Caccia</label
-            >
-            <label
-              ><input type="checkbox" name="activities" value="2" /> Bruno
-              Caccia</label
-            >
-            <label
-              ><input type="checkbox" name="activities" value="3" />
-              Regolegalità</label
-            >
-            <label
-              ><input type="checkbox" name="activities" value="4" /> I beni
-              confiscati</label
-            >
-            <label
-              ><input type="checkbox" name="activities" value="5" /> Le mafie e
-              il cibo</label
-            >
-            <label
-              ><input type="checkbox" name="activities" value="6" /> Miele e
-              Api</label
-            >
-            <label
-              ><input type="checkbox" name="activities" value="7" /> Ricicliamo
-              attività artistiche e manuali</label
-            >
-            <label
-              ><input type="checkbox" name="activities" value="8" /> La mafia
-              attraverso il cinema: percezioni culturali</label
-            >
-            <label
-              ><input type="checkbox" name="activities" value="9" /> Il gioco
-              non è un azzardo (6-14 anni)</label
-            >
-            <label
-              ><input type="checkbox" name="activities" value="10" /> Chi non
-              gioca vince</label
-            >
-          </div>
+          <label for="info-form-surname">Cognome</label>
+          <input placeholder="Inserisci il tuo cognome" type="text" id="info-form-surname" name="info-form-surname"
+            aria-labelledby="info-form-surname" minlength="2" maxlength="50" pattern="[A-Za-zÀ-ÿ\s]+" required
+            title="Inserisci il tuo cognome. Deve contenere almeno 2 caratteri e massimo 50." />
         </div>
+      </div>
 
+      <div class="row">
         <div class="input-group">
-          <label for="info-form-additionalInfo">Informazioni Aggiuntive:</label>
-          <textarea
-            placeholder="Descrivi in questo campo esigenze o richieste particolari"
-            id="info-form-additionalInfo"
-            name="info-form-additionalInfo"
-            title="Inserisci eventuali richieste o esigenze particolari. Deve contenere almeno 10 caratteri e massimo 500."
-            minlength="10"
-            maxlength="500"
-          ></textarea>
+          <label for="info-form-phoneNumber">Telefono</label>
+          <input placeholder="Inserisci un numero di telefono" type="tel" id="info-form-phoneNumber"
+            name="info-form-phoneNumber" aria-labelledby="info-form-phoneNumber"
+            pattern="^(\+(\d{1,4})\s?(\d{4,15}))?(\d{10})$" title="Inserisci un numero di telefono valido" required />
         </div>
+        <div class="input-group">
+          <label for="info-form-email">Email</label>
+          <input placeholder="Inserisci la tua e-mail" type="email" id="info-form-email" name="info-form-email"
+            aria-labelledby="info-form-email" maxlength="50" required title="Inserisci un'email valida" />
+        </div>
+      </div>
 
-        <button type="submit" aria-label="Invia la tua richiesta">
-          Invia Richiesta
+      <div class="input-group">
+        <label for="info-form-association">Ente</label>
+        <input placeholder="Ente/Associazione di cui fai parte" type="text" id="info-form-association"
+          name="info-form-association" aria-labelledby="info-form-association" minlength="2" maxlength="100"
+          pattern="[A-Za-zÀ-ÿ0-9\s\-]+" required title="Inserire nome dell'ente" />
+      </div>
+
+      <div class="input-group">
+        <label for="info-form-activitiesToggle">Attività:</label>
+        <button id="info-form-activitiesToggle" type="button" aria-expanded="false" aria-controls="activitiesContainer"
+          title="Clicca per selezionare una o più attività disponibili.">
+          Mostra Attività
         </button>
-      </form>
-    </div>
-  </body>
+        <div id="activitiesContainer" role="group" aria-labelledby="info-form-activitiesToggle" style="display: none">
+          <label><input type="checkbox" name="activities" value="1" /> Storia
+            della cascina Carla e Bruno Caccia</label>
+          <label><input type="checkbox" name="activities" value="2" /> Bruno
+            Caccia</label>
+          <label><input type="checkbox" name="activities" value="3" />
+            Regolegalità</label>
+          <label><input type="checkbox" name="activities" value="4" /> I beni
+            confiscati</label>
+          <label><input type="checkbox" name="activities" value="5" /> Le mafie e
+            il cibo</label>
+          <label><input type="checkbox" name="activities" value="6" /> Miele e
+            Api</label>
+          <label><input type="checkbox" name="activities" value="7" /> Ricicliamo
+            attività artistiche e manuali</label>
+          <label><input type="checkbox" name="activities" value="8" /> La mafia
+            attraverso il cinema: percezioni culturali</label>
+          <label><input type="checkbox" name="activities" value="9" /> Il gioco
+            non è un azzardo (6-14 anni)</label>
+          <label><input type="checkbox" name="activities" value="10" /> Chi non
+            gioca vince</label>
+        </div>
+      </div>
+
+      <div class="input-group">
+        <label for="info-form-additionalInfo">Informazioni Aggiuntive:</label>
+        <textarea placeholder="Descrivi in questo campo esigenze o richieste particolari" id="info-form-additionalInfo"
+          name="info-form-additionalInfo"
+          title="Inserisci eventuali richieste o esigenze particolari. Deve contenere almeno 10 caratteri e massimo 500."
+          minlength="10" maxlength="500"></textarea>
+      </div>
+
+      <button type="submit" aria-label="Invia la tua richiesta">
+        Invia Richiesta
+      </button>
+    </form>
+  </div>
+</body>
+
 </html>
