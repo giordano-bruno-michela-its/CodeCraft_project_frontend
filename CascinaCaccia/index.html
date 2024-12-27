@@ -17,13 +17,13 @@
       <form id="infoForm" method="post">
         <div class="row">
           <div class="input-group">
-            <label for="name">Nome</label>
+            <label for="info-form-name">Nome</label>
             <input
               placeholder="Inserisci il tuo nome"
               type="text"
-              id="name"
-              name="name"
-              aria-labelledby="name"
+              id="info-form-name"
+              name="info-form-name"
+              aria-labelledby="info-form-name"
               minlength="2"
               maxlength="50"
               pattern="[A-Za-zÀ-ÿ\s]+"
@@ -32,13 +32,13 @@
             />
           </div>
           <div class="input-group">
-            <label for="surname">Cognome</label>
+            <label for="info-form-surname">Cognome</label>
             <input
               placeholder="Inserisci il tuo cognome"
               type="text"
-              id="surname"
-              name="surname"
-              aria-labelledby="surname"
+              id="info-form-surname"
+              name="info-form-surname"
+              aria-labelledby="info-form-surname"
               minlength="2"
               maxlength="50"
               pattern="[A-Za-zÀ-ÿ\s]+"
@@ -50,26 +50,26 @@
 
         <div class="row">
           <div class="input-group">
-            <label for="phoneNumber">Telefono</label>
+            <label for="info-form-phoneNumber">Telefono</label>
             <input
               placeholder="Inserisci un numero di telefono"
               type="tel"
-              id="phoneNumber"
-              name="phoneNumber"
-              aria-labelledby="phoneNumber"
+              id="info-form-phoneNumber"
+              name="info-form-phoneNumber"
+              aria-labelledby="info-form-phoneNumber"
               pattern="^(\+(\d{1,4})\s?(\d{4,15}))?(\d{10})$"
               title="Inserisci un numero di telefono valido"
               required
             />
           </div>
           <div class="input-group">
-            <label for="email">Email</label>
+            <label for="info-form-email">Email</label>
             <input
               placeholder="Inserisci la tua e-mail"
               type="email"
-              id="email"
-              name="email"
-              aria-labelledby="email"
+              id="info-form-email"
+              name="info-form-email"
+              aria-labelledby="info-form-email"
               maxlength="50"
               required
               title="Inserisci un'email valida"
@@ -78,13 +78,13 @@
         </div>
 
         <div class="input-group">
-          <label for="association">Ente</label>
+          <label for="info-form-association">Ente</label>
           <input
             placeholder="Ente/Associazione di cui fai parte"
             type="text"
-            id="association"
-            name="association"
-            aria-labelledby="association"
+            id="info-form-association"
+            name="info-form-association"
+            aria-labelledby="info-form-association"
             minlength="2"
             maxlength="100"
             pattern="[A-Za-zÀ-ÿ0-9\s\-]+"
@@ -94,9 +94,9 @@
         </div>
 
         <div class="input-group">
-          <label for="activitiesToggle">Attività:</label>
+          <label for="info-form-activitiesToggle">Attività:</label>
           <button
-            id="activitiesToggle"
+            id="info-form-activitiesToggle"
             type="button"
             aria-expanded="false"
             aria-controls="activitiesContainer"
@@ -107,7 +107,7 @@
           <div
             id="activitiesContainer"
             role="group"
-            aria-labelledby="activitiesToggle"
+            aria-labelledby="info-form-activitiesToggle"
             style="display: none"
           >
             <label
@@ -154,11 +154,11 @@
         </div>
 
         <div class="input-group">
-          <label for="additionalInfo">Informazioni Aggiuntive:</label>
+          <label for="info-form-additionalInfo">Informazioni Aggiuntive:</label>
           <textarea
             placeholder="Descrivi in questo campo esigenze o richieste particolari"
-            id="additionalInfo"
-            name="additionalInfo"
+            id="info-form-additionalInfo"
+            name="info-form-additionalInfo"
             title="Inserisci eventuali richieste o esigenze particolari. Deve contenere almeno 10 caratteri e massimo 500."
             minlength="10"
             maxlength="500"
