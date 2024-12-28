@@ -6,6 +6,7 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap");
 
+@import "./styles/navbar.css";
 @import "./styles/heroSection.css";
 @import "./styles/newsletter.css";
 @import "./styles/faqSection.css";
