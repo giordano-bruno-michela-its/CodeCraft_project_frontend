@@ -1,0 +1,131 @@
+/*
+ * File Name: navbar.css
+ * Author: CodeCraft
+ * Content: navbar styles
+ */
+/* Navbar styles */
+.navbar {
+  position: fixed;
+  z-index: 3;
+  width: 100%;
+  background-color: #fff; /* Sfondo bianco */
+  color: #333; /* Testo grigio scuro */
+  border-bottom: 1px solid #ddd;
+  font-family: "Montserrat", "Arial", "Helvetica", sans-serif;
+  font-size: x-small;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.navbar-logo {
+  max-height: 40px;
+}
+
+.navbar-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333; /* Colore nero per l'hamburger */
+  font-size: 1.5rem;
+}
+
+.navbar-hamburger {
+  display: block;
+  width: 25px;
+  height: 2px;
+  background: #333; /* Nero */
+  position: relative;
+}
+
+.navbar-hamburger::before,
+.navbar-hamburger::after {
+  content: "";
+  width: 25px;
+  height: 2px;
+  background: #333; /* Nero */
+  position: absolute;
+  left: 0;
+}
+
+.navbar-hamburger::before {
+  top: -7px;
+}
+
+.navbar-hamburger::after {
+  bottom: -8px;
+}
+
+/* Change hamburger icon when navbar is open */
+.navbar-hamburger.open {
+  background: transparent;
+}
+
+.navbar-hamburger.open::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+.navbar-hamburger.open::after {
+  transform: rotate(-45deg);
+  bottom: 0;
+}
+
+/* Navbar menu */
+.navbar-menu {
+  display: none;
+  flex-direction: column;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-top: 1px solid #ddd;
+}
+
+.navbar-menu.open {
+  display: flex;
+}
+
+/* Navbar switches (Filtro daltonismo e Tema Chiaro/Scuro) */
+.navbar-switches {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.switch {
+  display: flex;
+  align-items: center;
+}
+
+.switch-input {
+  margin-left: 10px;
+}
+
+/* Voci del menu */
+.navbar-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #00000021;
+}
+
+.navbar-link {
+  text-decoration: none;
+  color: #333;
+  font-size: 0.9rem;
+}
+
+.navbar-arrow {
+  width: 20px;
+  height: 20px;
+}
