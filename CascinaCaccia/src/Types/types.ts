@@ -24,3 +24,13 @@ export interface BookingForm {
     descrizione: string | null; 
   }[]; // Array dei tipi di attività
 }
+
+export interface FormDataRequest {
+  name: string;
+  surname: string;
+  email: string;
+  phoneNumber: string;
+  association: string;
+  activities: string[];
+  additionalInfo: string;
+}

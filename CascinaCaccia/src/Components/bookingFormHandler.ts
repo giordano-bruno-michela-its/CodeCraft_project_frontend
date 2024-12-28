@@ -5,10 +5,10 @@ import { BookingForm } from "../Types/types";
  * @param activitiesContainer the activities container div element
  * @returns the BookingForm with the values from the form and activities container
  */
-export function getFormData(activitiesContainer: HTMLDivElement): BookingForm {
+export function getBookingFormData(infoForm:HTMLFormElement, activitiesContainer: HTMLDivElement): BookingForm {
   const nome = (document.getElementById("name") as HTMLInputElement).value;
 const cognome = (document.getElementById("surname") as HTMLInputElement).value;
-const email = (document.getElementById("email") as HTMLInputElement).value;
+const email = (document.getElementById("boking-form-email") as HTMLInputElement).value;
 const telefono = (document.getElementById("phoneNumber") as HTMLInputElement).value;
 const ente = (document.getElementById("association") as HTMLInputElement).value;
 const descrizione = (document.getElementById("additionalInfo") as HTMLTextAreaElement).value;

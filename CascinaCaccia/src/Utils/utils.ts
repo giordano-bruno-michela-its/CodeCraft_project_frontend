@@ -1,3 +1,5 @@
+
+
 /**
  * Toggles the visibility of the answer for a specific FAQ item.
  * @param {number} index - The index of the FAQ item to toggle.
@@ -24,8 +26,4 @@ export function setupActivitiesToggle(toggleButton: HTMLButtonElement, container
     toggleButton.setAttribute("aria-expanded", isHidden.toString());
   });
 
-
-
-
-  
 }
