@@ -6,7 +6,7 @@ import { toggleAnswer } from "./Utils/utils";
 import { submitFormData } from "./Services/api";
 
 
-// gettting html elements
+// gettting html elements bby BOOKING FORM
 document.addEventListener("DOMContentLoaded", () => {
   const bookingForm = document.getElementById("bookingForm") as HTMLFormElement;
   const activitiesToggle = document.getElementById("activitiesToggle") as HTMLButtonElement;
@@ -42,11 +42,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-// gettting html elements
+// gettting html elements BY INFORMATION FORM 
 document.addEventListener("DOMContentLoaded", () => {
   const infoForm = document.getElementById("infoForm") as HTMLFormElement;
-  const activitiesToggle = document.getElementById("activitiesToggle") as HTMLButtonElement;
-  const activitiesContainer = document.getElementById("activitiesContainer") as HTMLDivElement;
+  const activitiesToggle = document.getElementById("info-form-activitiesToggle") as HTMLButtonElement;
+  const activitiesContainer = document.getElementById("infoActivitiesContainer") as HTMLDivElement;
 
   setupActivitiesToggle(activitiesToggle, activitiesContainer);
 

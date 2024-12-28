@@ -1,9 +1,11 @@
+#info-form-container,
 #booking-form-container {
   padding: 10px;
   font-family: "Montserrat", Arial, sans-serif;
   background-image: url("../../public/assets/bookingForm/cascinaIMG.png");
 }
 
+.infoForm,
 .bookingForm {
   display: flex;
   flex-direction: column;
@@ -17,10 +19,12 @@
   width: 100%;
 }
 
+.info-form-title,
 .booking-form-title {
   margin: 0 auto;
 }
 
+.info-form-input,
 .booking-form-input {
   width: 100%;
   border-radius: 10px;
@@ -31,10 +35,11 @@
   padding-left: 15px;
 }
 
-#additionalInfo {
+.additional-info {
   height: 15vh;
 }
 
+.info-form-name-surname-container,
 .booking-form-tel-duration-container,
 .booking-form-name-surname-container {
   display: flex;
@@ -43,6 +48,7 @@
   gap: 10px;
 }
 
+#infoActivitiesContainer,
 #activitiesContainer {
   display: flex;
   flex-direction: column;
@@ -57,11 +63,13 @@
   display: flex;
 }
 
+.info-form-container-btn,
 .booking-form-container-btn {
   display: flex;
   justify-content: center;
 }
 
+#info-form-submit-btn,
 #booking-form-submit-btn {
   height: 4vh;
   width: 35%;

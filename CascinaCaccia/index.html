@@ -24,58 +24,55 @@
       <div class="hero-buttons">
         <a class="hero-btn hero-btn-book" href="#booking-form-container">Prenota</a>
         <!-- TODO add anchor link to info form btn -->
-        <a class="hero-btn hero-btn-info" href="#">Chiedi informazioni</a>
+        <a class="hero-btn hero-btn-info" href="#info-form-container">Chiedi informazioni</a>
       </div>
     </div>
   </section>
 
-  <div class="container">
+  <div class="container" id="info-form-container">
     <!-- Info Form -->
-    <h2>Richiedi Informazioni</h2>
-    <form id="infoForm" method="post">
-      <div class="row">
-        <div class="input-group">
-          <label for="info-form-name">Nome</label>
-          <input placeholder="Inserisci il tuo nome" type="text" id="info-form-name" name="info-form-name"
+    <form class="infoForm" id="infoForm" method="post">
+      <h2 class="info-form-title" >Richiedi Informazioni</h2>
+      <div class="info-form-name-surname-container">
+        <div class="input-container">
+          <input placeholder="Nome" class="info-form-input" type="text" id="info-form-name" name="info-form-name"
             aria-labelledby="info-form-name" minlength="2" maxlength="50" pattern="[A-Za-zÀ-ÿ\s]+" required
             title="Inserisci il tuo nome. Deve contenere almeno 2 caratteri e massimo 50." />
         </div>
-        <div class="input-group">
-          <label for="info-form-surname">Cognome</label>
-          <input placeholder="Inserisci il tuo cognome" type="text" id="info-form-surname" name="info-form-surname"
-            aria-labelledby="info-form-surname" minlength="2" maxlength="50" pattern="[A-Za-zÀ-ÿ\s]+" required
+        <div class="input-container">
+          <input placeholder="Cognome" class="info-form-input" type="text" id="info-form-surname"
+            name="info-form-surname" aria-labelledby="info-form-surname" minlength="2" maxlength="50"
+            pattern="[A-Za-zÀ-ÿ\s]+" required
             title="Inserisci il tuo cognome. Deve contenere almeno 2 caratteri e massimo 50." />
         </div>
       </div>
 
-      <div class="row">
-        <div class="input-group">
-          <label for="info-form-phoneNumber">Telefono</label>
-          <input placeholder="Inserisci un numero di telefono" type="tel" id="info-form-phoneNumber"
-            name="info-form-phoneNumber" aria-labelledby="info-form-phoneNumber"
-            pattern="^(\+(\d{1,4})\s?(\d{4,15}))?(\d{10})$" title="Inserisci un numero di telefono valido" required />
-        </div>
-        <div class="input-group">
-          <label for="info-form-email">Email</label>
-          <input placeholder="Inserisci la tua e-mail" type="email" id="info-form-email" name="info-form-email"
-            aria-labelledby="info-form-email" maxlength="50" required title="Inserisci un'email valida" />
-        </div>
+
+      <div class="input-container">
+        <input placeholder="Inserisci la tua e-mail" type="email" class="info-form-input" id="info-form-email"
+          name="info-form-email" aria-labelledby="info-form-email" maxlength="50" required
+          title="Inserisci un'email valida" />
       </div>
 
-      <div class="input-group">
-        <label for="info-form-association">Ente</label>
-        <input placeholder="Ente/Associazione di cui fai parte" type="text" id="info-form-association"
-          name="info-form-association" aria-labelledby="info-form-association" minlength="2" maxlength="100"
-          pattern="[A-Za-zÀ-ÿ0-9\s\-]+" required title="Inserire nome dell'ente" />
+      <div class="input-container">
+        <input placeholder="telefono" type="tel" class="info-form-input" id="info-form-phoneNumber"
+          name="info-form-phoneNumber" aria-labelledby="info-form-phoneNumber"
+          pattern="^(\+(\d{1,4})\s?(\d{4,15}))?(\d{10})$" title="Inserisci un numero di telefono valido" required />
       </div>
 
-      <div class="input-group">
-        <label for="info-form-activitiesToggle">Attività:</label>
-        <button id="info-form-activitiesToggle" type="button" aria-expanded="false" aria-controls="activitiesContainer"
-          title="Clicca per selezionare una o più attività disponibili.">
+
+      <div class="input-container">
+        <input placeholder="Ente/Associazione di cui fai parte" type="text" class="info-form-input"
+          id="info-form-association" name="info-form-association" aria-labelledby="info-form-association" minlength="2"
+          maxlength="100" pattern="[A-Za-zÀ-ÿ0-9\s\-]+" required title="Inserire nome dell'ente" />
+      </div>
+
+      <div class="input-container">
+        <button id="info-form-activitiesToggle" class="info-form-input" type="button" aria-expanded="false"
+          aria-controls="activitiesContainer" title="Clicca per selezionare una o più attività disponibili.">
           Mostra Attività
         </button>
-        <div id="activitiesContainer" role="group" aria-labelledby="info-form-activitiesToggle" style="display: none">
+        <div id="infoActivitiesContainer" role="group" aria-labelledby="info-form-activitiesToggle" >
           <label><input type="checkbox" name="activities" value="1" /> Storia
             della cascina Carla e Bruno Caccia</label>
           <label><input type="checkbox" name="activities" value="2" /> Bruno
@@ -99,19 +96,24 @@
         </div>
       </div>
 
-      <div class="input-group">
-        <label for="info-form-additionalInfo">Informazioni Aggiuntive:</label>
-        <textarea placeholder="Descrivi in questo campo esigenze o richieste particolari" id="info-form-additionalInfo"
-          name="info-form-additionalInfo"
+      <div class="input-container">
+        <textarea placeholder="Descrivi in questo campo esigenze o richieste particolari"
+          class="info-form-input additional-info" id="info-form-additionalInfo" name="info-form-additionalInfo"
           title="Inserisci eventuali richieste o esigenze particolari. Deve contenere almeno 10 caratteri e massimo 500."
           minlength="10" maxlength="500"></textarea>
       </div>
 
-      <button type="submit" aria-label="Invia la tua richiesta">
-        Invia Richiesta
+      <div class="info-form-container-btn">
+      <button type="submit" id="info-form-submit-btn" aria-label="Invia la tua richiesta">
+        Invia
       </button>
+    </div>
     </form>
   </div>
+
+
+
+
 
   <!-- Booking form -->
   <div id="booking-form-container">
@@ -179,13 +181,13 @@
 
       <div class="input-container">
         <textarea placeholder="Descrivi in questo campo esigenze o richieste particolari" id="additionalInfo"
-          class="booking-form-input" name="additionalInfo" aria-labelledby="additionalInfo" maxlength="500"
-          title="Descrivi in questo campo esigenze o richieste particolari"></textarea>
+          class="booking-form-input additional-info" name="additionalInfo" aria-labelledby="additionalInfo"
+          maxlength="500" title="Descrivi in questo campo esigenze o richieste particolari"></textarea>
       </div>
 
       <div class="input-container">
         <button id="activitiesToggle" class="booking-form-input" type="button" aria-expanded="false"
-          aria-controls="activitiesContainer">
+          aria-controls="activitiesContainer" >
           Mostra Attività
         </button>
         <div id="activitiesContainer" role="group" aria-labelledby="activitiesToggle">
@@ -392,8 +394,8 @@
     </div>
   </footer>
 
-  
-  
+
+
 </body>
 
 </html>
