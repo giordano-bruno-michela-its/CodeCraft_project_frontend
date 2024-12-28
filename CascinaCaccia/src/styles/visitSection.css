@@ -1,0 +1,26 @@
+.visit-container {
+  font-family: "Montserrat", "Arial", "Helvetica", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.visit-section-title {
+  background: linear-gradient(to right, #e3007e, #f1921f, #ffdd07);
+  background-clip: text; /*prop. standard */
+  -webkit-background-clip: text; /* prop. con prefisso per compatibilità */
+  color: transparent; /*  mostrare il gradiente nel testo */
+  -webkit-text-fill-color: transparent; /*  compatibilità con browser basati su WebKit */
+  margin-top: 2vh;
+  margin-bottom: 0.5vh;
+}
+
+.visit-section-explore-activities span {
+  font-weight: bold;
+}
+
+.visit-section-explore-activities{
+width: 80%;
+text-align: center ;
+margin-top: 2vh;
+}
