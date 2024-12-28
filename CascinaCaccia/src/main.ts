@@ -1,11 +1,18 @@
 import { getFormData } from "./Components/bookingFormHandler";
+import { initNavbar } from "./Components/navbar";
 import { submitBookingForm } from "./Services/api";
 import { setupActivitiesToggle } from "./Utils/utils";
 import { toggleAnswer } from "./Utils/utils";
 
-
-// gettting html elements
+//Navbar:
 document.addEventListener("DOMContentLoaded", () => {
+  try {
+    initNavbar();
+  } catch (error) {
+    console.error(error);
+  }
+
+  // Booging Form
   const bookingForm = document.getElementById("bookingForm") as HTMLFormElement;
   const activitiesToggle = document.getElementById("activitiesToggle") as HTMLButtonElement;
   const activitiesContainer = document.getElementById("activitiesContainer") as HTMLDivElement;
@@ -23,7 +30,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // get data from the html Form
     const formData = getFormData(activitiesContainer);
-    
 
     // Handling form data (submit)
     try {
