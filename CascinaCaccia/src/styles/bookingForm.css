@@ -2,6 +2,7 @@
   padding: 10px;
   font-family: "Montserrat", Arial, sans-serif;
   background-image: url("../../public/assets/bookingForm/cascinaIMG.png");
+  scroll-margin-top: 60px;
 }
 
 .bookingForm {
