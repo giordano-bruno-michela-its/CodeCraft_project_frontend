@@ -1,16 +1,20 @@
 import { getFormData } from "./Components/bookingFormHandler";
 import { initNavbar } from "./Components/navbar";
 import { submitBookingForm } from "./Services/api";
+import { toggleColorblindFilter } from "./Utils/colorBlindFilter";
+import { toggleDarkMode } from "./Utils/darkMode";
 import { setupActivitiesToggle } from "./Utils/utils";
 import { toggleAnswer } from "./Utils/utils";
 
-//Navbar:
 document.addEventListener("DOMContentLoaded", () => {
-  try {
-    initNavbar();
-  } catch (error) {
-    console.error(error);
-  }
+  //Navbar:
+  initNavbar();
+
+  // Darkmode:
+  toggleDarkMode();
+
+  // Colorblind Filter
+  toggleColorblindFilter();
 
   // Booging Form
   const bookingForm = document.getElementById("bookingForm") as HTMLFormElement;
