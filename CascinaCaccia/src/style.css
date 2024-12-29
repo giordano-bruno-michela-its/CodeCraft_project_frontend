@@ -12,6 +12,7 @@
 @import "./styles/faqSection.css";
 @import "./styles/footer.css";
 @import "./styles/bookingForm.css";
+@import "./styles/accessibilityFilters.css";
 
 html {
   box-sizing: border-box;
