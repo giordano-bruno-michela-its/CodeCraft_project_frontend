@@ -4,25 +4,29 @@
  * Content: faq section styles
  */
 
-.faq-section {
+#faq-section {
   padding: 20px;
   font-family: "Montserrat", Arial, sans-serif;
-  background-color: #ffde07bc;
+  scroll-margin-top: 60px;
+  background-image: url("../../public/assets/faqSection/faqSection-bg.png");
+  background-size: cover;
+  background-position: center;
 }
 
-.faq-section h2 {
+.faq-title {
   font-size: 1.5rem;
   font-weight: 700;
   text-align: center;
   margin-bottom: 20px;
+  color: #fff;
 }
 
 .faq-card {
-  background-color: #ffffff;
+  background-color: #fff;
   border: 1px solid #000000;
   margin-bottom: 15px;
   border-radius: 8px;
-  overflow: hidden; /* to hide the oerflow of the div Card wit border radius*/
+  overflow: hidden; /* to hide the overflow of the div Card wit border radius*/
   transition: all 0.3s ease-in-out;
 }
 
@@ -31,15 +35,15 @@
   justify-content: space-between;
   padding: 15px;
   cursor: pointer;
-  background-color: white;
   color: #333333;
   font-size: 0.8rem;
+  background-color: #fff;
 }
 
 .faq-answer {
   display: none;
   padding: 15px;
-  background-color: #f4f4f4;
+  background-color: #ababab25;
   font-size: 0.9rem;
   color: #333;
 }
