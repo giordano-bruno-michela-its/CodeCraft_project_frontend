@@ -3,6 +3,7 @@
  * Author: CodeCraft
  * Content: navbar styles
  */
+
 /* Navbar styles */
 .navbar {
   position: fixed;
@@ -13,6 +14,8 @@
   border-bottom: 1px solid #ddd;
   font-family: "Montserrat", "Arial", "Helvetica", sans-serif;
   font-size: x-small;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
 .navbar-container {
@@ -30,7 +33,7 @@
   background: none;
   border: none;
   cursor: pointer;
-  color: #333; /* Colore nero per l'hamburger */
+  color: #333;
   font-size: 1.5rem;
 }
 
@@ -38,7 +41,7 @@
   display: block;
   width: 25px;
   height: 2px;
-  background: #333; /* Nero */
+  background: #333;
   position: relative;
 }
 
@@ -47,7 +50,7 @@
   content: "";
   width: 25px;
   height: 2px;
-  background: #333; /* Nero */
+  background: #333;
   position: absolute;
   left: 0;
 }
@@ -80,8 +83,9 @@
   display: none;
   flex-direction: column;
   background-color: #f9f9f9;
-  padding: 20px;
-  border-top: 1px solid #ddd;
+  border-top: 1px solid #00000083;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
 .navbar-menu.open {
@@ -93,6 +97,7 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
+  padding: 10px 20px 0 20px;
 }
 
 .switch {
@@ -102,9 +107,22 @@
 
 .switch-input {
   margin-left: 10px;
+  width: 13px;
+  height: 13px;
+  border: 1px solid #333; /* Colore del bordo */
+  border-radius: 50%;
+  appearance: none; /* hide the default checkbox style */
+  --webkit-appearance: none; /* hide the default checkbox style (safari)*/
+  cursor: pointer;
+  margin-right: 10px;
 }
 
-/* Voci del menu */
+.switch-input:checked {
+  background-color: #333;
+  border: 2px solid #ffdd07;
+}
+
+/* Menu Voices */
 .navbar-links {
   list-style: none;
   padding: 0;
@@ -112,20 +130,26 @@
 }
 
 .navbar-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: block;
   padding: 10px 0;
-  border-bottom: 1px solid #00000021;
+  border-bottom: 1px solid #00000083;
+}
+
+.navbar-item:last-child {
+  border-bottom: none;
 }
 
 .navbar-link {
+  display: flex;
+  align-items: center;
   text-decoration: none;
   color: #333;
   font-size: 0.9rem;
+  padding: 0 20px;
 }
 
 .navbar-arrow {
+  margin-left: auto;
   width: 20px;
   height: 20px;
 }
