@@ -9,6 +9,7 @@
   flex-direction: column;
   padding: 10px;
   font-family: "Montserrat", "Arial", "Helvetica", sans-serif;
+  scroll-margin-top: 60px;
 }
 
 .newsletter-title {
