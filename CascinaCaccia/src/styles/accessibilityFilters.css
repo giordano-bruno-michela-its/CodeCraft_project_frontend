@@ -46,7 +46,16 @@
   border: 1px solid #fff;
 }
 
-.dark-mode .bookingForm {
+.dark-mode .visit-container {
+  background-color: #333;
+  color: #fff;
+}
+
+.dark-mode #bookingForm {
+  background-color: #333;
+  color: #fff;
+}
+.dark-mode #infoForm {
   background-color: #333;
   color: #fff;
 }
