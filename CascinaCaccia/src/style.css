@@ -8,11 +8,11 @@
 
 @import "./styles/navbar.css";
 @import "./styles/heroSection.css";
+@import "./styles/visitSection.css";
+@import "./styles/forms.css";
 @import "./styles/newsletter.css";
 @import "./styles/faqSection.css";
 @import "./styles/footer.css";
-@import "./styles/bookingForm.css";
-@import "./styles/visitSection.css";
 @import "./styles/accessibilityFilters.css";
 
 html {
