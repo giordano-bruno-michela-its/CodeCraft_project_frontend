@@ -62,6 +62,12 @@
   font-size: 15px;
   font-family: "Montserrat", "Arial", "Helvetica", sans-serif;
   background-color: white;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+#newsletter-submit:hover {
+  background-color: #e3007d;
+  color: white;
 }
 #newsletter-submit:before {
   content: "";
