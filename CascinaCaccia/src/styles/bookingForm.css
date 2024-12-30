@@ -35,6 +35,9 @@
   font-size: medium;
   padding-left: 15px;
 }
+#activitiesToggle {
+  cursor: pointer;
+}
 
 .additional-info {
   height: 15vh;
@@ -80,6 +83,14 @@
   font-size: 15px;
   font-family: "Montserrat", "Arial", "Helvetica", sans-serif;
   background-color: white;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+#info-form-submit-btn:hover,
+#booking-form-submit-btn:hover {
+  background-color: #e3007e;
+  color: white;
 }
 
 /* Codice per inserire bordo con gradiente al bottone invia 
