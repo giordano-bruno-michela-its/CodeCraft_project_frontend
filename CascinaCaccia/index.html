@@ -12,22 +12,90 @@
 </head>
 
 <body>
-  <!-- hero Section -->
-  <section class="hero-section">
-    <img src="./assets/heroSection/main-img-cont.png" alt="Sfondo Cascina Caccia" class="hero-bg" />
-    <div class="hero-content">
-      <h1 class="hero-title">
-        Visita <br />
-        Cascina Caccia: Educazione, Natura e Memoria.
-      </h1>
-      <p class="hero-subtitle">Prenota un'esperienza educativa unica per scuole, scout e gruppi organizzati.</p>
-      <div class="hero-buttons">
-        <a class="hero-btn hero-btn-book" href="#booking-form-container">Prenota</a>
-        <!-- TODO add anchor link to info form btn -->
-        <a class="hero-btn hero-btn-info" href="#info-form-container">Chiedi informazioni</a>
+
+  <header class="navbar">
+      <div class="navbar-container">
+        <img src="./assets/navbar/Logo-agora.svg" alt="Logo Cascina Caccia" class="navbar-logo" />
+
+        <button class="navbar-toggle" aria-label="Apri menu">
+          <span class="navbar-hamburger"></span>
+        </button>
       </div>
-    </div>
-  </section>
+
+      <nav class="navbar-menu">
+        <div class="navbar-switches">
+          <div class="switch">
+            <label for="colorblind-filter">Filtro Daltonismo</label>
+            <input type="checkbox" id="colorblind-filter" class="switch-input" />
+          </div>
+          <div class="switch">
+            <label for="darkmode-toggle">Tema Chiaro/Scuro</label>
+            <input type="checkbox" id="darkmode-toggle" class="switch-input" />
+          </div>
+        </div>
+
+        <ul class="navbar-links">
+          <li class="navbar-item">
+            <a href="#hero-section" class="navbar-link"
+              >Home
+              <img src="./public/assets/navbar/Arrow 1.svg" alt="Freccetta" class="navbar-arrow" />
+            </a>
+          </li>
+          <li class="navbar-item">
+            <a href="#info" class="navbar-link"
+              >Richiedi informazioni
+              <img src="./public/assets/navbar/Arrow 1.svg" alt="Freccetta" class="navbar-arrow" />
+            </a>
+          </li>
+          <li class="navbar-item">
+            <a href="#booking-form-container" class="navbar-link"
+              >Effettua prenotazioni
+              <img src="./public/assets/navbar/Arrow 1.svg" alt="Freccetta" class="navbar-arrow" />
+            </a>
+          </li>
+          <li class="navbar-item">
+            <a href="#activities" class="navbar-link"
+              >Attività
+              <img src="./public/assets/navbar/Arrow 1.svg" alt="Freccetta" class="navbar-arrow" />
+            </a>
+          </li>
+          <li class="navbar-item">
+            <a href="#offers" class="navbar-link"
+              >Le nostre offerte
+              <img src="./public/assets/navbar/Arrow 1.svg" alt="Freccetta" class="navbar-arrow" />
+            </a>
+          </li>
+          <li class="navbar-item">
+            <a href="#faq-section" class="navbar-link"
+              >FAQ
+              <img src="./public/assets/navbar/Arrow 1.svg" alt="Freccetta" class="navbar-arrow" />
+            </a>
+          </li>
+          <li class="navbar-item">
+            <a href="#footer" class="navbar-link"
+              >Contatti
+              <img src="./public/assets/navbar/Arrow 1.svg" alt="Freccetta" class="navbar-arrow" />
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  
+  <!-- hero Section -->
+    <section id="hero-section">
+      <img src="./assets/heroSection/main-img-cont.png" alt="Sfondo Cascina Caccia" class="hero-bg" />
+      <div class="hero-content">
+        <h1 class="hero-title">
+          Visita <br />
+          Cascina Caccia: Educazione, Natura e Memoria.
+        </h1>
+        <p class="hero-subtitle">Prenota un'esperienza educativa unica per scuole, scout e gruppi organizzati.</p>
+        <div class="hero-buttons">
+          <a class="hero-btn hero-btn-book" href="#booking-form-container">Prenota</a>
+          <!-- TODO add anchor link to info form btn -->
+          <a class="hero-btn hero-btn-info" href="#">Chiedi informazioni</a>
+        </div>
+      </div>
 
   <!-- Visit section -->
    <div class="visit-container">
@@ -37,8 +105,8 @@
     <p class="visit-section-explore-activities"><span>Esplora</span> le nostre attività pensate per qualunque età, <span>richiedi informazioni</span> o <span>prenota una visita!</span></p>
    </div>
 
+   <!-- Info Form -->
   <div class="container" id="info-form-container">
-    <!-- Info Form -->
     <form class="infoForm" id="infoForm" method="post">
       <h2 class="info-form-title" >Richiedi Informazioni</h2>
       <div class="info-form-name-surname-container">
@@ -54,6 +122,9 @@
             title="Inserisci il tuo cognome. Deve contenere almeno 2 caratteri e massimo 50." />
         </div>
       </div>
+    
+
+    
 
 
       <div class="input-container">
@@ -115,8 +186,9 @@
       <button type="submit" id="info-form-submit-btn" aria-label="Invia la tua richiesta">
         Invia
       </button>
-    </div>
+      </div>
     </form>
+    
   </div>
 
 
@@ -255,61 +327,17 @@
     </form>
   </section>
 
-  <!-- FAQ section -->
-  <section class="faq-section">
-    <h2>Domande frequenti</h2>
+   <!-- FAQ section -->
+    <section id="faq-section">
+      <!-- <img src="./public/assets/faqSection/faqSection-bg.png" class="faq-bg" alt="backgrounf image faq section" /> -->
 
-    <div class="faq-card">
-      <div class="faq-question">
-        <h3>Perché scegliere Cascina Caccia per la tua uscita didattica?</h3>
-        <span class="faq-arrow">
-          <img class="faq-arrow-icon" src="./assets/faqSection/dropdown-icon.svg" alt="arrow drop down" />
-        </span>
-      </div>
-      <div class="faq-answer">
-        <p>
-          Cascina Caccia offre un'<strong>opportunità educativa</strong> unica per le scuole. Gli studenti avranno modo
-          di scoprire la storia e il
-          valore di un luogo simbolo di <strong>legalità</strong> , approfondendo temi fondamentali come la lotta alle
-          mafie e l'impegno sociale.
-        </p>
-      </div>
-    </div>
+      <h2 class="faq-title">Domande frequenti</h2>
 
-    <div class="faq-card">
-      <div class="faq-question">
-        <h3>Quante persone possono visitare Cascina Caccia?</h3>
-        <span class="faq-arrow"><img class="faq-arrow-icon" src="./assets/faqSection/dropdown-icon.svg"
-            alt="arrow drop down" /></span>
-      </div>
-      <div class="faq-answer">
-        <p>
-          Cascina Caccia ospita massimo due gruppi, per un totale di circa
-          <strong>50 persone</strong> . Ogni <strong>gruppo</strong> è composto all'incirca da <strong>25
-            persone</strong>. Classi e gruppi piccoli
-          possono essere accorpate in un unico gruppo interclasse di 25 persone.
-        </p>
-      </div>
-    </div>
-
-    <div class="faq-card">
-      <div class="faq-question">
-        <h3>Quali attività consigliamo per una prima visita?</h3>
-        <span class="faq-arrow"><img class="faq-arrow-icon" src="./assets/faqSection/dropdown-icon.svg"
-            alt="arrow drop down" /></span>
-      </div>
-      <div class="faq-answer">
-        <p>
-          Per chi non è mai venuto in Cascina e non ha affrontato un percorso in classe sul tema della mafie, proponiamo
-          le attività
-          <span class="faq-brand-activities">“Storia di Cascina Carla e Bruno Caccia”</span>
-          e
-          <span class="faq-brand-activities">“Introduzione al tema mafia”</span>
-          . Puoi trovarle descritte nella sezione
-          <span class="faq-brand-activities">"
-            <!-- TODO : link -->
-            <a href="#attivita-section" class="faq-activity-link">Le nostre attività</a>
-            "
+      <div class="faq-card">
+        <div class="faq-question">
+          <h3>Perché scegliere Cascina Caccia per la tua uscita didattica?</h3>
+          <span class="faq-arrow">
+            <img class="faq-arrow-icon" src="./assets/faqSection/dropdown-icon.svg" alt="arrow drop down" />
           </span>
         </p>
       </div>
@@ -357,6 +385,24 @@
       </div>
     </div>
   </section>
+  
+    <!-- newsletter section -->
+    <section id="newsletter-container">
+      <p class="newsletter-title">Non perderti nulla,</p>
+      <p class="newsletter-title">con la nostra <span id="newsletter-highlight">newsletter</span>.</p>
+      <p id="newsletter-text-info">Storie di impegno al contrasto della criminalità organizzata, materiale esclusivo e aggiornamenti sulle novità.</p>
+
+      <form id="newsletter-email-form">
+        <input type="email" id="newsletter-email" name="email" required placeholder="inserisci la tua email" title="Inserisci un'email valida" />
+        <div>
+          <input type="checkbox" id="newsletter-checkbox" />
+          <label for="newsletter-checkbox">accetta il modo in cui trattiamo i tuoi dati...</label>
+        </div>
+        <div class="newsletter-containerBTN">
+          <button type="submit" id="newsletter-submit">Iscriviti</button>
+        </div>
+      </form>
+    </section>
 
   <!-- Footer -->
   <footer id="footer">
@@ -401,9 +447,5 @@
         allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
   </footer>
-
-
-
 </body>
-
 </html>

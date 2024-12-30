@@ -4,13 +4,11 @@
  * Content: newsletter styles
  */
 
-
-.newsletter-container {
+#newsletter-container {
   display: flex;
   flex-direction: column;
   padding: 10px;
   font-family: "Montserrat", "Arial", "Helvetica", sans-serif;
-
 }
 
 .newsletter-title {
@@ -40,41 +38,40 @@
   font-family: "Montserrat", "Arial", "Helvetica", sans-serif;
   font-size: medium;
   padding-left: 15px;
-
 }
 
-#newsletter-checkbox{
-    margin-top: 2vh;
-    border: 2px solid #3d3c3c;
+#newsletter-checkbox {
+  margin-top: 2vh;
+  border: 2px solid #3d3c3c;
 }
 
-.newsletter-containerBTN{
-    display: flex;
-    justify-content: flex-end;
+.newsletter-containerBTN {
+  display: flex;
+  justify-content: flex-end;
 }
 
- #newsletter-submit {
-    margin-top: 2vh;
-    height: 4vh;
-    width: 35%;
-    position: relative;
-    background-clip: padding-box;
-    border: solid 2px transparent;
-    border-radius: 10px;
-    font-weight: bold;
-    font-size: 15px;
-    font-family: "Montserrat", "Arial", "Helvetica", sans-serif;
-    background-color: white;
-  }
-  #newsletter-submit:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
-    margin: -2px;
-    border-radius: inherit;
-    background: linear-gradient(to right, #e3007e, #f1921f, #ffdd07);
-  }
+#newsletter-submit {
+  margin-top: 2vh;
+  height: 4vh;
+  width: 35%;
+  position: relative;
+  background-clip: padding-box;
+  border: solid 2px transparent;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 15px;
+  font-family: "Montserrat", "Arial", "Helvetica", sans-serif;
+  background-color: white;
+}
+#newsletter-submit:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  margin: -2px;
+  border-radius: inherit;
+  background: linear-gradient(to right, #e3007e, #f1921f, #ffdd07);
+}

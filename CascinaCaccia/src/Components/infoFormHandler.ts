@@ -9,7 +9,7 @@ import { FormDataRequest } from "../Types/types";
  *   the activities checkboxes
  * @returns {FormDataRequest} The form data as a FormDataRequest object
  */
-export function getFormData(form: HTMLFormElement, activitiesContainer: HTMLDivElement): FormDataRequest {
+export function getFormDataInfo(form: HTMLFormElement, activitiesContainer: HTMLDivElement): FormDataRequest {
   const name = (form.querySelector("#info-form-name") as HTMLInputElement).value;
   const surname = (form.querySelector("#info-form-surname") as HTMLInputElement).value;
   const email = (form.querySelector("#info-form-email") as HTMLInputElement).value;
