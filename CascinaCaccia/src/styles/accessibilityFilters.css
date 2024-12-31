@@ -11,6 +11,7 @@
 
 /* Dark Mode */
 
+/* Navbar */
 .dark-mode .navbar {
   background-color: #222;
   color: #fff;
@@ -46,11 +47,12 @@
   border: 1px solid #fff;
 }
 
+/* Visit section */
 .dark-mode .visit-container {
   background-color: #333;
   color: #fff;
 }
-
+/* Forms section */
 .dark-mode #bookingForm {
   background-color: #333;
   color: #fff;
@@ -59,14 +61,16 @@
   background-color: #333;
   color: #fff;
 }
+/* Newsletter section */
 .dark-mode #newsletter-container {
   background-color: #333;
   color: #fff;
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
 }
+/* Faq section */
 .dark-mode .faq-question {
-  background-color: #636363;
+  background-color: #333;
   color: #ffffffd2;
   font-size: 0.7rem;
   border: 1px solid #fff;
@@ -75,3 +79,25 @@
 .dark-mode .faq-arrow-icon {
   filter: invert(1);
 }
+/* Offers section */
+.dark-mode #offers-section {
+  background-color: #333;
+  color: #fff;
+}
+.dark-mode .offer-card {
+  background-color: #333;
+  color: #fff;
+}
+.dark-mode .offer-arrow {
+  filter: invert(1);
+}
+.dark-mode .offer-details {
+  color: #fff;
+}
+.dark-mode .news-offers {
+  background-color: #f4a100;
+}
+/* .dark-mode .payment-methods-container {
+  background-color: #333;
+  color: #fff;
+} */
