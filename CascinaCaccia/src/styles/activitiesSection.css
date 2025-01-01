@@ -1,0 +1,174 @@
+
+.activities-title{
+    text-align: center;
+    font-family: "Montserrat", Arial, sans-serif;
+}
+
+.activity-card{
+    border-radius: 10px;
+    margin: 20px;
+    font-family: "Montserrat", Arial, sans-serif;
+}
+
+.activity-image-container {
+    position: relative; 
+    height: auto;
+}
+
+.activity-image-container img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    display: block; 
+}
+
+.activity-content-overlay{
+    position: absolute;
+    width: 100%;
+    top: 70%;
+    left: 0%;
+    color: white; 
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 5px; 
+    z-index: 1; 
+    display: block; 
+    margin: 0;
+    border-radius: 10px; 
+
+}
+
+
+.title-text-overlay{
+    font-weight: bold;
+    top: 66%;
+    text-align: left;
+    font-size: 1.2em;
+    margin:0 0 5px 0 ;
+}
+
+.activity-text-overlay{
+    text-align: center; 
+    margin: 0;
+}
+
+
+
+.activity-details{
+    display: none;
+    padding: 10px;
+    border-radius: 10px;
+
+}
+
+.activity-title{
+    text-align: center;
+}
+
+.activity-list li strong {
+    display: block;
+  }
+
+.activity-list{
+    padding-left: 30px;
+}
+
+.activity-card.open{
+    border: 1px solid black;
+
+}
+
+.activity-card.open .activity-details{
+    display: block;
+}
+
+.activity-cta-btn a {
+    display: inline-block; 
+    width: 100%; 
+    height: 4vh;
+    margin-top: 10px;
+    border-radius: 10px;
+    background-color: #FFDD07;
+    font-family: "Montserrat", Arial, sans-serif;
+    color: black; 
+    text-align: center; 
+    line-height: 4vh; 
+    text-decoration: none; 
+}
+
+/* STYLE CAROSELLO (IN FORSE) */
+/* Base Styles */
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  
+  .carousel-track {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .carousel-slide {
+    min-width: 100%;
+    border-radius: 10px;
+  }
+  
+  .carousel-slide img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  /* Dots Navigation */
+  .carousel-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .carousel-dots button {
+    width: 10px;
+    height: 10px;
+    background-color: lightgray;
+    border: none;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  
+  .carousel-dots .active {
+    background-color: black;
+  }
+  
+  /* Buttons (Hidden by Default for Mobile) */
+  .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 10px;
+    display: none;
+  }
+  
+  .prev-btn {
+    left: 10px;
+  }
+  
+  .next-btn {
+    right: 10px;
+  }
+  
+  @media (min-width: 768px) {
+    .carousel-btn {
+      display: block;
+    }
+  }
+  
+  

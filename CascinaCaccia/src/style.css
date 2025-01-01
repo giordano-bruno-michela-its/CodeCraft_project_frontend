@@ -14,6 +14,8 @@
 @import "./styles/faqSection.css";
 @import "./styles/footer.css";
 @import "./styles/accessibilityFilters.css";
+@import "./styles/activitiesSection.css";
+
 
 html {
   box-sizing: border-box;

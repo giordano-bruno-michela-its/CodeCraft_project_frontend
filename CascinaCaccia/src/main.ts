@@ -7,6 +7,8 @@ import { toggleDarkMode } from "./Utils/darkMode";
 import { setupActivitiesToggle } from "./Utils/utils";
 import { toggleAnswer } from "./Utils/utils";
 import { submitFormData } from "./Services/api";
+import {activityCards } from "./Utils/utils"
+import { activityCarousel } from "./Utils/utils"
 
 document.addEventListener("DOMContentLoaded", () => {
   //Navbar:
@@ -18,6 +20,11 @@ document.addEventListener("DOMContentLoaded", () => {
   // Colorblind Filter
   toggleColorblindFilter();
 
+  
+  activityCards();
+  activityCarousel()
+
+  
   // BOOKING FORM
   const bookingForm = document.getElementById("bookingForm") as HTMLFormElement;
   const activitiesToggle = document.getElementById("activitiesToggle") as HTMLButtonElement;
