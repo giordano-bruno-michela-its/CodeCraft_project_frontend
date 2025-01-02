@@ -1,0 +1,154 @@
+/*
+ * File Name: offersSection.css
+ * Author: CodeCraft
+ * Content: styles for offers section
+ */
+
+#offers-section {
+  padding: 20px;
+  font-family: "Montserrat", Arial, sans-serif;
+  text-align: center;
+  scroll-margin-top: 20px;
+}
+
+#offers-section h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.offer-card {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.offer-header {
+  padding: 10px;
+  text-align: left;
+  position: relative;
+}
+
+.offer-duration {
+  background-color: #f4a100;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  max-width: fit-content;
+}
+
+.offer-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.offer-price {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 10px 0;
+  text-align: justify;
+  padding: 0 10px 0;
+}
+
+.price-value {
+  font-size: 2rem;
+}
+.offers-group {
+  font-size: 0.9rem;
+  font-weight: lighter;
+}
+
+.offer-divider {
+  border: 0.5px solid #ddd;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.offer-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.offer-summary {
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.offer-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.offer-arrow {
+  width: 20px;
+  margin: 0 auto;
+}
+
+.offer-card.open .offer-toggle {
+  transform: rotate(180deg);
+}
+
+.offer-details {
+  display: none;
+  padding: 10px;
+  font-size: 0.9rem;
+  color: #555;
+}
+.offer-details p a {
+  color: #e3007e;
+  transition: all 0.3s ease-in-out;
+}
+.offer-details p a:hover {
+  color: #e3007d8c;
+}
+
+.offer-card.open .offer-details {
+  display: block;
+}
+.news-offers {
+  background-color: #ffde0796;
+  max-width: 90%;
+  margin: 0 auto;
+  border-radius: 4px;
+}
+.news-offer {
+  padding: 5px;
+}
+
+.news-offer-details {
+  font-size: small;
+}
+.offer-specific {
+  font-size: x-small;
+}
+/* Payment Methods */
+.payment-methods-title {
+  text-align: justify;
+}
+.img-payment-methods {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+}
+.img-bonifico {
+  width: 50px;
+}
+.img-contanti {
+  width: 40px;
+}
+.payment-methods-info {
+  font-size: 0.8rem;
+  text-align: left;
+}

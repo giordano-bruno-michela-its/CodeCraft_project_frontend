@@ -138,3 +138,18 @@ updateCarousel();
 
 }
 
+/**
+ * Sets up event listeners on each of the offer cards to toggle the
+ *  visibility of the offer details when the toggle button is clicked.
+ */
+export function setupOfferCards(): void {
+  const offerCards = document.querySelectorAll(".offer-card");
+
+  offerCards.forEach((card) => {
+    const toggleButton = card.querySelector(".offer-toggle") as HTMLButtonElement;
+
+    toggleButton.addEventListener("click", () => {
+      card.classList.toggle("open");
+    });
+  });
+}

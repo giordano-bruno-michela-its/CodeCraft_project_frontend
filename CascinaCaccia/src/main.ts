@@ -4,7 +4,7 @@ import { initNavbar } from "./Components/navbar";
 import { submitBookingForm } from "./Services/api";
 import { toggleColorblindFilter } from "./Utils/colorBlindFilter";
 import { toggleDarkMode } from "./Utils/darkMode";
-import { setupActivitiesToggle } from "./Utils/utils";
+import { setupActivitiesToggle, setupOfferCards } from "./Utils/utils";
 import { toggleAnswer } from "./Utils/utils";
 import { submitFormData } from "./Services/api";
 import {activityCards } from "./Utils/utils"
@@ -24,17 +24,21 @@ document.addEventListener("DOMContentLoaded", () => {
   activityCards();
   activityCarousel()
 
-  
-  // BOOKING FORM
-  const bookingForm = document.getElementById("bookingForm") as HTMLFormElement;
-  const activitiesToggle = document.getElementById("activitiesToggle") as HTMLButtonElement;
-  const activitiesContainer = document.getElementById("activitiesContainer") as HTMLDivElement;
 
+  // Offers Section
+  setupOfferCards();
+
+  // Faq Section
   const faqQuestions = document.querySelectorAll(".faq-question");
 
   faqQuestions.forEach((question, index) => {
     question.addEventListener("click", () => toggleAnswer(index));
   });
+
+  // BOOKING FORM
+  const bookingForm = document.getElementById("bookingForm") as HTMLFormElement;
+  const activitiesToggle = document.getElementById("activitiesToggle") as HTMLButtonElement;
+  const activitiesContainer = document.getElementById("activitiesContainer") as HTMLDivElement;
 
   setupActivitiesToggle(activitiesToggle, activitiesContainer);
 
@@ -76,7 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
       console.log("Dati inviati con successo:", result);
       alert("La tua richiesta è stata inviata con successo!");
     } catch (error) {
-      console.error("Errore durante l’invio dei dati:", error);
+      console.error("Errore durante l'invio dei dati:", error);
       alert("Si è verificato un errore durante l'invio della tua richiesta. Riprova più tardi.");
     }
   });
