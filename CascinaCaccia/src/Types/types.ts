@@ -33,4 +33,6 @@ export interface FormDataRequest {
   association: string;
   activities: string[];
   additionalInfo: string;
+  contactDate:string;
+  formType:string;
 }

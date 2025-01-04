@@ -15,7 +15,9 @@ export function getFormDataInfo(form: HTMLFormElement, activitiesContainer: HTML
   const email = (form.querySelector("#info-form-email") as HTMLInputElement).value;
   const phoneNumber = (form.querySelector("#info-form-phoneNumber") as HTMLInputElement).value;
   const association = (form.querySelector("#info-form-association") as HTMLInputElement).value;
-  const additionalInfo = (form.querySelector("#info-form-activitiesToggle") as HTMLTextAreaElement).value;
+  const additionalInfo = (form.querySelector("#info-form-additionalInfo") as HTMLTextAreaElement).value;
+  const contactDate = new Date().toISOString().split('T')[0];
+  const formType = "FORM_INFO";
 
   const activities = Array.from(activitiesContainer.querySelectorAll('input[type="checkbox"]:checked')).map(
     (checkbox) => (checkbox as HTMLInputElement).value
@@ -29,5 +31,8 @@ export function getFormDataInfo(form: HTMLFormElement, activitiesContainer: HTML
     association,
     activities,
     additionalInfo,
+    contactDate,
+    formType
+
   };
 }
