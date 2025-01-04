@@ -13,7 +13,7 @@ import { FormDataRequest } from "../Types/types";
 
 
 export async function submitBookingForm(formData: BookingForm): Promise<void> {
-  const response = await fetch("http://localhost:8080/api/formreq/createprenot", {
+  const response = await fetch("http://localhost:8080/api/formreq/createbooking", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

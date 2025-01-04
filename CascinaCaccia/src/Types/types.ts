@@ -1,11 +1,11 @@
 export interface BookingForm {
   email: string;
-  nome: string;
-  cognome: string;
-  ente: string;
-  telefono: string;
-  dataContatto: string; 
-  descrizione: string; 
+  name: string;
+  surname: string;
+  association: string;
+  phoneNumber: string;
+  contactDate: string; 
+  additionalInfo: string; 
  /*  fasciaEta: {
     id: number; 
     denominazione: string; 
@@ -13,15 +13,15 @@ export interface BookingForm {
     etaMin: number; 
     etaMax: number; 
   }; */
-  tipoRichiesta: string; 
-  dataInizio: string; 
-  dataFine: string; 
-  numPartecipanti: number; 
-  numInsegnanti: number; 
-  tipoAttivita: {
+  formType: string; 
+  beginTime: string; 
+  endTime: string; 
+  participantsQuantity: number; 
+  guidesQuantity: number; 
+  activityType: {
     id: number; 
-    denominazione: string; 
-    descrizione: string | null; 
+    name: string; 
+    description: string | null; 
   }[]; // Array dei tipi di attività
 }
 

@@ -6,17 +6,17 @@ import { BookingForm } from "../Types/types";
  * @returns the BookingForm with the values from the form and activities container
  */
 export function getBookingFormData(infoForm:HTMLFormElement, activitiesContainer: HTMLDivElement): BookingForm {
-  const nome = (document.getElementById("name") as HTMLInputElement).value;
-const cognome = (document.getElementById("surname") as HTMLInputElement).value;
+  const name = (document.getElementById("name") as HTMLInputElement).value;
+const surname = (document.getElementById("surname") as HTMLInputElement).value;
 const email = (document.getElementById("boking-form-email") as HTMLInputElement).value;
-const telefono = (document.getElementById("phoneNumber") as HTMLInputElement).value;
-const ente = (document.getElementById("association") as HTMLInputElement).value;
-const descrizione = (document.getElementById("additionalInfo") as HTMLTextAreaElement).value;
-const numInsegnanti = parseInt((document.getElementById("nAdults") as HTMLInputElement).value);
-const numPartecipanti = parseInt((document.getElementById("nChildren") as HTMLInputElement).value);
-const dataInizio = (document.getElementById("startDate") as HTMLInputElement).value;
-const dataFine = (document.getElementById("endDate") as HTMLInputElement).value;
-const dataContatto = new Date().toISOString().split('T')[0];
+const phoneNumber = (document.getElementById("phoneNumber") as HTMLInputElement).value;
+const association = (document.getElementById("association") as HTMLInputElement).value;
+const additionalInfo = (document.getElementById("additionalInfo") as HTMLTextAreaElement).value;
+const guidesQuantity = parseInt((document.getElementById("nAdults") as HTMLInputElement).value);
+const participantsQuantity = parseInt((document.getElementById("nChildren") as HTMLInputElement).value);
+const beginTime = (document.getElementById("startDate") as HTMLInputElement).value;
+const endTime = (document.getElementById("endDate") as HTMLInputElement).value;
+const contactDate = new Date().toISOString().split('T')[0];
 
 /* ATTENZIONE: le activities sono giuste ma quando si fa il return dei value (1,2,3,ecc) nel json vengono mandati al db che ha id sballati */
   const activities = Array.from(activitiesContainer.querySelectorAll('input[type="checkbox"]:checked')).map(
@@ -27,12 +27,12 @@ const dataContatto = new Date().toISOString().split('T')[0];
   // shorthand syntax: we can omit the value of the properties if they have the same name of the variable
   return {
     email,
-    nome,
-    cognome,
-    ente,
-    telefono,
-    dataContatto,
-    descrizione,
+    name,
+    surname,
+    association,
+    phoneNumber,
+    contactDate,
+    additionalInfo,
    /*  fasciaEta: {
       id: 1,
       denominazione: "6-10 anni",
@@ -40,21 +40,21 @@ const dataContatto = new Date().toISOString().split('T')[0];
       etaMin: 6,
       etaMax: 10
     }, */
-    tipoRichiesta: "RICHIESTA_PRENOTAZIONE",
-    dataInizio,
-    dataFine,
-    numPartecipanti,
-    numInsegnanti,
-    tipoAttivita: [
+    formType: "FORM_BOOKING",
+    beginTime,
+    endTime,
+    participantsQuantity,
+    guidesQuantity,
+    activityType: [
       {
         id: 1,
-        denominazione: "Salto nel buio",
-        descrizione: null
+        name: "Salto nel buio",
+        description: null
       },
       {
         id: 2,
-        denominazione: "Tiro della cinghia",
-        descrizione: null
+        name: "Tiro della cinghia",
+        description: null
       }
     ]
   };
