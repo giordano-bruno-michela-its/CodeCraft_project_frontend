@@ -5,6 +5,17 @@
   text-align: center;
   font-family: "Montserrat", Arial, sans-serif;
 }
+#activity-1,
+#activity-2,
+#activity-3,
+#activity-4,
+#activity-5,
+#activity-6,
+#activity-7,
+#activity-8,
+#activity-9 {
+  scroll-margin-top: 200px;
+}
 
 .activity-card {
   border-radius: 10px;
