@@ -45,7 +45,15 @@
   position: relative;
 }
 
-.navbar-hamburger::before,
+.navbar-hamburger::before {
+  content: "";
+  width: 25px;
+  height: 3px;
+  background: #333;
+  position: absolute;
+  left: 0;
+}
+
 .navbar-hamburger::after {
   content: "";
   width: 25px;
@@ -62,7 +70,7 @@
 
 .navbar-hamburger::after {
   transition: all 0.4s ease-in-out;
-  bottom: -8px;
+  bottom: -7px;
 }
 
 /* Change hamburger icon when navbar is open */
@@ -74,11 +82,13 @@
 .navbar-hamburger.open::before {
   transform: rotate(45deg);
   top: 0;
+  height: 2px;
 }
 
 .navbar-hamburger.open::after {
   transform: rotate(-45deg);
   bottom: 0;
+  height: 2px;
 }
 
 /* Navbar menu */
