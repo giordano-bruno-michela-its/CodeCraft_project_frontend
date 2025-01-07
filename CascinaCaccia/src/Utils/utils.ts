@@ -58,84 +58,80 @@ export const getElement = <T extends HTMLElement>(selector: string): T => {
   return element;
 };
 
-
-export function activityCards():void {
+export function activityCards(): void {
   const activitiesCard = document.querySelectorAll(".activity-card");
- activitiesCard.forEach((card)=>{
-    card.addEventListener("click", ()=>{
+  activitiesCard.forEach((card) => {
+    card.addEventListener("click", () => {
       card.classList.toggle("open");
-    })
-  }) 
-
+    });
+  });
 }
 
 /* CAROSELLO (capire se da tenere) */
-export function activityCarousel():void{
-  const track = document.querySelector('.carousel-track') as HTMLElement;
+export function activityCarousel(): void {
+  const track = document.querySelector(".carousel-track") as HTMLElement;
   const slides = Array.from(track.children) as HTMLElement[];
-  const dotsNav = document.querySelector('.carousel-dots') as HTMLElement;
-  const prevButton = document.querySelector('.prev-btn') as HTMLButtonElement;
-  const nextButton = document.querySelector('.next-btn') as HTMLButtonElement;
-  
+  const dotsNav = document.querySelector(".carousel-dots") as HTMLElement;
+  const prevButton = document.querySelector(".prev-btn") as HTMLButtonElement;
+  const nextButton = document.querySelector(".next-btn") as HTMLButtonElement;
 
-let currentIndex = 0;
+  let currentIndex = 0;
 
-// Create dots
-slides.forEach((_, index) => {
-  const button = document.createElement('button');
-  if (index === 0) button.classList.add('active');
-  dotsNav.appendChild(button);
-});
-
-const dots = Array.from(dotsNav.children);
-
-// Update carousel position
-function updateCarousel() {
-  const slideWidth = slides[0].getBoundingClientRect().width;
-  track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
-  dots.forEach((dot, index) => {
-    dot.classList.toggle('active', index === currentIndex);
+  // Create dots
+  slides.forEach((_, index) => {
+    const button = document.createElement("button");
+    if (index === 0) button.classList.add("active");
+    dotsNav.appendChild(button);
   });
-}
 
-// Swipe for mobile
-let startX = 0;
-track.addEventListener('touchstart', (e) => {
-  startX = e.touches[0].clientX;
-});
+  const dots = Array.from(dotsNav.children);
 
-track.addEventListener('touchend', (e) => {
-  const endX = e.changedTouches[0].clientX;
-  if (endX < startX - 50) {
-    currentIndex = (currentIndex + 1) % slides.length; // Swipe left
-  } else if (endX > startX + 50) {
-    currentIndex = (currentIndex - 1 + slides.length) % slides.length; // Swipe right
+  // Update carousel position
+  function updateCarousel() {
+    const slideWidth = slides[0].getBoundingClientRect().width;
+    track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+    dots.forEach((dot, index) => {
+      dot.classList.toggle("active", index === currentIndex);
+    });
   }
-  updateCarousel();
-});
 
-// Button navigation
-prevButton.addEventListener('click', () => {
-  currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-  updateCarousel();
-});
+  // Swipe for mobile
+  let startX = 0;
+  track.addEventListener("touchstart", (e) => {
+    startX = e.touches[0].clientX;
+  });
 
-nextButton.addEventListener('click', () => {
-  currentIndex = (currentIndex + 1) % slides.length;
-  updateCarousel();
-});
-
-// Dots navigation
-dots.forEach((dot, index) => {
-  dot.addEventListener('click', () => {
-    currentIndex = index;
+  track.addEventListener("touchend", (e) => {
+    const endX = e.changedTouches[0].clientX;
+    if (endX < startX - 50) {
+      currentIndex = (currentIndex + 1) % slides.length; // Swipe left
+    } else if (endX > startX + 50) {
+      currentIndex = (currentIndex - 1 + slides.length) % slides.length; // Swipe right
+    }
     updateCarousel();
   });
-});
 
-// Initialize
-updateCarousel();
+  // Button navigation
+  prevButton.addEventListener("click", () => {
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+    updateCarousel();
+  });
 
+  nextButton.addEventListener("click", () => {
+    currentIndex = (currentIndex + 1) % slides.length;
+    updateCarousel();
+  });
+
+  // Dots navigation
+  dots.forEach((dot, index) => {
+    dot.addEventListener("click", () => {
+      currentIndex = index;
+      updateCarousel();
+    });
+  });
+
+  // Initialize
+  updateCarousel();
 }
 
 /**

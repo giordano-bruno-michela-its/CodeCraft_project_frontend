@@ -27,6 +27,7 @@
 
 .navbar-logo {
   max-height: 40px;
+  display: block;
 }
 
 .navbar-toggle {

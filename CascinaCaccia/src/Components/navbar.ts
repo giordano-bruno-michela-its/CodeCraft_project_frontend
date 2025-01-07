@@ -10,7 +10,8 @@ export const initNavbar = (): void => {
   const navbarMenu = getElement<HTMLElement>(".navbar-menu");
   const links = document.querySelectorAll<HTMLAnchorElement>(".navbar-link");
 
-  hamburger.addEventListener("click", () => {
+  hamburger.addEventListener("click", (e) => {
+    e.stopPropagation();
     toggleClass(navbarMenu, "open");
     toggleClass(hamburger, "open");
   });
@@ -20,5 +21,12 @@ export const initNavbar = (): void => {
       removeClass(navbarMenu, "open");
       removeClass(hamburger, "open");
     });
+  });
+  const bodyElement = document.body;
+  bodyElement.addEventListener("click", (e) => {
+    if (!navbarMenu.contains(e.target as Node) && !hamburger.contains(e.target as Node)) {
+      removeClass(navbarMenu, "open");
+      removeClass(hamburger, "open");
+    }
   });
 };
