@@ -1,10 +1,26 @@
 #activities-section {
   scroll-margin-top: 60px;
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
 }
+
 .activities-title {
+  font-size: 2rem;
+  font-weight: 600;
   text-align: center;
-  font-family: "Montserrat", Arial, sans-serif;
+  margin: 0;
+  margin-bottom: 1.5rem;
+  color: var(--text-dark);
+  font-family: var(--main-font);
 }
+
+.activities-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
 #activity-1,
 #activity-2,
 #activity-3,
@@ -14,13 +30,13 @@
 #activity-7,
 #activity-8,
 #activity-9 {
-  scroll-margin-top: 200px;
+  scroll-margin-top: 200px; /* cos'è sta roba */
 }
 
 .activity-card {
-  border-radius: 10px;
-  margin: 20px;
-  font-family: "Montserrat", Arial, sans-serif;
+  border-radius: 1rem;
+  /* margin: 20px; */
+  font-family: var(--main-font);
 }
 
 .activity-image-container {

@@ -1,18 +1,30 @@
 .visit-container {
-  font-family: "Montserrat", "Arial", "Helvetica", sans-serif;
+  font-family: var(--main-font);
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 1.25rem;
+  padding: 1.5rem;
+  color: var(--text-dark);
+  font-weight: 500;
+}
+
+.visit-container > * {
+  margin: 0;
 }
 
 .visit-section-title {
-  background: linear-gradient(to right, #e3007e, #f1921f, #ffdd07);
+  font-size: 2rem;
+  font-weight: 700;
+  width: 100%;
+  text-align: center;
+  background: var(--brand-gradient);
   background-clip: text; /*prop. standard */
   -webkit-background-clip: text; /* prop. con prefisso per compatibilità */
   color: transparent; /*  mostrare il gradiente nel testo */
   -webkit-text-fill-color: transparent; /*  compatibilità con browser basati su WebKit */
-  margin-top: 2vh;
-  margin-bottom: 0.5vh;
+  /* margin-top: 2vh; */
+  /* margin-bottom: 0.5vh; */
 }
 
 .visit-section-explore-activities span {
@@ -20,7 +32,7 @@
 }
 
 .visit-section-explore-activities{
-width: 80%;
+/* width: 80%; */
 text-align: center ;
-margin-top: 2vh;
+/* margin-top: 2vh; */
 }

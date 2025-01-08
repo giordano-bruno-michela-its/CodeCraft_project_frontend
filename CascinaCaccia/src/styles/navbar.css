@@ -7,7 +7,9 @@
 /* Navbar styles */
 .navbar {
   position: fixed;
-  z-index: 3;
+  /* position: sticky; */
+  top: 0;
+  z-index: 999;
   width: 100%;
   /* background-color: var(--text-light); Sfondo bianco */
   color: var(--text-dark); /* Testo grigio scuro */
@@ -39,7 +41,6 @@
   color: var(--text-dark);
   font-size: 1.5rem;
 }
-
 
 .navbar-hamburger {
   display: block;  
@@ -94,7 +95,11 @@
   background-color: var(--text-light);
   /* border-top: 1px solid #00000083; */
   border-radius: 0rem 0rem 1rem 1rem;
-  /* border-bottom: 2px solid var(--text-dark); */
+  border-bottom: 2px solid var(--text-dark);
+  /* border-width: 0 1px 2px 1px; */
+  /* border-style: solid; */
+  /* border-color: var(--text-dark); */
+
 }
 
 .navbar-menu.open {
@@ -106,12 +111,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.25rem 2rem;
+  padding: 0.25rem 1rem;
 }
 
 .switch-cont {
   display: flex;
   align-items: center;
+  gap: 0.5rem;
 }
 
 .switch-title {
@@ -176,13 +182,15 @@
 }
 
 .switch[for="darkmode-toggle"] .slider:before {
-  content: "🌞";
-  color: #FFDD07;
+  background-image: url(/assets/navbar/sun-icon-white.svg);
+  background-size: 1rem;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-.switch[for="darkmode-toggle"] input:checked + .slider::before {
-  content: "🌜";
-  color: #3D3C3C;
+.switch[for="darkmode-toggle"] input:checked + .slider::before{
+  background-color: var(--text-light);
+  background-image: url(/assets/navbar/moon-icon-black.svg);
 }
 
 input:checked + .slider:before {
