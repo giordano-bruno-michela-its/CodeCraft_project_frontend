@@ -17,6 +17,20 @@
 @import "./styles/accessibilityFilters.css";
 @import "./styles/activitiesSection.css";
 
+/* custom properties */
+
+:root {
+  --brand-yellow: #ffdd07;
+  --brand-pink: #E3007E;
+  --brand-orange: #F1921F;
+  --text-dark: #3d3c3c;
+  --text-light: #FAFAFA;
+  --success-color: #34C724;
+  --brand-gradient: linear-gradient(to right, #e3007e 0%, #f1921f 50%, #ffdd07 100%);
+  --main-font: 'Montserrat', sans-serif;
+}
+
+/* Universal styles */
 
 html {
   box-sizing: border-box;
@@ -29,4 +43,6 @@ html {
 
 body {
   margin: 0;
+  font-family: var(--main-font);
+  background-color: var(--text-light);
 }
