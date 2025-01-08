@@ -24,10 +24,6 @@
   gap: 20px;
 }
 
-.footer-section .block {
-  flex: 1; /* the two blocks will have equal width */
-}
-
 .block h3 {
   font-size: 1rem;
 }
@@ -44,8 +40,22 @@
   display: flex;
   align-items: center;
   gap: 5px;
+  max-width: 250px;
 }
-
+.block ul li a {
+  text-decoration: none;
+  color: inherit;
+  max-width: 250px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.block ul li a:hover {
+  text-decoration: underline;
+}
+.footer-email:hover {
+  word-wrap: break-word;
+  word-break: break-word;
+}
 .footer-social-icons {
   display: flex;
   gap: 5px;
@@ -74,4 +84,77 @@
 .footer-map:hover {
   transition: all 0.5s ease-in-out;
   transform: scale(1.03);
+}
+.footer-partner-logo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 1.0625rem;
+  max-width: 400px;
+}
+.copyright {
+  display: flex;
+  justify-content: center;
+  font-size: 0.75rem;
+  color: #fafafaaf;
+}
+.copyright p a {
+  text-decoration: underline;
+  color: inherit;
+}
+.code-craft-factory {
+  width: 100%;
+  background-color: #232323;
+  color: #c9c9c9;
+  display: flex;
+  padding: 2px;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat", "Arial", "Helvetica", sans-serif;
+  font-size: 0.75rem;
+}
+.code-craft-factory p {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.code-craft-logo {
+  margin-left: 5px;
+}
+
+/* Media Queries */
+@media (max-width: 351px) {
+  #footer {
+    font-size: 0.8rem;
+    padding: 10px;
+  }
+
+  .footer-section {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    gap: 15px;
+  }
+
+  .footer-social-icons {
+    gap: 10px;
+  }
+  .foote .footer-map {
+    height: 20vh;
+  }
+
+  .logo-azienda {
+    width: 80px;
+    margin-bottom: 15px;
+  }
+  .footer-map-section {
+    padding: 10px;
+  }
+  .footer-partner-logo {
+    flex-direction: column;
+  }
+  .partner-logo-title {
+    padding: 10px;
+  }
 }
