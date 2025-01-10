@@ -28,12 +28,22 @@
   filter: invert(1);
 }
 
+.dark-mode .navbar-links {
+  border-color: #fff;
+}
+
 .dark-mode .navbar-link {
   color: #fff;
+}
+.dark-mode .navbar-link:hover {
+  color: #222;
 }
 
 .dark-mode .navbar-item {
   background-color: #333;
+}
+.dark-mode .navbar-item:hover {
+  background-color: #ffdd07;
 }
 
 .dark-mode .navbar-arrow {
@@ -97,7 +107,3 @@
 .dark-mode .news-offers {
   background-color: #f4a100;
 }
-/* .dark-mode .payment-methods-container {
-  background-color: #333;
-  color: #fff;
-} */
