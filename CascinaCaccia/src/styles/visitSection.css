@@ -13,14 +13,38 @@
   -webkit-text-fill-color: transparent; /*  compatibilità con browser basati su WebKit */
   margin-top: 2vh;
   margin-bottom: 0.5vh;
+  font-size: 1.4rem;
 }
 
 .visit-section-explore-activities span {
   font-weight: bold;
 }
 
-.visit-section-explore-activities{
-width: 80%;
-text-align: center ;
-margin-top: 2vh;
+.visit-section-explore-activities {
+  width: 80%;
+  text-align: center;
+  margin-top: 2vh;
+}
+/* Media Query */
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .visit-section-title {
+    font-size: 1.8rem;
+  }
+
+  .visit-section-explore-activities {
+    width: 80%;
+    font-size: 1rem;
+  }
+}
+/* Desktop */
+@media (min-width: 1200px) {
+  .visit-section-title {
+    font-size: 2rem;
+  }
+  .visit-section-explore-activities {
+    width: 100%;
+    font-size: 1.2rem;
+  }
 }
