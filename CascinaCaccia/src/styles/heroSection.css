@@ -33,6 +33,7 @@
   color: rgb(255, 255, 255);
   padding: 15px;
   padding-bottom: 200px;
+  max-width: 80%;
 }
 
 .hero-title {
@@ -92,4 +93,43 @@
 
 .hero-btn-info:hover {
   background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Media Query */
+
+/* Tablet */
+@media (min-width: 500px) and (max-width: 1200px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+  .hero-buttons {
+    gap: 40px;
+  }
+
+  .hero-btn {
+    height: 2rem;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+}
+/* Desktop */
+@media (min-width: 1201px) {
+  .hero-title {
+    font-size: 3rem;
+  }
+  .hero-subtitle {
+    font-size: 1.5rem;
+  }
+  .hero-buttons {
+    gap: 60px;
+    width: 90%;
+  }
+  .hero-btn {
+    height: 3rem;
+    font-weight: 600;
+    font-size: 1.2rem;
+  }
 }
