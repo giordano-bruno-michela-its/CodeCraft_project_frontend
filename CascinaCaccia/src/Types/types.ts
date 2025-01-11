@@ -49,3 +49,13 @@ export interface FormDataRequest {
   }[];
   formType: string;
 }
+
+
+export interface NewsletterForm {
+  email: string;
+  name: string;
+  surname: string;
+  contactDate: string;
+  newsletterCheck: string;
+  formType: string;
+}

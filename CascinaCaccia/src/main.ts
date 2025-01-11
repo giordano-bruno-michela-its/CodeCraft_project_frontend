@@ -1,7 +1,7 @@
 import { getBookingFormData } from "./Components/bookingFormHandler";
 import { getFormDataInfo } from "./Components/infoFormHandler";
 import { initNavbar } from "./Components/navbar";
-import { submitBookingForm } from "./Services/api";
+import { submitBookingForm, submitNewsletterData } from "./Services/api";
 import { toggleColorblindFilter } from "./Utils/colorBlindFilter";
 import { toggleDarkMode } from "./Utils/darkMode";
 import { setupActivitiesToggle, setupOfferCards } from "./Utils/utils";
@@ -9,6 +9,7 @@ import { toggleAnswer } from "./Utils/utils";
 import { submitFormData } from "./Services/api";
 import {activityCards } from "./Utils/utils"
 import { activityCarousel } from "./Utils/utils"
+import { getNewsletterFormData } from "./Components/newsletterFormHandler";
 
 document.addEventListener("DOMContentLoaded", () => {
   //Navbar:
@@ -85,3 +86,28 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+//  NEWSLETTER FORM
+document.addEventListener("DOMContentLoaded", () => {
+  const newsletterForm = document.getElementById("newsletter-email-form") as HTMLFormElement;
+
+  newsletterForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    // get data from the html Form
+    const newsletterData = getNewsletterFormData();
+
+    // Handling form data (submit)
+    try {
+      const result = await submitNewsletterData(newsletterData);
+      console.log("Dati inviati con successo:", result);
+      alert("La tua richiesta è stata inviata con successo!");
+    } catch (error) {
+      console.error("Errore durante l'invio dei dati:", error);
+      alert("Si è verificato un errore durante l'invio della tua richiesta.");
+    }
+  });
+});
+
+
+// submitNewsletterData
