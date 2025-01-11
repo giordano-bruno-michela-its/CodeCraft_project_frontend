@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
       alert("La tua richiesta è stata inviata con successo!");
     } catch (error) {
       console.error("Errore durante l'invio dei dati:", error);
-      alert("Si è verificato un errore durante l'invio della tua richiesta. Riprova più tardi.");
+      alert("Si è verificato un errore durante l'invio della tua richiesta.");
     }
   });
 });

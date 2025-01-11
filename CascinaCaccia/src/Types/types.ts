@@ -4,35 +4,48 @@ export interface BookingForm {
   surname: string;
   association: string;
   phoneNumber: string;
-  contactDate: string; 
-  additionalInfo: string; 
- /*  fasciaEta: {
-    id: number; 
-    denominazione: string; 
-    descrizione: string; 
-    etaMin: number; 
-    etaMax: number; 
-  }; */
-  formType: string; 
-  beginTime: string; 
-  endTime: string; 
-  participantsQuantity: number; 
-  guidesQuantity: number; 
+  contactDate: string;
+  additionalInfo: string;
+  newsletterCheck: string,
+
+  /*  fasciaEta: {
+     id: number; 
+     denominazione: string; 
+     descrizione: string; 
+     etaMin: number; 
+     etaMax: number; 
+   }; */
+  formType: string;
+  beginTime: string;
+  endTime: string;
+  participantsQuantity: number;
+  guidesQuantity: number;
+  bookingDuration: {
+    id: number;
+  };
   activityType: {
-    id: number; 
-    name: string; 
-    description: string | null; 
+    id: number;
+    name: string;
+    description: string | null;
   }[]; // Array dei tipi di attività
 }
 
 export interface FormDataRequest {
+  email: string;
   name: string;
   surname: string;
-  email: string;
-  phoneNumber: string;
   association: string;
-  activities: string[];
+  phoneNumber: string;
+  contactDate: string;
   additionalInfo: string;
-  contactDate:string;
-  formType:string;
+  newsletterCheck: null | string; // Considerando che potrebbe essere stringa o null
+  /* ageGroup: {
+    id: number;
+  }; */
+  activityType: {
+    id: number;
+    name: string,
+    description: string
+  }[];
+  formType: string;
 }
