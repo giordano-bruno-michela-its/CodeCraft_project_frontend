@@ -16,6 +16,7 @@
   padding: 10px;
   margin: 10px;
 }
+
 .input-container {
   width: 100%;
 }
@@ -35,6 +36,7 @@
   font-size: medium;
   padding-left: 15px;
 }
+
 #activitiesToggle {
   cursor: pointer;
 }
@@ -121,3 +123,41 @@ ma va in conflitto con backgrounimg e backgroundcolor white dell'intero form */
     border-radius: inherit;
     background: linear-gradient(to right, #e3007e, #f1921f, #ffdd07);
   } */
+
+
+@media (min-width: 352px) and (max-width: 768px) {}
+
+/* Tablet */
+@media (min-width: 769px) {
+
+  #info-form-container,
+  #booking-form-container {
+    padding: 48px 128px ;
+
+  }
+
+  .infoForm,
+  .bookingForm {
+    padding: 32px 64px;
+    
+  }
+}
+
+/* Desktop */
+@media (min-width: 1200px) {
+
+  #info-form-container,
+  #booking-form-container {
+    padding: 90px 300px ;
+
+  }
+
+  .infoForm,
+  .bookingForm {
+    padding: 45px 150px ;
+    
+  }
+
+
+
+}
