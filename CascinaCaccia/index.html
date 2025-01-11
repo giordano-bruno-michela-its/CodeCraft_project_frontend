@@ -1050,6 +1050,38 @@
       <p id="newsletter-text-info">Storie di impegno al contrasto della criminalità organizzata, materiale esclusivo e aggiornamenti sulle novità.</p>
 
       <form id="newsletter-email-form">
+        <div class="newsletter-form-name-surname-container">
+          <div class="input-container">
+            <input
+              placeholder="Nome"
+              class="newsletter-form-input"
+              type="text"
+              id="newsletter-form-name"
+              name="newsletter-form-name"
+              aria-labelledby="newsletter-form-name"
+              minlength="2"
+              maxlength="50"
+              pattern="[A-Za-zÀ-ÿ\s]+"
+              required
+              title="Inserisci il tuo nome. Deve contenere almeno 2 caratteri e massimo 50."
+            />
+          </div>
+          <div class="input-container">
+            <input
+              placeholder="Cognome"
+              class="newsletter-form-input"
+              type="text"
+              id="newsletter-form-surname"
+              name="newsletter-form-surname"
+              aria-labelledby="newsletter-form-surname"
+              minlength="2"
+              maxlength="50"
+              pattern="[A-Za-zÀ-ÿ\s]+"
+              required
+              title="Inserisci il tuo cognome. Deve contenere almeno 2 caratteri e massimo 50."
+            />
+          </div>
+        </div>
         <input type="email" id="newsletter-email" name="email" required placeholder="inserisci la tua email" title="Inserisci un'email valida" />
         <div>
           <input type="checkbox" id="newsletter-checkbox" />

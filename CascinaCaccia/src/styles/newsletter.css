@@ -32,6 +32,14 @@
   flex-direction: column;
 }
 
+.newsletter-form-name-surname-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 10px;
+}
+
+.newsletter-form-input,
 #newsletter-email {
   border-radius: 10px;
   height: 5vh;
@@ -39,6 +47,8 @@
   font-family: "Montserrat", "Arial", "Helvetica", sans-serif;
   font-size: medium;
   padding-left: 15px;
+  margin-top: 15px;
+  width: 100%;
 }
 
 #newsletter-checkbox {
