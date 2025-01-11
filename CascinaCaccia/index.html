@@ -130,30 +130,35 @@
       <h2 class="activities-title">Le nostre attività</h2>
       <div class="activities-wrapper">
         <!-- 1st activity -->
-        <div class="activity-card">
-          <div class="activity-image-container">
+        <div class="activity-card" tabindex="0">
+          <div class="activity-card-header">
             <img src="./public/assets/activitiesSection/apicoltore.png" alt="" />
             <div class="activity-content-overlay">
-              <h2 id="activity-1" class="title-text-overlay">Storia di cascina Carla e Bruno Caccia</h2>
+              <h2 id="activity-1" class="activity-title-overlay">Storia di cascina Carla e Bruno Caccia</h2>
               <p class="activity-text-overlay">tocca per maggiori dettagli</p>
+            </div>
+            <div class="activity-content-overlay hidden">
+              <p class="activity-text-overlay">tocca di nuovo per chiudere</p>
             </div>
           </div>
           <div class="activity-details">
             <!-- Only visible on click -->
-            <h2 class="activity-title">Storia di cascina Carla e Bruno Caccia</h2>
-            <p>
-              <!-- TODO add links anchor to pages of activities -->
-              Un racconto avvincente della storia della Cascina e del suo impegno contro le mafie.
-            </p>
-            <p><span>include</span></p>
-            <ul class="activity-list">
-              <li><strong>Legame con la famiglia Belfiore:</strong> scelta del luogo, insediamento e rapporto con il territorio.</li>
-              <li><strong>Indagini e processo:</strong> tappe fondamentali nella lotta contro l'illegalità.</li>
-              <li>
-                <strong>Progetti dal 2008 a oggi:</strong> attività educative e produzioni che valorizzano il riutilizzo sociale, con un forte valore
-                simbolico e materiale.
-              </li>
-            </ul>
+            <div class="activity-description-content">
+              <h2 class="activity-title">Storia di cascina Carla e Bruno Caccia</h2>
+              <p>
+                <!-- TODO add links anchor to pages of activities -->
+                Un racconto avvincente della storia della Cascina e del suo impegno contro le mafie.
+              </p>
+              <p><span>include</span></p>
+              <ul class="activity-list">
+                <li><strong>Legame con la famiglia Belfiore:</strong> scelta del luogo, insediamento e rapporto con il territorio.</li>
+                <li><strong>Indagini e processo:</strong> tappe fondamentali nella lotta contro l'illegalità.</li>
+                <li>
+                  <strong>Progetti dal 2008 a oggi:</strong> attività educative e produzioni che valorizzano il riutilizzo sociale, con un forte valore
+                  simbolico e materiale.
+                </li>
+              </ul>
+            </div>
             <!-- IDEA CAROSELLO (in forse) -->
             <div class="carousel">
               <div class="carousel-track">
@@ -171,33 +176,39 @@
               <button class="carousel-btn prev-btn">&lt;</button>
               <button class="carousel-btn next-btn">&gt;</button>
             </div>
-            <div class="activity-cta-btn">
+            <button class="activity-book-btn">
               <a href="#booking-form-container">Prenota</a>
-            </div>
+            </button>
           </div>
         </div>
         <!-- 2 activity -->
         <div class="activity-card">
-          <div class="activity-image-container">
+          <div class="activity-card-header">
             <img src="./public/assets/activitiesSection/apicoltore.png" alt="" />
             <div class="activity-content-overlay">
-              <h2 id="activity-2" class="title-text-overlay">Bruno Caccia</h2>
+              <h2 id="activity-2" class="activity-title-overlay">Bruno Caccia</h2>
               <p class="activity-text-overlay">tocca per maggiori dettagli</p>
+            </div>
+            <div class="activity-content-overlay hidden">
+              <p class="activity-text-overlay">tocca di nuovo per chiudere</p>
             </div>
           </div>
           <div class="activity-details">
             <!-- Only visible on click -->
-            <h2 class="activity-title">Bruno Caccia</h2>
-            <p>
-              <!-- TODO add links anchor to pages of activities -->
-              Laboratorio sulla figura di Bruno Caccia sotto il profilo istituzionale e umano.
-            </p>
-            <p><span>include</span></p>
-            <ul class="activity-list">
-              <li><strong>Il magistrato e l'uomo:</strong>il profilo istituzionale e umano di Bruno Caccia.</li>
-              <li><strong>Documentario:</strong>girato dall'associazione Acmos per i 30 anni dall'omicidio (50 minuti, consigliato dai 14 anni).</li>
-              <li><strong>Nuovi sviluppi:</strong>riapertura del caso e arresti recenti che riaccendono l'attenzione sulla sua figura.</li>
-            </ul>
+             
+            <div class="activity-description-content">
+              <h2 class="activity-title">Bruno Caccia</h2>
+              <p>
+                <!-- TODO add links anchor to pages of activities -->
+                Laboratorio sulla figura di Bruno Caccia sotto il profilo istituzionale e umano.
+              </p>
+              <p><span>include</span></p>
+              <ul class="activity-list">
+                <li><strong>Il magistrato e l'uomo:</strong>il profilo istituzionale e umano di Bruno Caccia.</li>
+                <li><strong>Documentario:</strong>girato dall'associazione Acmos per i 30 anni dall'omicidio (50 minuti, consigliato dai 14 anni).</li>
+                <li><strong>Nuovi sviluppi:</strong>riapertura del caso e arresti recenti che riaccendono l'attenzione sulla sua figura.</li>
+              </ul>
+            </div>
             <!-- IDEA CAROSELLO (in forse) -->
             <div class="carousel">
               <div class="carousel-track">
@@ -215,34 +226,40 @@
               <button class="carousel-btn prev-btn">&lt;</button>
               <button class="carousel-btn next-btn">&gt;</button>
             </div>
-            <div class="activity-cta-btn">
+            <button class="activity-book-btn">
               <a href="#booking-form-container">Prenota</a>
-            </div>
+            </button>
           </div>
         </div>
         <!-- 3 activity -->
         <div class="activity-card">
-          <div class="activity-image-container">
+          <div class="activity-card-header">
             <img src="./public/assets/activitiesSection/apicoltore.png" alt="" />
             <div class="activity-content-overlay">
-              <h2 id="activity-3" class="title-text-overlay">Introduzione al tema Mafia</h2>
+              <h2 id="activity-3" class="activity-title-overlay">Introduzione al tema Mafia</h2>
               <p class="activity-text-overlay">tocca per maggiori dettagli</p>
+            </div>
+            <div class="activity-content-overlay hidden">
+              <p class="activity-text-overlay">tocca di nuovo per chiudere</p>
             </div>
           </div>
           <div class="activity-details">
             <!-- Only visible on click -->
-            <h2 class="activity-title">Introduzione al tema Mafia</h2>
-            <p>
-              <!-- TODO add links anchor to pages of activities -->
-              Attività introduttiva volta a definire, conoscere e far conoscere il fenomeno mafioso.
-            </p>
-            <p><span>include</span></p>
-            <ul class="activity-list">
-              <li><strong>Fenomeno mafioso:</strong>superare stereotipi e mistificazioni per una comprensione reale.</li>
-              <li><strong>Radici della cultura mafiosa:</strong>atteggiamenti di prepotenza e illegalità nella vita quotidiana.</li>
-              <li><strong>Responsabilità collettiva e personale:</strong>combattere l'illegalità partendo dalle scelte quotidiane.</li>
-              <li><strong>Antimafia sociale:</strong>principali leggi e iniziative per contrastare il fenomeno mafioso.</li>
-            </ul>
+
+            <div class="activity-description-content">
+              <h2 class="activity-title">Introduzione al tema Mafia</h2>
+              <p>
+                <!-- TODO add links anchor to pages of activities -->
+                Attività introduttiva volta a definire, conoscere e far conoscere il fenomeno mafioso.
+              </p>
+              <p><span>include</span></p>
+              <ul class="activity-list">
+                <li><strong>Fenomeno mafioso:</strong>superare stereotipi e mistificazioni per una comprensione reale.</li>
+                <li><strong>Radici della cultura mafiosa:</strong>atteggiamenti di prepotenza e illegalità nella vita quotidiana.</li>
+                <li><strong>Responsabilità collettiva e personale:</strong>combattere l'illegalità partendo dalle scelte quotidiane.</li>
+                <li><strong>Antimafia sociale:</strong>principali leggi e iniziative per contrastare il fenomeno mafioso.</li>
+              </ul>
+            </div>
             <!-- IDEA CAROSELLO (in forse) -->
             <div class="carousel">
               <div class="carousel-track">
@@ -260,33 +277,39 @@
               <button class="carousel-btn prev-btn">&lt;</button>
               <button class="carousel-btn next-btn">&gt;</button>
             </div>
-            <div class="activity-cta-btn">
+            <button class="activity-book-btn">
               <a href="#booking-form-container">Prenota</a>
-            </div>
+            </button>
           </div>
         </div>
         <!-- 4 activity -->
         <div class="activity-card">
-          <div class="activity-image-container">
+          <div class="activity-card-header">
             <img src="./public/assets/activitiesSection/apicoltore.png" alt="" />
             <div class="activity-content-overlay">
-              <h2 id="activity-4" class="title-text-overlay">I beni confiscati</h2>
+              <h2 id="activity-4" class="activity-title-overlay">I beni confiscati</h2>
               <p class="activity-text-overlay">tocca per maggiori dettagli</p>
+            </div>
+            <div class="activity-content-overlay hidden">
+              <p class="activity-text-overlay">tocca di nuovo per chiudere</p>
             </div>
           </div>
           <div class="activity-details">
             <!-- Only visible on click -->
-            <h2 class="activity-title">I beni confiscati</h2>
-            <p>
-              <!-- TODO add links anchor to pages of activities -->
-              Attività di approfondimento sui beni confiscati, delle leggi sulla confisca dei beni e delle novità legislative.
-            </p>
-            <p><span>include</span></p>
-            <ul class="activity-list">
-              <li><strong>Leggi sulla confisca:</strong>genesi delle normative su sequestro e riutilizzo dei beni mafiosi.</li>
-              <li><strong>Riutilizzo sociale:</strong>come i beni confiscati diventano risorse per la comunità.</li>
-              <li><strong>Beni confiscati in Italia:</strong>panoramica e valore simbolico del recupero.</li>
-            </ul>
+
+            <div class="activity-description-content">
+              <h2 class="activity-title">I beni confiscati</h2>
+              <p>
+                <!-- TODO add links anchor to pages of activities -->
+                Attività di approfondimento sui beni confiscati, delle leggi sulla confisca dei beni e delle novità legislative.
+              </p>
+              <p><span>include</span></p>
+              <ul class="activity-list">
+                <li><strong>Leggi sulla confisca:</strong>genesi delle normative su sequestro e riutilizzo dei beni mafiosi.</li>
+                <li><strong>Riutilizzo sociale:</strong>come i beni confiscati diventano risorse per la comunità.</li>
+                <li><strong>Beni confiscati in Italia:</strong>panoramica e valore simbolico del recupero.</li>
+              </ul>
+            </div>
             <!-- IDEA CAROSELLO (in forse) -->
             <div class="carousel">
               <div class="carousel-track">
@@ -304,33 +327,39 @@
               <button class="carousel-btn prev-btn">&lt;</button>
               <button class="carousel-btn next-btn">&gt;</button>
             </div>
-            <div class="activity-cta-btn">
+            <button class="activity-book-btn">
               <a href="#booking-form-container">Prenota</a>
-            </div>
+            </button>
           </div>
         </div>
         <!-- 5 activity -->
         <div class="activity-card">
-          <div class="activity-image-container">
+          <div class="activity-card-header">
             <img src="./public/assets/activitiesSection/apicoltore.png" alt="" />
             <div class="activity-content-overlay">
-              <h2 id="activity-5" class="title-text-overlay">Le mafie in Piemonte</h2>
+              <h2 id="activity-5" class="activity-title-overlay">Le mafie in Piemonte</h2>
               <p class="activity-text-overlay">tocca per maggiori dettagli</p>
+            </div>
+            <div class="activity-content-overlay hidden">
+              <p class="activity-text-overlay">tocca di nuovo per chiudere</p>
             </div>
           </div>
           <div class="activity-details">
             <!-- Only visible on click -->
-            <h2 class="activity-title">Le mafie in Piemonte</h2>
-            <p>
-              <!-- TODO add links anchor to pages of activities -->
-              Attività di approfondimento sulla presenza delle mafie sul territorio piemontese.
-            </p>
-            <p><span>include</span></p>
-            <ul class="activity-list">
-              <li><strong>Insediamento mafioso:</strong>perché le mafie hanno scelto il Piemonte.</li>
-              <li><strong>Beni confiscati nella regione:</strong>stato attuale e progetti di riutilizzo sociale.</li>
-              <li><strong>Operazioni antimafia:</strong>azioni più rilevanti svolte sul territorio.</li>
-            </ul>
+
+            <div class="activity-description-content">
+              <h2 class="activity-title">Le mafie in Piemonte</h2>
+              <p>
+                <!-- TODO add links anchor to pages of activities -->
+                Attività di approfondimento sulla presenza delle mafie sul territorio piemontese.
+              </p>
+              <p><span>include</span></p>
+              <ul class="activity-list">
+                <li><strong>Insediamento mafioso:</strong>perché le mafie hanno scelto il Piemonte.</li>
+                <li><strong>Beni confiscati nella regione:</strong>stato attuale e progetti di riutilizzo sociale.</li>
+                <li><strong>Operazioni antimafia:</strong>azioni più rilevanti svolte sul territorio.</li>
+              </ul>
+            </div>
             <!-- IDEA CAROSELLO (in forse) -->
             <div class="carousel">
               <div class="carousel-track">
@@ -348,34 +377,40 @@
               <button class="carousel-btn prev-btn">&lt;</button>
               <button class="carousel-btn next-btn">&gt;</button>
             </div>
-            <div class="activity-cta-btn">
+            <button class="activity-book-btn">
               <a href="#booking-form-container">Prenota</a>
-            </div>
+            </button>
           </div>
         </div>
         <!-- 6 activity -->
         <div class="activity-card">
-          <div class="activity-image-container">
+          <div class="activity-card-header">
             <img src="./public/assets/activitiesSection/apicoltore.png" alt="" />
             <div class="activity-content-overlay">
-              <h2 id="activity-6" class="title-text-overlay">Sensibilità ambientale</h2>
+              <h2 id="activity-6" class="activity-title-overlay">Sensibilità ambientale</h2>
               <p class="activity-text-overlay">tocca per maggiori dettagli</p>
+            </div>
+            <div class="activity-content-overlay hidden">
+              <p class="activity-text-overlay">tocca di nuovo per chiudere</p>
             </div>
           </div>
           <div class="activity-details">
             <!-- Only visible on click -->
-            <h2 class="activity-title">Sensibilità ambientale</h2>
-            <p>
-              <!-- TODO add links anchor to pages of activities -->
-              Approfondimenti sui temi della sostenibilità ambientale e della disuguaglianza con riflessioni sui problemi e la ricerca delle possibili
-              soluzioni.
-            </p>
-            <p><span>include</span></p>
-            <ul class="activity-list">
-              <li><strong>Sostenibilità ambientale e sociale:</strong>concetti fondamentali per uno sviluppo sostenibile.</li>
-              <li><strong>Relazioni globali:</strong>come gli stili di vita e le politiche economiche influenzano l'ambiente.</li>
-              <li><strong>Modelli alternativi:</strong>immaginare un futuro equo, basato su risorse libere dallo sfruttamento.</li>
-            </ul>
+
+            <div class="activity-description-content">
+              <h2 class="activity-title">Sensibilità ambientale</h2>
+              <p>
+                <!-- TODO add links anchor to pages of activities -->
+                Approfondimenti sui temi della sostenibilità ambientale e della disuguaglianza con riflessioni sui problemi e la ricerca delle possibili
+                soluzioni.
+              </p>
+              <p><span>include</span></p>
+              <ul class="activity-list">
+                <li><strong>Sostenibilità ambientale e sociale:</strong>concetti fondamentali per uno sviluppo sostenibile.</li>
+                <li><strong>Relazioni globali:</strong>come gli stili di vita e le politiche economiche influenzano l'ambiente.</li>
+                <li><strong>Modelli alternativi:</strong>immaginare un futuro equo, basato su risorse libere dallo sfruttamento.</li>
+              </ul>
+            </div>
             <!-- IDEA CAROSELLO (in forse) -->
             <div class="carousel">
               <div class="carousel-track">
@@ -393,35 +428,41 @@
               <button class="carousel-btn prev-btn">&lt;</button>
               <button class="carousel-btn next-btn">&gt;</button>
             </div>
-            <div class="activity-cta-btn">
+            <button class="activity-book-btn">
               <a href="#booking-form-container">Prenota</a>
-            </div>
+            </button>
           </div>
         </div>
         <!-- 7 activity -->
         <div class="activity-card">
-          <div class="activity-image-container">
+          <div class="activity-card-header">
             <img src="./public/assets/activitiesSection/apicoltore.png" alt="" />
             <div class="activity-content-overlay">
-              <h2 id="activity-7" class="title-text-overlay">La mafia attraverso il cinema</h2>
+              <h2 id="activity-7" class="activity-title-overlay">La mafia attraverso il cinema</h2>
               <p class="activity-text-overlay">tocca per maggiori dettagli</p>
+            </div>
+            <div class="activity-content-overlay hidden">
+              <p class="activity-text-overlay">tocca di nuovo per chiudere</p>
             </div>
           </div>
           <div class="activity-details">
             <!-- Only visible on click -->
-            <h2 class="activity-title">La mafia attraverso il cinema</h2>
-            <p>
-              <!-- TODO add links anchor to pages of activities -->
-              Riflessioni sui modelli mafiosi presentati dal cinema per comprendere il loro impatto sulla società e migliorare la comprensione critica
-              (e su quanto siano rappresentativi della realtà oggettiva e del sentire comune).
-            </p>
-            <p><span>include</span></p>
-            <ul class="activity-list">
-              <li><strong>Rappresentazioni cinematografiche:</strong>il cinema come strumento per raccontare la mafia.</li>
-              <li><strong>Tipologie di mafia-movie:</strong>gangster film americani, cinema d'inchiesta italiano, mafia giapponese.</li>
-              <li><strong>Impatto sociale:</strong>come i film influenzano la percezione e l'opinione pubblica.</li>
-              <li><strong>Senso critico:</strong>analizzare il cinema per comprendere i messaggi nascosti.</li>
-            </ul>
+
+            <div class="activity-description-content">
+              <h2 class="activity-title">La mafia attraverso il cinema</h2>
+              <p>
+                <!-- TODO add links anchor to pages of activities -->
+                Riflessioni sui modelli mafiosi presentati dal cinema per comprendere il loro impatto sulla società e migliorare la comprensione critica
+                (e su quanto siano rappresentativi della realtà oggettiva e del sentire comune).
+              </p>
+              <p><span>include</span></p>
+              <ul class="activity-list">
+                <li><strong>Rappresentazioni cinematografiche:</strong>il cinema come strumento per raccontare la mafia.</li>
+                <li><strong>Tipologie di mafia-movie:</strong>gangster film americani, cinema d'inchiesta italiano, mafia giapponese.</li>
+                <li><strong>Impatto sociale:</strong>come i film influenzano la percezione e l'opinione pubblica.</li>
+                <li><strong>Senso critico:</strong>analizzare il cinema per comprendere i messaggi nascosti.</li>
+              </ul>
+            </div>
             <!-- IDEA CAROSELLO (in forse) -->
             <div class="carousel">
               <div class="carousel-track">
@@ -439,34 +480,40 @@
               <button class="carousel-btn prev-btn">&lt;</button>
               <button class="carousel-btn next-btn">&gt;</button>
             </div>
-            <div class="activity-cta-btn">
+            <button class="activity-book-btn">
               <a href="#booking-form-container">Prenota</a>
-            </div>
+            </button>
           </div>
         </div>
         <!-- 8 activity -->
         <div class="activity-card">
-          <div class="activity-image-container">
+          <div class="activity-card-header">
             <img src="./public/assets/activitiesSection/apicoltore.png" alt="" />
             <div class="activity-content-overlay">
-              <h2 id="activity-8" class="title-text-overlay">Il gioco non è un'azzardo</h2>
+              <h2 id="activity-8" class="activity-title-overlay">Il gioco non è un'azzardo</h2>
               <p class="activity-text-overlay">tocca per maggiori dettagli</p>
+            </div>
+            <div class="activity-content-overlay hidden">
+              <p class="activity-text-overlay">tocca di nuovo per chiudere</p>
             </div>
           </div>
           <div class="activity-details">
             <!-- Only visible on click -->
-            <h2 class="activity-title">Il gioco non è un'azzardo</h2>
-            <p>
-              <!-- TODO add links anchor to pages of activities -->
-              L'attività mira a esplorare le varie tipologie di gioco e le loro caratteristiche e a riflettere sulla correttezza dei giochi a cui si
-              prende parte.
-            </p>
-            <p><span>include</span></p>
-            <ul class="activity-list">
-              <li><strong>Giochi d'azzardo vs giochi di abilità:</strong>capire le differenze per promuovere un divertimento sano.</li>
-              <li><strong>Caratteristiche di un gioco positivo:</strong>inclusività e divertimento per tutti.</li>
-              <li><strong>Messaggio educativo:</strong>sensibilizzare i giovani a scegliere giochi che favoriscano la crescita.</li>
-            </ul>
+
+            <div class="activity-description-content">
+              <h2 class="activity-title">Il gioco non è un'azzardo</h2>
+              <p>
+                <!-- TODO add links anchor to pages of activities -->
+                L'attività mira a esplorare le varie tipologie di gioco e le loro caratteristiche e a riflettere sulla correttezza dei giochi a cui si
+                prende parte.
+              </p>
+              <p><span>include</span></p>
+              <ul class="activity-list">
+                <li><strong>Giochi d'azzardo vs giochi di abilità:</strong>capire le differenze per promuovere un divertimento sano.</li>
+                <li><strong>Caratteristiche di un gioco positivo:</strong>inclusività e divertimento per tutti.</li>
+                <li><strong>Messaggio educativo:</strong>sensibilizzare i giovani a scegliere giochi che favoriscano la crescita.</li>
+              </ul>
+            </div>
             <!-- IDEA CAROSELLO (in forse) -->
             <div class="carousel">
               <div class="carousel-track">
@@ -484,33 +531,39 @@
               <button class="carousel-btn prev-btn">&lt;</button>
               <button class="carousel-btn next-btn">&gt;</button>
             </div>
-            <div class="activity-cta-btn">
+            <button class="activity-book-btn">
               <a href="#booking-form-container">Prenota</a>
-            </div>
+            </button>
           </div>
         </div>
         <!-- 9 activity -->
         <div class="activity-card">
-          <div class="activity-image-container">
+          <div class="activity-card-header">
             <img src="./public/assets/activitiesSection/apicoltore.png" alt="" />
             <div class="activity-content-overlay">
-              <h2 id="activity-9" class="title-text-overlay">Chi non gioca vince</h2>
+              <h2 id="activity-9" class="activity-title-overlay">Chi non gioca vince</h2>
               <p class="activity-text-overlay">tocca per maggiori dettagli</p>
+            </div>
+            <div class="activity-content-overlay hidden">
+              <p class="activity-text-overlay">tocca di nuovo per chiudere</p>
             </div>
           </div>
           <div class="activity-details">
             <!-- Only visible on click -->
-            <h2 class="activity-title">Chi non gioca vince</h2>
-            <p>
-              <!-- TODO add links anchor to pages of activities -->
-              Considerazioni per sensibilizzare ai rischi e alla dipendenza del gioco d'azzardo e ai collegamenti tra mafia e gioco d'azzardo illegale.
-            </p>
-            <p><span>include</span></p>
-            <ul class="activity-list">
-              <li><strong>Il rischio del gioco d'azzardo:</strong>abuso, dipendenza e impatti negativi.</li>
-              <li><strong>Legame con la mafia:</strong>gioco illegale come fonte di finanziamento per la criminalità..</li>
-              <li><strong>Prevenzione e consapevolezza:</strong>promuovere un approccio sano al gioco, libero da dipendenze.</li>
-            </ul>
+
+            <div class="activity-description-content">
+              <h2 class="activity-title">Chi non gioca vince</h2>
+              <p>
+                <!-- TODO add links anchor to pages of activities -->
+                Considerazioni per sensibilizzare ai rischi e alla dipendenza del gioco d'azzardo e ai collegamenti tra mafia e gioco d'azzardo illegale.
+              </p>
+              <p><span>include</span></p>
+              <ul class="activity-list">
+                <li><strong>Il rischio del gioco d'azzardo:</strong>abuso, dipendenza e impatti negativi.</li>
+                <li><strong>Legame con la mafia:</strong>gioco illegale come fonte di finanziamento per la criminalità..</li>
+                <li><strong>Prevenzione e consapevolezza:</strong>promuovere un approccio sano al gioco, libero da dipendenze.</li>
+              </ul>
+            </div>
             <!-- IDEA CAROSELLO (in forse) -->
             <div class="carousel">
               <div class="carousel-track">
@@ -528,9 +581,9 @@
               <button class="carousel-btn prev-btn">&lt;</button>
               <button class="carousel-btn next-btn">&gt;</button>
             </div>
-            <div class="activity-cta-btn">
+            <button class="activity-book-btn">
               <a href="#booking-form-container">Prenota</a>
-            </div>
+            </button>
           </div>
         </div>
       </div>
