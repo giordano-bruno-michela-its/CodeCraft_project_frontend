@@ -92,3 +92,56 @@
   border-radius: inherit;
   background: linear-gradient(to right, #e3007e, #f1921f, #ffdd07);
 }
+
+/* Tablet */
+@media (min-width: 769px) {
+
+  #newsletter-container {
+    padding: 32px 48px ;
+
+  }
+
+  #newsletter-email-form {
+    padding: 32px 128px;
+    
+  }
+}
+
+/* Desktop */
+@media (min-width: 1200px) {
+
+  #newsletter-container {
+    padding: 90px 300px ;
+
+  }
+
+  #newsletter-email-form {
+    padding: 0px ;
+    
+  }
+  .newsletter-text-form-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+  }
+
+  .newsletter-titles-container{
+    display: flex;
+    
+  }
+
+ .newsletter-title{
+  margin: 0 5px 25px 5px;
+
+ }
+ 
+
+  #newsletter-text-info{
+   width: 50%;
+   margin-right: 30px;
+  }
+
+
+
+
+}
