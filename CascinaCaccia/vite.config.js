@@ -3,6 +3,10 @@ import { defineConfig } from "vite";
 export default defineConfig({
   build: {
     rollupOptions: {
+      input: {
+        main: "index.html",
+        retrieveReservation: "src/pages/retrieve-reservation.html",
+      },
       output: {
         // custom output folder
         assetFileNames: ({ names }) => {

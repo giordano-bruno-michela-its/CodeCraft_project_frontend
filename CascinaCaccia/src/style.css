@@ -21,13 +21,13 @@
 
 :root {
   --brand-yellow: #ffdd07;
-  --brand-pink: #E3007E;
-  --brand-orange: #F1921F;
+  --brand-pink: #e3007e;
+  --brand-orange: #f1921f;
   --text-dark: #3d3c3c;
-  --text-light: #FAFAFA;
-  --success-color: #34C724;
+  --text-light: #fafafa;
+  --success-color: #34c724;
   --brand-gradient: linear-gradient(to right, #e3007e 0%, #f1921f 50%, #ffdd07 100%);
-  --main-font: 'Montserrat', sans-serif;
+  --main-font: "Montserrat", sans-serif;
 }
 
 /* Universal styles */
