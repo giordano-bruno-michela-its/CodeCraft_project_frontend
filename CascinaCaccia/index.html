@@ -26,7 +26,7 @@
             <p class="switch-title">Filtro Daltonismo</p>
             <!-- <input type="checkbox" id="colorblind-filter" class="switch-input" /> -->
             <label class="switch" for="colorblind-filter">
-              <input type="checkbox" id="colorblind-filter">
+              <input type="checkbox" id="colorblind-filter" />
               <span class="slider"></span>
             </label>
           </div>
@@ -34,7 +34,7 @@
             <p class="switch-title">Tema Chiaro/Scuro</p>
             <!-- <input type="checkbox" id="darkmode-toggle" class="switch-input" /> -->
             <label class="switch" for="darkmode-toggle">
-              <input type="checkbox" id="darkmode-toggle">
+              <input type="checkbox" id="darkmode-toggle" />
               <span class="slider"></span>
             </label>
           </div>
@@ -99,10 +99,7 @@
       <div class="hero-img-overlay"></div>
       <div class="hero-content">
         <div>
-          <h1 class="hero-title">
-            Visita
-            Cascina Caccia: Educazione, Natura e Memoria.
-          </h1>
+          <h1 class="hero-title">Visita Cascina Caccia: Educazione, Natura e Memoria.</h1>
           <p class="hero-subtitle">Prenota un'esperienza educativa unica per scuole, scout e gruppi organizzati.</p>
         </div>
         <div class="hero-buttons">
@@ -154,8 +151,8 @@
                 <li><strong>Legame con la famiglia Belfiore:</strong> scelta del luogo, insediamento e rapporto con il territorio.</li>
                 <li><strong>Indagini e processo:</strong> tappe fondamentali nella lotta contro l'illegalità.</li>
                 <li>
-                  <strong>Progetti dal 2008 a oggi:</strong> attività educative e produzioni che valorizzano il riutilizzo sociale, con un forte valore
-                  simbolico e materiale.
+                  <strong>Progetti dal 2008 a oggi:</strong> attività educative e produzioni che valorizzano il riutilizzo sociale, con un forte
+                  valore simbolico e materiale.
                 </li>
               </ul>
             </div>
@@ -195,7 +192,7 @@
           </div>
           <div class="activity-details">
             <!-- Only visible on click -->
-             
+
             <div class="activity-description-content">
               <h2 class="activity-title">Bruno Caccia</h2>
               <p>
@@ -205,7 +202,9 @@
               <p><span>include</span></p>
               <ul class="activity-list">
                 <li><strong>Il magistrato e l'uomo:</strong>il profilo istituzionale e umano di Bruno Caccia.</li>
-                <li><strong>Documentario:</strong>girato dall'associazione Acmos per i 30 anni dall'omicidio (50 minuti, consigliato dai 14 anni).</li>
+                <li>
+                  <strong>Documentario:</strong>girato dall'associazione Acmos per i 30 anni dall'omicidio (50 minuti, consigliato dai 14 anni).
+                </li>
                 <li><strong>Nuovi sviluppi:</strong>riapertura del caso e arresti recenti che riaccendono l'attenzione sulla sua figura.</li>
               </ul>
             </div>
@@ -401,8 +400,8 @@
               <h2 class="activity-title">Sensibilità ambientale</h2>
               <p>
                 <!-- TODO add links anchor to pages of activities -->
-                Approfondimenti sui temi della sostenibilità ambientale e della disuguaglianza con riflessioni sui problemi e la ricerca delle possibili
-                soluzioni.
+                Approfondimenti sui temi della sostenibilità ambientale e della disuguaglianza con riflessioni sui problemi e la ricerca delle
+                possibili soluzioni.
               </p>
               <p><span>include</span></p>
               <ul class="activity-list">
@@ -452,8 +451,8 @@
               <h2 class="activity-title">La mafia attraverso il cinema</h2>
               <p>
                 <!-- TODO add links anchor to pages of activities -->
-                Riflessioni sui modelli mafiosi presentati dal cinema per comprendere il loro impatto sulla società e migliorare la comprensione critica
-                (e su quanto siano rappresentativi della realtà oggettiva e del sentire comune).
+                Riflessioni sui modelli mafiosi presentati dal cinema per comprendere il loro impatto sulla società e migliorare la comprensione
+                critica (e su quanto siano rappresentativi della realtà oggettiva e del sentire comune).
               </p>
               <p><span>include</span></p>
               <ul class="activity-list">
@@ -555,7 +554,8 @@
               <h2 class="activity-title">Chi non gioca vince</h2>
               <p>
                 <!-- TODO add links anchor to pages of activities -->
-                Considerazioni per sensibilizzare ai rischi e alla dipendenza del gioco d'azzardo e ai collegamenti tra mafia e gioco d'azzardo illegale.
+                Considerazioni per sensibilizzare ai rischi e alla dipendenza del gioco d'azzardo e ai collegamenti tra mafia e gioco d'azzardo
+                illegale.
               </p>
               <p><span>include</span></p>
               <ul class="activity-list">
@@ -1072,51 +1072,53 @@
         <p class="newsletter-title">con la nostra <span id="newsletter-highlight">newsletter</span>.</p>
       </div>
       <div class="newsletter-text-form-container">
-      <p id="newsletter-text-info">Storie di impegno al contrasto della criminalità organizzata, materiale esclusivo e aggiornamenti sulle novità.</p>
+        <p id="newsletter-text-info">
+          Storie di impegno al contrasto della criminalità organizzata, materiale esclusivo e aggiornamenti sulle novità.
+        </p>
 
-      <form id="newsletter-email-form">
-        <div class="newsletter-form-name-surname-container">
-          <div class="input-container">
-            <input
-              placeholder="Nome"
-              class="newsletter-form-input"
-              type="text"
-              id="newsletter-form-name"
-              name="newsletter-form-name"
-              aria-labelledby="newsletter-form-name"
-              minlength="2"
-              maxlength="50"
-              pattern="[A-Za-zÀ-ÿ\s]+"
-              required
-              title="Inserisci il tuo nome. Deve contenere almeno 2 caratteri e massimo 50."
-            />
+        <form id="newsletter-email-form">
+          <div class="newsletter-form-name-surname-container">
+            <div class="input-container">
+              <input
+                placeholder="Nome"
+                class="newsletter-form-input"
+                type="text"
+                id="newsletter-form-name"
+                name="newsletter-form-name"
+                aria-labelledby="newsletter-form-name"
+                minlength="2"
+                maxlength="50"
+                pattern="[A-Za-zÀ-ÿ\s]+"
+                required
+                title="Inserisci il tuo nome. Deve contenere almeno 2 caratteri e massimo 50."
+              />
+            </div>
+            <div class="input-container">
+              <input
+                placeholder="Cognome"
+                class="newsletter-form-input"
+                type="text"
+                id="newsletter-form-surname"
+                name="newsletter-form-surname"
+                aria-labelledby="newsletter-form-surname"
+                minlength="2"
+                maxlength="50"
+                pattern="[A-Za-zÀ-ÿ\s]+"
+                required
+                title="Inserisci il tuo cognome. Deve contenere almeno 2 caratteri e massimo 50."
+              />
+            </div>
           </div>
-          <div class="input-container">
-            <input
-              placeholder="Cognome"
-              class="newsletter-form-input"
-              type="text"
-              id="newsletter-form-surname"
-              name="newsletter-form-surname"
-              aria-labelledby="newsletter-form-surname"
-              minlength="2"
-              maxlength="50"
-              pattern="[A-Za-zÀ-ÿ\s]+"
-              required
-              title="Inserisci il tuo cognome. Deve contenere almeno 2 caratteri e massimo 50."
-            />
+          <input type="email" id="newsletter-email" name="email" required placeholder="inserisci la tua email" title="Inserisci un'email valida" />
+          <div>
+            <input type="checkbox" id="newsletter-checkbox" />
+            <label for="newsletter-checkbox">accetta il modo in cui trattiamo i tuoi dati...</label>
           </div>
-        </div>
-        <input type="email" id="newsletter-email" name="email" required placeholder="inserisci la tua email" title="Inserisci un'email valida" />
-        <div>
-          <input type="checkbox" id="newsletter-checkbox" />
-          <label for="newsletter-checkbox">accetta il modo in cui trattiamo i tuoi dati...</label>
-        </div>
-        <div class="newsletter-containerBTN">
-          <button type="submit" id="newsletter-submit">Iscriviti</button>
-        </div>
-      </form>
-    </div>
+          <div class="newsletter-containerBTN">
+            <button type="submit" id="newsletter-submit">Iscriviti</button>
+          </div>
+        </form>
+      </div>
     </section>
 
     <!-- FAQ section -->
@@ -1124,90 +1126,91 @@
       <!-- <img src="./public/assets/faqSection/faqSection-bg.png" class="faq-bg" alt="backgrounf image faq section" /> -->
 
       <h2 class="faq-title">Domande frequenti</h2>
-
-      <div class="faq-card">
-        <div class="faq-question">
-          <h3>Perché scegliere Cascina Caccia per la tua uscita didattica?</h3>
-          <span class="faq-arrow">
-            <img class="faq-arrow-icon" src="./assets/faqSection/dropdown-icon.svg" alt="arrow drop down" />
-          </span>
-        </div>
-        <div class="faq-answer">
-          <p>
-            Cascina Caccia offre un'<strong>opportunità educativa</strong> unica per le scuole. Gli studenti avranno modo di scoprire la storia e il
-            valore di un luogo simbolo di <strong>legalità</strong> , approfondendo temi fondamentali come la lotta alle mafie e l'impegno sociale.
-          </p>
-        </div>
-      </div>
-
-      <div class="faq-card">
-        <div class="faq-question">
-          <h3>Quante persone possono visitare Cascina Caccia?</h3>
-          <span class="faq-arrow"><img class="faq-arrow-icon" src="./assets/faqSection/dropdown-icon.svg" alt="arrow drop down" /></span>
-        </div>
-        <div class="faq-answer">
-          <p>
-            Cascina Caccia ospita massimo due gruppi, per un totale di circa
-            <strong>50 persone</strong> . Ogni <strong>gruppo</strong> è composto all'incirca da <strong>25 persone</strong>. Classi e gruppi piccoli
-            possono essere accorpate in un unico gruppo interclasse di 25 persone.
-          </p>
-        </div>
-      </div>
-
-      <div class="faq-card">
-        <div class="faq-question">
-          <h3>Quali attività consigliamo per una prima visita?</h3>
-          <span class="faq-arrow"><img class="faq-arrow-icon" src="./assets/faqSection/dropdown-icon.svg" alt="arrow drop down" /></span>
-        </div>
-        <div class="faq-answer">
-          <p>
-            Per chi non è mai venuto in Cascina e non ha affrontato un percorso in classe sul tema della mafie, proponiamo le attività
-            <span class="faq-brand-activities">“Storia di Cascina Carla e Bruno Caccia”</span>
-            e
-            <span class="faq-brand-activities">“Introduzione al tema mafia”</span>
-            . Puoi trovarle descritte nella sezione
-            <span class="faq-brand-activities"
-              >"
-              <!-- TODO : link -->
-              <a href="#attivita-section" class="faq-activity-link">Le nostre attività</a>
-              "
+      <div class="faq-card-wrapper">
+        <div class="faq-card">
+          <div class="faq-question">
+            <h3>Perché scegliere Cascina Caccia per la tua uscita didattica?</h3>
+            <span class="faq-arrow">
+              <img class="faq-arrow-icon" src="./assets/faqSection/dropdown-icon.svg" alt="arrow drop down" />
             </span>
-          </p>
+          </div>
+          <div class="faq-answer">
+            <p>
+              Cascina Caccia offre un'<strong>opportunità educativa</strong> unica per le scuole. Gli studenti avranno modo di scoprire la storia e il
+              valore di un luogo simbolo di <strong>legalità</strong> , approfondendo temi fondamentali come la lotta alle mafie e l'impegno sociale.
+            </p>
+          </div>
         </div>
-      </div>
 
-      <div class="faq-card">
-        <div class="faq-question">
-          <h3>Come ci si organizza per i pasti?</h3>
-          <span class="faq-arrow"><img class="faq-arrow-icon" src="./assets/faqSection/dropdown-icon.svg" alt="arrow drop down" /></span>
+        <div class="faq-card">
+          <div class="faq-question">
+            <h3>Quante persone possono visitare Cascina Caccia?</h3>
+            <span class="faq-arrow"><img class="faq-arrow-icon" src="./assets/faqSection/dropdown-icon.svg" alt="arrow drop down" /></span>
+          </div>
+          <div class="faq-answer">
+            <p>
+              Cascina Caccia ospita massimo due gruppi, per un totale di circa
+              <strong>50 persone</strong> . Ogni <strong>gruppo</strong> è composto all'incirca da <strong>25 persone</strong>. Classi e gruppi
+              piccoli possono essere accorpate in un unico gruppo interclasse di 25 persone.
+            </p>
+          </div>
         </div>
-        <div class="faq-answer">
-          <p>
-            <strong>Soggiorno di mezza giornata:</strong> Se la classe lo desidera, sarà possibile consumare il pranzo al sacco portato autonomamente
-            in loco.
-          </p>
-          <p><strong>Soggiorno di una giornata:</strong> La classe dovrà organizzarsi per consumare il pranzo al sacco portato autonomamente.</p>
-          <p>
-            <strong>Soggiorno di più giorni:</strong> Cascina Caccia fornirà i pasti richiesti dal gruppo. Il costo è di <strong>8 €</strong> a
-            persona <span class="faq-iva">+ IVA al 10% con fattura (anche elettronica)</span>.
-          </p>
-        </div>
-      </div>
 
-      <div class="faq-card">
-        <div class="faq-question">
-          <h3>Come arrivare a Cascina Caccia?</h3>
-          <span class="faq-arrow"><img class="faq-arrow-icon" src="./assets/faqSection/dropdown-icon.svg" alt="arrow drop down" /></span>
+        <div class="faq-card">
+          <div class="faq-question">
+            <h3>Quali attività consigliamo per una prima visita?</h3>
+            <span class="faq-arrow"><img class="faq-arrow-icon" src="./assets/faqSection/dropdown-icon.svg" alt="arrow drop down" /></span>
+          </div>
+          <div class="faq-answer">
+            <p>
+              Per chi non è mai venuto in Cascina e non ha affrontato un percorso in classe sul tema della mafie, proponiamo le attività
+              <span class="faq-brand-activities">“Storia di Cascina Carla e Bruno Caccia”</span>
+              e
+              <span class="faq-brand-activities">“Introduzione al tema mafia”</span>
+              . Puoi trovarle descritte nella sezione
+              <span class="faq-brand-activities"
+                >"
+                <!-- TODO : link -->
+                <a href="#attivita-section" class="faq-activity-link">Le nostre attività</a>
+                "
+              </span>
+            </p>
+          </div>
         </div>
-        <div class="faq-answer">
-          <p>
-            Cascina Caccia si trova in
-            <strong>Via Serra Alta 6, San Sebastiano da Po (TO)</strong>. I bus superiori a <strong>25 posti</strong>
-            devono fermarsi al
-            <strong>cimitero di San Sebastiano</strong> (lungo la statale per Casalborgone). Da lì, proseguite a <strong>piedi</strong> per circa
-            <strong>15 minuti</strong>, seguendo le indicazioni per Via Rigonda e poi Via Serra Alta.
-          </p>
-          <p>Per persone con <strong>difficoltà motorie</strong>, è possibile organizzare il trasporto in auto concordando in anticipo.</p>
+
+        <div class="faq-card">
+          <div class="faq-question">
+            <h3>Come ci si organizza per i pasti?</h3>
+            <span class="faq-arrow"><img class="faq-arrow-icon" src="./assets/faqSection/dropdown-icon.svg" alt="arrow drop down" /></span>
+          </div>
+          <div class="faq-answer">
+            <p>
+              <strong>Soggiorno di mezza giornata:</strong> Se la classe lo desidera, sarà possibile consumare il pranzo al sacco portato
+              autonomamente in loco.
+            </p>
+            <p><strong>Soggiorno di una giornata:</strong> La classe dovrà organizzarsi per consumare il pranzo al sacco portato autonomamente.</p>
+            <p>
+              <strong>Soggiorno di più giorni:</strong> Cascina Caccia fornirà i pasti richiesti dal gruppo. Il costo è di <strong>8 €</strong> a
+              persona <span class="faq-iva">+ IVA al 10% con fattura (anche elettronica)</span>.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-card">
+          <div class="faq-question">
+            <h3>Come arrivare a Cascina Caccia?</h3>
+            <span class="faq-arrow"><img class="faq-arrow-icon" src="./assets/faqSection/dropdown-icon.svg" alt="arrow drop down" /></span>
+          </div>
+          <div class="faq-answer">
+            <p>
+              Cascina Caccia si trova in
+              <strong>Via Serra Alta 6, San Sebastiano da Po (TO)</strong>. I bus superiori a <strong>25 posti</strong>
+              devono fermarsi al
+              <strong>cimitero di San Sebastiano</strong> (lungo la statale per Casalborgone). Da lì, proseguite a <strong>piedi</strong> per circa
+              <strong>15 minuti</strong>, seguendo le indicazioni per Via Rigonda e poi Via Serra Alta.
+            </p>
+            <p>Per persone con <strong>difficoltà motorie</strong>, è possibile organizzare il trasporto in auto concordando in anticipo.</p>
+          </div>
         </div>
       </div>
     </section>
