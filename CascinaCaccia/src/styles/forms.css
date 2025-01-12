@@ -1,20 +1,20 @@
 #info-form-container,
 #booking-form-container {
-  padding: 10px;
-  font-family: "Montserrat", Arial, sans-serif;
+  padding: 1.5rem 1.75rem;
+  font-family: var(--main-font);
   background-image: url("../../public/assets/bookingForm/cascinaIMG.png");
-  scroll-margin-top: 60px;
+  scroll-margin-top: 60px; /* boh?? */
 }
 
 .infoForm,
 .bookingForm {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  background-color: white;
-  border-radius: 10px;
-  padding: 10px;
-  margin: 10px;
+  gap: 0.5rem;
+  background-color: var(--text-light);
+  border-radius: 1rem;
+  padding: 1rem 0.75rem;
+  box-shadow: 2px 4px 12px 1px rgba(0, 0, 0, 0.50);
 }
 
 .input-container {
@@ -23,18 +23,30 @@
 
 .info-form-title,
 .booking-form-title {
-  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--text-dark);
 }
 
 .info-form-input,
 .booking-form-input {
   width: 100%;
-  border-radius: 10px;
-  height: 5vh;
-  border: 2px solid #3d3c3c;
-  font-family: "Montserrat", "Arial", "Helvetica", sans-serif;
-  font-size: medium;
-  padding-left: 15px;
+  padding: 0.625rem 1rem;
+  border-radius: 0.625rem;
+  border: 2px solid var(--text-dark);
+  font-family: var(--main-font);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+.info-form-input::placeholder,
+.booking-form-input::placeholder {
+  color: rgba(61, 60, 60, 0.60);
 }
 
 #activitiesToggle {
@@ -51,7 +63,7 @@
   display: flex;
   flex-direction: row;
   width: 100%;
-  gap: 10px;
+  gap: 0.64rem;
 }
 
 #infoActivitiesContainer,

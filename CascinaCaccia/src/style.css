@@ -35,6 +35,7 @@
 html {
   box-sizing: border-box;
 }
+
 *,
 *::before,
 *::after {
@@ -45,4 +46,5 @@ body {
   margin: 0;
   font-family: var(--main-font);
   background-color: var(--text-light);
+  padding-top: 6rem; /* Header height */
 }
