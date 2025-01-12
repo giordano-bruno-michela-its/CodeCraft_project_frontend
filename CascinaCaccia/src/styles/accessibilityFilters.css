@@ -1,0 +1,109 @@
+/*
+ * File Name: accessibilityFilters.css
+ * Author: CodeCraft
+ * Content: accessibilityFilters styles
+ */
+
+/* Daltonism Filter */
+.colorblind-mode {
+  filter: grayscale(100%);
+}
+
+/* Dark Mode */
+
+/* Navbar */
+.dark-mode .navbar {
+  background-color: #222;
+  color: #fff;
+  border-bottom: none;
+}
+.dark-mode .navbar-hamburger {
+  filter: invert(1);
+}
+
+.dark-mode #colorblind-filter {
+  background-color: #fff;
+}
+.dark-mode #colorblind-filter:checked {
+  filter: invert(1);
+}
+
+.dark-mode .navbar-links {
+  border-color: #fff;
+}
+
+.dark-mode .navbar-link {
+  color: #fff;
+}
+.dark-mode .navbar-link:hover {
+  color: #222;
+}
+
+.dark-mode .navbar-item {
+  background-color: #333;
+}
+.dark-mode .navbar-item:hover {
+  background-color: #ffdd07;
+}
+
+.dark-mode .navbar-arrow {
+  filter: invert(1); /* Invert the color of the arrow */
+}
+.dark-mode .navbar-menu {
+  background-color: #333;
+}
+.dark-mode .switch-input:checked {
+  background-color: #ffdd07;
+  border: 1px solid #fff;
+}
+
+/* Visit section */
+.dark-mode .visit-container {
+  background-color: #333;
+  color: #fff;
+}
+/* Forms section */
+.dark-mode #bookingForm {
+  background-color: #333;
+  color: #fff;
+}
+.dark-mode #infoForm {
+  background-color: #333;
+  color: #fff;
+}
+/* Newsletter section */
+.dark-mode #newsletter-container {
+  background-color: #333;
+  color: #fff;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+}
+/* Faq section */
+.dark-mode .faq-question {
+  background-color: #333;
+  color: #ffffffd2;
+  font-size: 0.7rem;
+  border: 1px solid #fff;
+  border-radius: 8px;
+}
+.dark-mode .faq-arrow-icon {
+  filter: invert(1);
+}
+/* Offers section */
+.dark-mode #offers-section {
+  background-color: #333;
+  color: #fff;
+}
+.dark-mode .offer-card {
+  background-color: #333;
+  color: #fff;
+}
+.dark-mode .offer-arrow {
+  filter: invert(1);
+}
+.dark-mode .offer-details {
+  color: #fff;
+}
+.dark-mode .news-offers {
+  background-color: #f4a100;
+}

@@ -5,10 +5,1260 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="CodeCraft" />
     <meta name="description" content="landing page" />
-    <script type="module" src="./src/main.ts"></script>
     <link rel="stylesheet" href="./src/style.css" />
+    <script type="module" src="./src/main.ts"></script>
     <title>Cascina Caccia</title>
   </head>
 
-  <body></body>
+  <body>
+    <header class="navbar">
+      <div class="navbar-container">
+        <a href="#hero-section">
+          <img src="./assets/navbar/Logo-agora.svg" alt="Logo Cascina Caccia" class="navbar-logo" />
+        </a>
+        <button class="navbar-toggle" aria-label="Apri menu">
+          <span class="navbar-hamburger"></span>
+        </button>
+      </div>
+
+      <nav class="navbar-menu">
+        <div class="navbar-switches">
+          <div class="switch">
+            <label for="colorblind-filter">Filtro Daltonismo</label>
+            <input type="checkbox" id="colorblind-filter" class="switch-input" />
+          </div>
+          <div class="switch">
+            <label for="darkmode-toggle">Tema Chiaro/Scuro</label>
+            <input type="checkbox" id="darkmode-toggle" class="switch-input" />
+          </div>
+        </div>
+
+        <ul class="navbar-links">
+          <li class="navbar-item">
+            <a href="#hero-section" class="navbar-link"
+              >Home
+              <img src="./public/assets/navbar/Arrow 1.svg" alt="Freccetta" class="navbar-arrow" />
+            </a>
+          </li>
+          <li class="navbar-item">
+            <a href="#info-form-container" class="navbar-link"
+              >Informazioni
+              <img src="./public/assets/navbar/Arrow 1.svg" alt="Freccetta" class="navbar-arrow" />
+            </a>
+          </li>
+          <li class="navbar-item">
+            <a href="#booking-form-container" class="navbar-link"
+              >Prenotazioni
+              <img src="./public/assets/navbar/Arrow 1.svg" alt="Freccetta" class="navbar-arrow" />
+            </a>
+          </li>
+          <li class="navbar-item">
+            <a href="#activities-section" class="navbar-link"
+              >Attività
+              <img src="./public/assets/navbar/Arrow 1.svg" alt="Freccetta" class="navbar-arrow" />
+            </a>
+          </li>
+          <li class="navbar-item">
+            <a href="#offers-section" class="navbar-link"
+              >Offerte
+              <img src="./public/assets/navbar/Arrow 1.svg" alt="Freccetta" class="navbar-arrow" />
+            </a>
+          </li>
+          <li class="navbar-item">
+            <a href="#newsletter-container" class="navbar-link"
+              >Newsletter
+              <img src="./public/assets/navbar/Arrow 1.svg" alt="Freccetta" class="navbar-arrow" />
+            </a>
+          </li>
+          <li class="navbar-item">
+            <a href="#faq-section" class="navbar-link"
+              >FAQ
+              <img src="./public/assets/navbar/Arrow 1.svg" alt="Freccetta" class="navbar-arrow" />
+            </a>
+          </li>
+          <li class="navbar-item">
+            <a href="#footer" class="navbar-link"
+              >Contatti
+              <img src="./public/assets/navbar/Arrow 1.svg" alt="Freccetta" class="navbar-arrow" />
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- hero Section -->
+    <section id="hero-section">
+      <img src="./assets/heroSection/main-img-cont.png" alt="Sfondo Cascina Caccia" class="hero-bg" />
+      <div class="hero-content">
+        <h1 class="hero-title">Visita Cascina Caccia: Educazione, Natura e Memoria.</h1>
+        <p class="hero-subtitle">Prenota un'esperienza educativa unica per scuole, scout e gruppi organizzati.</p>
+        <div class="hero-buttons">
+          <a class="hero-btn hero-btn-book" href="#booking-form-container">Prenota</a>
+          <!-- TODO add anchor link to info form btn -->
+          <a class="hero-btn hero-btn-info" href="#info-form-container">Chiedi informazioni</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Visit section -->
+    <div class="visit-container">
+      <h2 class="visit-section-title">Benvenuti ad Agorà</h2>
+
+      <p class="visit-section-explore-activities">la piattaforma dedicata alla prenotazione di visite presso Cascina Caccia.</p>
+      <p class="visit-section-explore-activities">
+        <span>Esplora</span> le nostre attività pensate per qualunque età, <span>richiedi informazioni</span> o
+        <span>prenota una visita!</span>
+      </p>
+    </div>
+
+    <!-- Activities section -->
+
+    <section id="activities-section">
+      <h2 class="activities-title">Le nostre attività</h2>
+      <!-- 1st activity -->
+      <div class="activity-card">
+        <div class="activity-image-container">
+          <img src="./public/assets/activitiesSection/apicoltore.png" alt="" />
+          <div class="activity-content-overlay">
+            <h2 id="activity-1" class="title-text-overlay">Storia di cascina Carla e Bruno Caccia</h2>
+            <p class="activity-text-overlay">tocca per maggiori dettagli</p>
+          </div>
+        </div>
+
+        <div class="activity-details">
+          <!-- Only visible on click -->
+
+          <h2 class="activity-title">Storia di cascina Carla e Bruno Caccia</h2>
+          <p>
+            <!-- TODO add links anchor to pages of activities -->
+            Un racconto avvincente della storia della Cascina e del suo impegno contro le mafie.
+          </p>
+          <p><span>include</span></p>
+          <ul class="activity-list">
+            <li><strong>Legame con la famiglia Belfiore:</strong> scelta del luogo, insediamento e rapporto con il territorio.</li>
+            <li><strong>Indagini e processo:</strong> tappe fondamentali nella lotta contro l'illegalità.</li>
+            <li>
+              <strong>Progetti dal 2008 a oggi:</strong> attività educative e produzioni che valorizzano il riutilizzo sociale, con un forte valore
+              simbolico e materiale.
+            </li>
+          </ul>
+
+          <!-- IDEA CAROSELLO (in forse) -->
+          <div class="carousel">
+            <div class="carousel-track">
+              <div class="carousel-slide">
+                <img src="https://via.placeholder.com/300x150?text=Slide+1" alt="Slide 1" />
+              </div>
+              <div class="carousel-slide">
+                <img src="https://via.placeholder.com/300x150?text=Slide+2" alt="Slide 2" />
+              </div>
+              <div class="carousel-slide">
+                <img src="https://via.placeholder.com/300x150?text=Slide+3" alt="Slide 3" />
+              </div>
+            </div>
+            <div class="carousel-dots"></div>
+            <button class="carousel-btn prev-btn">&lt;</button>
+            <button class="carousel-btn next-btn">&gt;</button>
+          </div>
+
+          <div class="activity-cta-btn">
+            <a href="#booking-form-container">Prenota</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2 activity -->
+      <div class="activity-card">
+        <div class="activity-image-container">
+          <img src="./public/assets/activitiesSection/apicoltore.png" alt="" />
+          <div class="activity-content-overlay">
+            <h2 id="activity-2" class="title-text-overlay">Bruno Caccia</h2>
+            <p class="activity-text-overlay">tocca per maggiori dettagli</p>
+          </div>
+        </div>
+
+        <div class="activity-details">
+          <!-- Only visible on click -->
+
+          <h2 class="activity-title">Bruno Caccia</h2>
+          <p>
+            <!-- TODO add links anchor to pages of activities -->
+            Laboratorio sulla figura di Bruno Caccia sotto il profilo istituzionale e umano.
+          </p>
+          <p><span>include</span></p>
+          <ul class="activity-list">
+            <li><strong>Il magistrato e l'uomo:</strong>il profilo istituzionale e umano di Bruno Caccia.</li>
+            <li><strong>Documentario:</strong>girato dall'associazione Acmos per i 30 anni dall'omicidio (50 minuti, consigliato dai 14 anni).</li>
+            <li><strong>Nuovi sviluppi:</strong>riapertura del caso e arresti recenti che riaccendono l'attenzione sulla sua figura.</li>
+          </ul>
+
+          <!-- IDEA CAROSELLO (in forse) -->
+          <div class="carousel">
+            <div class="carousel-track">
+              <div class="carousel-slide">
+                <img src="https://via.placeholder.com/300x150?text=Slide+1" alt="Slide 1" />
+              </div>
+              <div class="carousel-slide">
+                <img src="https://via.placeholder.com/300x150?text=Slide+2" alt="Slide 2" />
+              </div>
+              <div class="carousel-slide">
+                <img src="https://via.placeholder.com/300x150?text=Slide+3" alt="Slide 3" />
+              </div>
+            </div>
+            <div class="carousel-dots"></div>
+            <button class="carousel-btn prev-btn">&lt;</button>
+            <button class="carousel-btn next-btn">&gt;</button>
+          </div>
+
+          <div class="activity-cta-btn">
+            <a href="#booking-form-container">Prenota</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 activity -->
+      <div class="activity-card">
+        <div class="activity-image-container">
+          <img src="./public/assets/activitiesSection/apicoltore.png" alt="" />
+          <div class="activity-content-overlay">
+            <h2 id="activity-3" class="title-text-overlay">Introduzione al tema Mafia</h2>
+            <p class="activity-text-overlay">tocca per maggiori dettagli</p>
+          </div>
+        </div>
+
+        <div class="activity-details">
+          <!-- Only visible on click -->
+
+          <h2 class="activity-title">Introduzione al tema Mafia</h2>
+          <p>
+            <!-- TODO add links anchor to pages of activities -->
+            Attività introduttiva volta a definire, conoscere e far conoscere il fenomeno mafioso.
+          </p>
+          <p><span>include</span></p>
+          <ul class="activity-list">
+            <li><strong>Fenomeno mafioso:</strong>superare stereotipi e mistificazioni per una comprensione reale.</li>
+            <li><strong>Radici della cultura mafiosa:</strong>atteggiamenti di prepotenza e illegalità nella vita quotidiana.</li>
+            <li><strong>Responsabilità collettiva e personale:</strong>combattere l'illegalità partendo dalle scelte quotidiane.</li>
+            <li><strong>Antimafia sociale:</strong>principali leggi e iniziative per contrastare il fenomeno mafioso.</li>
+          </ul>
+
+          <!-- IDEA CAROSELLO (in forse) -->
+          <div class="carousel">
+            <div class="carousel-track">
+              <div class="carousel-slide">
+                <img src="https://via.placeholder.com/300x150?text=Slide+1" alt="Slide 1" />
+              </div>
+              <div class="carousel-slide">
+                <img src="https://via.placeholder.com/300x150?text=Slide+2" alt="Slide 2" />
+              </div>
+              <div class="carousel-slide">
+                <img src="https://via.placeholder.com/300x150?text=Slide+3" alt="Slide 3" />
+              </div>
+            </div>
+            <div class="carousel-dots"></div>
+            <button class="carousel-btn prev-btn">&lt;</button>
+            <button class="carousel-btn next-btn">&gt;</button>
+          </div>
+
+          <div class="activity-cta-btn">
+            <a href="#booking-form-container">Prenota</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4 activity -->
+
+      <div class="activity-card">
+        <div class="activity-image-container">
+          <img src="./public/assets/activitiesSection/apicoltore.png" alt="" />
+          <div class="activity-content-overlay">
+            <h2 id="activity-4" class="title-text-overlay">I beni confiscati</h2>
+            <p class="activity-text-overlay">tocca per maggiori dettagli</p>
+          </div>
+        </div>
+
+        <div class="activity-details">
+          <!-- Only visible on click -->
+
+          <h2 class="activity-title">I beni confiscati</h2>
+          <p>
+            <!-- TODO add links anchor to pages of activities -->
+            Attività di approfondimento sui beni confiscati, delle leggi sulla confisca dei beni e delle novità legislative.
+          </p>
+          <p><span>include</span></p>
+          <ul class="activity-list">
+            <li><strong>Leggi sulla confisca:</strong>genesi delle normative su sequestro e riutilizzo dei beni mafiosi.</li>
+            <li><strong>Riutilizzo sociale:</strong>come i beni confiscati diventano risorse per la comunità.</li>
+            <li><strong>Beni confiscati in Italia:</strong>panoramica e valore simbolico del recupero.</li>
+          </ul>
+
+          <!-- IDEA CAROSELLO (in forse) -->
+          <div class="carousel">
+            <div class="carousel-track">
+              <div class="carousel-slide">
+                <img src="https://via.placeholder.com/300x150?text=Slide+1" alt="Slide 1" />
+              </div>
+              <div class="carousel-slide">
+                <img src="https://via.placeholder.com/300x150?text=Slide+2" alt="Slide 2" />
+              </div>
+              <div class="carousel-slide">
+                <img src="https://via.placeholder.com/300x150?text=Slide+3" alt="Slide 3" />
+              </div>
+            </div>
+            <div class="carousel-dots"></div>
+            <button class="carousel-btn prev-btn">&lt;</button>
+            <button class="carousel-btn next-btn">&gt;</button>
+          </div>
+
+          <div class="activity-cta-btn">
+            <a href="#booking-form-container">Prenota</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5 activity -->
+
+      <div class="activity-card">
+        <div class="activity-image-container">
+          <img src="./public/assets/activitiesSection/apicoltore.png" alt="" />
+          <div class="activity-content-overlay">
+            <h2 id="activity-5" class="title-text-overlay">Le mafie in Piemonte</h2>
+            <p class="activity-text-overlay">tocca per maggiori dettagli</p>
+          </div>
+        </div>
+
+        <div class="activity-details">
+          <!-- Only visible on click -->
+
+          <h2 class="activity-title">Le mafie in Piemonte</h2>
+          <p>
+            <!-- TODO add links anchor to pages of activities -->
+            Attività di approfondimento sulla presenza delle mafie sul territorio piemontese.
+          </p>
+          <p><span>include</span></p>
+          <ul class="activity-list">
+            <li><strong>Insediamento mafioso:</strong>perché le mafie hanno scelto il Piemonte.</li>
+            <li><strong>Beni confiscati nella regione:</strong>stato attuale e progetti di riutilizzo sociale.</li>
+            <li><strong>Operazioni antimafia:</strong>azioni più rilevanti svolte sul territorio.</li>
+          </ul>
+
+          <!-- IDEA CAROSELLO (in forse) -->
+          <div class="carousel">
+            <div class="carousel-track">
+              <div class="carousel-slide">
+                <img src="https://via.placeholder.com/300x150?text=Slide+1" alt="Slide 1" />
+              </div>
+              <div class="carousel-slide">
+                <img src="https://via.placeholder.com/300x150?text=Slide+2" alt="Slide 2" />
+              </div>
+              <div class="carousel-slide">
+                <img src="https://via.placeholder.com/300x150?text=Slide+3" alt="Slide 3" />
+              </div>
+            </div>
+            <div class="carousel-dots"></div>
+            <button class="carousel-btn prev-btn">&lt;</button>
+            <button class="carousel-btn next-btn">&gt;</button>
+          </div>
+
+          <div class="activity-cta-btn">
+            <a href="#booking-form-container">Prenota</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6 activity -->
+
+      <div class="activity-card">
+        <div class="activity-image-container">
+          <img src="./public/assets/activitiesSection/apicoltore.png" alt="" />
+          <div class="activity-content-overlay">
+            <h2 id="activity-6" class="title-text-overlay">Sensibilità ambientale</h2>
+            <p class="activity-text-overlay">tocca per maggiori dettagli</p>
+          </div>
+        </div>
+
+        <div class="activity-details">
+          <!-- Only visible on click -->
+
+          <h2 class="activity-title">Sensibilità ambientale</h2>
+          <p>
+            <!-- TODO add links anchor to pages of activities -->
+            Approfondimenti sui temi della sostenibilità ambientale e della disuguaglianza con riflessioni sui problemi e la ricerca delle possibili
+            soluzioni.
+          </p>
+          <p><span>include</span></p>
+          <ul class="activity-list">
+            <li><strong>Sostenibilità ambientale e sociale:</strong>concetti fondamentali per uno sviluppo sostenibile.</li>
+            <li><strong>Relazioni globali:</strong>come gli stili di vita e le politiche economiche influenzano l'ambiente.</li>
+            <li><strong>Modelli alternativi:</strong>immaginare un futuro equo, basato su risorse libere dallo sfruttamento.</li>
+          </ul>
+
+          <!-- IDEA CAROSELLO (in forse) -->
+          <div class="carousel">
+            <div class="carousel-track">
+              <div class="carousel-slide">
+                <img src="https://via.placeholder.com/300x150?text=Slide+1" alt="Slide 1" />
+              </div>
+              <div class="carousel-slide">
+                <img src="https://via.placeholder.com/300x150?text=Slide+2" alt="Slide 2" />
+              </div>
+              <div class="carousel-slide">
+                <img src="https://via.placeholder.com/300x150?text=Slide+3" alt="Slide 3" />
+              </div>
+            </div>
+            <div class="carousel-dots"></div>
+            <button class="carousel-btn prev-btn">&lt;</button>
+            <button class="carousel-btn next-btn">&gt;</button>
+          </div>
+
+          <div class="activity-cta-btn">
+            <a href="#booking-form-container">Prenota</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 7 activity -->
+
+      <div class="activity-card">
+        <div class="activity-image-container">
+          <img src="./public/assets/activitiesSection/apicoltore.png" alt="" />
+          <div class="activity-content-overlay">
+            <h2 id="activity-7" class="title-text-overlay">La mafia attraverso il cinema</h2>
+            <p class="activity-text-overlay">tocca per maggiori dettagli</p>
+          </div>
+        </div>
+
+        <div class="activity-details">
+          <!-- Only visible on click -->
+
+          <h2 class="activity-title">La mafia attraverso il cinema</h2>
+          <p>
+            <!-- TODO add links anchor to pages of activities -->
+            Riflessioni sui modelli mafiosi presentati dal cinema per comprendere il loro impatto sulla società e migliorare la comprensione critica
+            (e su quanto siano rappresentativi della realtà oggettiva e del sentire comune).
+          </p>
+          <p><span>include</span></p>
+          <ul class="activity-list">
+            <li><strong>Rappresentazioni cinematografiche:</strong>il cinema come strumento per raccontare la mafia.</li>
+            <li><strong>Tipologie di mafia-movie:</strong>gangster film americani, cinema d'inchiesta italiano, mafia giapponese.</li>
+            <li><strong>Impatto sociale:</strong>come i film influenzano la percezione e l'opinione pubblica.</li>
+            <li><strong>Senso critico:</strong>analizzare il cinema per comprendere i messaggi nascosti.</li>
+          </ul>
+
+          <!-- IDEA CAROSELLO (in forse) -->
+          <div class="carousel">
+            <div class="carousel-track">
+              <div class="carousel-slide">
+                <img src="https://via.placeholder.com/300x150?text=Slide+1" alt="Slide 1" />
+              </div>
+              <div class="carousel-slide">
+                <img src="https://via.placeholder.com/300x150?text=Slide+2" alt="Slide 2" />
+              </div>
+              <div class="carousel-slide">
+                <img src="https://via.placeholder.com/300x150?text=Slide+3" alt="Slide 3" />
+              </div>
+            </div>
+            <div class="carousel-dots"></div>
+            <button class="carousel-btn prev-btn">&lt;</button>
+            <button class="carousel-btn next-btn">&gt;</button>
+          </div>
+
+          <div class="activity-cta-btn">
+            <a href="#booking-form-container">Prenota</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 8 activity -->
+
+      <div class="activity-card">
+        <div class="activity-image-container">
+          <img src="./public/assets/activitiesSection/apicoltore.png" alt="" />
+          <div class="activity-content-overlay">
+            <h2 id="activity-8" class="title-text-overlay">Il gioco non è un'azzardo</h2>
+            <p class="activity-text-overlay">tocca per maggiori dettagli</p>
+          </div>
+        </div>
+
+        <div class="activity-details">
+          <!-- Only visible on click -->
+
+          <h2 class="activity-title">Il gioco non è un'azzardo</h2>
+          <p>
+            <!-- TODO add links anchor to pages of activities -->
+            L'attività mira a esplorare le varie tipologie di gioco e le loro caratteristiche e a riflettere sulla correttezza dei giochi a cui si
+            prende parte.
+          </p>
+          <p><span>include</span></p>
+          <ul class="activity-list">
+            <li><strong>Giochi d'azzardo vs giochi di abilità:</strong>capire le differenze per promuovere un divertimento sano.</li>
+            <li><strong>Caratteristiche di un gioco positivo:</strong>inclusività e divertimento per tutti.</li>
+            <li><strong>Messaggio educativo:</strong>sensibilizzare i giovani a scegliere giochi che favoriscano la crescita.</li>
+          </ul>
+
+          <!-- IDEA CAROSELLO (in forse) -->
+          <div class="carousel">
+            <div class="carousel-track">
+              <div class="carousel-slide">
+                <img src="https://via.placeholder.com/300x150?text=Slide+1" alt="Slide 1" />
+              </div>
+              <div class="carousel-slide">
+                <img src="https://via.placeholder.com/300x150?text=Slide+2" alt="Slide 2" />
+              </div>
+              <div class="carousel-slide">
+                <img src="https://via.placeholder.com/300x150?text=Slide+3" alt="Slide 3" />
+              </div>
+            </div>
+            <div class="carousel-dots"></div>
+            <button class="carousel-btn prev-btn">&lt;</button>
+            <button class="carousel-btn next-btn">&gt;</button>
+          </div>
+
+          <div class="activity-cta-btn">
+            <a href="#booking-form-container">Prenota</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 9 activity -->
+
+      <div class="activity-card">
+        <div class="activity-image-container">
+          <img src="./public/assets/activitiesSection/apicoltore.png" alt="" />
+          <div class="activity-content-overlay">
+            <h2 id="activity-9" class="title-text-overlay">Chi non gioca vince</h2>
+            <p class="activity-text-overlay">tocca per maggiori dettagli</p>
+          </div>
+        </div>
+
+        <div class="activity-details">
+          <!-- Only visible on click -->
+
+          <h2 class="activity-title">Chi non gioca vince</h2>
+          <p>
+            <!-- TODO add links anchor to pages of activities -->
+            Considerazioni per sensibilizzare ai rischi e alla dipendenza del gioco d'azzardo e ai collegamenti tra mafia e gioco d'azzardo illegale.
+          </p>
+          <p><span>include</span></p>
+          <ul class="activity-list">
+            <li><strong>Il rischio del gioco d'azzardo:</strong>abuso, dipendenza e impatti negativi.</li>
+            <li><strong>Legame con la mafia:</strong>gioco illegale come fonte di finanziamento per la criminalità..</li>
+            <li><strong>Prevenzione e consapevolezza:</strong>promuovere un approccio sano al gioco, libero da dipendenze.</li>
+          </ul>
+
+          <!-- IDEA CAROSELLO (in forse) -->
+          <div class="carousel">
+            <div class="carousel-track">
+              <div class="carousel-slide">
+                <img src="https://via.placeholder.com/300x150?text=Slide+1" alt="Slide 1" />
+              </div>
+              <div class="carousel-slide">
+                <img src="https://via.placeholder.com/300x150?text=Slide+2" alt="Slide 2" />
+              </div>
+              <div class="carousel-slide">
+                <img src="https://via.placeholder.com/300x150?text=Slide+3" alt="Slide 3" />
+              </div>
+            </div>
+            <div class="carousel-dots"></div>
+            <button class="carousel-btn prev-btn">&lt;</button>
+            <button class="carousel-btn next-btn">&gt;</button>
+          </div>
+
+          <div class="activity-cta-btn">
+            <a href="#booking-form-container">Prenota</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Info Form -->
+    <div class="container" id="info-form-container">
+      <form class="infoForm" id="infoForm" method="post">
+        <h2 class="info-form-title">Richiedi Informazioni</h2>
+        <div class="info-form-name-surname-container">
+          <div class="input-container">
+            <input
+              placeholder="Nome"
+              class="info-form-input"
+              type="text"
+              id="info-form-name"
+              name="info-form-name"
+              aria-labelledby="info-form-name"
+              minlength="2"
+              maxlength="50"
+              pattern="[A-Za-zÀ-ÿ\s]+"
+              required
+              title="Inserisci il tuo nome. Deve contenere almeno 2 caratteri e massimo 50."
+            />
+          </div>
+          <div class="input-container">
+            <input
+              placeholder="Cognome"
+              class="info-form-input"
+              type="text"
+              id="info-form-surname"
+              name="info-form-surname"
+              aria-labelledby="info-form-surname"
+              minlength="2"
+              maxlength="50"
+              pattern="[A-Za-zÀ-ÿ\s]+"
+              required
+              title="Inserisci il tuo cognome. Deve contenere almeno 2 caratteri e massimo 50."
+            />
+          </div>
+        </div>
+
+        <div class="input-container">
+          <input
+            placeholder="Inserisci la tua e-mail"
+            type="email"
+            class="info-form-input"
+            id="info-form-email"
+            name="info-form-email"
+            aria-labelledby="info-form-email"
+            maxlength="50"
+            required
+            title="Inserisci un'email valida"
+          />
+        </div>
+
+        <div class="input-container">
+          <input
+            placeholder="telefono"
+            type="tel"
+            class="info-form-input"
+            id="info-form-phoneNumber"
+            name="info-form-phoneNumber"
+            aria-labelledby="info-form-phoneNumber"
+            pattern="^(\+(\d{1,4})\s?(\d{4,15}))?(\d{10})$"
+            title="Inserisci un numero di telefono valido"
+            required
+          />
+        </div>
+
+        <div class="input-container">
+          <input
+            placeholder="Ente/Associazione di cui fai parte"
+            type="text"
+            class="info-form-input"
+            id="info-form-association"
+            name="info-form-association"
+            aria-labelledby="info-form-association"
+            minlength="2"
+            maxlength="100"
+            pattern="[A-Za-zÀ-ÿ0-9\s\-]+"
+            required
+            title="Inserire nome dell'ente"
+          />
+        </div>
+
+        <div class="input-container">
+          <button
+            id="info-form-activitiesToggle"
+            class="info-form-input"
+            type="button"
+            aria-expanded="false"
+            aria-controls="activitiesContainer"
+            title="Clicca per selezionare una o più attività disponibili."
+          >
+            Mostra Attività
+          </button>
+          <div id="infoActivitiesContainer" role="group" aria-labelledby="info-form-activitiesToggle">
+            <label><input type="checkbox" name="activities" value="1" /> Storia della cascina Carla e Bruno Caccia</label>
+            <label><input type="checkbox" name="activities" value="2" /> Bruno Caccia</label>
+            <label><input type="checkbox" name="activities" value="3" /> Regolegalità</label>
+            <label><input type="checkbox" name="activities" value="4" /> I beni confiscati</label>
+            <label><input type="checkbox" name="activities" value="5" /> Le mafie e il cibo</label>
+            <label><input type="checkbox" name="activities" value="6" /> Miele e Api</label>
+            <label><input type="checkbox" name="activities" value="7" /> Ricicliamo attività artistiche e manuali</label>
+            <label><input type="checkbox" name="activities" value="8" /> La mafia attraverso il cinema: percezioni culturali</label>
+            <label><input type="checkbox" name="activities" value="9" /> Il gioco non è un azzardo (6-14 anni)</label>
+            <label><input type="checkbox" name="activities" value="10" /> Chi non gioca vince</label>
+          </div>
+        </div>
+
+        <div class="input-container">
+          <textarea
+            placeholder="Descrivi in questo campo esigenze o richieste particolari"
+            class="info-form-input additional-info"
+            id="info-form-additionalInfo"
+            name="info-form-additionalInfo"
+            title="Inserisci eventuali richieste o esigenze particolari. Deve contenere almeno 10 caratteri e massimo 500."
+            minlength="10"
+            maxlength="500"
+          ></textarea>
+        </div>
+
+        <div class="info-form-container-btn">
+          <button type="submit" id="info-form-submit-btn" aria-label="Invia la tua richiesta">Invia</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Offers Section -->
+    <section id="offers-section">
+      <h2>Le nostre offerte</h2>
+      <!-- 1st offer -->
+      <div class="offer-card">
+        <div class="offer-header">
+          <div class="offer-duration">4h</div>
+          <h3 class="offer-title">Soggiorno Formativo di Mezza Giornata</h3>
+        </div>
+
+        <div class="offer-price">
+          <p class="price-value"></p>
+          120 €
+          <span class="offers-group"
+            >/ gruppo* <br />
+            Con ricevuta per il contributo</span
+          >
+        </div>
+
+        <hr class="offer-divider" />
+
+        <div class="offer-footer">
+          <button class="offer-toggle">
+            <img src="./public/assets/offersSection/offer-arrow.svg" alt="Freccia giù" class="offer-arrow" />
+          </button>
+        </div>
+
+        <div class="offer-details">
+          <!-- Only visible on click -->
+          <p>
+            <!-- TODO add links anchor to pages of activities -->
+            Partecipa a una <strong>mezza giornata educativa</strong> dalle 9:00 alle 13:00 per scoprire la storia di
+            <strong>Cascina Carla e Bruno Caccia</strong> e approfondire il tema delle mafie e della legalità. Potrai scegliere tra due attività
+            principali: "<a href="#activity-1">Storia di Cascina Carla e Bruno Caccia</a>", per conoscere il luogo simbolo dell'impegno civile, e
+            <a href="#activity-3">“Introduzione al tema Mafia”</a>, un primo approccio per comprendere l'impatto delle mafie. La cascina organizza
+            gruppi visita di circa <strong>25 persone**</strong> e accoglie fino a 50 partecipanti. È consentito portare il
+            <strong>pranzo al sacco</strong> per consumarlo negli spazi dedicati.
+          </p>
+        </div>
+      </div>
+
+      <!-- 2nd offer -->
+      <div class="offer-card">
+        <div class="offer-header">
+          <div class="offer-duration">7h</div>
+          <h3 class="offer-title">Soggiorno Formativo di Una Giornata</h3>
+        </div>
+
+        <div class="offer-price">
+          <p class="price-value"></p>
+          170 €
+          <span class="offers-group"
+            >/ gruppo* <br />
+            Con ricevuta per il contributo</span
+          >
+        </div>
+
+        <hr class="offer-divider" />
+
+        <div class="offer-footer">
+          <button class="offer-toggle">
+            <img src="./public/assets/offersSection/offer-arrow.svg" alt="Freccia giù" class="offer-arrow" />
+          </button>
+        </div>
+
+        <div class="offer-details">
+          <!-- Only visible on click -->
+          <p>
+            <!-- TODO add links anchor to pages of activities -->
+            Partecipa a una <strong>giornata educativa</strong> presso <strong>Cascina Carla e Bruno Caccia</strong>, simbolo di legalità e
+            cittadinanza attiva. La gita si svolge dalle <strong>9:00 alle 16:00</strong>, con una pausa per il consumo per il pranzo al sacco portato
+            da casa. Al mattino, scopri la “ <a href="#activity-1">Storia di Cascina Carla e Bruno Caccia</a>” o approfondisci il tema delle mafie con
+            l'attività “ <a href="#activity-3">Introduzione al tema Mafia</a>”. Nel pomeriggio, partecipa a un laboratorio educativo tra quelli a
+            scelta. La struttura accoglie fino a <strong>50 partecipanti</strong>, suddivisi in gruppi di circa <strong>25 persone**</strong> .
+          </p>
+        </div>
+      </div>
+
+      <!-- 3rd offer -->
+      <div class="offer-card">
+        <div class="offer-header">
+          <div class="offer-duration">>24h</div>
+          <h3 class="offer-title">Soggiorno Formativo di più Giorni</h3>
+        </div>
+
+        <div class="offer-price">
+          <p class="price-value"></p>
+          35 €
+          <span class="offers-group"
+            >/ persona al giorno* <br />
+            Con ricevuta per il contributo</span
+          >
+        </div>
+
+        <hr class="offer-divider" />
+
+        <div class="offer-footer">
+          <button class="offer-toggle">
+            <img src="./public/assets/offersSection/offer-arrow.svg" alt="Freccia giù" class="offer-arrow" />
+          </button>
+        </div>
+
+        <div class="offer-details">
+          <!-- Only visible on click -->
+          <p>
+            Trasforma una gita di più giorni in un'esperienza educativa unica presso <strong>Cascina Carla e Bruno Caccia</strong> . Questa modalità è
+            perfetta per <strong>scuole e gruppi</strong> che vogliono affrontare i temi delle mafie e della cittadinanza attiva in un contesto
+            immersivo. Il programma, personalizzato con gli insegnanti, include attività come la “
+            <a href="#activity-1">Storia di Cascina Carla e Bruno Caccia</a>”, visioni di <strong>film a tema</strong> ,
+            <strong>giochi educativi</strong> e <strong>attività manuali</strong> stagionali. I partecipanti sono coinvolti nelle attività quotidiane
+            della Cascina, come la preparazione dei pasti e la manutenzione ordinaria. La struttura offre <strong>24 posti letto</strong> in camerate
+            con letti a castello e <strong>bagni in comune</strong> . I partecipanti devono portare
+            <strong>sacco a pelo o lenzuola, federa e asciugamani</strong> . Un <strong>servizio navetta</strong> è disponibile per il trasporto dei
+            bagagli dal cimitero di San Sebastiano.
+          </p>
+        </div>
+      </div>
+
+      <!-- 4th offer -->
+      <div class="offer-card">
+        <div class="offer-header">
+          <div class="offer-duration">Novità</div>
+          <h3 class="offer-title">Proposta “Territorio e Legalità”</h3>
+        </div>
+
+        <div class="news-offers">
+          <p class="news-offer">In collaborazione con <strong>Azienda Agricola Peracca</strong>.</p>
+        </div>
+
+        <hr class="offer-divider" />
+
+        <div class="offer-footer">
+          <button class="offer-toggle">
+            <img src="./public/assets/offersSection/offer-arrow.svg" alt="Freccia giù" class="offer-arrow" />
+          </button>
+        </div>
+
+        <div class="offer-details">
+          <!-- Only visible on click -->
+          <p>
+            <!-- TODO add links anchor to pages of activities and documents -->
+            L'<strong>Azienda Agricola Peracca</strong> e l'<strong>Associazione Acmos</strong> propongono il soggiorno formativo
+            <strong>"Territorio e Legalità"</strong> . La giornata, dalle <strong>9:00 alle 16:00</strong> , prevede attività al
+            <strong>mattino</strong> presso l'Azienda Agricola Peracca a Casalborgone e al <strong>pomeriggio</strong> presso Cascina Caccia.
+          </p>
+          <p class="news-offer-details">
+            Per maggiori informazioni, visita la sezione delle proposte educative sul sito di
+            <a href="https://cascinacaccia.net/">Cascina Caccia</a> e consulta il documento Percorso di cittadinanza “Territorio e Legalità”.
+          </p>
+        </div>
+      </div>
+      <p class="offer-specific">* + IVA al 22% con fattura (anche elettronica).</p>
+      <p class="offer-specific">** In caso di gruppi meno numerosi, è possibile unirli in un gruppo interclasse di circa 25 persone.</p>
+
+      <div class="payment-methods-container">
+        <h3 class="payment-methods-title">Metodi di pagamento</h3>
+        <div class="img-payment-methods">
+          <img src="./public/assets/offersSection/bonifico.svg" class="img-bonifico" alt="pagamento tramite bonifico" />
+          <img src="./public/assets/offersSection/contanti.svg" class="img-contanti" alt="pagamento in contanti" />
+        </div>
+        <p class="payment-methods-info"><strong>Ragione Sociale:</strong> ACMOS A.P.S. (C.F. 97590480014)</p>
+        <p class="payment-methods-info"><strong>Sede Legale:</strong> Via Leoncavallo, 27 - 10154 Torino</p>
+        <p class="payment-methods-info"><strong>IBAN:</strong> A0359901899050188540239</p>
+        <p class="payment-methods-info"><strong>Banca Collocatrice: </strong>BANCA POPOLARE ETICA</p>
+        <p class="payment-methods-info"><strong>Causale:</strong> "Attività presso Cascina Caccia del gruppo "Esempio" in data gg/mm/aaaa"</p>
+        <p class="payment-methods-info"></p>
+      </div>
+    </section>
+
+    <!-- Booking form -->
+    <div id="booking-form-container">
+      <form class="bookingForm" id="bookingForm" method="post">
+        <h2 class="booking-form-title">Prenota una visita</h2>
+        <div class="input-container">
+          <input type="date" id="startDate" class="booking-form-input" name="startDate" aria-labelledby="startDate" required />
+        </div>
+
+        <div class="input-container">
+          <input type="date" id="endDate" class="booking-form-input" name="endDate" aria-labelledby="endDate" required />
+        </div>
+
+        <div class="booking-form-name-surname-container">
+          <div class="input-container" id="booking-form-name-field">
+            <input
+              placeholder="Nome"
+              type="text"
+              id="name"
+              class="booking-form-input"
+              name="name"
+              aria-labelledby="name"
+              minlength="2"
+              maxlength="50"
+              pattern="[A-Za-zÀ-ÿ\s]+"
+              required
+              title="Il nome deve contenere solo lettere"
+            />
+          </div>
+          <div class="input-container" id="booking-form-surname-field">
+            <input
+              placeholder="Cognome"
+              type="text"
+              id="surname"
+              class="booking-form-input"
+              name="surname"
+              aria-labelledby="surname"
+              minlength="2"
+              maxlength="50"
+              pattern="[A-Za-zÀ-ÿ\s]+"
+              required
+              title="Il cognome deve contenere solo lettere"
+            />
+          </div>
+        </div>
+
+        <div class="input-container">
+          <input
+            placeholder="Indirizzo email"
+            type="email"
+            id="boking-form-email"
+            class="booking-form-input"
+            name="email"
+            aria-labelledby="email"
+            maxlength="50"
+            required
+            title="Inserisci un'email valida"
+          />
+        </div>
+
+        <div class="input-container">
+          <input
+            placeholder="ente"
+            type="text"
+            id="association"
+            class="booking-form-input"
+            name="association"
+            aria-labelledby="association"
+            minlength="2"
+            maxlength="100"
+            pattern="[A-Za-zÀ-ÿ0-9\s\-]+"
+            required
+            title="Inserire nome dell'ente"
+          />
+        </div>
+
+        <div class="booking-form-tel-duration-container">
+          <div class="input-container">
+            <input
+              placeholder="tel"
+              type="tel"
+              id="phoneNumber"
+              class="booking-form-input"
+              name="phoneNumber"
+              aria-labelledby="phoneNumber"
+              pattern="^(\+(\d{1,4})\s?(\d{4,15}))?(\d{10})$"
+              title="Inserisci un numero di telefono valido"
+              required
+            />
+          </div>
+
+          <div class="input-container">
+            <select name="duration" id="duration" class="booking-form-input" aria-labelledby="duration" required>
+              <option value="1" disabled selected>Durata visita</option>
+              <option value="2">1/2 Giornata</option>
+              <option value="3">1 Giornata</option>
+              <option value="4">2 Giornate</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="input-container">
+          <input
+            type="number"
+            placeholder="numero minori"
+            min="1"
+            max="35"
+            id="nChildren"
+            class="booking-form-input"
+            name="nChildren"
+            aria-labelledby="nChildren"
+            required
+          />
+        </div>
+
+        <div class="input-container">
+          <input
+            type="number"
+            placeholder="numero adulti"
+            min="1"
+            max="10"
+            id="nAdults"
+            class="booking-form-input"
+            name="nAdults"
+            aria-labelledby="nAdults"
+            required
+          />
+        </div>
+
+        <div class="input-container">
+          <textarea
+            placeholder="Descrivi in questo campo esigenze o richieste particolari"
+            id="additionalInfo"
+            class="booking-form-input additional-info"
+            name="additionalInfo"
+            aria-labelledby="additionalInfo"
+            maxlength="500"
+            title="Descrivi in questo campo esigenze o richieste particolari"
+          ></textarea>
+        </div>
+
+        <div class="input-container">
+          <button id="activitiesToggle" class="booking-form-input" type="button" aria-expanded="false" aria-controls="activitiesContainer">
+            Mostra Attività
+          </button>
+          <div id="activitiesContainer" role="group" aria-labelledby="activitiesToggle">
+            <label><input type="checkbox" name="activities" value="1" /> Storia della cascina Carla e Bruno Caccia</label>
+            <label><input type="checkbox" name="activities" value="2" /> Bruno Caccia</label>
+            <label><input type="checkbox" name="activities" value="3" /> Regolegalità</label>
+            <label><input type="checkbox" name="activities" value="4" /> I beni confiscati</label>
+            <label><input type="checkbox" name="activities" value="5" /> Le mafie e il cibo</label>
+            <label><input type="checkbox" name="activities" value="6" /> Miele e Api</label>
+            <label><input type="checkbox" name="activities" value="7" /> Ricicliamo attività artistiche e manuali</label>
+            <label><input type="checkbox" name="activities" value="8" /> La mafia attraverso il cinema: percezioni culturali</label>
+            <label><input type="checkbox" name="activities" value="9" /> Il gioco non è un azzardo (6-14 anni)</label>
+            <label><input type="checkbox" name="activities" value="10" /> Chi non gioca vince</label>
+          </div>
+        </div>
+
+        <p class="booking-form-activity-text">
+          *le attività selezionate rappresentano una manifestazione d'interesse verso le stesse, e verranno confermate solo nel contatto diretto con
+          Cascina Caccia.
+        </p>
+
+        <div class="consent-checkbox-container">
+          <div>
+            <input type="checkbox" id="option1" name="options" value="option1" />
+            <label for="option1">Accetto il modo in cui trattate i miei dati</label>
+          </div>
+          <div>
+            <input type="checkbox" id="option2" name="options" value="option2" />
+            <label for="option2">Acconsento ad iscrivermi alla newsletter</label>
+          </div>
+        </div>
+        <div class="booking-form-container-btn">
+          <button type="submit" id="booking-form-submit-btn" aria-label="Invia la tua richiesta">Invia</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- newsletter section -->
+    <section id="newsletter-container">
+      <p class="newsletter-title">Non perderti nulla,</p>
+      <p class="newsletter-title">con la nostra <span id="newsletter-highlight">newsletter</span>.</p>
+      <p id="newsletter-text-info">Storie di impegno al contrasto della criminalità organizzata, materiale esclusivo e aggiornamenti sulle novità.</p>
+
+      <form id="newsletter-email-form">
+        <div class="newsletter-form-name-surname-container">
+          <div class="input-container">
+            <input
+              placeholder="Nome"
+              class="newsletter-form-input"
+              type="text"
+              id="newsletter-form-name"
+              name="newsletter-form-name"
+              aria-labelledby="newsletter-form-name"
+              minlength="2"
+              maxlength="50"
+              pattern="[A-Za-zÀ-ÿ\s]+"
+              required
+              title="Inserisci il tuo nome. Deve contenere almeno 2 caratteri e massimo 50."
+            />
+          </div>
+          <div class="input-container">
+            <input
+              placeholder="Cognome"
+              class="newsletter-form-input"
+              type="text"
+              id="newsletter-form-surname"
+              name="newsletter-form-surname"
+              aria-labelledby="newsletter-form-surname"
+              minlength="2"
+              maxlength="50"
+              pattern="[A-Za-zÀ-ÿ\s]+"
+              required
+              title="Inserisci il tuo cognome. Deve contenere almeno 2 caratteri e massimo 50."
+            />
+          </div>
+        </div>
+        <input type="email" id="newsletter-email" name="email" required placeholder="inserisci la tua email" title="Inserisci un'email valida" />
+        <div>
+          <input type="checkbox" id="newsletter-checkbox" />
+          <label for="newsletter-checkbox">accetta il modo in cui trattiamo i tuoi dati...</label>
+        </div>
+        <div class="newsletter-containerBTN">
+          <button type="submit" id="newsletter-submit">Iscriviti</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- FAQ section -->
+    <section id="faq-section">
+      <!-- <img src="./public/assets/faqSection/faqSection-bg.png" class="faq-bg" alt="backgrounf image faq section" /> -->
+
+      <h2 class="faq-title">Domande frequenti</h2>
+
+      <div class="faq-card">
+        <div class="faq-question">
+          <h3>Perché scegliere Cascina Caccia per la tua uscita didattica?</h3>
+          <span class="faq-arrow">
+            <img class="faq-arrow-icon" src="./assets/faqSection/dropdown-icon.svg" alt="arrow drop down" />
+          </span>
+        </div>
+        <div class="faq-answer">
+          <p>
+            Cascina Caccia offre un'<strong>opportunità educativa</strong> unica per le scuole. Gli studenti avranno modo di scoprire la storia e il
+            valore di un luogo simbolo di <strong>legalità</strong> , approfondendo temi fondamentali come la lotta alle mafie e l'impegno sociale.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-card">
+        <div class="faq-question">
+          <h3>Quante persone possono visitare Cascina Caccia?</h3>
+          <span class="faq-arrow"><img class="faq-arrow-icon" src="./assets/faqSection/dropdown-icon.svg" alt="arrow drop down" /></span>
+        </div>
+        <div class="faq-answer">
+          <p>
+            Cascina Caccia ospita massimo due gruppi, per un totale di circa
+            <strong>50 persone</strong> . Ogni <strong>gruppo</strong> è composto all'incirca da <strong>25 persone</strong>. Classi e gruppi piccoli
+            possono essere accorpate in un unico gruppo interclasse di 25 persone.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-card">
+        <div class="faq-question">
+          <h3>Quali attività consigliamo per una prima visita?</h3>
+          <span class="faq-arrow"><img class="faq-arrow-icon" src="./assets/faqSection/dropdown-icon.svg" alt="arrow drop down" /></span>
+        </div>
+        <div class="faq-answer">
+          <p>
+            Per chi non è mai venuto in Cascina e non ha affrontato un percorso in classe sul tema della mafie, proponiamo le attività
+            <span class="faq-brand-activities">“Storia di Cascina Carla e Bruno Caccia”</span>
+            e
+            <span class="faq-brand-activities">“Introduzione al tema mafia”</span>
+            . Puoi trovarle descritte nella sezione
+            <span class="faq-brand-activities"
+              >"
+              <!-- TODO : link -->
+              <a href="#attivita-section" class="faq-activity-link">Le nostre attività</a>
+              "
+            </span>
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-card">
+        <div class="faq-question">
+          <h3>Come ci si organizza per i pasti?</h3>
+          <span class="faq-arrow"><img class="faq-arrow-icon" src="./assets/faqSection/dropdown-icon.svg" alt="arrow drop down" /></span>
+        </div>
+        <div class="faq-answer">
+          <p>
+            <strong>Soggiorno di mezza giornata:</strong> Se la classe lo desidera, sarà possibile consumare il pranzo al sacco portato autonomamente
+            in loco.
+          </p>
+          <p><strong>Soggiorno di una giornata:</strong> La classe dovrà organizzarsi per consumare il pranzo al sacco portato autonomamente.</p>
+          <p>
+            <strong>Soggiorno di più giorni:</strong> Cascina Caccia fornirà i pasti richiesti dal gruppo. Il costo è di <strong>8 €</strong> a
+            persona <span class="faq-iva">+ IVA al 10% con fattura (anche elettronica)</span>.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-card">
+        <div class="faq-question">
+          <h3>Come arrivare a Cascina Caccia?</h3>
+          <span class="faq-arrow"><img class="faq-arrow-icon" src="./assets/faqSection/dropdown-icon.svg" alt="arrow drop down" /></span>
+        </div>
+        <div class="faq-answer">
+          <p>
+            Cascina Caccia si trova in
+            <strong>Via Serra Alta 6, San Sebastiano da Po (TO)</strong>. I bus superiori a <strong>25 posti</strong>
+            devono fermarsi al
+            <strong>cimitero di San Sebastiano</strong> (lungo la statale per Casalborgone). Da lì, proseguite a <strong>piedi</strong> per circa
+            <strong>15 minuti</strong>, seguendo le indicazioni per Via Rigonda e poi Via Serra Alta.
+          </p>
+          <p>Per persone con <strong>difficoltà motorie</strong>, è possibile organizzare il trasporto in auto concordando in anticipo.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+      <a href="#hero-section">
+        <img class="logo-azienda" src="./assets/footer/Logo-agora.svg" alt="Logo azienda" />
+      </a>
+      <div class="footer-section">
+        <!-- left Block -->
+        <div class="block">
+          <h3>Contatti</h3>
+          <ul>
+            <li><img src="./assets/footer/email-icon.svg" alt="Email" /> <a href="mailto:cascina.caccia@acmos.it">cascina.caccia@acmos.it</a></li>
+            <li class="footer-email">
+              <img src="./assets/footer/email-icon.svg" alt="Email" />
+              <a href="mailto:educazione.cascina.caccia@acmos.it">educazione.cascina.caccia@acmos.it</a>
+            </li>
+            <!-- TODO: add telephone number (?) -->
+            <!--  <li><img src="./assets/footer/telephone-icon.svg" alt="Telefono"" /></li> -->
+            <li><img src="./assets/footer/location-pin-icon.svg" alt="Indirizzo" />Via Serra Alta, 6, San Sebastiano da Po (TO)</li>
+          </ul>
+        </div>
+
+        <!-- right block -->
+        <div class="block">
+          <h3>Seguici su</h3>
+          <div class="footer-social-icons">
+            <a href="https://www.facebook.com/cascinacaccia/ " target="_blank">
+              <img src="./assets/footer/facebook-vector.svg" alt="Facebook" />
+            </a>
+            <a href="https://www.instagram.com/cascina_caccia/" target="_blank">
+              <img src="./assets/footer/instagram-vector.svg" alt="Instagram" />
+            </a>
+
+            <a href="#">
+              <img src="./assets/footer/tiktok-vector.svg" alt="TikTok" />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Map -->
+      <div class="footer-map-section">
+        <h3>Ci trovi qui</h3>
+
+        <iframe
+          class="footer-map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d180060.30609044182!2d7.853336533475485!3d45.155361292900125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4787d83975557773%3A0xce98a033bd811358!2sCascina%20Caccia!5e0!3m2!1sit!2sit!4v1735224718795!5m2!1sit!2sit"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+
+      <h3 class="partner-logo-title">I nostri partner</h3>
+      <div class="footer-partner-logo">
+        <a href="https://associazione.acmos.net/">
+          <img class="logo-acmos" src="./public/assets/footer/logo-acmos.svg" alt="partner logo" />
+        </a>
+        <a href="https://www.libera.it/">
+          <img class="logo-libera" src="./public/assets/footer/logo-libera.svg" alt="partner logo" />
+        </a>
+        <a href="https://www.laperacca.com/">
+          <img class="logo-peracca" src="./public/assets/footer/logo-la-peracca.svg" alt="partner logo" />
+        </a>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2025 Cascina Caccia / <a href="#privacy-policy"> Privacy Policy</a></p>
+      </div>
+    </footer>
+    <div class="code-craft-factory">
+      <p>
+        Designed and developed by <strong>CodeCraft</strong
+        ><img class="code-craft-logo" src="./public/assets/footer/Codecraft-logo.svg" alt="codecraft logo" />
+      </p>
+    </div>
+  </body>
 </html>

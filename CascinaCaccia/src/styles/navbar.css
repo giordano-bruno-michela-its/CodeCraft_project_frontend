@@ -1,0 +1,266 @@
+/*
+ * File Name: navbar.css
+ * Author: CodeCraft
+ * Content: navbar styles
+ */
+
+/* Navbar styles */
+.navbar {
+  position: fixed;
+  z-index: 3;
+  width: 100%;
+  background-color: #fff;
+  color: #333;
+  border-bottom: 1px solid #ddd;
+  font-family: "Montserrat", "Arial", "Helvetica", sans-serif;
+  font-size: x-small;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.navbar-logo {
+  max-height: 40px;
+  display: block;
+}
+
+.navbar-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+  font-size: 1.5rem;
+}
+
+.navbar-hamburger {
+  display: block;
+  width: 25px;
+  height: 2px;
+  background: #333;
+  position: relative;
+}
+
+.navbar-hamburger::before {
+  content: "";
+  width: 25px;
+  height: 3px;
+  background: #333;
+  position: absolute;
+  left: 0;
+}
+
+.navbar-hamburger::after {
+  content: "";
+  width: 25px;
+  height: 2px;
+  background: #333;
+  position: absolute;
+  left: 0;
+}
+
+.navbar-hamburger::before {
+  transition: all 0.4s ease-in-out;
+  top: -7px;
+}
+
+.navbar-hamburger::after {
+  transition: all 0.4s ease-in-out;
+  bottom: -7px;
+}
+
+/* Change hamburger icon when navbar is open */
+.navbar-hamburger.open {
+  background: transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-hamburger.open::before {
+  transform: rotate(45deg);
+  top: 0;
+  height: 2px;
+}
+
+.navbar-hamburger.open::after {
+  transform: rotate(-45deg);
+  bottom: 0;
+  height: 2px;
+}
+
+/* Navbar menu */
+.navbar-menu {
+  display: none;
+  flex-direction: column;
+  background-color: #f9f9f9;
+  border-top: 1px solid #00000083;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.navbar-menu.open {
+  display: flex;
+}
+
+/* Navbar switches (Filtro daltonismo e Tema Chiaro/Scuro) */
+.navbar-switches {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding: 10px 20px 0 20px;
+}
+
+.switch {
+  display: flex;
+  align-items: center;
+}
+
+.switch-input {
+  margin-left: 10px;
+  width: 13px;
+  height: 13px;
+  border: 1px solid #333; /* Colore del bordo */
+  border-radius: 50%;
+  appearance: none; /* hide the default checkbox style */
+  --webkit-appearance: none; /* hide the default checkbox style (safari)*/
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.switch-input:checked {
+  background-color: #333;
+  border: 2px solid #ffdd07;
+}
+
+/* Menu Voices */
+.navbar-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-item {
+  display: block;
+  padding: 10px 0;
+  border-bottom: 1px solid #00000083;
+}
+.navbar-item:hover {
+  background-color: #ffdd07;
+}
+
+.navbar-item:last-child {
+  border-bottom: none;
+}
+
+.navbar-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+  font-size: 0.9rem;
+  padding: 0 20px;
+}
+
+.navbar-arrow {
+  margin-left: auto;
+  width: 20px;
+  height: 20px;
+}
+
+/* Media Query */
+
+/* Tablet Media query */
+@media (min-width: 600px) and (max-width: 899px) {
+  .navbar-menu {
+    display: none;
+    flex-direction: column;
+    background-color: #f9f9f9;
+    border-top: 1px solid #00000083;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+
+  .navbar-menu.open {
+    display: flex;
+  }
+
+  .navbar-switches {
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  .navbar-item {
+    border-bottom: 1px solid #00000083;
+    padding: 10px 0;
+  }
+
+  .navbar-link {
+    padding: 0 20px;
+    font-size: 1rem;
+  }
+}
+
+/* Desktop Media query */
+@media (min-width: 1200px) {
+  .navbar {
+    display: flex;
+  }
+
+  .navbar-toggle {
+    display: none;
+  }
+
+  .navbar-menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+
+    border: none;
+  }
+
+  .navbar-item {
+    border: none;
+    border-radius: 15px;
+    padding: 0;
+  }
+  .navbar-item:hover {
+    background-color: #ffde07a2;
+  }
+  .navbar-links {
+    display: flex;
+    gap: 20px;
+    border-radius: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.653);
+    height: 30px;
+  }
+
+  .navbar-link {
+    padding: 5px;
+    font-size: 1rem;
+    color: #333;
+  }
+  .navbar-switches {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    margin: 0;
+  }
+
+  .navbar-logo {
+    max-height: 50px;
+  }
+  .navbar-arrow {
+    display: none;
+  }
+}
+@media (min-width: 1400px) {
+  .navbar-links {
+    gap: 50px;
+  }
+}

@@ -1,0 +1,135 @@
+/*
+ * File Name: style.css
+ * Author: CodeCraft
+ * Content: heroSection Styles
+ */
+
+#hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  font-family: "Montserrat", Arial, sans-serif;
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: rgb(255, 255, 255);
+  padding: 15px;
+  padding-bottom: 200px;
+  max-width: 80%;
+}
+
+.hero-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 30px;
+}
+
+.hero-subtitle {
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+}
+
+.hero-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  flex: 1;
+  height: 30px;
+  font-weight: 500;
+  font-size: 0.8rem;
+  text-decoration: none;
+}
+
+.hero-btn-book {
+  background-color: #ffdd07;
+  color: #333;
+}
+
+.hero-btn-book:hover {
+  background-color: #e0a800;
+}
+
+.hero-btn-info {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.hero-btn-info:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Media Query */
+
+/* Tablet */
+@media (min-width: 500px) and (max-width: 1200px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+  .hero-buttons {
+    gap: 40px;
+  }
+
+  .hero-btn {
+    height: 2rem;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+}
+/* Desktop */
+@media (min-width: 1201px) {
+  .hero-title {
+    font-size: 3rem;
+  }
+  .hero-subtitle {
+    font-size: 1.5rem;
+  }
+  .hero-buttons {
+    gap: 60px;
+    width: 90%;
+  }
+  .hero-btn {
+    height: 3rem;
+    font-weight: 600;
+    font-size: 1.2rem;
+  }
+}
