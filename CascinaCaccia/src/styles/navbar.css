@@ -245,11 +245,6 @@ input:checked + .slider:before {
   font-weight: 500;
 }
 
-.navbar-link:hover,
-.navbar-link:active {
-  text-decoration: underline;
-}
-
 .navbar-arrow {
   margin-left: auto;
   width: 1.75rem;
