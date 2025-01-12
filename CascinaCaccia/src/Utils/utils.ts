@@ -59,10 +59,15 @@ export const getElement = <T extends HTMLElement>(selector: string): T => {
 };
 
 export function activityCards(): void {
-  const activitiesCard = document.querySelectorAll(".activity-card");
-  activitiesCard.forEach((card) => {
-    card.addEventListener("click", () => {
-      card.classList.toggle("open");
+  const activitiesCardHeaders = document.querySelectorAll(".activity-card-header");
+  // const activitiesCard = document.querySelectorAll(".activity-card");
+  activitiesCardHeaders.forEach((cardHead) => {
+    cardHead.addEventListener("click", () => {
+      if(cardHead.parentElement){
+        cardHead.parentElement.classList.toggle("open");
+        cardHead.children[1].classList.toggle('hidden');
+        cardHead.children[2].classList.toggle('hidden');
+      }
     });
   });
 }
