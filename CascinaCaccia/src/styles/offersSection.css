@@ -4,17 +4,24 @@
  * Content: styles for offers section
  */
 
+.offers-section-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+  padding: 20px;
+  text-align: center;
+  font-family: "Montserrat", Arial, sans-serif;
+}
 #offers-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: flex-start;
+  justify-content: center;
   padding: 20px;
   font-family: "Montserrat", Arial, sans-serif;
   text-align: center;
   scroll-margin-top: 20px;
-}
-
-#offers-section h2 {
-  font-size: 1.8rem;
-  font-weight: 700;
-  margin-bottom: 20px;
 }
 
 .offer-card {
@@ -25,6 +32,8 @@
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
   transition: all 0.3s ease-in-out;
+  flex: 1 1 calc(100% - 20px);
+  max-width: 100%;
 }
 
 .offer-header {
@@ -117,11 +126,15 @@
 .offer-card.open .offer-details {
   display: block;
 }
+
 .news-offers {
   background-color: #ffde0796;
   max-width: 90%;
   margin: 0 auto;
   border-radius: 4px;
+  /* height: 116px; */
+  display: flex;
+  align-items: center;
 }
 .news-offer {
   padding: 5px;
@@ -130,13 +143,19 @@
 .news-offer-details {
   font-size: small;
 }
+/* Payment Methods */
+
+#payment-methods {
+  padding: 20px;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 1.2rem;
+}
 .offer-specific {
   font-size: x-small;
+  display: block;
+  text-align: center;
 }
-/* Payment Methods */
-.payment-methods-title {
-  text-align: justify;
-}
+
 .img-payment-methods {
   display: flex;
   justify-content: flex-start;
@@ -151,4 +170,32 @@
 .payment-methods-info {
   font-size: 0.8rem;
   text-align: left;
+}
+
+/* Tablet Layout */
+@media (min-width: 768px) {
+  .offer-card {
+    flex: 1 1 calc(50% - 20px);
+  }
+  .news-offers {
+    height: 93px;
+  }
+}
+
+/* Desktop Layout */
+@media (min-width: 1300px) {
+  .offer-card {
+    flex: 1 1 calc(25.333% - 20px);
+    max-width: 30%;
+  }
+  .news-offers {
+    height: 116px;
+  }
+}
+
+/* Optional: Adjust Text Size for Payment Info on Larger Screens */
+@media (min-width: 768px) {
+  .payment-methods-info {
+    font-size: 1rem; /* Slightly larger text for tablet and above */
+  }
 }
