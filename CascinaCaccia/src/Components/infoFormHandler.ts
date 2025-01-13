@@ -17,7 +17,14 @@ export function getFormDataInfo(form: HTMLFormElement, activitiesContainer: HTML
   const association = (form.querySelector("#info-form-association") as HTMLInputElement).value;
   const additionalInfo = (form.querySelector("#info-form-additionalInfo") as HTMLTextAreaElement).value;
   const contactDate = new Date().toISOString().split('T')[0];
-  const newsletterCheck = "YES";
+  // const newsletterCheck = "YES";
+
+  const newsletterCheckbox = document.getElementById("info-form-newsletter") as HTMLInputElement;
+  const newsletterCheck = newsletterCheckbox.checked ? "YES" : "NO";
+  console.log(newsletterCheck);
+  
+
+
   const formType = "FORM_INFO";
 
   const activities = Array.from(activitiesContainer.querySelectorAll('input[type="checkbox"]:checked')).map(
