@@ -8,7 +8,7 @@ import { setupActivitiesToggle, setupOfferCards } from "./Utils/utils";
 import { toggleAnswer } from "./Utils/utils";
 import { submitFormData } from "./Services/api";
 import {activityCards } from "./Utils/utils"
-import { activityCarousel } from "./Utils/utils"
+// import { activityCarousel } from "./Utils/utils"
 import { getNewsletterFormData } from "./Components/newsletterFormHandler";
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   
   activityCards();
-  activityCarousel()
+  // activityCarousel()
 
 
   // Offers Section
