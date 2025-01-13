@@ -18,7 +18,14 @@ export function getBookingFormData(infoForm: HTMLFormElement, activitiesContaine
   const endTime = (document.getElementById("endDate") as HTMLInputElement).value;
   const contactDate = new Date().toISOString().split('T')[0];
   const formType = "FORM_BOOKING";
-  const newsletterCheck = "NO";
+
+  const newsletterCheckbox = document.getElementById("booking-form-newsletter") as HTMLInputElement;
+  const newsletterCheck = newsletterCheckbox.checked ? "YES" : "NO";
+  console.log(newsletterCheck);
+  
+
+
+ 
 
   const activities = Array.from(activitiesContainer.querySelectorAll('input[type="checkbox"]:checked')).map(
     (checkbox) => parseInt((checkbox as HTMLInputElement).value)
