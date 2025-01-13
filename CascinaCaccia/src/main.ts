@@ -54,6 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const result = await submitBookingForm(formData);
       console.log("Dati inviati con successo:", result);
       alert("La tua richiesta è stata inviata con successo!");
+      bookingForm.reset()
     } catch (error) {
       console.error("Errore durante l'invio dei dati:", error);
       alert("Si è verificato un errore durante l'invio della tua richiesta");
@@ -80,6 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const result = await submitFormData(formData);
       console.log("Dati inviati con successo:", result);
       alert("La tua richiesta è stata inviata con successo!");
+      infoForm.reset();
     } catch (error) {
       console.error("Errore durante l'invio dei dati:", error);
       alert("Si è verificato un errore durante l'invio della tua richiesta.");

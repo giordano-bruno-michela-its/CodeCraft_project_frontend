@@ -23,10 +23,6 @@ export function getBookingFormData(infoForm: HTMLFormElement, activitiesContaine
   const newsletterCheck = newsletterCheckbox.checked ? "YES" : "NO";
   console.log(newsletterCheck);
   
-
-
- 
-
   const activities = Array.from(activitiesContainer.querySelectorAll('input[type="checkbox"]:checked')).map(
     (checkbox) => parseInt((checkbox as HTMLInputElement).value)
   );
