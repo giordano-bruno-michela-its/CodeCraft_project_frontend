@@ -246,6 +246,7 @@ input:checked + .slider:before {
 
 .navbar-item:last-child {
   border-bottom: none;
+  border-radius: 0 0 1rem 1rem;
 }
 
 .navbar-link {
