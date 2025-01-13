@@ -20,17 +20,70 @@ export function getBookingFormData(infoForm: HTMLFormElement, activitiesContaine
   const formType = "FORM_BOOKING";
   const newsletterCheck = "NO";
 
-
-
-
-
-  /* ATTENZIONE: le activities sono giuste ma quando si fa il return dei value (1,2,3,ecc) nel json vengono mandati al db che ha id sballati */
   const activities = Array.from(activitiesContainer.querySelectorAll('input[type="checkbox"]:checked')).map(
-    (checkbox) => (checkbox as HTMLInputElement).value
+    (checkbox) => parseInt((checkbox as HTMLInputElement).value)
   );
 
+  console.log(activities);
+  
+  const activityType = [
+    {
+      id: 1,
+      name: "STORIA DI CASCINA Carla e Bruno CACCIA",
+      description: "Un racconto avvincente della storia della Cascina e del suo impegno contro le mafie"
+    },
+    {
+      id: 2,
+      name: "BRUNO CACCIA",
+      description: " Laboratorio sulla figura di Bruno Caccia sotto il profilo istituzionale e umano"
+    },
+    {
+      id: 3,
+      name: "INTRODUZIONE AL TEMA MAFIA",
+      description: "Attività introduttiva volta a definire, conoscere e far conoscere il fenomeno mafioso"
+    },
+    {
+      id: 4,
+      name: "I BENI CONFISCATI",
+      description: "Attività di approfondimento sui beni confiscati, delle leggi sulla confisca dei beni e delle novità legislative"
+    },
+    {
+      id: 5,
+      name: "LE MAFIE IN PIEMONTE",
+      description: " Attività di approfondimento sulla presenza delle mafie sul territorio piemontese"
+    },
+    {
+      id: 6,
+      name: "SOSTENIBILITÀ AMBIENTALE",
+      description: "Approfondimenti sui temi della sostenibilità ambientale e della disuguaglianza con riflessioni sui problemi e la ricerca delle possibili soluzioni."
+    },
+    {
+      id: 7,
+      name: "LA MAFIA ATTRAVERSO IL CINEMA",
+      description: "Riflessioni sui modelli mafiosi presentati dal cinema per comprendere il loro impatto sulla società e migliorare la comprensione critica (e su quanto siano rappresentativi della realtà oggettiva e del sentire comune)."
+    },
+    {
+      id: 8,
+      name: "IL GIOCO NON È UN AZZARDO (6-14 anni)",
+      description: "L'attività mira a esplorare le varie tipologie di gioco e le loro caratteristiche e a riflettere sulla correttezza dei giochi a cui si prende parte"
+    },
+    {
+      id: 9,
+      name: "CHI NON GIOCA VINCE",
+      description: "Considerazioni per sensibilizzare ai rischi e alla dipendenza del gioco d'azzardo e ai collegamenti tra mafia e gioco d'azzardo illegale"
+    },
+  
+  ];
 
-  // shorthand syntax: we can omit the value of the properties if they have the same name of the variable
+  const selectedActivities = activityType
+  .filter((activity) => activities.includes(activity.id))
+  .map((activity) => ({
+    id: activity.id,
+    name: activity.name,
+    description: activity.description,
+  }));
+
+
   return {
     email,
     name,
@@ -40,21 +93,7 @@ export function getBookingFormData(infoForm: HTMLFormElement, activitiesContaine
     contactDate,
     additionalInfo,
     newsletterCheck,
-    /*  "ageGroup": {
-     "id": 1
-   }, */
-    activityType: [
-      {
-        id: 1,
-        name: "Salto nel buio",
-        description: null
-      },
-      {
-        id: 2,
-        name: "Tiro della cinghia",
-        description: null
-      }
-    ],
+    activityType:selectedActivities,
     formType,
     beginTime,
     endTime,
