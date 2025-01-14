@@ -8,7 +8,7 @@
   padding: 4vw;
   font-family: var(--main-font);
   scroll-margin-top: 60px;
-  background-image: url("../../public/assets/faqSection/faqSection-bg.png");
+  background-image: url("../../public/assets/faqSection/faq-section.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -40,6 +40,10 @@
   box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.35);
   flex: 1 1 100%;
   max-height: 500px;
+  transition: all 0.3s ease-in-out;
+}
+.faq-card:hover {
+  transform: scale(1.05);
 }
 
 .faq-question {

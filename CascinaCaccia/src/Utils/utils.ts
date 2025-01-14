@@ -18,7 +18,7 @@ export function toggleAnswer(index: number): void {
  */
 export function setupActivitiesToggle(toggleButton: HTMLButtonElement, container: HTMLDivElement): void {
   toggleButton.addEventListener("click", () => {
-    const isHidden = container.style.display === "none";
+    const isHidden = container.style.display === "none" || window.getComputedStyle(container).display === "none";
     container.style.display = isHidden ? "flex" : "none";
     toggleButton.textContent = isHidden ? "Nascondi Attività" : "Mostra Attività";
     toggleButton.setAttribute("aria-expanded", isHidden.toString());
@@ -63,10 +63,10 @@ export function activityCards(): void {
   // const activitiesCard = document.querySelectorAll(".activity-card");
   activitiesCardHeaders.forEach((cardHead) => {
     cardHead.addEventListener("click", () => {
-      if(cardHead.parentElement){
+      if (cardHead.parentElement) {
         cardHead.parentElement.classList.toggle("open");
-        cardHead.children[1].classList.toggle('hidden');
-        cardHead.children[2].classList.toggle('hidden');
+        cardHead.children[1].classList.toggle("hidden");
+        cardHead.children[2].classList.toggle("hidden");
       }
     });
   });
