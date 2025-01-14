@@ -106,6 +106,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const result = await submitNewsletterData(newsletterData);
       console.log("Dati inviati con successo:", result);
       alert("La tua richiesta è stata inviata con successo!");
+      newsletterForm.reset();
     } catch (error) {
       console.error("Errore durante l'invio dei dati:", error);
       alert("Si è verificato un errore durante l'invio della tua richiesta.");
