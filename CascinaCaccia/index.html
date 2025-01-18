@@ -16,9 +16,9 @@
         <a href="#hero-section">
           <img src="./assets/navbar/Logo-agora.svg" alt="Logo Cascina Caccia" class="navbar-logo" />
         </a>
-        <button class="navbar-toggle" aria-label="Apri menu">
-          <span class="navbar-hamburger"></span>
-        </button>
+          <button class="hamburger-toggle" aria-label="Apri il menu" aria-expanded="false" aria-controls="navbar-menu">
+            <span class="navbar-hamburger"></span>
+          </button>
       </div>
       <nav class="navbar-menu">
         <div class="navbar-switches">
@@ -159,23 +159,57 @@
                 </li>
               </ul>
             </div>
-            <!-- IDEA CAROSELLO (in forse)
-            <div class="carousel">
-              <div class="carousel-track">
-                <div class="carousel-slide">
-                  <img src="https://via.placeholder.com/300x150?text=Slide+1" alt="Slide 1" />
+            <!-- Carousel: Swiper JS -->
+            <div class="swiper activity-img-swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img
+                    class="swiper-img"
+                    src="https://picsum.photos/300/200"
+                    loading="lazy"
+                    alt="swiper image"
+                  />
+                  <div class="swiper-lazy-preloader"></div>
+                  <!-- per tema scuro -->
+                  <!-- <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div> -->
                 </div>
-                <div class="carousel-slide">
-                  <img src="https://via.placeholder.com/300x150?text=Slide+2" alt="Slide 2" />
+                <div class="swiper-slide">
+                  <img
+                    class="swiper-img"
+                    src="https://picsum.photos/300/200"
+                    loading="lazy"
+                    alt="swiper image"
+                  />
+                  <div class="swiper-lazy-preloader"></div>
+                  <!-- <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div> -->
                 </div>
-                <div class="carousel-slide">
-                  <img src="https://via.placeholder.com/300x150?text=Slide+3" alt="Slide 3" />
+                <div class="swiper-slide">
+                  <img
+                    class="swiper-img"
+                    src="https://picsum.photos/300/200"
+                    loading="lazy"
+                    alt="swiper image"
+                  />
+                  <div class="swiper-lazy-preloader"></div>
+                  <!-- <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div> -->
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    class="swiper-img"
+                    src="https://picsum.photos/300/200"
+                    loading="lazy"
+                    alt="swiper image"
+                  />
+                  <div class="swiper-lazy-preloader"></div>
+                  <!-- <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div> -->
                 </div>
               </div>
-              <div class="carousel-dots"></div>
-              <button class="carousel-btn prev-btn">&lt;</button>
-              <button class="carousel-btn next-btn">&gt;</button>
-            </div> -->
+              <div class="swiper-pagination"></div>
+              <!-- If we need navigation buttons -->
+              <div class="swiper-button-prev"><img src="./public/assets/activitiesSection/calendar-arrow.svg" alt="previous image button"></div>
+              <div class="swiper-button-next"><img src="./public/assets/activitiesSection/calendar-arrow.svg" alt="next image button"></div>
+            </div>
+            <!--  -->
             <button class="activity-book-btn">
               <a href="#booking-form-container">Prenota</a>
             </button>
@@ -904,11 +938,13 @@
       <form class="bookingForm" id="bookingForm" method="post">
         <h2 class="booking-form-title">Prenota una visita</h2>
         <div class="input-container">
-          <input type="date" id="startDate" class="booking-form-input" name="startDate" aria-labelledby="startDate" required />
+          <label id="start-date-label">Data di inzio</label>
+          <input type="date" id="startDate" class="booking-form-input" name="startDate" aria-labelledby="start-date-label" required />
         </div>
 
         <div class="input-container">
-          <input type="date" id="endDate" class="booking-form-input" name="endDate" aria-labelledby="endDate" required />
+          <label id="end-date-label">Data di fine</label>
+          <input type="date" id="endDate" class="booking-form-input" name="endDate" aria-labelledby="end-date-label" required />
         </div>
 
         <div class="booking-form-name-surname-container">
@@ -1295,10 +1331,8 @@
       </div>
     </footer>
     <div class="code-craft-factory">
-      <p>
-        Designed and developed by <strong>CodeCraft</strong
-        ><img class="code-craft-logo" src="./public/assets/footer/Codecraft-logo.svg" alt="codecraft logo" />
-      </p>
+      <p>Designed and developed by <strong>CodeCraft</strong></p>
+      <img class="code-craft-logo" src="./public/assets/footer/Codecraft-logo.svg" alt="codecraft logo" />
     </div>
   </body>
 </html>

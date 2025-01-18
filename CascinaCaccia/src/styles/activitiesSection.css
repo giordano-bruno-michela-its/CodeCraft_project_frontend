@@ -1,3 +1,5 @@
+
+
 #activities-section {
   scroll-margin-top: 60px;
   /* padding: 2rem 1.5rem 1.5rem 1.5rem; */
@@ -210,77 +212,80 @@
   background-color: #bfa600;
 }
 
-/* STYLE CAROSELLO (IN FORSE) */
-/* Base Styles */
-.carousel {
-  position: relative;
+/* Swiper js carousel styles */
+
+.swiper.activity-img-swiper {
   width: 100%;
-  max-width: 400px;
-  margin: 0 auto;
+  min-height: 12rem;
+  aspect-ratio: 2.14/1;
+  /* border: 1px solid red; */
+  padding: 0.5rem 0;
+}
+
+.swiper-slide {
+  width: 85%;
+  border-radius: 1rem;
+  background: transparent;
+  /* border: 1px solid #000; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.2s ease-in;
   overflow: hidden;
 }
 
-.carousel-track {
-  display: flex;
-  transition: transform 0.3s ease-in-out;
+.swiper-slide.swiper-slide-active {
+  transform: scale(1.07);
 }
 
-.carousel-slide {
-  min-width: 100%;
-  border-radius: 10px;
-}
-
-.carousel-slide img {
-  display: block;
+.swiper-slide img {
   width: 100%;
-  height: auto;
-  border-radius: 10px;
+  height: 100%;
 }
 
-/* Dots Navigation */
-.carousel-dots {
-  display: flex;
-  justify-content: center;
-  margin-top: 10px;
-}
+/* arrows */
 
-.carousel-dots button {
-  width: 10px;
-  height: 10px;
-  background-color: lightgray;
-  border: none;
-  border-radius: 50%;
-  margin: 0 5px;
-  cursor: pointer;
-}
-
-.carousel-dots .active {
-  background-color: black;
-}
-
-/* Buttons (Hidden by Default for Mobile) */
-.carousel-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-  padding: 10px;
+.swiper-button-prev:after,
+.swiper-button-next:after {
   display: none;
 }
 
-.prev-btn {
-  left: 10px;
+.swiper-button-next {
+  right: 1rem;
 }
 
-.next-btn {
-  right: 10px;
+.swiper-button-prev {
+  left: 1rem;
 }
 
+.swiper-button-prev img,
+.swiper-button-next img {
+  display: block;
+  width: 0.875rem;
+  height: 1.625rem;
+}
 
+.swiper-button-prev,
+.swiper-button-next {
+  width: 1rem;
+  height: 1.75rem;
+}
+
+.swiper-button-prev img {
+  transform: rotate(180deg);
+}
+
+/* bullets */
+
+.swiper-pagination-bullet-active {
+  background-color: var(--text-light) !important;
+}
+
+.swiper-pagination-bullet {
+  margin: 0 0.25rem !important;
+  background-color: rgba(250, 250, 250, 0.60);
+  opacity: 1;
+  
 
 /* Mobile */
 @media (max-width: 351px) {

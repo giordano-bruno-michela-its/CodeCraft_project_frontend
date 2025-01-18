@@ -1,7 +1,7 @@
 #info-form-container,
 #booking-form-container {
-  padding: 10px;
-  font-family: "Montserrat", Arial, sans-serif;
+  padding: 1.5rem 1.75rem;
+  font-family: var(--main-font);
   background-image: url("../../public/assets/bookingForm/cascinaIMG.png");
   scroll-margin-top: 60px;
   background-repeat: no-repeat;
@@ -12,11 +12,11 @@
 .bookingForm {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  background-color: white;
-  border-radius: 10px;
-  padding: 10px;
-  margin: 10px;
+  gap: 0.75rem;
+  background-color: var(--text-light);
+  border-radius: 1rem;
+  padding: 1rem 0.75rem;
+  box-shadow: 2px 4px 12px 1px rgba(0, 0, 0, 0.50);
 }
 
 .input-container {
@@ -25,18 +25,65 @@
 
 .info-form-title,
 .booking-form-title {
-  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 1.25rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--text-dark);
 }
 
 .info-form-input,
 .booking-form-input {
   width: 100%;
-  border-radius: 10px;
-  height: 5vh;
-  border: 2px solid #3d3c3c;
-  font-family: "Montserrat", "Arial", "Helvetica", sans-serif;
-  font-size: medium;
-  padding-left: 15px;
+  padding: 0.625rem 1rem;
+  border-radius: 0.625rem;
+  border: 2px solid var(--text-dark);
+  font-family: var(--main-font);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+#start-date-label,
+#end-date-label {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--text-dark);
+}
+
+.booking-form-input[type="date"] {
+  margin-top: 0.25rem;
+}
+
+.booking-form-input[type="date"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+}
+
+.info-form-input:focus,
+.booking-form-input:focus {
+  outline: 2px solid var(--brand-orange); /* anche rosa è ok */
+  /* outline: none; */
+  /* border: 2px solid var(--brand-pink); */
+}
+
+.info-form-input::placeholder,
+.booking-form-input::placeholder {
+  color: rgba(61, 60, 60, 0.60);
+}
+
+#duration {
+  -webkit-appearance: none; 
+  -moz-appearance: none;
+  appearance: none; 
+  background: transparent;
+  background-image: url("/assets/bookingForm/dropdown-icon.svg");
+  background-repeat: no-repeat;
+  background-position-x: calc(100% - 0.5rem);
+  background-position-y: center;
+  cursor: pointer;
 }
 
 #activitiesToggle,
@@ -54,7 +101,7 @@
   display: flex;
   flex-direction: row;
   width: 100%;
-  gap: 10px;
+  gap: 0.64rem;
 }
 
 #infoActivitiesContainer,
@@ -80,22 +127,22 @@
 
 #info-form-submit-btn,
 #booking-form-submit-btn {
-  height: 4vh;
-  width: 35%;
-  border: solid 2px #e3007e;
-  border-radius: 10px;
-  font-weight: bold;
-  font-size: 15px;
-  font-family: "Montserrat", "Arial", "Helvetica", sans-serif;
-  background-color: white;
+  padding: 0.75rem 3.25rem;
+  border: 3px solid var(--brand-pink);
+  border-radius: 0.75rem;
+  font-weight: 700;
+  font-size: 1.25rem;
+  font-family: var(--main-font);
+  background-color: var(--text-light);
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+  box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.25);
 }
 
 #info-form-submit-btn:hover,
 #booking-form-submit-btn:hover {
-  background-color: #e3007e;
-  color: white;
+  background-color: var(--brand-pink);
+  color: var(--text-light);
 }
 
 /* Codice per inserire bordo con gradiente al bottone invia 
