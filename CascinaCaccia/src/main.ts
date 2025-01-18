@@ -8,7 +8,7 @@ import { setupActivitiesToggle, setupOfferCards } from "./Utils/utils";
 import { toggleAnswer } from "./Utils/utils";
 import { submitFormData } from "./Services/api";
 import { activityCards } from "./Utils/utils"
-import { activityCarousel } from "./Utils/utils"
+// import { activityCarousel } from "./Utils/utils"
 import { getNewsletterFormData } from "./Components/newsletterFormHandler";
 
 // import Swiper JS
@@ -138,10 +138,6 @@ new Swiper(".activity-img-swiper", {
   breakpoints: {
     500: {
       spaceBetween: 24,
-    },
-    // 1024: {
-    //   slidesPerView: 4,
-    //   spaceBetween: 16,
-    // },
+    }
   },
 });
