@@ -215,7 +215,8 @@
 
 .swiper.activity-img-swiper {
   width: 100%;
-  height: 12rem;
+  min-height: 12rem;
+  aspect-ratio: 2.14/1;
   /* border: 1px solid red; */
   padding: 0.5rem 0;
 }

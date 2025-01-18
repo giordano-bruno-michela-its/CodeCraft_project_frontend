@@ -7,7 +7,7 @@ import { toggleDarkMode } from "./Utils/darkMode";
 import { setupActivitiesToggle, setupOfferCards } from "./Utils/utils";
 import { toggleAnswer } from "./Utils/utils";
 import { submitFormData } from "./Services/api";
-import {activityCards } from "./Utils/utils"
+import { activityCards } from "./Utils/utils"
 import { activityCarousel } from "./Utils/utils"
 import { getNewsletterFormData } from "./Components/newsletterFormHandler";
 
@@ -113,13 +113,13 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// carousel script
+// Swiper.js carousel script
 
 new Swiper(".activity-img-swiper", {
   modules: [Navigation, Pagination],
   slidesPerView: "auto",
   centeredSlides: true,
-  spaceBetween: 18,
+  spaceBetween: 16,
   loop: true,
   grabCursor: true,
   pagination: {
@@ -129,6 +129,15 @@ new Swiper(".activity-img-swiper", {
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
+  },
+  breakpoints: {
+    500: {
+      spaceBetween: 24,
+    },
+    // 1024: {
+    //   slidesPerView: 4,
+    //   spaceBetween: 16,
+    // },
   },
 });
 
