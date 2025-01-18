@@ -55,7 +55,7 @@
 }
 
 .navbar-hamburger {
-  display: block;  
+  display: block;
   position: relative;
 }
 
@@ -76,7 +76,7 @@
   transition: all 0.4s ease;
 }
 
-.navbar-hamburger::before {  
+.navbar-hamburger::before {
   top: -9px;
 }
 
@@ -106,12 +106,11 @@
   flex-direction: column;
   background-color: var(--text-light);
   /* border-top: 1px solid #00000083; */
-  border-radius: 0rem 0rem 1rem 1rem;
+  /* border-radius: 0rem 0rem 1rem 1rem; */
   border-bottom: 2px solid var(--text-dark);
   /* border-width: 0 1px 2px 1px; */
   /* border-style: solid; */
   /* border-color: var(--text-dark); */
-
 }
 
 .navbar-menu.open {
@@ -130,11 +129,12 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  margin: 0 16px;
 }
 
 .switch-title {
-  font-size: 0.875rem;
-  font-weight: 500; /* magari 400 */
+  font-size: 0.8rem;
+  font-weight: 400;
 }
 
 .switch {
@@ -160,8 +160,8 @@
   bottom: 0;
   border: 1px solid var(--text-dark);
   border-radius: 1250rem;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .slider:before {
@@ -179,13 +179,13 @@
   bottom: 0.125rem;
   background-color: var(--text-dark);
   border-radius: 50%;
-  -webkit-transition: .4s;
-  transition: all .4s;
+  -webkit-transition: 0.4s;
+  transition: all 0.4s;
 }
 
 .switch[for="colorblind-filter"] .slider:before {
   content: "OFF";
-  color: #D0D0D0;
+  color: #d0d0d0;
 }
 
 .switch[for="colorblind-filter"] input:checked + .slider::before {
@@ -200,7 +200,7 @@
   background-position: center;
 }
 
-.switch[for="darkmode-toggle"] input:checked + .slider::before{
+.switch[for="darkmode-toggle"] input:checked + .slider::before {
   background-color: var(--text-light);
   background-image: url(/assets/navbar/moon-icon-black.svg);
 }
@@ -257,11 +257,6 @@ input:checked + .slider:before {
   font-size: 1.125rem;
   font-weight: 500;
   padding: 0.75rem 2rem;
-}
-
-.navbar-link:hover,
-.navbar-link:active {
-  text-decoration: underline;
 }
 
 .navbar-arrow {
@@ -322,7 +317,6 @@ input:checked + .slider:before {
     flex-direction: row;
     align-items: center;
     width: 100%;
-    margin: 0 auto;
 
     border: none;
   }
@@ -337,7 +331,7 @@ input:checked + .slider:before {
   }
   .navbar-links {
     display: flex;
-    gap: 20px;
+    gap: 10px;
     border-radius: 20px;
     border: 1px solid rgba(0, 0, 0, 0.653);
     height: 30px;
@@ -361,9 +355,15 @@ input:checked + .slider:before {
   .navbar-arrow {
     display: none;
   }
+  .slider {
+    left: -2px;
+  }
 }
-@media (min-width: 1400px) {
+@media (min-width: 1300px) {
   .navbar-links {
-    gap: 50px;
+    gap: 20px;
+  }
+  .slider {
+    left: 2px;
   }
 }

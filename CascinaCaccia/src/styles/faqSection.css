@@ -5,29 +5,45 @@
  */
 
 #faq-section {
-  padding: 20px;
-  font-family: "Montserrat", Arial, sans-serif;
+  padding: 4vw;
+  font-family: var(--main-font);
   scroll-margin-top: 60px;
-  background-image: url("../../public/assets/faqSection/faqSection-bg.png");
+  background-image: url("../../public/assets/faqSection/faq-section.jpg");
   background-size: cover;
   background-position: center;
 }
 
 .faq-title {
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0;
   text-align: center;
   margin-bottom: 20px;
-  color: #fff;
+  color: var(--text-light);
+}
+
+.faq-card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  align-items: flex-start;
 }
 
 .faq-card {
   background-color: #fff;
   border: 1px solid #000000;
   margin-bottom: 15px;
-  border-radius: 8px;
+  border-radius: 1rem;
   overflow: hidden; /* to hide the overflow of the div Card wit border radius*/
   transition: all 0.3s ease-in-out;
+  box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.35);
+  flex: 1 1 100%;
+  max-height: 500px;
+  transition: all 0.3s ease-in-out;
+}
+.faq-card:hover {
+  transform: scale(1.05);
 }
 
 .faq-question {
@@ -35,9 +51,9 @@
   justify-content: space-between;
   padding: 15px;
   cursor: pointer;
-  color: #333333;
+  color: var(--text-dark);
   font-size: 0.8rem;
-  background-color: #fff;
+  background-color: var(--text-light);
 }
 
 .faq-answer {
@@ -45,7 +61,7 @@
   padding: 15px;
   background-color: #ababab25;
   font-size: 0.9rem;
-  color: #333;
+  color: var(--text-dark);
 }
 
 .faq-arrow {
@@ -66,13 +82,38 @@
 }
 
 .faq-brand-activities {
-  color: #e3007e;
+  color: var(--brand-pink);
   font-weight: 500;
 }
 .faq-activity-link {
-  color: #e3007e;
+  color: var(--brand-pink);
   font-weight: 500;
 }
 .faq-iva {
   font-size: smaller;
+}
+
+/* Media query tablet*/
+@media (min-width: 768px) {
+  .faq-card-wrapper {
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+
+  .faq-card {
+    flex: 1 1 calc(50% - 1rem); /* Two Columns */
+    border-radius: 1rem;
+  }
+}
+
+/* Media query desktop */
+@media (min-width: 1024px) {
+  .faq-card-wrapper {
+    gap: 2rem;
+  }
+
+  .faq-card {
+    flex: 1 1 calc(33.333% - 2rem); /* Three Columns */
+    border-radius: 1rem;
+  }
 }

@@ -25,10 +25,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // Colorblind Filter
   toggleColorblindFilter();
 
-  
   activityCards();
-  activityCarousel()
-
+  // activityCarousel()
 
   // Offers Section
   setupOfferCards();
@@ -58,6 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const result = await submitBookingForm(formData);
       console.log("Dati inviati con successo:", result);
       alert("La tua richiesta è stata inviata con successo!");
+      bookingForm.reset();
     } catch (error) {
       console.error("Errore durante l'invio dei dati:", error);
       alert("Si è verificato un errore durante l'invio della tua richiesta");
@@ -70,6 +69,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const infoForm = document.getElementById("infoForm") as HTMLFormElement;
   const activitiesToggle = document.getElementById("info-form-activitiesToggle") as HTMLButtonElement;
   const activitiesContainer = document.getElementById("infoActivitiesContainer") as HTMLDivElement;
+
+  const isHidden = window.getComputedStyle(activitiesContainer).display === "none";
+  activitiesToggle.textContent = isHidden ? "Mostra Attività" : "Nascondi Attività";
+  activitiesToggle.setAttribute("aria-expanded", (!isHidden).toString());
 
   setupActivitiesToggle(activitiesToggle, activitiesContainer);
 
@@ -84,6 +87,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const result = await submitFormData(formData);
       console.log("Dati inviati con successo:", result);
       alert("La tua richiesta è stata inviata con successo!");
+      infoForm.reset();
     } catch (error) {
       console.error("Errore durante l'invio dei dati:", error);
       alert("Si è verificato un errore durante l'invio della tua richiesta.");
@@ -106,6 +110,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const result = await submitNewsletterData(newsletterData);
       console.log("Dati inviati con successo:", result);
       alert("La tua richiesta è stata inviata con successo!");
+      newsletterForm.reset();
     } catch (error) {
       console.error("Errore durante l'invio dei dati:", error);
       alert("Si è verificato un errore durante l'invio della tua richiesta.");
@@ -140,5 +145,3 @@ new Swiper(".activity-img-swiper", {
     // },
   },
 });
-
-

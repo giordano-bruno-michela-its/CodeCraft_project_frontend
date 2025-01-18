@@ -18,7 +18,7 @@ export function toggleAnswer(index: number): void {
  */
 export function setupActivitiesToggle(toggleButton: HTMLButtonElement, container: HTMLDivElement): void {
   toggleButton.addEventListener("click", () => {
-    const isHidden = container.style.display === "none";
+    const isHidden = container.style.display === "none" || window.getComputedStyle(container).display === "none";
     container.style.display = isHidden ? "flex" : "none";
     toggleButton.textContent = isHidden ? "Nascondi Attività" : "Mostra Attività";
     toggleButton.setAttribute("aria-expanded", isHidden.toString());
@@ -63,81 +63,81 @@ export function activityCards(): void {
   // const activitiesCard = document.querySelectorAll(".activity-card");
   activitiesCardHeaders.forEach((cardHead) => {
     cardHead.addEventListener("click", () => {
-      if(cardHead.parentElement){
+      if (cardHead.parentElement) {
         cardHead.parentElement.classList.toggle("open");
-        cardHead.children[1].classList.toggle('hidden');
-        cardHead.children[2].classList.toggle('hidden');
+        cardHead.children[1].classList.toggle("hidden");
+        cardHead.children[2].classList.toggle("hidden");
       }
     });
   });
 }
 
 /* CAROSELLO (capire se da tenere) */
-export function activityCarousel(): void {
-  const track = document.querySelector(".carousel-track") as HTMLElement;
-  const slides = Array.from(track.children) as HTMLElement[];
-  const dotsNav = document.querySelector(".carousel-dots") as HTMLElement;
-  const prevButton = document.querySelector(".prev-btn") as HTMLButtonElement;
-  const nextButton = document.querySelector(".next-btn") as HTMLButtonElement;
+// export function activityCarousel(): void {
+//   const track = document.querySelector(".carousel-track") as HTMLElement;
+//   const slides = Array.from(track.children) as HTMLElement[];
+//   const dotsNav = document.querySelector(".carousel-dots") as HTMLElement;
+//   const prevButton = document.querySelector(".prev-btn") as HTMLButtonElement;
+//   const nextButton = document.querySelector(".next-btn") as HTMLButtonElement;
 
-  let currentIndex = 0;
+//   let currentIndex = 0;
 
-  // Create dots
-  slides.forEach((_, index) => {
-    const button = document.createElement("button");
-    if (index === 0) button.classList.add("active");
-    dotsNav.appendChild(button);
-  });
+//   // Create dots
+//   slides.forEach((_, index) => {
+//     const button = document.createElement("button");
+//     if (index === 0) button.classList.add("active");
+//     dotsNav.appendChild(button);
+//   });
 
-  const dots = Array.from(dotsNav.children);
+//   const dots = Array.from(dotsNav.children);
 
-  // Update carousel position
-  function updateCarousel() {
-    const slideWidth = slides[0].getBoundingClientRect().width;
-    track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
-    dots.forEach((dot, index) => {
-      dot.classList.toggle("active", index === currentIndex);
-    });
-  }
+//   // Update carousel position
+//   function updateCarousel() {
+//     const slideWidth = slides[0].getBoundingClientRect().width;
+//     track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+//     dots.forEach((dot, index) => {
+//       dot.classList.toggle("active", index === currentIndex);
+//     });
+//   }
 
-  // Swipe for mobile
-  let startX = 0;
-  track.addEventListener("touchstart", (e) => {
-    startX = e.touches[0].clientX;
-  });
+//   // Swipe for mobile
+//   let startX = 0;
+//   track.addEventListener("touchstart", (e) => {
+//     startX = e.touches[0].clientX;
+//   });
 
-  track.addEventListener("touchend", (e) => {
-    const endX = e.changedTouches[0].clientX;
-    if (endX < startX - 50) {
-      currentIndex = (currentIndex + 1) % slides.length; // Swipe left
-    } else if (endX > startX + 50) {
-      currentIndex = (currentIndex - 1 + slides.length) % slides.length; // Swipe right
-    }
-    updateCarousel();
-  });
+//   track.addEventListener("touchend", (e) => {
+//     const endX = e.changedTouches[0].clientX;
+//     if (endX < startX - 50) {
+//       currentIndex = (currentIndex + 1) % slides.length; // Swipe left
+//     } else if (endX > startX + 50) {
+//       currentIndex = (currentIndex - 1 + slides.length) % slides.length; // Swipe right
+//     }
+//     updateCarousel();
+//   });
 
-  // Button navigation
-  prevButton.addEventListener("click", () => {
-    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-    updateCarousel();
-  });
+//   // Button navigation
+//   prevButton.addEventListener("click", () => {
+//     currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+//     updateCarousel();
+//   });
 
-  nextButton.addEventListener("click", () => {
-    currentIndex = (currentIndex + 1) % slides.length;
-    updateCarousel();
-  });
+//   nextButton.addEventListener("click", () => {
+//     currentIndex = (currentIndex + 1) % slides.length;
+//     updateCarousel();
+//   });
 
-  // Dots navigation
-  dots.forEach((dot, index) => {
-    dot.addEventListener("click", () => {
-      currentIndex = index;
-      updateCarousel();
-    });
-  });
+//   // Dots navigation
+//   dots.forEach((dot, index) => {
+//     dot.addEventListener("click", () => {
+//       currentIndex = index;
+//       updateCarousel();
+//     });
+//   });
 
-  // Initialize
-  updateCarousel();
-}
+//   // Initialize
+//   updateCarousel();
+// }
 
 /**
  * Sets up event listeners on each of the offer cards to toggle the
