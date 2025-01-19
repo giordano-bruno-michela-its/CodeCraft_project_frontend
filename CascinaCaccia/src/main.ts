@@ -1,19 +1,20 @@
 import { getBookingFormData } from "./Components/bookingFormHandler";
 import { getFormDataInfo } from "./Components/infoFormHandler";
 import { initNavbar } from "./Components/navbar";
-import { submitBookingForm, submitNewsletterData } from "./Services/api";
+import { submitBookingForm, submitNewsletterData, submitRetrieveReservationForm } from "./Services/api";
 import { toggleColorblindFilter } from "./Utils/colorBlindFilter";
 import { toggleDarkMode } from "./Utils/darkMode";
 import { setupActivitiesToggle, setupOfferCards } from "./Utils/utils";
 import { toggleAnswer } from "./Utils/utils";
 import { submitFormData } from "./Services/api";
-import { activityCards } from "./Utils/utils"
+import { activityCards } from "./Utils/utils";
 // import { activityCarousel } from "./Utils/utils"
 import { getNewsletterFormData } from "./Components/newsletterFormHandler";
 
 // import Swiper JS
-import Swiper from 'swiper';
-import { Navigation, Pagination } from 'swiper/modules';
+import Swiper from "swiper";
+import { Navigation, Pagination } from "swiper/modules";
+import { getRetrieveReservationFormData } from "./Components/getRetrieveReservationFormData";
 
 document.addEventListener("DOMContentLoaded", () => {
   //Navbar:
@@ -118,6 +119,31 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// Retrieve Reservation Form
+
+document.addEventListener("DOMContentLoaded", () => {
+  const retrieveResForm = document.getElementById("retrieve-reservation-form") as HTMLFormElement;
+
+  retrieveResForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const { email, code } = getRetrieveReservationFormData();
+
+    try {
+      const result = await submitRetrieveReservationForm(email, code);
+      console.log("Codice iviato con successo!", result);
+      // Salva i dati della prenotazione in localStorage
+      localStorage.setItem("reservationDetails", JSON.stringify(result));
+      alert("Codice inviato con succeso");
+      window.location.href = "./Pages/update-booking.html"; // url to the page that allow the user to modify booking
+      retrieveResForm.reset();
+    } catch (error) {
+      console.error("Errore durante l'invio dei dati", error);
+      alert("Errore durante l'invio dei dati");
+    }
+  });
+});
+
 // Swiper.js carousel script
 
 new Swiper(".activity-img-swiper", {
@@ -132,12 +158,12 @@ new Swiper(".activity-img-swiper", {
     clickable: true,
   },
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
   },
   breakpoints: {
     500: {
       spaceBetween: 24,
-    }
+    },
   },
 });

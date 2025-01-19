@@ -6,7 +6,7 @@ export interface BookingForm {
   phoneNumber: string;
   contactDate: string;
   additionalInfo: string;
-  newsletterCheck: string,
+  newsletterCheck: string;
 
   /*  fasciaEta: {
      id: number; 
@@ -44,12 +44,11 @@ export interface FormDataRequest {
   }; */
   activityType: {
     id: number;
-    name: string,
-    description: string
+    name: string;
+    description: string;
   }[];
   formType: string;
 }
-
 
 export interface NewsletterForm {
   email: string;
@@ -58,4 +57,8 @@ export interface NewsletterForm {
   contactDate: string;
   newsletterCheck: string;
   formType: string;
+}
+
+export interface RetrieveReservationForm {
+  email: string;
 }

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="CodeCraft" />
+    <meta name="description" content="update booking page" />
+    <link rel="stylesheet" href="../styles/update-booking.css" />
+    <script type="module" src="./update-booking.ts"></script>
+    <title>Update Booking</title>
+  </head>
+
+  <body>
+    <div id="booking-form-container">
+      <form class="bookingForm" id="bookingForm" method="post">
+        <h2 class="booking-form-title">Prenota una visita</h2>
+        <div class="input-container">
+          <label id="start-date-label">Data di inzio</label>
+          <input type="date" id="startDate" class="booking-form-input" name="startDate" aria-labelledby="start-date-label" required />
+        </div>
+
+        <div class="input-container">
+          <label id="end-date-label">Data di fine</label>
+          <input type="date" id="endDate" class="booking-form-input" name="endDate" aria-labelledby="end-date-label" required />
+        </div>
+
+        <div class="booking-form-name-surname-container">
+          <div class="input-container" id="booking-form-name-field">
+            <input
+              placeholder="Nome"
+              type="text"
+              id="name"
+              class="booking-form-input"
+              name="name"
+              aria-labelledby="name"
+              minlength="2"
+              maxlength="50"
+              pattern="[A-Za-zÀ-ÿ\s]+"
+              required
+              title="Il nome deve contenere solo lettere"
+            />
+          </div>
+          <div class="input-container" id="booking-form-surname-field">
+            <input
+              placeholder="Cognome"
+              type="text"
+              id="surname"
+              class="booking-form-input"
+              name="surname"
+              aria-labelledby="surname"
+              minlength="2"
+              maxlength="50"
+              pattern="[A-Za-zÀ-ÿ\s]+"
+              required
+              title="Il cognome deve contenere solo lettere"
+            />
+          </div>
+        </div>
+
+        <div class="input-container">
+          <input
+            placeholder="Indirizzo email"
+            type="email"
+            id="boking-form-email"
+            class="booking-form-input"
+            name="email"
+            aria-labelledby="email"
+            maxlength="50"
+            required
+            title="Inserisci un'email valida"
+          />
+        </div>
+
+        <div class="input-container">
+          <input
+            placeholder="ente"
+            type="text"
+            id="association"
+            class="booking-form-input"
+            name="association"
+            aria-labelledby="association"
+            minlength="2"
+            maxlength="100"
+            pattern="[A-Za-zÀ-ÿ0-9\s\-]+"
+            required
+            title="Inserire nome dell'ente"
+          />
+        </div>
+
+        <div class="booking-form-tel-duration-container">
+          <div class="input-container">
+            <input
+              placeholder="tel"
+              type="tel"
+              id="phoneNumber"
+              class="booking-form-input"
+              name="phoneNumber"
+              aria-labelledby="phoneNumber"
+              pattern="^(\+(\d{1,4})\s?(\d{4,15}))?(\d{10})$"
+              title="Inserisci un numero di telefono valido"
+              required
+            />
+          </div>
+
+          <div class="input-container">
+            <select name="duration" id="duration" class="booking-form-input" aria-labelledby="duration" required>
+              <option value="1" disabled selected>Durata visita</option>
+              <option value="2">1/2 Giornata</option>
+              <option value="3">1 Giornata</option>
+              <option value="4">2 Giornate</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="input-container">
+          <input
+            type="number"
+            placeholder="numero minori"
+            min="1"
+            max="35"
+            id="nChildren"
+            class="booking-form-input"
+            name="nChildren"
+            aria-labelledby="nChildren"
+            required
+          />
+        </div>
+
+        <div class="input-container">
+          <input
+            type="number"
+            placeholder="numero adulti"
+            min="1"
+            max="10"
+            id="nAdults"
+            class="booking-form-input"
+            name="nAdults"
+            aria-labelledby="nAdults"
+            required
+          />
+        </div>
+
+        <div class="input-container">
+          <textarea
+            placeholder="Descrivi in questo campo esigenze o richieste particolari"
+            id="additionalInfo"
+            class="booking-form-input additional-info"
+            name="additionalInfo"
+            aria-labelledby="additionalInfo"
+            maxlength="500"
+            title="Descrivi in questo campo esigenze o richieste particolari"
+          ></textarea>
+        </div>
+
+        <div class="input-container">
+          <button id="activitiesToggle" class="booking-form-input" type="button" aria-expanded="false" aria-controls="activitiesContainer">
+            Mostra Attività
+          </button>
+          <div id="activitiesContainer" role="group" aria-labelledby="activitiesToggle">
+            <label><input type="checkbox" name="activities" value="1" /> Storia della cascina - Carla e Bruno Caccia</label>
+            <label><input type="checkbox" name="activities" value="2" /> Bruno Caccia</label>
+            <label><input type="checkbox" name="activities" value="3" /> Introduzione al tema mafia</label>
+            <label><input type="checkbox" name="activities" value="4" /> I beni confiscati</label>
+            <label><input type="checkbox" name="activities" value="5" /> Le mafie in Piemonte</label>
+            <label><input type="checkbox" name="activities" value="6" /> Sensibilità ambientale</label>
+            <label><input type="checkbox" name="activities" value="7" /> La mafia attraverso il cinema: percezioni culturali</label>
+            <label><input type="checkbox" name="activities" value="8" /> Il gioco non è un azzardo (6-14 anni)</label>
+            <label><input type="checkbox" name="activities" value="9" /> Chi non gioca vince</label>
+          </div>
+        </div>
+
+        <p class="booking-form-activity-text">
+          *le attività selezionate rappresentano una manifestazione d'interesse verso le stesse, e verranno confermate solo nel contatto diretto con
+          Cascina Caccia.
+        </p>
+
+        <div class="consent-checkbox-container">
+          <div>
+            <input type="checkbox" id="option1" name="options" value="option1" />
+            <label for="option1">Accetto il modo in cui trattate i miei dati</label>
+          </div>
+          <div>
+            <input type="checkbox" id="booking-form-newsletter" name="options" value="option2" />
+            <label for="booking-form-newsletter">Acconsento ad iscrivermi alla newsletter</label>
+          </div>
+        </div>
+        <div class="booking-form-container-btn">
+          <button type="submit" id="booking-form-submit-btn" aria-label="Invia la tua richiesta">Invia</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
