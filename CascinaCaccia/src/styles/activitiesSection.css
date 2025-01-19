@@ -374,7 +374,7 @@
   
   .activities-title {
     margin-bottom: 3.5rem;
-    font-size: 2.75rem;
+    font-size: 2.5rem;
   }
 
   .activities-wrapper {
@@ -403,5 +403,17 @@
 
   .activities-wrapper {
     gap: 4rem;
+  }
+}
+
+@media (min-width: 1900px) {
+  #activities-section {
+    padding: 2.5rem 3rem 2.5rem 3rem;
+  }
+}
+
+@media (min-width: 2200px) {
+  #activities-section {
+    padding: 2.5rem 12rem 2.5rem 12rem;
   }
 }

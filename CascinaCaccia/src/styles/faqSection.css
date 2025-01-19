@@ -11,9 +11,12 @@
   background-image: url("../../public/assets/faqSection/faq-section.jpg");
   background-size: cover;
   background-position: center;
+  position: relative;
 }
 
 .faq-title {
+  position: relative;
+  z-index: 2;
   font-size: 2rem;
   font-weight: 600;
   margin: 0;
@@ -23,6 +26,8 @@
 }
 
 .faq-card-wrapper {
+  position: relative;
+  z-index: 2;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
