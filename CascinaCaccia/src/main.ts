@@ -137,7 +137,7 @@ new Swiper(".activity-img-swiper", {
   },
   breakpoints: {
     500: {
-      spaceBetween: 24,
+      spaceBetween: 20,
     }
   },
 });
