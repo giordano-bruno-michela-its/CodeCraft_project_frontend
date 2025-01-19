@@ -8,7 +8,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: "index.html",
-        retrieveReservation: "src/pages/retrieve-reservation.html",
+        retrieveReservation: "src/Pages/retrieve-reservation.html",
       },
       output: {
         // custom output folder

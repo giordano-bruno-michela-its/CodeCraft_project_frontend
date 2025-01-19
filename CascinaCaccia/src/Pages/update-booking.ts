@@ -41,7 +41,8 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     try {
-      const response = await fetch("http://localhost:8080/api/formreq/createbooking", {
+      // const URL = "http://localhost:8080/api/formreq/createbooking";
+      const response = await fetch("", {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "json-server": "^1.0.0-beta.3",
     "typescript": "~5.6.2",
     "vite": "^6.0.3"
   },

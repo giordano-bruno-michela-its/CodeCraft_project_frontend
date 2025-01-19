@@ -135,8 +135,8 @@ document.addEventListener("DOMContentLoaded", () => {
       // Salva i dati della prenotazione in localStorage
       localStorage.setItem("reservationDetails", JSON.stringify(result));
       alert("Codice inviato con succeso");
-      window.location.href = "./Pages/update-booking.html"; // url to the page that allow the user to modify booking
-      retrieveResForm.reset();
+      window.location.href = "./update-booking.html"; // url to the page that allow the user to modify booking
+      // retrieveResForm.reset();
     } catch (error) {
       console.error("Errore durante l'invio dei dati", error);
       alert("Errore durante l'invio dei dati");

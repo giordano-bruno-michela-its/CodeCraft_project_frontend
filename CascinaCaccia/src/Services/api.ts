@@ -58,13 +58,14 @@ export async function submitNewsletterData(formData: NewsletterForm): Promise<vo
 }
 
 export async function submitRetrieveReservationForm(email: string, code: string): Promise<any> {
-  const URL = `http://localhost:8080/api/formreq/code/${code}`;
+  // const URL = `http://localhost:8080/api/formreq/code/${code}` cancellare poi code dal body inviato al backend (solo email passata ne body);
+  const URL = "http:localhost:8080/reservations";
   const response = await fetch(URL, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({ email }),
+    body: JSON.stringify({ email, code }),
   });
 
   if (!response.ok) {

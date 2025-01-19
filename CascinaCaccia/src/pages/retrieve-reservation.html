@@ -6,6 +6,8 @@
     <meta name="author" content="CodeCraft" />
     <meta name="description" content="retrieve reservation page" />
     <link rel="stylesheet" href="../styles/retrieve-reservation.css" />
+    <script type="module" src="../main.ts"></script>
+
     <title>Retrieve Reservation</title>
   </head>
 
@@ -15,7 +17,7 @@
       <h1 class="title">Recupera Prenotazione</h1>
       <p class="subtitle">Inserisci l'indirizzo email e il codice di 6 cifre per proseguire</p>
 
-      <form class="retrieve-reservation-form">
+      <form id="retrieve-reservation-form" method="post">
         <div class="input-group">
           <label for="email">Email</label>
           <input type="email" id="email" name="email" placeholder="Email" required />
