@@ -18,6 +18,7 @@ export function getBookingFormData(infoForm: HTMLFormElement, activitiesContaine
   const endTime = (document.getElementById("endDate") as HTMLInputElement).value;
   const contactDate = new Date().toISOString().split('T')[0];
   const formType = "FORM_BOOKING";
+  const bookingStatus = "PENDING";
 
   const newsletterCheckbox = document.getElementById("booking-form-newsletter") as HTMLInputElement;
   const newsletterCheck = newsletterCheckbox.checked ? "YES" : "NO";
@@ -102,6 +103,7 @@ export function getBookingFormData(infoForm: HTMLFormElement, activitiesContaine
     endTime,
     participantsQuantity,
     guidesQuantity,
+    bookingStatus,
     bookingDuration: {
       id: 1
     }
