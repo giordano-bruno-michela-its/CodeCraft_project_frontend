@@ -182,3 +182,20 @@ export function enableDisableSbmtBtnInfoForm(): void {
     submitButton.disabled = !consentCheckbox.checked;
   });
 }
+
+/**
+ * Shows a toast notification with the given message and type.
+ * @param {string} message - The message to display in the toast.
+ * @param {string} type - The type of the toast. Can be "success", "error", or "info".
+ */
+export function showToast(message: string, type: string) {
+  const toastContainer = document.getElementById("toast-container") as HTMLDivElement;
+  const toast = document.createElement("div");
+  toast.className = `toast ${type}`;
+  toast.textContent = message;
+
+  toastContainer.appendChild(toast);
+  setTimeout(() => {
+    toast.remove();
+  }, 3000);
+}
