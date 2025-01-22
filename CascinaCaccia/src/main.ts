@@ -4,7 +4,7 @@ import { initNavbar } from "./Components/navbar";
 import { submitBookingForm, submitNewsletterData } from "./Services/api";
 import { toggleColorblindFilter } from "./Utils/colorBlindFilter";
 import { toggleDarkMode } from "./Utils/darkMode";
-import { enableDisableSbmtBtnBookingForm, enableDisableSbmtBtnInfoForm, setupActivitiesToggle, setupOfferCards } from "./Utils/utils";
+import { enableDisableSbmtBtnBookingForm, enableDisableSbmtBtnInfoForm, setupActivitiesToggle, setupOfferCards, showToast } from "./Utils/utils";
 import { toggleAnswer } from "./Utils/utils";
 import { submitFormData } from "./Services/api";
 import { activityCards } from "./Utils/utils";
@@ -56,11 +56,11 @@ document.addEventListener("DOMContentLoaded", () => {
     try {
       const result = await submitBookingForm(formData);
       console.log("Dati inviati con successo:", result);
-      alert("La tua richiesta è stata inviata con successo!");
+      showToast("Richiesta inoltrata con successo!", "success");
       bookingForm.reset();
     } catch (error) {
       console.error("Errore durante l'invio dei dati:", error);
-      alert("Si è verificato un errore durante l'invio della tua richiesta");
+      showToast("Problemi durante l'invio della richiesta, riprova tra poco!", "error");
     }
   });
 });
@@ -88,11 +88,11 @@ document.addEventListener("DOMContentLoaded", () => {
     try {
       const result = await submitFormData(formData);
       console.log("Dati inviati con successo:", result);
-      alert("La tua richiesta è stata inviata con successo!");
+      showToast("Richiesta inoltrata con successo!", "success");
       infoForm.reset();
     } catch (error) {
       console.error("Errore durante l'invio dei dati:", error);
-      alert("Si è verificato un errore durante l'invio della tua richiesta.");
+      showToast("Problemi durante l'invio della richiesta, riprova tra poco!", "error");
     }
   });
 });
@@ -111,11 +111,11 @@ document.addEventListener("DOMContentLoaded", () => {
     try {
       const result = await submitNewsletterData(newsletterData);
       console.log("Dati inviati con successo:", result);
-      alert("La tua richiesta è stata inviata con successo!");
+      showToast("Richiesta inoltrata con successo!", "success");
       newsletterForm.reset();
     } catch (error) {
-      console.error("Errore durante l'invio dei dati:", error);
-      alert("Si è verificato un errore durante l'invio della tua richiesta.");
+      console.error(" Errore durante l'invio dei dati:", error);
+      showToast("Problemi durante l'invio della richiesta, riprova tra poco!", "error");
     }
   });
 });
