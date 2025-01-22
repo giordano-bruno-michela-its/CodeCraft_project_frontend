@@ -6,6 +6,8 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap");
 
+@import "../node_modules/swiper/swiper-bundle.min.css";
+
 @import "./styles/navbar.css";
 @import "./styles/heroSection.css";
 @import "./styles/visitSection.css";
@@ -16,9 +18,9 @@
 @import "./styles/footer.css";
 @import "./styles/accessibilityFilters.css";
 @import "./styles/activitiesSection.css";
+@import "./styles/toast.css";
 
 /* custom properties */
-
 :root {
   --brand-yellow: #ffdd07;
   --brand-pink: #e3007e;
@@ -35,6 +37,7 @@
 html {
   box-sizing: border-box;
 }
+
 *,
 *::before,
 *::after {
@@ -45,6 +48,16 @@ body {
   margin: 0;
   font-family: var(--main-font);
   background-color: var(--text-light);
-  padding-top: 6rem;
+  padding-top: 6rem; /* Header height */
+}
 
+.bg-img-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background: linear-gradient(180deg, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 65%); */
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 1;
 }

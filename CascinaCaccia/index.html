@@ -16,7 +16,7 @@
         <a href="#hero-section">
           <img src="./assets/navbar/Logo-agora.svg" alt="Logo Cascina Caccia" class="navbar-logo" />
         </a>
-        <button class="navbar-toggle" aria-label="Apri menu">
+        <button class="hamburger-toggle" aria-label="Apri il menu" aria-expanded="false" aria-controls="navbar-menu">
           <span class="navbar-hamburger"></span>
         </button>
       </div>
@@ -96,7 +96,7 @@
     <!-- hero Section -->
     <section id="hero-section">
       <img src="./assets/heroSection/hero-section.png" alt="Sfondo Cascina Caccia" class="hero-bg" />
-      <div class="hero-img-overlay"></div>
+      <div class="bg-img-overlay"></div>
       <div class="hero-content">
         <div>
           <h1 class="hero-title">
@@ -159,23 +159,34 @@
                 </li>
               </ul>
             </div>
-            <!-- IDEA CAROSELLO (in forse)
-            <div class="carousel">
-              <div class="carousel-track">
-                <div class="carousel-slide">
-                  <img src="https://via.placeholder.com/300x150?text=Slide+1" alt="Slide 1" />
+            <!-- Carousel: Swiper JS -->
+            <div class="swiper activity-img-swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img class="swiper-img" src="https://picsum.photos/300/200" loading="lazy" alt="swiper image" />
+                  <div class="swiper-lazy-preloader"></div>
+                  <!-- per tema scuro -->
+                  <!-- <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div> -->
                 </div>
-                <div class="carousel-slide">
-                  <img src="https://via.placeholder.com/300x150?text=Slide+2" alt="Slide 2" />
+                <div class="swiper-slide">
+                  <img class="swiper-img" src="https://picsum.photos/300/200" loading="lazy" alt="swiper image" />
+                  <div class="swiper-lazy-preloader"></div>
                 </div>
-                <div class="carousel-slide">
-                  <img src="https://via.placeholder.com/300x150?text=Slide+3" alt="Slide 3" />
+                <div class="swiper-slide">
+                  <img class="swiper-img" src="https://picsum.photos/300/200" loading="lazy" alt="swiper image" />
+                  <div class="swiper-lazy-preloader"></div>
+                </div>
+                <div class="swiper-slide">
+                  <img class="swiper-img" src="https://picsum.photos/300/200" loading="lazy" alt="swiper image" />
+                  <div class="swiper-lazy-preloader"></div>
                 </div>
               </div>
-              <div class="carousel-dots"></div>
-              <button class="carousel-btn prev-btn">&lt;</button>
-              <button class="carousel-btn next-btn">&gt;</button>
-            </div> -->
+              <div class="swiper-pagination"></div>
+              <!-- If we need navigation buttons -->
+              <div class="swiper-button-prev"><img src="./public/assets/activitiesSection/calendar-arrow.svg" alt="previous image button" /></div>
+              <div class="swiper-button-next"><img src="./public/assets/activitiesSection/calendar-arrow.svg" alt="next image button" /></div>
+            </div>
+            <!--  -->
             <button class="activity-book-btn">
               <a href="#booking-form-container">Prenota</a>
             </button>
@@ -211,23 +222,32 @@
                 <li><strong>Nuovi sviluppi:</strong>riapertura del caso e arresti recenti che riaccendono l'attenzione sulla sua figura.</li>
               </ul>
             </div>
-            <!-- IDEA CAROSELLO (in forse)
-            <div class="carousel">
-              <div class="carousel-track">
-                <div class="carousel-slide">
-                  <img src="https://via.placeholder.com/300x150?text=Slide+1" alt="Slide 1" />
+            <!-- Carousel: Swiper JS -->
+            <div class="swiper activity-img-swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img class="swiper-img" src="https://picsum.photos/300/200" loading="lazy" alt="swiper image" />
+                  <div class="swiper-lazy-preloader"></div>
+                  <!-- per tema scuro -->
                 </div>
-                <div class="carousel-slide">
-                  <img src="https://via.placeholder.com/300x150?text=Slide+2" alt="Slide 2" />
+                <div class="swiper-slide">
+                  <img class="swiper-img" src="https://picsum.photos/300/200" loading="lazy" alt="swiper image" />
+                  <div class="swiper-lazy-preloader"></div>
                 </div>
-                <div class="carousel-slide">
-                  <img src="https://via.placeholder.com/300x150?text=Slide+3" alt="Slide 3" />
+                <div class="swiper-slide">
+                  <img class="swiper-img" src="https://picsum.photos/300/200" loading="lazy" alt="swiper image" />
+                  <div class="swiper-lazy-preloader"></div>
+                </div>
+                <div class="swiper-slide">
+                  <img class="swiper-img" src="https://picsum.photos/300/200" loading="lazy" alt="swiper image" />
+                  <div class="swiper-lazy-preloader"></div>
                 </div>
               </div>
-              <div class="carousel-dots"></div>
-              <button class="carousel-btn prev-btn">&lt;</button>
-              <button class="carousel-btn next-btn">&gt;</button>
-            </div> -->
+              <div class="swiper-pagination"></div>
+              <!-- If we need navigation buttons -->
+              <div class="swiper-button-prev"><img src="./public/assets/activitiesSection/calendar-arrow.svg" alt="previous image button" /></div>
+              <div class="swiper-button-next"><img src="./public/assets/activitiesSection/calendar-arrow.svg" alt="next image button" /></div>
+            </div>
             <button class="activity-book-btn">
               <a href="#booking-form-container">Prenota</a>
             </button>
@@ -262,23 +282,32 @@
                 <li><strong>Antimafia sociale:</strong>principali leggi e iniziative per contrastare il fenomeno mafioso.</li>
               </ul>
             </div>
-            <!-- IDEA CAROSELLO (in forse)
-            <div class="carousel">
-              <div class="carousel-track">
-                <div class="carousel-slide">
-                  <img src="https://via.placeholder.com/300x150?text=Slide+1" alt="Slide 1" />
+            <!-- Carousel: Swiper JS -->
+            <div class="swiper activity-img-swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img class="swiper-img" src="https://picsum.photos/300/200" loading="lazy" alt="swiper image" />
+                  <div class="swiper-lazy-preloader"></div>
+                  <!-- per tema scuro -->
                 </div>
-                <div class="carousel-slide">
-                  <img src="https://via.placeholder.com/300x150?text=Slide+2" alt="Slide 2" />
+                <div class="swiper-slide">
+                  <img class="swiper-img" src="https://picsum.photos/300/200" loading="lazy" alt="swiper image" />
+                  <div class="swiper-lazy-preloader"></div>
                 </div>
-                <div class="carousel-slide">
-                  <img src="https://via.placeholder.com/300x150?text=Slide+3" alt="Slide 3" />
+                <div class="swiper-slide">
+                  <img class="swiper-img" src="https://picsum.photos/300/200" loading="lazy" alt="swiper image" />
+                  <div class="swiper-lazy-preloader"></div>
+                </div>
+                <div class="swiper-slide">
+                  <img class="swiper-img" src="https://picsum.photos/300/200" loading="lazy" alt="swiper image" />
+                  <div class="swiper-lazy-preloader"></div>
                 </div>
               </div>
-              <div class="carousel-dots"></div>
-              <button class="carousel-btn prev-btn">&lt;</button>
-              <button class="carousel-btn next-btn">&gt;</button>
-            </div> -->
+              <div class="swiper-pagination"></div>
+              <!-- If we need navigation buttons -->
+              <div class="swiper-button-prev"><img src="./public/assets/activitiesSection/calendar-arrow.svg" alt="previous image button" /></div>
+              <div class="swiper-button-next"><img src="./public/assets/activitiesSection/calendar-arrow.svg" alt="next image button" /></div>
+            </div>
             <button class="activity-book-btn">
               <a href="#booking-form-container">Prenota</a>
             </button>
@@ -312,23 +341,32 @@
                 <li><strong>Beni confiscati in Italia:</strong>panoramica e valore simbolico del recupero.</li>
               </ul>
             </div>
-            <!-- IDEA CAROSELLO (in forse)
-            <div class="carousel">
-              <div class="carousel-track">
-                <div class="carousel-slide">
-                  <img src="https://via.placeholder.com/300x150?text=Slide+1" alt="Slide 1" />
+            <!-- Carousel: Swiper JS -->
+            <div class="swiper activity-img-swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img class="swiper-img" src="https://picsum.photos/300/200" loading="lazy" alt="swiper image" />
+                  <div class="swiper-lazy-preloader"></div>
+                  <!-- per tema scuro -->
                 </div>
-                <div class="carousel-slide">
-                  <img src="https://via.placeholder.com/300x150?text=Slide+2" alt="Slide 2" />
+                <div class="swiper-slide">
+                  <img class="swiper-img" src="https://picsum.photos/300/200" loading="lazy" alt="swiper image" />
+                  <div class="swiper-lazy-preloader"></div>
                 </div>
-                <div class="carousel-slide">
-                  <img src="https://via.placeholder.com/300x150?text=Slide+3" alt="Slide 3" />
+                <div class="swiper-slide">
+                  <img class="swiper-img" src="https://picsum.photos/300/200" loading="lazy" alt="swiper image" />
+                  <div class="swiper-lazy-preloader"></div>
+                </div>
+                <div class="swiper-slide">
+                  <img class="swiper-img" src="https://picsum.photos/300/200" loading="lazy" alt="swiper image" />
+                  <div class="swiper-lazy-preloader"></div>
                 </div>
               </div>
-              <div class="carousel-dots"></div>
-              <button class="carousel-btn prev-btn">&lt;</button>
-              <button class="carousel-btn next-btn">&gt;</button>
-            </div> -->
+              <div class="swiper-pagination"></div>
+              <!-- If we need navigation buttons -->
+              <div class="swiper-button-prev"><img src="./public/assets/activitiesSection/calendar-arrow.svg" alt="previous image button" /></div>
+              <div class="swiper-button-next"><img src="./public/assets/activitiesSection/calendar-arrow.svg" alt="next image button" /></div>
+            </div>
             <button class="activity-book-btn">
               <a href="#booking-form-container">Prenota</a>
             </button>
@@ -362,23 +400,32 @@
                 <li><strong>Operazioni antimafia:</strong>azioni più rilevanti svolte sul territorio.</li>
               </ul>
             </div>
-            <!-- IDEA CAROSELLO (in forse)
-            <div class="carousel">
-              <div class="carousel-track">
-                <div class="carousel-slide">
-                  <img src="https://via.placeholder.com/300x150?text=Slide+1" alt="Slide 1" />
+            <!-- Carousel: Swiper JS -->
+            <div class="swiper activity-img-swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img class="swiper-img" src="https://picsum.photos/300/200" loading="lazy" alt="swiper image" />
+                  <div class="swiper-lazy-preloader"></div>
+                  <!-- per tema scuro -->
                 </div>
-                <div class="carousel-slide">
-                  <img src="https://via.placeholder.com/300x150?text=Slide+2" alt="Slide 2" />
+                <div class="swiper-slide">
+                  <img class="swiper-img" src="https://picsum.photos/300/200" loading="lazy" alt="swiper image" />
+                  <div class="swiper-lazy-preloader"></div>
                 </div>
-                <div class="carousel-slide">
-                  <img src="https://via.placeholder.com/300x150?text=Slide+3" alt="Slide 3" />
+                <div class="swiper-slide">
+                  <img class="swiper-img" src="https://picsum.photos/300/200" loading="lazy" alt="swiper image" />
+                  <div class="swiper-lazy-preloader"></div>
+                </div>
+                <div class="swiper-slide">
+                  <img class="swiper-img" src="https://picsum.photos/300/200" loading="lazy" alt="swiper image" />
+                  <div class="swiper-lazy-preloader"></div>
                 </div>
               </div>
-              <div class="carousel-dots"></div>
-              <button class="carousel-btn prev-btn">&lt;</button>
-              <button class="carousel-btn next-btn">&gt;</button>
-            </div> -->
+              <div class="swiper-pagination"></div>
+              <!-- If we need navigation buttons -->
+              <div class="swiper-button-prev"><img src="./public/assets/activitiesSection/calendar-arrow.svg" alt="previous image button" /></div>
+              <div class="swiper-button-next"><img src="./public/assets/activitiesSection/calendar-arrow.svg" alt="next image button" /></div>
+            </div>
             <button class="activity-book-btn">
               <a href="#booking-form-container">Prenota</a>
             </button>
@@ -413,23 +460,32 @@
                 <li><strong>Modelli alternativi:</strong>immaginare un futuro equo, basato su risorse libere dallo sfruttamento.</li>
               </ul>
             </div>
-            <!-- IDEA CAROSELLO (in forse)
-            <div class="carousel">
-              <div class="carousel-track">
-                <div class="carousel-slide">
-                  <img src="https://via.placeholder.com/300x150?text=Slide+1" alt="Slide 1" />
+            <!-- Carousel: Swiper JS -->
+            <div class="swiper activity-img-swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img class="swiper-img" src="https://picsum.photos/300/200" loading="lazy" alt="swiper image" />
+                  <div class="swiper-lazy-preloader"></div>
+                  <!-- per tema scuro -->
                 </div>
-                <div class="carousel-slide">
-                  <img src="https://via.placeholder.com/300x150?text=Slide+2" alt="Slide 2" />
+                <div class="swiper-slide">
+                  <img class="swiper-img" src="https://picsum.photos/300/200" loading="lazy" alt="swiper image" />
+                  <div class="swiper-lazy-preloader"></div>
                 </div>
-                <div class="carousel-slide">
-                  <img src="https://via.placeholder.com/300x150?text=Slide+3" alt="Slide 3" />
+                <div class="swiper-slide">
+                  <img class="swiper-img" src="https://picsum.photos/300/200" loading="lazy" alt="swiper image" />
+                  <div class="swiper-lazy-preloader"></div>
+                </div>
+                <div class="swiper-slide">
+                  <img class="swiper-img" src="https://picsum.photos/300/200" loading="lazy" alt="swiper image" />
+                  <div class="swiper-lazy-preloader"></div>
                 </div>
               </div>
-              <div class="carousel-dots"></div>
-              <button class="carousel-btn prev-btn">&lt;</button>
-              <button class="carousel-btn next-btn">&gt;</button>
-            </div> -->
+              <div class="swiper-pagination"></div>
+              <!-- If we need navigation buttons -->
+              <div class="swiper-button-prev"><img src="./public/assets/activitiesSection/calendar-arrow.svg" alt="previous image button" /></div>
+              <div class="swiper-button-next"><img src="./public/assets/activitiesSection/calendar-arrow.svg" alt="next image button" /></div>
+            </div>
             <button class="activity-book-btn">
               <a href="#booking-form-container">Prenota</a>
             </button>
@@ -465,23 +521,32 @@
                 <li><strong>Senso critico:</strong>analizzare il cinema per comprendere i messaggi nascosti.</li>
               </ul>
             </div>
-            <!-- IDEA CAROSELLO (in forse)
-            <div class="carousel">
-              <div class="carousel-track">
-                <div class="carousel-slide">
-                  <img src="https://via.placeholder.com/300x150?text=Slide+1" alt="Slide 1" />
+            <!-- Carousel: Swiper JS -->
+            <div class="swiper activity-img-swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img class="swiper-img" src="https://picsum.photos/300/200" loading="lazy" alt="swiper image" />
+                  <div class="swiper-lazy-preloader"></div>
+                  <!-- per tema scuro -->
                 </div>
-                <div class="carousel-slide">
-                  <img src="https://via.placeholder.com/300x150?text=Slide+2" alt="Slide 2" />
+                <div class="swiper-slide">
+                  <img class="swiper-img" src="https://picsum.photos/300/200" loading="lazy" alt="swiper image" />
+                  <div class="swiper-lazy-preloader"></div>
                 </div>
-                <div class="carousel-slide">
-                  <img src="https://via.placeholder.com/300x150?text=Slide+3" alt="Slide 3" />
+                <div class="swiper-slide">
+                  <img class="swiper-img" src="https://picsum.photos/300/200" loading="lazy" alt="swiper image" />
+                  <div class="swiper-lazy-preloader"></div>
+                </div>
+                <div class="swiper-slide">
+                  <img class="swiper-img" src="https://picsum.photos/300/200" loading="lazy" alt="swiper image" />
+                  <div class="swiper-lazy-preloader"></div>
                 </div>
               </div>
-              <div class="carousel-dots"></div>
-              <button class="carousel-btn prev-btn">&lt;</button>
-              <button class="carousel-btn next-btn">&gt;</button>
-            </div> -->
+              <div class="swiper-pagination"></div>
+              <!-- If we need navigation buttons -->
+              <div class="swiper-button-prev"><img src="./public/assets/activitiesSection/calendar-arrow.svg" alt="previous image button" /></div>
+              <div class="swiper-button-next"><img src="./public/assets/activitiesSection/calendar-arrow.svg" alt="next image button" /></div>
+            </div>
             <button class="activity-book-btn">
               <a href="#booking-form-container">Prenota</a>
             </button>
@@ -516,23 +581,32 @@
                 <li><strong>Messaggio educativo:</strong>sensibilizzare i giovani a scegliere giochi che favoriscano la crescita.</li>
               </ul>
             </div>
-            <!-- IDEA CAROSELLO (in forse)
-            <div class="carousel">
-              <div class="carousel-track">
-                <div class="carousel-slide">
-                  <img src="https://via.placeholder.com/300x150?text=Slide+1" alt="Slide 1" />
+            <!-- Carousel: Swiper JS -->
+            <div class="swiper activity-img-swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img class="swiper-img" src="https://picsum.photos/300/200" loading="lazy" alt="swiper image" />
+                  <div class="swiper-lazy-preloader"></div>
+                  <!-- per tema scuro -->
                 </div>
-                <div class="carousel-slide">
-                  <img src="https://via.placeholder.com/300x150?text=Slide+2" alt="Slide 2" />
+                <div class="swiper-slide">
+                  <img class="swiper-img" src="https://picsum.photos/300/200" loading="lazy" alt="swiper image" />
+                  <div class="swiper-lazy-preloader"></div>
                 </div>
-                <div class="carousel-slide">
-                  <img src="https://via.placeholder.com/300x150?text=Slide+3" alt="Slide 3" />
+                <div class="swiper-slide">
+                  <img class="swiper-img" src="https://picsum.photos/300/200" loading="lazy" alt="swiper image" />
+                  <div class="swiper-lazy-preloader"></div>
+                </div>
+                <div class="swiper-slide">
+                  <img class="swiper-img" src="https://picsum.photos/300/200" loading="lazy" alt="swiper image" />
+                  <div class="swiper-lazy-preloader"></div>
                 </div>
               </div>
-              <div class="carousel-dots"></div>
-              <button class="carousel-btn prev-btn">&lt;</button>
-              <button class="carousel-btn next-btn">&gt;</button>
-            </div> -->
+              <div class="swiper-pagination"></div>
+              <!-- If we need navigation buttons -->
+              <div class="swiper-button-prev"><img src="./public/assets/activitiesSection/calendar-arrow.svg" alt="previous image button" /></div>
+              <div class="swiper-button-next"><img src="./public/assets/activitiesSection/calendar-arrow.svg" alt="next image button" /></div>
+            </div>
             <button class="activity-book-btn">
               <a href="#booking-form-container">Prenota</a>
             </button>
@@ -567,23 +641,32 @@
                 <li><strong>Prevenzione e consapevolezza:</strong>promuovere un approccio sano al gioco, libero da dipendenze.</li>
               </ul>
             </div>
-            <!-- IDEA CAROSELLO (in forse)
-            <div class="carousel">
-              <div class="carousel-track">
-                <div class="carousel-slide">
-                  <img src="https://via.placeholder.com/300x150?text=Slide+1" alt="Slide 1" />
+            <!-- Carousel: Swiper JS -->
+            <div class="swiper activity-img-swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img class="swiper-img" src="https://picsum.photos/300/200" loading="lazy" alt="swiper image" />
+                  <div class="swiper-lazy-preloader"></div>
+                  <!-- per tema scuro -->
                 </div>
-                <div class="carousel-slide">
-                  <img src="https://via.placeholder.com/300x150?text=Slide+2" alt="Slide 2" />
+                <div class="swiper-slide">
+                  <img class="swiper-img" src="https://picsum.photos/300/200" loading="lazy" alt="swiper image" />
+                  <div class="swiper-lazy-preloader"></div>
                 </div>
-                <div class="carousel-slide">
-                  <img src="https://via.placeholder.com/300x150?text=Slide+3" alt="Slide 3" />
+                <div class="swiper-slide">
+                  <img class="swiper-img" src="https://picsum.photos/300/200" loading="lazy" alt="swiper image" />
+                  <div class="swiper-lazy-preloader"></div>
+                </div>
+                <div class="swiper-slide">
+                  <img class="swiper-img" src="https://picsum.photos/300/200" loading="lazy" alt="swiper image" />
+                  <div class="swiper-lazy-preloader"></div>
                 </div>
               </div>
-              <div class="carousel-dots"></div>
-              <button class="carousel-btn prev-btn">&lt;</button>
-              <button class="carousel-btn next-btn">&gt;</button>
-            </div> -->
+              <div class="swiper-pagination"></div>
+              <!-- If we need navigation buttons -->
+              <div class="swiper-button-prev"><img src="./public/assets/activitiesSection/calendar-arrow.svg" alt="previous image button" /></div>
+              <div class="swiper-button-next"><img src="./public/assets/activitiesSection/calendar-arrow.svg" alt="next image button" /></div>
+            </div>
             <button class="activity-book-btn">
               <a href="#booking-form-container">Prenota</a>
             </button>
@@ -712,18 +795,24 @@
         <div class="consent-checkbox-container">
           <div>
             <input type="checkbox" id="info-form-input" name="options" value="option1" />
-            <label for="info-form-input">Accetto il modo in cui trattate i miei dati</label>
+            <label for="info-form-input"
+              >Accetto che i miei dati personali vengano raccolti e trattati secondo la Privacy Policy di Cascina Caccia.</label
+            >
           </div>
           <div>
             <input type="checkbox" id="info-form-newsletter" name="options" value="option2" />
-            <label for="info-form-newsletter">Acconsento ad iscrivermi alla newsletter</label>
+            <label for="info-form-newsletter"
+              >Desidero ricevere la newsletter di Cascina Caccia. Potrò annullare l’iscrizione in qualsasi momento.</label
+            >
           </div>
         </div>
+        <p class="form-privacy-policy"><a href="./src/pages/privacyPolicy.html" target="_blank"> Privacy Policy</a></p>
 
         <div class="info-form-container-btn">
-          <button type="submit" id="info-form-submit-btn" aria-label="Invia la tua richiesta">Invia</button>
+          <button type="submit" id="info-form-submit-btn" aria-label="Invia la tua richiesta" disabled>Invia</button>
         </div>
       </form>
+      <div class="bg-img-overlay"></div>
     </div>
 
     <!-- Offers Section -->
@@ -904,11 +993,13 @@
       <form class="bookingForm" id="bookingForm" method="post">
         <h2 class="booking-form-title">Prenota una visita</h2>
         <div class="input-container">
-          <input type="date" id="startDate" class="booking-form-input" name="startDate" aria-labelledby="startDate" required />
+          <label id="start-date-label">Data di inzio</label>
+          <input type="date" id="startDate" class="booking-form-input" name="startDate" aria-labelledby="start-date-label" required />
         </div>
 
         <div class="input-container">
-          <input type="date" id="endDate" class="booking-form-input" name="endDate" aria-labelledby="endDate" required />
+          <label id="end-date-label">Data di fine</label>
+          <input type="date" id="endDate" class="booking-form-input" name="endDate" aria-labelledby="end-date-label" required />
         </div>
 
         <div class="booking-form-name-surname-container">
@@ -999,32 +1090,39 @@
           </div>
         </div>
 
-        <div class="input-container">
-          <input
-            type="number"
-            placeholder="numero minori"
-            min="1"
-            max="35"
-            id="nChildren"
-            class="booking-form-input"
-            name="nChildren"
-            aria-labelledby="nChildren"
-            required
-          />
-        </div>
-
-        <div class="input-container">
-          <input
-            type="number"
-            placeholder="numero adulti"
-            min="1"
-            max="10"
-            id="nAdults"
-            class="booking-form-input"
-            name="nAdults"
-            aria-labelledby="nAdults"
-            required
-          />
+        <div class="multiple-input-wrapper">
+          <div class="input-container">
+            <input
+              type="number"
+              placeholder="n° minori"
+              min="1"
+              max="35"
+              id="nChildren"
+              class="booking-form-input"
+              name="nChildren"
+              aria-labelledby="nChildren"
+              required
+            />
+          </div>
+          <div class="adults-input-wrapper">
+            <div class="promo-bg"></div>
+            <div class="input-container">
+              <input
+                type="number"
+                placeholder="n° adulti"
+                min="1"
+                max="10"
+                id="nAdults"
+                class="booking-form-input"
+                name="nAdults"
+                aria-labelledby="nAdults"
+                required
+              />
+            </div>
+            <div id="adults-promo">
+              <p>tariffa gratuita fino a 2 adulti accompagantori</p>
+            </div>
+          </div>
         </div>
 
         <div class="input-container">
@@ -1056,6 +1154,11 @@
           </div>
         </div>
 
+        <div class="activity-age-warning">
+          <img src="./public/assets/formsSection/danger-alert-icon.svg" alt="danger icon" />
+          <p>L’attività selezionata è limitata ad una fascia di età dai 6 ai 14 anni.</p>
+        </div>
+
         <p class="booking-form-activity-text">
           *le attività selezionate rappresentano una manifestazione d'interesse verso le stesse, e verranno confermate solo nel contatto diretto con
           Cascina Caccia.
@@ -1064,24 +1167,28 @@
         <div class="consent-checkbox-container">
           <div>
             <input type="checkbox" id="option1" name="options" value="option1" />
-            <label for="option1">Accetto il modo in cui trattate i miei dati</label>
+            <label for="option1">Accetto che i miei dati personali vengano raccolti e trattati secondo la Privacy Policy di Cascina Caccia.</label>
           </div>
           <div>
             <input type="checkbox" id="booking-form-newsletter" name="options" value="option2" />
-            <label for="booking-form-newsletter">Acconsento ad iscrivermi alla newsletter</label>
+            <label for="booking-form-newsletter"
+              >Desidero ricevere la newsletter di Cascina Caccia. Potrò annullare l’iscrizione in qualsasi momento.</label
+            >
           </div>
         </div>
+        <p class="form-privacy-policy"><a href="./src/pages/privacyPolicy.html" target="_blank"> Privacy Policy</a></p>
         <div class="booking-form-container-btn">
-          <button type="submit" id="booking-form-submit-btn" aria-label="Invia la tua richiesta">Invia</button>
+          <button type="submit" id="booking-form-submit-btn" aria-label="Invia la tua richiesta" disabled>Invia</button>
         </div>
       </form>
+      <div class="bg-img-overlay"></div>
     </div>
 
     <!-- newsletter section -->
     <section id="newsletter-container">
       <div class="newsletter-titles-container">
         <p class="newsletter-title">Non perderti nulla,</p>
-        <p class="newsletter-title">con la nostra <span id="newsletter-highlight">newsletter</span>.</p>
+        <p class="newsletter-title">con la nostra <span id="newsletter-highlight">Newsletter</span>.</p>
       </div>
       <div class="newsletter-text-form-container">
         <p id="newsletter-text-info">
@@ -1122,10 +1229,13 @@
             </div>
           </div>
           <input type="email" id="newsletter-email" name="email" required placeholder="inserisci la tua email" title="Inserisci un'email valida" />
-          <div>
+          <div class="newsletter-checkbox-container">
             <input type="checkbox" id="newsletter-checkbox" />
-            <label for="newsletter-checkbox">accetta il modo in cui trattiamo i tuoi dati...</label>
+            <label for="newsletter-checkbox"
+              >Accetto che i miei dati personali vengano raccolti e trattati secondo la Privacy Policy di Cascina Caccia.</label
+            >
           </div>
+          <p class="form-privacy-policy"><a href="./src/pages/privacyPolicy.html" target="_blank"> Privacy Policy</a></p>
           <div class="newsletter-containerBTN">
             <button type="submit" id="newsletter-submit">Iscriviti</button>
           </div>
@@ -1225,6 +1335,7 @@
           </div>
         </div>
       </div>
+      <div class="bg-img-overlay"></div>
     </section>
 
     <!-- Footer -->
@@ -1295,10 +1406,10 @@
       </div>
     </footer>
     <div class="code-craft-factory">
-      <p>
-        Designed and developed by <strong>CodeCraft</strong
-        ><img class="code-craft-logo" src="./public/assets/footer/Codecraft-logo.svg" alt="codecraft logo" />
-      </p>
+      <p>Designed and developed by <strong>CodeCraft</strong></p>
+      <img class="code-craft-logo" src="./public/assets/footer/Codecraft-logo.svg" alt="codecraft logo" />
     </div>
+    <!-- Toast Feedback -->
+    <div id="toast-container"></div>
   </body>
 </html>
