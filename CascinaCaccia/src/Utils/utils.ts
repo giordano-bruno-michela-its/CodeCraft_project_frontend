@@ -154,3 +154,31 @@ export function setupOfferCards(): void {
     });
   });
 }
+
+/**
+ * Enables or disables the submit button of the booking form depending on the
+ *  checked state of the consent checkbox.
+ */
+export function enableDisableSbmtBtnBookingForm(): void {
+  const submitButton = document.getElementById("booking-form-submit-btn") as HTMLButtonElement;
+  const consentCheckbox = document.getElementById("option1") as HTMLInputElement;
+
+  // Enable and disable submit form btn
+  consentCheckbox.addEventListener("change", () => {
+    submitButton.disabled = !consentCheckbox.checked;
+  });
+}
+
+/**
+ * Enables or disables the submit button of the info form depending on the
+ * checked state of the newsletter consent checkbox.
+ */
+export function enableDisableSbmtBtnInfoForm(): void {
+  const submitButton = document.getElementById("info-form-submit-btn") as HTMLButtonElement;
+  const consentCheckbox = document.getElementById("info-form-input") as HTMLInputElement;
+
+  // Enable and disable submit form btn
+  consentCheckbox.addEventListener("change", () => {
+    submitButton.disabled = !consentCheckbox.checked;
+  });
+}

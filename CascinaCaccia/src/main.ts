@@ -4,16 +4,16 @@ import { initNavbar } from "./Components/navbar";
 import { submitBookingForm, submitNewsletterData } from "./Services/api";
 import { toggleColorblindFilter } from "./Utils/colorBlindFilter";
 import { toggleDarkMode } from "./Utils/darkMode";
-import { setupActivitiesToggle, setupOfferCards } from "./Utils/utils";
+import { enableDisableSbmtBtnBookingForm, enableDisableSbmtBtnInfoForm, setupActivitiesToggle, setupOfferCards } from "./Utils/utils";
 import { toggleAnswer } from "./Utils/utils";
 import { submitFormData } from "./Services/api";
-import { activityCards } from "./Utils/utils"
+import { activityCards } from "./Utils/utils";
 // import { activityCarousel } from "./Utils/utils"
 import { getNewsletterFormData } from "./Components/newsletterFormHandler";
 
 // import Swiper JS
-import Swiper from 'swiper';
-import { Navigation, Pagination } from 'swiper/modules';
+import Swiper from "swiper";
+import { Navigation, Pagination } from "swiper/modules";
 
 document.addEventListener("DOMContentLoaded", () => {
   //Navbar:
@@ -44,6 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const activitiesContainer = document.getElementById("activitiesContainer") as HTMLDivElement;
 
   setupActivitiesToggle(activitiesToggle, activitiesContainer);
+  enableDisableSbmtBtnBookingForm();
 
   bookingForm.addEventListener("submit", async (event) => {
     event.preventDefault();
@@ -75,6 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
   activitiesToggle.setAttribute("aria-expanded", (!isHidden).toString());
 
   setupActivitiesToggle(activitiesToggle, activitiesContainer);
+  enableDisableSbmtBtnInfoForm();
 
   infoForm.addEventListener("submit", async (event) => {
     event.preventDefault();
@@ -132,12 +134,12 @@ new Swiper(".activity-img-swiper", {
     clickable: true,
   },
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
   },
   breakpoints: {
     500: {
       spaceBetween: 20,
-    }
+    },
   },
 });
