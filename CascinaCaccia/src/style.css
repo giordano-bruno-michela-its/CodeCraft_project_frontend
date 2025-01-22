@@ -18,10 +18,9 @@
 @import "./styles/footer.css";
 @import "./styles/accessibilityFilters.css";
 @import "./styles/activitiesSection.css";
-
+@import "./styles/toast.css";
 
 /* custom properties */
-
 :root {
   --brand-yellow: #ffdd07;
   --brand-pink: #e3007e;
