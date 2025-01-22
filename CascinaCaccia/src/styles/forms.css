@@ -274,6 +274,7 @@ input[type="number"] {
 
 .form-privacy-policy {
   text-align: center;
+  font-size: 0.8rem;
 }
 .form-privacy-policy a {
   color: var(--text-dark);
@@ -329,6 +330,9 @@ ma va in conflitto con backgrounimg e backgroundcolor white dell'intero form */
 
   #adults-promo {
     padding: 0 0.5rem;
+  }
+  .form-privacy-policy {
+    font-size: 0.8rem;
   }
 }
 
@@ -569,6 +573,9 @@ ma va in conflitto con backgrounimg e backgroundcolor white dell'intero form */
     padding: 0.9rem 5rem;
     font-size: 1.65rem;
     border-radius: 1rem;
+  }
+  .form-privacy-policy {
+    font-size: 0.95rem;
   }
 }
 
