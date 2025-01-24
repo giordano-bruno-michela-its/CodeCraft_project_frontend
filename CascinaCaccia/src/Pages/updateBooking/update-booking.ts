@@ -3,8 +3,6 @@
 import { getUpdateBknFormData } from "../../Components/getUpdateBookingFormData";
 import { prefillFields } from "../../Utils/update-booking-reservation-prefill";
 
-
-
 document.addEventListener("DOMContentLoaded", () => {
   const reservationDetails = JSON.parse(localStorage.getItem("reservationDetails") || "{}");
 
@@ -29,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (response.ok) {
         alert("Prenotazione aggiornata con successo!");
         form.reset();
-        window.location.href = "../../index.html";
+        window.location.href = "../../../index.html";
       } else {
         throw new Error("Errore durante l'aggiornamento della prenotazione");
       }
