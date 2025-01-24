@@ -1,7 +1,9 @@
 // Update booking form after retrieve reservation
 
-import { getUpdateBknFormData } from "../Components/getUpdateBookingFormData";
-import { prefillFields } from "../Utils/update-booking-reservation-prefill";
+import { getUpdateBknFormData } from "../../Components/getUpdateBookingFormData";
+import { prefillFields } from "../../Utils/update-booking-reservation-prefill";
+
+
 
 document.addEventListener("DOMContentLoaded", () => {
   const reservationDetails = JSON.parse(localStorage.getItem("reservationDetails") || "{}");

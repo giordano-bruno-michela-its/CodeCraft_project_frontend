@@ -4,7 +4,7 @@ import { initNavbar } from "./Components/navbar";
 import { submitBookingForm, submitNewsletterData, submitRetrieveReservationForm } from "./Services/api";
 import { toggleColorblindFilter } from "./Utils/colorBlindFilter";
 import { toggleDarkMode } from "./Utils/darkMode";
-import { setupActivitiesToggle, setupOfferCards } from "./Utils/utils";
+import { getElement, setupActivitiesToggle, setupOfferCards } from "./Utils/utils";
 import { toggleAnswer } from "./Utils/utils";
 import { submitFormData } from "./Services/api";
 import { activityCards } from "./Utils/utils";
@@ -120,7 +120,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // Retrieve Reservation Form
-
+/* 
 document.addEventListener("DOMContentLoaded", () => {
   const retrieveResForm = document.getElementById("retrieve-reservation-form") as HTMLFormElement;
 
@@ -142,7 +142,7 @@ document.addEventListener("DOMContentLoaded", () => {
       alert("Errore durante l'invio dei dati");
     }
   });
-});
+}); */
 
 // Swiper.js carousel script
 
