@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
     event.preventDefault();
 
     // get data from the html Form
-    const formData = getBookingFormData(bookingForm, activitiesContainer);
+    const formData = getBookingFormData(activitiesContainer);
 
     // Handling form data (submit)
     try {
