@@ -1,10 +1,10 @@
 import { getBookingFormData } from "./Components/bookingFormHandler";
 import { getFormDataInfo } from "./Components/infoFormHandler";
 import { initNavbar } from "./Components/navbar";
-import { submitBookingForm, submitNewsletterData, submitRetrieveReservationForm } from "./Services/api";
+import { submitBookingForm, submitNewsletterData } from "./Services/api";
 import { toggleColorblindFilter } from "./Utils/colorBlindFilter";
 import { toggleDarkMode } from "./Utils/darkMode";
-import { getElement, setupActivitiesToggle, setupOfferCards } from "./Utils/utils";
+import { setupActivitiesToggle, setupOfferCards } from "./Utils/utils";
 import { toggleAnswer } from "./Utils/utils";
 import { submitFormData } from "./Services/api";
 import { activityCards } from "./Utils/utils";
@@ -14,7 +14,6 @@ import { getNewsletterFormData } from "./Components/newsletterFormHandler";
 // import Swiper JS
 import Swiper from "swiper";
 import { Navigation, Pagination } from "swiper/modules";
-import { getRetrieveReservationFormData } from "./Components/getRetrieveReservationFormData";
 
 document.addEventListener("DOMContentLoaded", () => {
   //Navbar:
