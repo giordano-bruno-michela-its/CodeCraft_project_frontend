@@ -58,6 +58,10 @@ export const getElement = <T extends HTMLElement>(selector: string): T => {
   return element;
 };
 
+/**
+ * Toggle the "open" CSS class on activity card headers, and toggle the "hidden" CSS class on the details and button
+ * elements inside the card header. This allows the user to click on the card header to show/hide the card details.
+ */
 export function activityCards(): void {
   const activitiesCardHeaders = document.querySelectorAll(".activity-card-header");
   // const activitiesCard = document.querySelectorAll(".activity-card");

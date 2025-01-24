@@ -1,3 +1,7 @@
+/**
+ * Extracts the values from the BookingForm form
+ * @returns The values of the form
+ */
 export function getUpdateBknFormData() {
   return {
     startDate: (document.getElementById("startDate") as HTMLInputElement).value,
