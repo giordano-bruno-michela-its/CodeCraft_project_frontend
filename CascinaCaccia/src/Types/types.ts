@@ -6,15 +6,7 @@ export interface BookingForm {
   phoneNumber: string;
   contactDate: string;
   additionalInfo: string;
-  newsletterCheck: string,
-
-  /*  fasciaEta: {
-     id: number; 
-     denominazione: string; 
-     descrizione: string; 
-     etaMin: number; 
-     etaMax: number; 
-   }; */
+  newsletterCheck: string;
   formType: string;
   beginTime: string;
   endTime: string;
@@ -28,7 +20,7 @@ export interface BookingForm {
     id: number;
     name: string;
     description: string | null;
-  }[]; // Array dei tipi di attività
+  }[];
 }
 
 export interface FormDataRequest {
@@ -39,18 +31,14 @@ export interface FormDataRequest {
   phoneNumber: string;
   contactDate: string;
   additionalInfo: string;
-  newsletterCheck: null | string; // Considerando che potrebbe essere stringa o null
-  /* ageGroup: {
-    id: number;
-  }; */
+  newsletterCheck: null | string;
   activityType: {
     id: number;
-    name: string,
-    description: string
+    name: string;
+    description: string;
   }[];
   formType: string;
 }
-
 
 export interface NewsletterForm {
   email: string;
@@ -59,4 +47,9 @@ export interface NewsletterForm {
   contactDate: string;
   newsletterCheck: string;
   formType: string;
+}
+
+export interface RetrieveReservationForm {
+  email: string;
+  code: string;
 }

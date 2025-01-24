@@ -58,6 +58,10 @@ export const getElement = <T extends HTMLElement>(selector: string): T => {
   return element;
 };
 
+/**
+ * Toggle the "open" CSS class on activity card headers, and toggle the "hidden" CSS class on the details and button
+ * elements inside the card header. This allows the user to click on the card header to show/hide the card details.
+ */
 export function activityCards(): void {
   const activitiesCardHeaders = document.querySelectorAll(".activity-card-header");
   // const activitiesCard = document.querySelectorAll(".activity-card");
@@ -198,4 +202,47 @@ export function showToast(message: string, type: string) {
   setTimeout(() => {
     toast.remove();
   }, 3000);
+}
+
+/** 
+ * Sets the value of an HTML input element with the given ID.
+ * @param {string} id - The ID of the element to set the value for.
+ * @param {string} value - The value to set for the element.
+ */
+export function setInputValue(id: string, value: string) {
+  const element = document.getElementById(id) as HTMLInputElement;
+  if (element) {
+    element.value = value;
+  }
+}
+
+/**
+ * Sets the selected option of a select element by its numerical value.
+ * @param {string} id - The ID of the select element to update.
+ * @param {number} value - The numerical value to match and select within the options.
+ * Logs a warning if no matching option is found.
+ */
+export function setSelectValueById(id: string, value: number) {
+  const selectElement = document.getElementById(id) as HTMLSelectElement;
+  if (selectElement) {
+    const options = Array.from(selectElement.options);
+    const matchingOption = options.find((option) => parseInt(option.value) === value);
+    if (matchingOption) {
+      matchingOption.selected = true;
+    } else {
+      console.warn(`Nessuna opzione trovata per il valore: ${value}`);
+    }
+  }
+}
+
+/**
+ * Sets the text content of a textarea element with the given ID.
+ * @param {string} id - The ID of the textarea element to update.
+ * @param {string} value - The text content to set for the textarea element.
+ */
+export function setTextAreaContent(id: string, value: string) {
+  const textArea = document.getElementById(id) as HTMLTextAreaElement;
+  if (textArea) {
+    textArea.textContent = value;
+  }
 }
