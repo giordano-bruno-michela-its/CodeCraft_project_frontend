@@ -204,7 +204,7 @@ export function showToast(message: string, type: string) {
   }, 3000);
 }
 
-/** 
+/**
  * Sets the value of an HTML input element with the given ID.
  * @param {string} id - The ID of the element to set the value for.
  * @param {string} value - The value to set for the element.
@@ -246,3 +246,51 @@ export function setTextAreaContent(id: string, value: string) {
     textArea.textContent = value;
   }
 }
+
+/**
+ * Adds a submit event listener to all forms on the page to validate the privacy consent checkbox.
+ * Prevents form submission if the checkbox is not checked, displaying a warning message.
+ * If the checkbox is checked, clears the message and dispatches a custom "validatedSubmit" event.
+ * Handles different forms by their IDs and associated checkbox elements.
+ */
+export function controlCheckboxForm() {
+  const forms = document.querySelectorAll<HTMLFormElement>("form");
+
+  forms.forEach((form) => {
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      // checkbox privacy
+      let checkbox: HTMLInputElement | null = null;
+
+      if (form.id === "infoForm") {
+        checkbox = form.querySelector<HTMLInputElement>("#info-form-input");
+      } else if (form.id === "bookingForm") {
+        checkbox = form.querySelector<HTMLInputElement>("#option1");
+      } else if (form.id === "newsletter-email-form") {
+        checkbox = form.querySelector<HTMLInputElement>("#newsletter-checkbox");
+      }
+
+      // Seleziona l'elemento per il messaggio
+      const messageElement = form.querySelector<HTMLParagraphElement>(".checkbox-message");
+
+      if (checkbox && messageElement) {
+        if (!checkbox.checked) {
+          messageElement.textContent = "Devi accettare i termini di privacy per continuare.";
+          messageElement.style.color = "red";
+          return;
+        } else {
+          messageElement.textContent = "";
+          messageElement.style.display = "none";
+        }
+      }
+
+      // Se la validazione passa, inviamo un evento personalizzato per il submit dei form nel main.ts
+      form.dispatchEvent(new Event("validatedSubmit"));
+    });
+  });
+}
+/* In pratica, quando event.preventDefault() viene chiamato, impediamo l'invio del form immediatamente ma,
+ per continuare con la logica di submit (solo se la validazione è passata), dobbiamo creare 
+ un altro evento che viene attivato dopo che la validazione è andata a buon fine e lo andiamo a richiamare nel main.ts 
+ su tutti i form. */
