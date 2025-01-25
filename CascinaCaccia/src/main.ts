@@ -4,7 +4,7 @@ import { initNavbar } from "./Components/navbar";
 import { submitBookingForm, submitNewsletterData } from "./Services/api";
 import { toggleColorblindFilter } from "./Utils/colorBlindFilter";
 import { toggleDarkMode } from "./Utils/darkMode";
-import { enableDisableSbmtBtnBookingForm, enableDisableSbmtBtnInfoForm, setupActivitiesToggle, setupOfferCards, showToast } from "./Utils/utils";
+import { enableDisableSbmtBtnBookingForm, enableDisableSbmtBtnInfoForm, setupActivitiesToggle, setupOfferCards, setUpPaymentMethodsBtns, showToast } from "./Utils/utils";
 import { toggleAnswer } from "./Utils/utils";
 import { submitFormData } from "./Services/api";
 import { activityCards } from "./Utils/utils";
@@ -31,6 +31,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // Offers Section
   setupOfferCards();
 
+  setUpPaymentMethodsBtns();
+
   // Faq Section
   const faqQuestions = document.querySelectorAll(".faq-question");
 
@@ -42,6 +44,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const bookingForm = document.getElementById("bookingForm") as HTMLFormElement;
   const activitiesToggle = document.getElementById("activitiesToggle") as HTMLButtonElement;
   const activitiesContainer = document.getElementById("activitiesContainer") as HTMLDivElement;
+  
+  // toggles the activity age limit banner when the checkbox is checked
+  const limitedActivityCheck = document.querySelector('#bookingForm #activitiesContainer input[value="8"]') as HTMLInputElement;
+  const limiteActivityBanner = document.querySelector('#bookingForm .activity-age-warning') as HTMLDivElement;
+
+  limitedActivityCheck.addEventListener('change', () => {
+    limiteActivityBanner.classList.toggle('hidden');
+  });
 
   setupActivitiesToggle(activitiesToggle, activitiesContainer);
   enableDisableSbmtBtnBookingForm();

@@ -448,12 +448,6 @@ input:checked + .slider:before {
 
 
 @media (min-width: 1350px) {
-  .navbar-logo {
-    width: 10.25rem;
-    max-height: 4.9375rem;
-  }
-
-
   .navbar-switches {
     padding-right: 1.5rem;
     gap: 1.5rem;

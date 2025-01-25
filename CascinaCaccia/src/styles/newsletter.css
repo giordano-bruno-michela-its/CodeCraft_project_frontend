@@ -199,6 +199,14 @@
     font-size: 0.85rem;
   }
 
+  .newsletter-checkbox-container label a {
+    color: var(--text-dark);
+  }
+
+  .newsletter-checkbox-container label a:hover {
+    color: var(--brand-pink);
+  }
+
   #newsletter-checkbox {
     width: 1.4rem;
     height: 1.4rem;
