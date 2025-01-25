@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="CodeCraft" />
     <meta name="description" content="retrieve reservation page" />
-    <link rel="stylesheet" href="../styles/retrieve-reservation.css" />
+    <link rel="stylesheet" href="./retrieve-reservation.css" />
+    <script type="module" src="./retrieveReservation.ts"></script>
+
     <title>Retrieve Reservation</title>
   </head>
 
@@ -15,7 +17,7 @@
       <h1 class="title">Recupera Prenotazione</h1>
       <p class="subtitle">Inserisci l'indirizzo email e il codice di 6 cifre per proseguire</p>
 
-      <form class="form">
+      <form id="retrieve-reservation-form" method="post">
         <div class="input-group">
           <label for="email">Email</label>
           <input type="email" id="email" name="email" placeholder="Email" required />
@@ -24,12 +26,12 @@
         <div class="input-group code-group">
           <label for="code">Codice di verifica</label>
           <div class="code-inputs">
-            <input type="number" min="0" max="9" required />
-            <input type="number" min="0" max="9" required />
-            <input type="number" min="0" max="9" required />
-            <input type="number" min="0" max="9" required />
-            <input type="number" min="0" max="9" required />
-            <input type="number" min="0" max="9" required />
+            <input type="number" min="0" max="9" id="code-1" required />
+            <input type="number" min="0" max="9" id="code-2" required />
+            <input type="number" min="0" max="9" id="code-3" required />
+            <input type="number" min="0" max="9" id="code-4" required />
+            <input type="number" min="0" max="9" id="code-5" required />
+            <input type="number" min="0" max="9" id="code-6" required />
           </div>
         </div>
 

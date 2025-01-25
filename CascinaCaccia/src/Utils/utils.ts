@@ -58,6 +58,10 @@ export const getElement = <T extends HTMLElement>(selector: string): T => {
   return element;
 };
 
+/**
+ * Toggle the "open" CSS class on activity card headers, and toggle the "hidden" CSS class on the details and button
+ * elements inside the card header. This allows the user to click on the card header to show/hide the card details.
+ */
 export function activityCards(): void {
   const activitiesCardHeaders = document.querySelectorAll(".activity-card-header");
   // const activitiesCard = document.querySelectorAll(".activity-card");
@@ -174,3 +178,94 @@ export function showToast(message: string, type: string) {
     toast.remove();
   }, 3000);
 }
+
+/**
+ * Sets the value of an HTML input element with the given ID.
+ * @param {string} id - The ID of the element to set the value for.
+ * @param {string} value - The value to set for the element.
+ */
+export function setInputValue(id: string, value: string) {
+  const element = document.getElementById(id) as HTMLInputElement;
+  if (element) {
+    element.value = value;
+  }
+}
+
+/**
+ * Sets the selected option of a select element by its numerical value.
+ * @param {string} id - The ID of the select element to update.
+ * @param {number} value - The numerical value to match and select within the options.
+ * Logs a warning if no matching option is found.
+ */
+export function setSelectValueById(id: string, value: number) {
+  const selectElement = document.getElementById(id) as HTMLSelectElement;
+  if (selectElement) {
+    const options = Array.from(selectElement.options);
+    const matchingOption = options.find((option) => parseInt(option.value) === value);
+    if (matchingOption) {
+      matchingOption.selected = true;
+    } else {
+      console.warn(`Nessuna opzione trovata per il valore: ${value}`);
+    }
+  }
+}
+
+/**
+ * Sets the text content of a textarea element with the given ID.
+ * @param {string} id - The ID of the textarea element to update.
+ * @param {string} value - The text content to set for the textarea element.
+ */
+export function setTextAreaContent(id: string, value: string) {
+  const textArea = document.getElementById(id) as HTMLTextAreaElement;
+  if (textArea) {
+    textArea.textContent = value;
+  }
+}
+
+/**
+ * Adds a submit event listener to all forms on the page to validate the privacy consent checkbox.
+ * Prevents form submission if the checkbox is not checked, displaying a warning message.
+ * If the checkbox is checked, clears the message and dispatches a custom "validatedSubmit" event.
+ * Handles different forms by their IDs and associated checkbox elements.
+ */
+export function controlCheckboxForm() {
+  const forms = document.querySelectorAll<HTMLFormElement>("form");
+
+  forms.forEach((form) => {
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      // checkbox privacy
+      let checkbox: HTMLInputElement | null = null;
+
+      if (form.id === "infoForm") {
+        checkbox = form.querySelector<HTMLInputElement>("#info-form-input");
+      } else if (form.id === "bookingForm") {
+        checkbox = form.querySelector<HTMLInputElement>("#option1");
+      } else if (form.id === "newsletter-email-form") {
+        checkbox = form.querySelector<HTMLInputElement>("#newsletter-checkbox");
+      }
+
+      // Seleziona l'elemento per il messaggio
+      const messageElement = form.querySelector<HTMLParagraphElement>(".checkbox-message");
+
+      if (checkbox && messageElement) {
+        if (!checkbox.checked) {
+          messageElement.textContent = "Devi accettare i termini di privacy per continuare.";
+          messageElement.style.color = "red";
+          return;
+        } else {
+          messageElement.textContent = "";
+          messageElement.style.display = "none";
+        }
+      }
+
+      // Se la validazione passa, inviamo un evento personalizzato per il submit dei form nel main.ts
+      form.dispatchEvent(new Event("validatedSubmit"));
+    });
+  });
+}
+/* In pratica, quando event.preventDefault() viene chiamato, impediamo l'invio del form immediatamente ma,
+ per continuare con la logica di submit (solo se la validazione è passata), dobbiamo creare 
+ un altro evento che viene attivato dopo che la validazione è andata a buon fine e lo andiamo a richiamare nel main.ts 
+ su tutti i form. */
