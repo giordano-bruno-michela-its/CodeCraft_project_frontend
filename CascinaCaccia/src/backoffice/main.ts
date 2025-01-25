@@ -8,11 +8,11 @@ async function init() {
         console.log("Stato auth:", result);
 
         if (result === true) {
-            if (window.location.pathname !== '../backoffice/Pages/login.html') {
+            if (window.location.pathname !== '/src/backoffice/Pages/login.html') {
                 window.location.href = '/src/backoffice/Pages/login.html';
             }
         } else if (result === false) {
-            if (window.location.pathname !== '../backoffice/Pages/registrationUser.html') {
+            if (window.location.pathname !== '/src/backoffice/Pages/registrationUser.html') {
                 window.location.href = '/src/backoffice/Pages/registrationUser.html';
             }
         } else {

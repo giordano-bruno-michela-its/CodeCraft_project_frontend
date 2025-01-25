@@ -2,9 +2,13 @@ import { defineConfig } from "vite";
 import { resolve } from "path";
 
 export default defineConfig({
+  preview: {
+    port: 3000, // Imposta la porta 3000 per la preview
+  },
   server: {
     port: 3000,
   },
+  base: '/',  // Aggiungi questa configurazione per definire il percorso base
   build: {
     target: "esnext",
     rollupOptions: {
