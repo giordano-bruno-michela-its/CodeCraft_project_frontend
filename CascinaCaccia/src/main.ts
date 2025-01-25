@@ -4,7 +4,14 @@ import { initNavbar } from "./Components/navbar";
 import { submitBookingForm, submitNewsletterData } from "./Services/api";
 import { toggleColorblindFilter } from "./Utils/colorBlindFilter";
 import { toggleDarkMode } from "./Utils/darkMode";
-import { enableDisableSbmtBtnBookingForm, enableDisableSbmtBtnInfoForm, setupActivitiesToggle, setupOfferCards, showToast } from "./Utils/utils";
+import {
+  controlCheckboxForm,
+  enableDisableSbmtBtnBookingForm,
+  enableDisableSbmtBtnInfoForm,
+  setupActivitiesToggle,
+  setupOfferCards,
+  showToast,
+} from "./Utils/utils";
 import { toggleAnswer } from "./Utils/utils";
 import { submitFormData } from "./Services/api";
 import { activityCards } from "./Utils/utils";
@@ -38,6 +45,9 @@ document.addEventListener("DOMContentLoaded", () => {
     question.addEventListener("click", () => toggleAnswer(index));
   });
 
+  // Privacy checkbox control
+  controlCheckboxForm();
+
   // BOOKING FORM
   const bookingForm = document.getElementById("bookingForm") as HTMLFormElement;
   const activitiesToggle = document.getElementById("activitiesToggle") as HTMLButtonElement;
@@ -46,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
   setupActivitiesToggle(activitiesToggle, activitiesContainer);
   enableDisableSbmtBtnBookingForm();
 
-  bookingForm.addEventListener("submit", async (event) => {
+  bookingForm.addEventListener("validatedSubmit", async (event) => {
     event.preventDefault();
 
     // get data from the html Form
@@ -78,7 +88,7 @@ document.addEventListener("DOMContentLoaded", () => {
   setupActivitiesToggle(activitiesToggle, activitiesContainer);
   enableDisableSbmtBtnInfoForm();
 
-  infoForm.addEventListener("submit", async (event) => {
+  infoForm.addEventListener("validatedSubmit", async (event) => {
     event.preventDefault();
 
     // get data from the html Form
@@ -101,7 +111,7 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
   const newsletterForm = document.getElementById("newsletter-email-form") as HTMLFormElement;
 
-  newsletterForm.addEventListener("submit", async (event) => {
+  newsletterForm.addEventListener("validatedSubmit", async (event) => {
     event.preventDefault();
 
     // get data from the html Form
