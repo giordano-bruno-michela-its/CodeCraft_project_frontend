@@ -1,15 +1,24 @@
 import { defineConfig } from "vite";
+import { resolve } from "path";
 
 export default defineConfig({
   server: {
     port: 3000,
   },
   build: {
+    target: "esnext",
     rollupOptions: {
       input: {
-        main: "index.html",
-        backoffice: 'src/backoffice/index.html',
-        retrieveReservation: "src/Pages/retrieveReservation/retrieve-reservation.html",
+        main: resolve(__dirname, "index.html"),
+        retrieveReservation: resolve(__dirname, "src/Pages/retrieveReservation/retrieve-reservation.html"),
+        updateBooking: resolve(__dirname, "src/Pages/updateBooking/update-booking.html"),
+        privacyPolicy: resolve(__dirname, "src/Pages/privacyPolicy.html"),
+        backofficeIndex: resolve(__dirname, "src/backoffice/index.html"),
+        backOfficeDashboard: resolve(__dirname, "src/backoffice/Pages/dashboard.html"),
+        backofficeLogin: resolve(__dirname, "src/backoffice/Pages/login.html"),
+        backofficeLogout: resolve(__dirname, "src/backoffice/Pages/logout.html"),
+        backOfficeRegistrationMail: resolve(__dirname, "src/backoffice/Pages/registrationMail.html"),
+        backOfficeRegistrationUser: resolve(__dirname, "src/backoffice/Pages/registrationUser.html"),
       },
       output: {
         // custom output folder
@@ -21,7 +30,12 @@ export default defineConfig({
           return "assets/[name].[ext]"; // other assets
         },
         chunkFileNames: "js/[name].[hash].js", // chunk JS
-        entryFileNames: "js/[name].[hash].js", // main js file
+        entryFileNames: ({ name }) => {
+          if (name && name.includes("backoffice")) {
+            return "backoffice/js/[name].[hash].js";
+          }
+          return "js/[name].[hash].js";
+        },
       },
     },
 
