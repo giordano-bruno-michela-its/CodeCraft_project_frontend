@@ -8,16 +8,16 @@
 
 @import "../node_modules/swiper/swiper-bundle.min.css";
 
-@import "./styles/navbar.css";
-@import "./styles/heroSection.css";
-@import "./styles/visitSection.css";
-@import "./styles/forms.css";
-@import "./styles/offersSection.css";
-@import "./styles/newsletter.css";
-@import "./styles/faqSection.css";
-@import "./styles/footer.css";
-@import "./styles/activitiesSection.css";
-@import "./styles/toast.css";
+@import "./styles/main/navbar.css";
+@import "./styles/main/heroSection.css";
+@import "./styles/main/visitSection.css";
+@import "./styles/main/forms.css";
+@import "./styles/main/offersSection.css";
+@import "./styles/main/newsletter.css";
+@import "./styles/main/faqSection.css";
+@import "./styles/main/footer.css";
+@import "./styles/main/activitiesSection.css";
+@import "./styles/main/toast.css";
 
 /* custom properties */
 :root  {
