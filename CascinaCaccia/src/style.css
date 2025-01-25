@@ -16,7 +16,6 @@
 @import "./styles/newsletter.css";
 @import "./styles/faqSection.css";
 @import "./styles/footer.css";
-@import "./styles/accessibilityFilters.css";
 @import "./styles/activitiesSection.css";
 @import "./styles/toast.css";
 
@@ -27,6 +26,7 @@
   --brand-orange: #f1921f;
   --text-dark: #3d3c3c;
   --text-light: #fafafa;
+  --danger-color: #EF233C;
   --success-color: #34c724;
   --brand-gradient: linear-gradient(to right, #e3007e 0%, #f1921f 50%, #ffdd07 100%);
   --main-font: "Montserrat", sans-serif;
@@ -48,7 +48,11 @@ body {
   margin: 0;
   font-family: var(--main-font);
   background-color: var(--text-light);
-  padding-top: 6rem; /* Header height */
+}
+
+/* Daltonism Filter */
+.colorblind-mode {
+  filter: grayscale(100%);
 }
 
 .bg-img-overlay {

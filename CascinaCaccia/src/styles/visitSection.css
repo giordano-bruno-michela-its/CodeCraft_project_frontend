@@ -58,11 +58,11 @@
   }
 
   .visit-section-title {
-    font-size: 2.25rem;
+    font-size: 2.05rem;
   }
 
   .visit-section-explore-activities {
-    font-size: 1.15rem;
+    font-size: 1.05rem;
   }
 
 }
@@ -70,15 +70,21 @@
 /* Desktop */
 @media (min-width: 1201px) {
   .visit-container {
-    padding: 4rem;
+    padding: 4rem 4rem 3rem;
     gap: 2.5rem;
   }
 
   .visit-section-title {
-    font-size: 2.65rem;
+    font-size: 2.25rem;
   }
 
   .visit-section-explore-activities {
-    font-size: 1.25rem;
+    font-size: 1.15rem;
+  }
+}
+
+@media (min-width: 1201px) {
+  .visit-section-title {
+    font-size: 2.5rem;
   }
 }

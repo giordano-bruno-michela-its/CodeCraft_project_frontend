@@ -10,7 +10,7 @@
 }
 
 .activities-title {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 600;
   text-align: center;
   margin: 0;
@@ -26,19 +26,6 @@
   justify-content: center;
   gap: 1.5rem;
 }
-
- /* cos'è sta roba */
-/* #activity-1,
-#activity-2,
-#activity-3,
-#activity-4,
-#activity-5,
-#activity-6,
-#activity-7,
-#activity-8,
-#activity-9 {
-  scroll-margin-top: 200px;
-} */
 
 /* activity card */
 
@@ -91,7 +78,7 @@
   width: 100%;
   bottom: 0;
   left: 0;
-  color: var(--text-light);
+  color: #fafafa;
   background-color: rgba(0, 0, 0, 0.5);
   padding: 0.25rem 1rem;
   z-index: 1;
@@ -198,9 +185,13 @@
   font-weight: 600; 
   text-align: center;
   width: 100%;
-  color: var(--text-dark);
+  color: #3d3c3c;
   text-align: center;
   text-decoration: none;
+}
+
+.dark-mode .activity-book-btn a {
+  border-color: var(--brand-yellow);
 }
 
 .activity-book-btn a:hover,
@@ -261,6 +252,11 @@
   height: 1.625rem;
 }
 
+.dark-mode .swiper-button-prev img,
+.dark-mode .swiper-button-next img {
+  filter: invert(1);
+}
+
 .swiper-button-prev,
 .swiper-button-next {
   width: 1rem;
@@ -274,7 +270,7 @@
 /* bullets */
 
 .swiper-pagination-bullet-active {
-  background-color: var(--text-light) !important;
+  background-color: #fafafa !important;
 }
 
 .swiper-pagination-bullet {
@@ -335,7 +331,7 @@
 
   .activities-title {
     margin-bottom: 2.5rem;
-    font-size: 2.25rem;
+    font-size: 2.05rem;
   }
 
   .activities-wrapper {
@@ -374,7 +370,7 @@
   
   .activities-title {
     margin-bottom: 3.5rem;
-    font-size: 2.5rem;
+    font-size: 2.25rem;
   }
 
   .activities-wrapper {
@@ -408,7 +404,7 @@
 
 @media (min-width: 1900px) {
   #activities-section {
-    padding: 2.5rem 3rem 2.5rem 3rem;
+    padding: 3rem 3rem 2.5rem 3rem;
   }
 }
 

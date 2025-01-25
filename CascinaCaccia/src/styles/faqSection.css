@@ -5,9 +5,8 @@
  */
 
 #faq-section {
-  padding: 4vw;
+  padding: 2rem 1.75rem 1.5rem;
   font-family: var(--main-font);
-  scroll-margin-top: 60px;
   background-image: url("../../public/assets/faqSection/faq-section.webp");
   background-size: cover;
   background-position: center;
@@ -17,65 +16,93 @@
 .faq-title {
   position: relative;
   z-index: 2;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 600;
   margin: 0;
   text-align: center;
-  margin-bottom: 20px;
-  color: var(--text-light);
+  margin-bottom: 1.5rem;
+  color: #fafafa;
 }
 
 .faq-card-wrapper {
   position: relative;
   z-index: 2;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 1.25rem;
   align-items: flex-start;
+  /* max-height: 500px; */
 }
 
 .faq-card {
-  background-color: #fff;
-  border: 1px solid #000000;
-  margin-bottom: 15px;
-  border-radius: 1rem;
+  width: 100%;
+  background-color: var(--text-light);
+  border: 1px solid var(--text-dark);
+  border-radius: 0.75rem;
   overflow: hidden; /* to hide the overflow of the div Card wit border radius*/
   transition: all 0.3s ease-in-out;
   box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.35);
-  flex: 1 1 100%;
-  max-height: 500px;
-  transition: all 0.3s ease-in-out;
+  flex-shrink: 0;
 }
+
 .faq-card:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
 .faq-question {
   display: flex;
   justify-content: space-between;
-  padding: 15px;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
   cursor: pointer;
   color: var(--text-dark);
-  font-size: 0.8rem;
   background-color: var(--text-light);
+}
+
+.faq-question h3 {
+  margin: 0;
+  font-size: 0.9rem;
 }
 
 .faq-answer {
   display: none;
-  padding: 15px;
-  background-color: #ababab25;
-  font-size: 0.9rem;
+  padding: 0 1rem 0.75rem;
+  background-color: var(--text-light);
+  font-size: 0.85rem;
+}
+
+.faq-divider {
+  width: 100%;
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--text-dark);
+  margin: 0;
+  margin-bottom: 0.75rem;
+  border-radius: 1rem;
+}
+
+.faq-answer p {
+  margin: 0;
+  padding: 0.25rem 0;
+  font-size: 0.85rem;
   color: var(--text-dark);
+  line-height: 1.1rem;
 }
 
 .faq-arrow {
-  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
   transform: rotate(0deg);
   transition: transform 0.3s ease-in-out;
 }
+
 .faq-arrow-icon {
   width: 1rem;
+}
+
+.dark-mode .faq-arrow-icon {
+  filter: invert(1);
 }
 
 .faq-card.open .faq-answer {
@@ -87,38 +114,223 @@
 }
 
 .faq-brand-activities {
-  color: var(--brand-pink);
+  color: var(--text-dark);
   font-weight: 500;
 }
+
 .faq-activity-link {
-  color: var(--brand-pink);
+  color: var(--text-dark);
   font-weight: 500;
 }
+
+.faq-activity-link:hover {
+  color: var(--brand-pink);
+}
+
 .faq-iva {
-  font-size: smaller;
+  font-size: 0.675rem;
 }
 
-/* Media query tablet*/
+/* Mobile Large */
+@media (min-width: 500px) {
+  #faq-section {
+    padding: 2.25rem 2rem 1.75rem;
+  }
+  
+  .faq-title {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .faq-card-wrapper {
+    gap: 1.25rem;
+    max-width: 30rem;
+    margin: 0 auto;
+  }
+  
+  .faq-question {
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+  }
+  
+  .faq-question h3 {
+    font-size: 0.9rem;
+  }
+  
+  .faq-answer {
+    padding: 0 1rem 0.75rem;
+    font-size: 0.85rem;
+  }
+  
+  .faq-divider {
+    border-width: 1px;
+    margin-bottom: 0.75rem;
+  }
+  
+  .faq-answer p {
+    padding: 0.25rem 0;
+    font-size: 0.85rem;
+    line-height: 1.1rem;
+  }
+  
+  .faq-arrow-icon {
+    width: 1rem;
+  }
+  
+  .faq-iva {
+    font-size: 0.7rem;
+  }
+}
+
+/* Tablet */
 @media (min-width: 768px) {
-  .faq-card-wrapper {
-    justify-content: flex-start;
-    gap: 1rem;
+  #faq-section {
+    padding: 3rem 2.5rem 2.25rem;
   }
-
-  .faq-card {
-    flex: 1 1 calc(50% - 1rem); /* Two Columns */
-    border-radius: 1rem;
+  
+  .faq-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .faq-card-wrapper {
+    gap: 1.5rem;
+    max-width: 33rem;
+    margin: 0 auto;
+  }
+  
+  .faq-question {
+    gap: 0.75rem;
+    padding: 0.9rem 1rem;
+  }
+  
+  .faq-question h3 {
+    font-size: 0.95rem;
+  }
+  
+  .faq-answer {
+    padding: 0 1rem 0.75rem;
+    font-size: 0.9rem;
+  }
+  
+  .faq-divider {
+    border-width: 1px;
+    margin-bottom: 0.85rem;
+  }
+  
+  .faq-answer p {
+    padding: 0.25rem 0;
+    font-size: 0.85rem;
+    line-height: 1.15rem;
+  }
+  
+  .faq-arrow-icon {
+    width: 1.15rem;
+  }
+  
+  .faq-iva {
+    font-size: 0.75rem;
   }
 }
 
-/* Media query desktop */
+/* Desktop */
 @media (min-width: 1024px) {
-  .faq-card-wrapper {
-    gap: 2rem;
+  #faq-section {
+    padding: 4rem 3.5rem 2.75rem;
   }
+  
+  .faq-title {
+    font-size: 2.15rem;
+    margin-bottom: 2.5rem;
+  }
+  
+  .faq-card-wrapper {
+    gap: 1.75rem;
+    max-width: 35rem;
+    margin: 0 auto;
+  }
+  
+  .faq-question {
+    gap: 1rem;
+    padding: 0.95rem 1.1rem;
+  }
+  
+  .faq-question h3 {
+    font-size: 1rem;
+  }
+  
+  .faq-answer {
+    padding: 0 1.1rem 1rem;
+    font-size: 0.95rem;
+  }
+  
+  .faq-divider {
+    border-width: 1px;
+    margin-bottom: 0.85rem;
+  }
+  
+  .faq-answer p {
+    padding: 0.25rem 0;
+    font-size: 0.925rem;
+    line-height: 1.2rem;
+  }
+  
+  .faq-arrow-icon {
+    width: 1.2rem;
+  }
+  
+  .faq-iva {
+    font-size: 0.8rem;
+  }
+}
 
-  .faq-card {
-    flex: 1 1 calc(33.333% - 2rem); /* Three Columns */
-    border-radius: 1rem;
+/* Desktop Large */
+@media (min-width: 1500px) {
+  #faq-section {
+    padding: 5.5rem 4.5rem 3.5rem;
+  }
+  
+  .faq-title {
+    font-size: 2.25rem;
+    margin-bottom: 2.5rem;
+  }
+  
+  .faq-card-wrapper {
+    gap: 1.75rem;
+    max-width: 40rem;
+    margin: 0 auto;
+  }
+  
+  .faq-question {
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+  }
+  
+  .faq-question h3 {
+    font-size: 1.025rem;
+  }
+  
+  .faq-answer {
+    padding: 0 1.2rem 1rem;
+    font-size: 1rem;
+  }
+  
+  .faq-divider {
+    border-width: 1px;
+    margin-bottom: 1rem;
+  }
+  
+  .faq-answer p {
+    padding: 0.3rem 0;
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+  
+  .faq-arrow-icon {
+    width: 1.25rem;
+  }
+  
+  .faq-iva {
+    font-size: 0.825rem;
   }
 }
