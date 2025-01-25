@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="CodeCraft" />
+    <meta name="description" content="retrieve reservation page" />
+    <link rel="stylesheet" href="../styles/retrieve-reservation.css" />
+    <title>Retrieve Reservation</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <img src="/public/assets/navbar/Logo-agora.svg" alt="Logo Agorà" class="logo" />
+      <h1 class="title">Recupera Prenotazione</h1>
+      <p class="subtitle">Inserisci l'indirizzo email e il codice di 6 cifre per proseguire</p>
+
+      <form class="form">
+        <div class="input-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Email" required />
+        </div>
+
+        <div class="input-group code-group">
+          <label for="code">Codice di verifica</label>
+          <div class="code-inputs">
+            <input type="number" min="0" max="9" required />
+            <input type="number" min="0" max="9" required />
+            <input type="number" min="0" max="9" required />
+            <input type="number" min="0" max="9" required />
+            <input type="number" min="0" max="9" required />
+            <input type="number" min="0" max="9" required />
+          </div>
+        </div>
+
+        <button type="submit" class="submit-btn">Continua</button>
+      </form>
+    </div>
+  </body>
+</html>

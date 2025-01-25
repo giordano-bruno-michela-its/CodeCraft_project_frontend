@@ -6,11 +6,12 @@ import { getElement, removeClass, toggleClass } from "../Utils/utils";
  * and to remove the “open” class when clicking on a link.
  */
 export const initNavbar = (): void => {
+  const toggleBtn = getElement<HTMLElement>(".hamburger-toggle");
   const hamburger = getElement<HTMLElement>(".navbar-hamburger");
   const navbarMenu = getElement<HTMLElement>(".navbar-menu");
   const links = document.querySelectorAll<HTMLAnchorElement>(".navbar-link");
 
-  hamburger.addEventListener("click", (e) => {
+  toggleBtn.addEventListener("click", (e) => {
     e.stopPropagation();
     toggleClass(navbarMenu, "open");
     toggleClass(hamburger, "open");
