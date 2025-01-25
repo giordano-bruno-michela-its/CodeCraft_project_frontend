@@ -9,7 +9,7 @@ export default defineConfig({
       input: {
         main: "index.html",
         backoffice: 'src/backoffice/index.html',
-        retrieveReservation: "src/Pages/retrieve-reservation.html",
+        retrieveReservation: "src/Pages/retrieveReservation/retrieve-reservation.html",
       },
       output: {
         // custom output folder
