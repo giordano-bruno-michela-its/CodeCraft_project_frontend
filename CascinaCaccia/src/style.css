@@ -18,9 +18,10 @@
 @import "./styles/main/footer.css";
 @import "./styles/main/accessibilityFilters.css";
 @import "./styles/main/activitiesSection.css";
+@import "./styles/main/toast.css";
 
 /* custom properties */
-:root {
+:root  {
   --brand-yellow: #ffdd07;
   --brand-pink: #e3007e;
   --brand-orange: #f1921f;
