@@ -100,7 +100,6 @@ input[type="number"] {
   cursor: pointer;
 }
 
-
 .additional-info {
   height: 15vh;
 }
@@ -174,7 +173,6 @@ input[type="number"] {
 #info-form-activitiesToggle:hover {
   background-color: rgba(241 146 31 / 0.25);
 }
-
 
 #infoActivitiesContainer,
 #activitiesContainer {
@@ -364,7 +362,7 @@ input[type="number"] {
   .consent-checkbox-container div {
     gap: 0.65rem;
   }
-  
+
   #infoActivitiesContainer,
   #activitiesContainer {
     padding: 0.85rem 0.5rem 0;
