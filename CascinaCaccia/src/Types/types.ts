@@ -20,6 +20,7 @@ export interface BookingForm {
   endTime: string;
   participantsQuantity: number;
   guidesQuantity: number;
+  bookingStatus:string;
   bookingDuration: {
     id: number;
   };

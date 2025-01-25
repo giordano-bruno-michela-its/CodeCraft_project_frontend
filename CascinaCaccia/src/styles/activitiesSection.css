@@ -1,11 +1,34 @@
+/* 
+ * File Name: activitiesSection.css
+ * Author: CodeCraft
+ * Content: activities section styles
+*/
+
 #activities-section {
   scroll-margin-top: 60px;
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
 }
+
 .activities-title {
+  font-size: 2rem;
+  font-weight: 600;
   text-align: center;
-  font-family: "Montserrat", Arial, sans-serif;
+  margin: 0;
+  margin-bottom: 1.5rem;
+  color: var(--text-dark);
+  font-family: var(--main-font);
 }
-#activity-1,
+
+.activities-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+ /* cos'è sta roba */
+/* #activity-1,
 #activity-2,
 #activity-3,
 #activity-4,
@@ -15,165 +38,382 @@
 #activity-8,
 #activity-9 {
   scroll-margin-top: 200px;
-}
+} */
+
+/* activity card */
 
 .activity-card {
-  border-radius: 10px;
-  margin: 20px;
-  font-family: "Montserrat", Arial, sans-serif;
+  border-radius: 1rem;
+  overflow: hidden;
+  font-family: var(--main-font);
+  background: var(--text-light);
+  /* box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.35); */
 }
 
-.activity-image-container {
+/* card header */
+
+.activity-card:hover,
+.activity-card:focus {
+  transform: scale(1.025);
+  transition: transform 0.3s ease-in-out;
+  outline: none;
+}
+
+.activity-card.open:hover,
+.activity-card.open:focus {
+  transform: scale(1);
+  transition: transform 0.3s ease;
+}
+
+.activity-card.open .activity-card-header:hover img,
+.activity-card.open .activity-card-header:focus img {
+  transform: scale(1.025);
+  transition: transform 0.3s;
+}
+
+.activity-card-header {
   position: relative;
-  height: auto;
+  height: 12rem;
+  cursor: pointer;
+  overflow: hidden;
 }
 
-.activity-image-container img {
+.activity-card-header img {
   width: 100%;
   height: 100%;
-  border-radius: 10px;
   display: block;
 }
+
+/* card header overlay */
 
 .activity-content-overlay {
   position: absolute;
   width: 100%;
-  top: 70%;
-  left: 0%;
-  color: white;
+  bottom: 0;
+  left: 0;
+  color: var(--text-light);
   background-color: rgba(0, 0, 0, 0.5);
-  padding: 5px;
+  padding: 0.25rem 1rem;
   z-index: 1;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
   margin: 0;
-  border-radius: 10px;
 }
 
-.title-text-overlay {
-  font-weight: bold;
-  top: 66%;
-  text-align: left;
-  font-size: 1.2em;
-  margin: 0 0 5px 0;
+.activity-title-overlay {
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin: 0;
 }
 
 .activity-text-overlay {
+  font-size: 0.8rem;
+  font-weight: 300;
   text-align: center;
   margin: 0;
 }
 
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+
+/* activity details */
+
 .activity-details {
   display: none;
-  padding: 10px;
-  border-radius: 10px;
+  padding: 0.5rem 0;
+  color: var(--text-dark);
+}
+
+.activity-description-content {
+  padding: 0 0.5rem 0.5rem;
 }
 
 .activity-title {
   text-align: center;
+  margin: 0;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
 }
+
+.activity-description-content p {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+}
+
+.activity-description-content p span {
+  font-size: 1.125rem;;
+  font-weight: 700;
+  /* font-style: italic; */
+}
+
+/* Unordered list */
 
 .activity-list li strong {
   display: block;
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0.25rem 0;
 }
 
 .activity-list {
-  padding-left: 30px;
+  padding-left: 1rem;
+  margin: 0;
+  margin-top: 1rem;
 }
 
 .activity-card.open {
-  border: 1px solid black;
+  border: 1px solid var(--text-dark);
 }
 
 .activity-card.open .activity-details {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 }
 
-.activity-cta-btn a {
-  display: inline-block;
+/* "Book" button */
+
+.activity-book-btn {
+  padding: 0 1rem;
   width: 100%;
-  height: 4vh;
-  margin-top: 10px;
-  border-radius: 10px;
-  background-color: #ffdd07;
-  font-family: "Montserrat", Arial, sans-serif;
-  color: black;
+  border: none;
+  background: none;
+}
+
+.activity-book-btn a {
+  display: inline-block;
+  border: 2px solid var(--text-dark);
+  background-color: var(--brand-yellow);
+  border-radius: 0.5rem;
+  padding: 0.65rem 0;
+  font-family: var(--main-font);
+  font-size: 1rem;
+  font-weight: 600; 
   text-align: center;
-  line-height: 4vh;
+  width: 100%;
+  color: var(--text-dark);
+  text-align: center;
   text-decoration: none;
 }
 
-/* STYLE CAROSELLO (IN FORSE) */
-/* Base Styles */
-.carousel {
-  position: relative;
+.activity-book-btn a:hover,
+.activity-book-btn a:focus,
+.activity-book-btn a:active {
+  background-color: #bfa600;
+}
+
+/* Swiper js carousel styles */
+
+.swiper.activity-img-swiper {
   width: 100%;
-  max-width: 400px;
-  margin: 0 auto;
+  min-height: 12rem;
+  aspect-ratio: 1.95/1;
+  padding: 0.5rem 0;
+}
+
+.swiper-slide {
+  width: 85%;
+  border-radius: 1rem;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.2s ease-in;
   overflow: hidden;
 }
 
-.carousel-track {
-  display: flex;
-  transition: transform 0.3s ease-in-out;
+.swiper-slide.swiper-slide-active {
+  transform: scale(1.07);
 }
 
-.carousel-slide {
-  min-width: 100%;
-  border-radius: 10px;
-}
-
-.carousel-slide img {
-  display: block;
+.swiper-slide img {
   width: 100%;
-  height: auto;
-  border-radius: 10px;
+  height: 100%;
+  /* height: auto; */
 }
 
-/* Dots Navigation */
-.carousel-dots {
-  display: flex;
-  justify-content: center;
-  margin-top: 10px;
-}
+/* arrows */
 
-.carousel-dots button {
-  width: 10px;
-  height: 10px;
-  background-color: lightgray;
-  border: none;
-  border-radius: 50%;
-  margin: 0 5px;
-  cursor: pointer;
-}
-
-.carousel-dots .active {
-  background-color: black;
-}
-
-/* Buttons (Hidden by Default for Mobile) */
-.carousel-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-  padding: 10px;
+.swiper-button-prev:after,
+.swiper-button-next:after {
   display: none;
 }
 
-.prev-btn {
-  left: 10px;
+.swiper-button-next {
+  right: 1rem;
 }
 
-.next-btn {
-  right: 10px;
+.swiper-button-prev {
+  left: 1rem;
 }
 
-@media (min-width: 768px) {
-  .carousel-btn {
-    display: block;
+.swiper-button-prev img,
+.swiper-button-next img {
+  display: block;
+  width: 0.875rem;
+  height: 1.625rem;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  width: 1rem;
+  height: 1.75rem;
+}
+
+.swiper-button-prev img {
+  transform: rotate(180deg);
+}
+
+/* bullets */
+
+.swiper-pagination-bullet-active {
+  background-color: var(--text-light) !important;
+}
+
+.swiper-pagination-bullet {
+  margin: 0 0.25rem !important;
+  background-color: rgba(250, 250, 250, 0.60);
+  opacity: 1;
+}
+
+/* Media Queries */
+
+@media (max-width: 430px) {
+  .swiper.activity-img-swiper {
+    aspect-ratio: none;
+    min-height: 8rem;
+  }
+}
+
+/* Mobile Large */
+@media (min-width: 500px) and (max-width: 768px) {
+
+  #activities-section {
+    padding: 2rem 2.5rem 1.5rem 2.5rem;
+  }
+
+  .activities-wrapper {
+    width: fit-content;
+    margin: 0 auto;
+  }
+
+  .activity-card {
+    width: 25rem;
+  }
+
+  .activities-title {
+    margin-bottom: 1.75rem;
+  }
+}
+
+/* From tablet upwards  */
+@media (min-width: 769px) {
+  .activities-wrapper {
+    width: fit-content;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+  }
+}
+
+/* Tablet */
+@media (min-width: 769px) and (max-width: 1200px) {
+
+  #activities-section {
+    padding: 3rem 1.5rem 3rem 1.5rem;
+  }
+
+  .activities-title {
+    margin-bottom: 2.5rem;
+    font-size: 2.25rem;
+  }
+
+  .activities-wrapper {
+    width: fit-content;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .activity-card {
+    width: 21.8rem;
+  }
+  
+}
+
+@media (min-width: 950px) and (max-width: 1200px) {
+  
+  #activities-section {
+    padding: 2.5rem 2rem 2.5rem 2rem;
+  }
+
+  .activities-wrapper {
+    gap: 3rem;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1201px) {
+  #activities-section {
+    padding: 2.5rem 1.75rem 2.5rem 1.75rem;
+  }
+  
+  .activities-title {
+    margin-bottom: 3.5rem;
+    font-size: 2.5rem;
+  }
+
+  .activities-wrapper {
+    gap: 3rem;
+  }
+
+  .activity-card {
+    width: 21.8rem;
+  }
+}
+
+@media (min-width: 1350px) {
+  .activity-card {
+    width: 24rem;
+  }
+}
+
+@media (min-width: 1500px) {
+  .activity-card {
+    width: 25rem;
+  }
+
+  .activities-title {
+    margin-bottom: 4.25rem;
+  }
+
+  .activities-wrapper {
+    gap: 4rem;
+  }
+}
+
+@media (min-width: 1900px) {
+  #activities-section {
+    padding: 2.5rem 3rem 2.5rem 3rem;
+  }
+}
+
+@media (min-width: 2200px) {
+  #activities-section {
+    padding: 2.5rem 12rem 2.5rem 12rem;
   }
 }

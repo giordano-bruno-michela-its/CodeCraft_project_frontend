@@ -1,0 +1,100 @@
+/*
+ * File Name: faqSection.css
+ * Author: CodeCraft
+ * Content: faq section styles
+ */
+
+:root {
+  --brand-yellow: #ffdd07;
+  --brand-pink: #e3007e;
+  --brand-orange: #f1921f;
+  --text-dark: #3d3c3c;
+  --text-light: #fafafa;
+  --success-color: #34c724;
+  --brand-gradient: linear-gradient(to right, #e3007e 0%, #f1921f 50%, #ffdd07 100%);
+  --main-font: "Montserrat", sans-serif;
+}
+
+#toast-container {
+  position: fixed;
+  top: 100px; /* Distanza dal top */
+  left: 50%; /* Posizione orizzontale al centro */
+  transform: translateX(-50%); /* Centra il contenitore */
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 800px;
+}
+
+.toast {
+  display: flex;
+  justify-content: center;
+  color: #000;
+  padding: 10px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: fadeInOut 3s ease-in-out forwards;
+  width: auto;
+  max-width: 100%;
+}
+
+.toast.success {
+  background-color: var(--brand-yellow);
+}
+
+.toast.error {
+  background-color: var(--brand-pink);
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  10%,
+  90% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+/* Media Queries */
+
+/* Adults promo specific fix */
+@media (max-width: 499px) {
+  #toast-container {
+    max-width: 300px;
+  }
+}
+
+/* Mobile Large */
+@media (min-width: 500px) and (max-width: 768px) {
+  #toast-container {
+    max-width: 400px;
+  }
+}
+
+/* Tablet */
+@media (min-width: 769px) and (max-width: 1200px) {
+  #toast-container {
+    max-width: 600px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1201px) {
+  #toast-container {
+    max-width: 700px;
+  }
+}
+
+@media (min-width: 1900px) {
+  #toast-container {
+    max-width: 1500px;
+  }
+}
