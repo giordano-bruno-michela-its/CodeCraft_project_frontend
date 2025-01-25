@@ -6,6 +6,7 @@
 
 /* styles.css */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap");
+@import url("../../styles/main/toast.css");
 :root {
   --brand-yellow: #ffdd07;
   --brand-pink: #e3007e;
@@ -25,6 +26,9 @@ body {
   align-items: center;
   height: 100vh;
   background-color: var(--text-light);
+}
+#toast-container {
+  top: 20px;
 }
 
 .container {

@@ -36,4 +36,5 @@ document.addEventListener("DOMContentLoaded", () => {
       console.error(error);
     }
   });
+  localStorage.removeItem("reservationDetails");
 });
