@@ -33,7 +33,7 @@
   flex-grow: 1;
   position: relative;
   z-index: 3;
-  color: var(--text-light);
+  color: #fafafa;
   padding: 0 1.5rem;
   display: flex;
   flex-direction: column;
@@ -82,6 +82,11 @@
   border-color: var(--text-dark);
 }
 
+.dark-mode .hero-btn-book {
+  color: var(--text-light);
+  border-color: var(--text-light);
+}
+
 .hero-btn-book:hover,
 .hero-btn-book:focus,
 .hero-btn-book:active {
@@ -90,16 +95,23 @@
 
 .hero-btn-info {
   background: transparent;
-  color: var(--text-light);
-  border-color: var(--text-light);
+  color: #fafafa;
+  border-color: #fafafa;
 }
 
 .hero-btn-info:hover,
 .hero-btn-info:focus,
 .hero-btn-info:active {
-  background-color: var(--text-light);
+  background-color: #fafafa;
   color: var(--text-dark);
 }
+
+.dark-mode .hero-btn-info:hover,
+.dark-mode .hero-btn-info:focus,
+.dark-mode .hero-btn-info:active {
+  color: var(--text-light);
+}
+
 
 /* Media Queries */
 
@@ -118,15 +130,15 @@
   }
 
   .hero-subtitle {
-    font-size: 1.15rem;
+    font-size: 1.05rem;
   }
 
   .hero-buttons {
-    gap: 1.25rem;
+    gap: 1.5rem;
   }
 
   .hero-btn {
-    padding: 0.85rem 0;
+    padding: 0.65rem 0;
   }
 }
 
@@ -141,11 +153,11 @@
   }
 
   .hero-title {
-    font-size: 2.2rem;
+    font-size: 2.1rem;
   }
 
   .hero-subtitle {
-    font-size: 1.5rem;
+    font-size: 1.15rem;
   }
 
   .hero-buttons {
@@ -155,15 +167,27 @@
   }
 
   .hero-btn {
-    border-radius: 0.75rem;
-    padding: 1.12rem 0;
-    font-size: 1.25rem;
+    border-radius: 0.6rem;
+    padding: 0.8rem 0;
+    font-size: 1.2rem;
   }
 }
 
 @media (min-width: 930px) and (max-width: 1200px) {
+  .hero-title {
+    font-size: 2.2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .hero-btn {
+    border-radius: 0.65rem;
+  }
+
   .hero-buttons {
-    width: 70%;
+    width: 75%;
     margin: 0 auto;
   }
 }
@@ -179,11 +203,11 @@
   }
 
   .hero-title {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 
   .hero-subtitle {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 
   .hero-buttons {
@@ -193,17 +217,31 @@
   }
 
   .hero-btn {
-    border-radius: 1rem;
-    padding: 1.1rem 0;
-    font-size: 1.4rem;
-    border-width: 3px;
+    border-radius: 0.75rem;
+    padding: 0.75rem 0;
+    font-size: 1.25rem;
+    border-width: 2px;
   }
 }
 
  @media (min-width: 1500px) {
+  .hero-title {
+    font-size: 2.75rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.35rem;
+  }
+
     .hero-buttons {
       width: 50%;
       margin: 0 auto;
       gap: 4rem;
+    }
+
+    .hero-btn {
+      padding: 0.75rem 0;
+      font-size: 1.25rem;
+      border-width: 3px;
     }
 }

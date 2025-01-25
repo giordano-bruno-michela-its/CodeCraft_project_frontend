@@ -96,8 +96,6 @@ export function setupOfferCards(): void {
 export function setUpPaymentMethodsBtns() {
   const bonificoBtn = document.getElementById('bonifico-btn') as HTMLButtonElement;
   const contantiBtn = document.getElementById('contanti-btn') as HTMLButtonElement;
-  const bonificoIcon = document.querySelector('#bonifico-btn img') as HTMLImageElement;
-  const contantiIcon = document.querySelector('#contanti-btn img') as HTMLImageElement;
   const instructionsParagraph = document.getElementById('payment-method-instructions') as HTMLParagraphElement;
   const bonificoData = document.getElementById('bonifico-only-text') as HTMLDivElement;
 
@@ -106,10 +104,6 @@ export function setUpPaymentMethodsBtns() {
       // add and removes clicked class
       bonificoBtn.classList.add('clicked');
       contantiBtn.classList.remove('clicked');
-
-      // changes the icons
-      bonificoIcon.src = './public/assets/offersSection/bonifico-active-icon.svg';
-      contantiIcon.src = './public/assets/offersSection/cash-icon.svg';
 
       // changes the content of the instructions paragraph and shows / hides the bonifico data
       instructionsParagraph.textContent = 'Pagamento entro 30 giorni prima del soggiorno.';
@@ -122,10 +116,6 @@ export function setUpPaymentMethodsBtns() {
       // add and removes clicked class
       contantiBtn.classList.add('clicked');
       bonificoBtn.classList.remove('clicked');
-
-      // changes the icons
-      bonificoIcon.src = './public/assets/offersSection/bonifico-icon.svg';
-      contantiIcon.src = './public/assets/offersSection/cash-active-icon.svg';
 
       // changes the content of the instructions paragraph and shows / hides the bonifico data
       instructionsParagraph.textContent = 'Possibilità di pagamento in contanti al momento dell\'arrivo.';

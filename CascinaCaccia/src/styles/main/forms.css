@@ -15,7 +15,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 0.65rem;
   background-color: var(--text-light);
   border-radius: 1rem;
   padding: 1rem 0.75rem;
@@ -43,6 +43,7 @@
   padding: 0.625rem 1rem;
   border-radius: 0.625rem;
   border: 2px solid var(--text-dark);
+  background-color: var(--text-light);
   font-family: var(--main-font);
   font-size: 1rem;
   font-weight: 500;
@@ -88,6 +89,11 @@ input[type="number"] {
   color: rgba(61, 60, 60, 0.6);
 }
 
+.dark-mode .info-form-input::placeholder,
+.dark-mode .booking-form-input::placeholder {
+  color: rgba(250 250 250 / 0.6);
+}
+
 #duration {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -100,6 +106,13 @@ input[type="number"] {
   cursor: pointer;
 }
 
+#duration option:not(:disabled) {
+  color: #3d3c3c;
+}
+
+.dark-mode #duration {
+  background-image: url("/assets/bookingForm/dropdown-icon-light.svg");
+}
 
 .additional-info {
   height: 15vh;
@@ -228,15 +241,20 @@ input[type="number"] {
 .activity-age-warning p {
   margin: 0;
   font-size: 0.75rem;
-  font-weight: 400;
+  font-weight: 500;
+  color: #3d3c3c;
 }
 
 .booking-form-activity-text {
   margin: 0;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 400;
   color: rgba(61, 60, 60, 0.6);
   text-align: center;
+}
+
+.dark-mode .booking-form-activity-text {
+  color: rgba(250 250 250 / 0.6);
 }
 
 .consent-checkbox-container {
@@ -283,6 +301,7 @@ input[type="number"] {
   font-size: 1.25rem;
   font-family: var(--main-font);
   background-color: var(--text-light);
+  color: var(--text-dark);
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.25);
@@ -291,8 +310,9 @@ input[type="number"] {
 #info-form-submit-btn:hover,
 #booking-form-submit-btn:hover {
   background-color: var(--brand-pink);
-  color: var(--text-light);
+  color: #fafafa;
 }
+
 #booking-form-submit-btn:disabled,
 #info-form-submit-btn:disabled {
   background-color: var(--text-light);
@@ -339,12 +359,12 @@ input[type="number"] {
     max-width: 500px;
     max-width: 31.25rem;
     margin: 0 auto;
-    gap: 0.85rem;
+    gap: 0.65rem;
   }
 
   .info-form-title,
   .booking-form-title {
-    font-size: 2rem;
+    font-size: 1.8rem;
     margin-bottom: 1.5rem;
   }
 
@@ -373,7 +393,7 @@ input[type="number"] {
 
   #infoActivitiesContainer label,
   #activitiesContainer label {
-    gap: 0.65rem;
+    gap: 0.6rem;
     font-size: 1rem;
   }
 
@@ -387,6 +407,10 @@ input[type="number"] {
   .activity-age-warning p {
     font-size: 0.8rem;
   }
+
+  .booking-form-activity-text {
+    font-size: 0.85rem;
+  }
 }
 
 /* Tablet */
@@ -398,46 +422,46 @@ input[type="number"] {
 
   .infoForm,
   .bookingForm {
-    padding: 2rem 3.5rem;
+    padding: 2rem 2.25rem;
     max-width: 560px;
     max-width: 35rem;
     margin: 0 auto;
-    gap: 1rem;
+    gap: 0.8rem;
   }
 
   .info-form-title,
   .booking-form-title {
-    font-size: 2.25rem;
-    margin-bottom: 2rem;
+    font-size: 2rem;
+    margin-bottom: 1rem;
   }
 
   #start-date-label,
   #end-date-label {
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
 
   .booking-form-input[type="date"] {
-    margin-top: 0.5rem;
+    margin-top: 0.35rem;
   }
 
   .info-form-input,
   .booking-form-input {
-    padding: 0.75rem 1.15rem;
-    font-size: 1.05rem;
+    padding: 0.65rem 1.15rem;
+    font-size: 1rem;
   }
 
   .additional-info {
-    height: 20vh;
+    height: 15vh;
   }
 
   .info-form-name-surname-container,
   .booking-form-tel-duration-container,
   .booking-form-name-surname-container {
-    gap: 0.85rem;
+    gap: 0.75rem;
   }
 
   .multiple-input-wrapper {
-    gap: 0.85rem;
+    gap: 0.75rem;
   }
 
   #adults-promo {
@@ -445,39 +469,39 @@ input[type="number"] {
   }
 
   #adults-promo p {
-    font-size: 0.75rem;
+    font-size: 0.74rem;
   }
 
   #infoActivitiesContainer,
   #activitiesContainer {
-    padding: 1.15rem 0.5rem 0;
-    gap: 0.65rem;
+    padding: 1rem 0.5rem 0;
+    gap: 0.5rem;
   }
 
   #infoActivitiesContainer label,
   #activitiesContainer label {
-    gap: 0.75rem;
-    font-size: 1.05rem;
+    gap: 0.7rem;
+    font-size: 1rem;
   }
 
   #infoActivitiesContainer label input[type="checkbox"],
   #activitiesContainer label input[type="checkbox"] {
-    width: 1.25rem;
-    height: 1.25rem;
+    width: 1.2rem;
+    height: 1.2rem;
     border-radius: 0.375rem;
   }
 
   .activity-age-warning {
-    padding: 0.75rem;
+    padding: 0.7rem;
     gap: 0.75rem;
   }
 
   .activity-age-warning p {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
   }
 
   .booking-form-activity-text {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
   }
 
   .consent-checkbox-container {
@@ -500,8 +524,8 @@ input[type="number"] {
 
   #info-form-submit-btn,
   #booking-form-submit-btn {
-    padding: 0.8rem 4rem;
-    font-size: 1.4rem;
+    padding: 0.75rem 3.5rem;
+    font-size: 1.3rem;
   }
 }
 
@@ -509,41 +533,41 @@ input[type="number"] {
 @media (min-width: 1201px) {
   #info-form-container,
   #booking-form-container {
-    padding: 4rem 0;
+    padding: 3rem 0;
   }
 
   .infoForm,
   .bookingForm {
-    padding: 4rem 6rem;
-    max-width: 832px;
-    max-width: 52rem;
+    padding: 3rem 3.5rem;
+    max-width: 768px;
+    max-width: 48rem;
     margin: 0 auto;
-    gap: 1.5rem;
+    gap: 0.75rem;
   }
 
   .info-form-title,
   .booking-form-title {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
+    font-size: 2.15rem;
+    margin-bottom: 1.25rem;
   }
 
   #start-date-label,
   #end-date-label {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 
   .booking-form-input[type="date"] {
-    margin-top: 0.75rem;
+    margin-top: 0.5rem;
   }
 
   .info-form-input,
   .booking-form-input {
     padding: 0.75rem 1.15rem;
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 
   .additional-info {
-    height: 20vh;
+    height: 15vh;
   }
 
   .info-form-name-surname-container,
@@ -566,48 +590,48 @@ input[type="number"] {
 
   #infoActivitiesContainer,
   #activitiesContainer {
-    padding: 1.25rem 0.75rem 0;
-    gap: 0.75rem;
+    padding: 1rem 0.75rem 0;
+    gap: 0.65rem;
   }
 
   #infoActivitiesContainer label,
   #activitiesContainer label {
     gap: 0.85rem;
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 
   #infoActivitiesContainer label input[type="checkbox"],
   #activitiesContainer label input[type="checkbox"] {
-    width: 1.35rem;
-    height: 1.35rem;
+    width: 1.25rem;
+    height: 1.25rem;
     border-radius: 0.5rem;
   }
 
   .activity-age-warning {
-    padding: 0.75rem;
+    padding: 0.65rem 1rem;
     gap: 1rem;
   }
 
   .activity-age-warning p {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
   }
 
   .booking-form-activity-text {
-    font-size: 1.05rem;
-  }
-
-  .consent-checkbox-container {
-    gap: 1rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .consent-checkbox-container div label {
     font-size: 0.95rem;
   }
 
+  .consent-checkbox-container {
+    gap: 0.65rem;
+    margin-bottom: 1rem;
+  }
+
+  .consent-checkbox-container div label {
+    font-size: 0.9rem;
+  }
+
   .consent-checkbox-container div input[type="checkbox"] {
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 1.35rem;
+    height: 1.35rem;
   }
 
   .consent-checkbox-container div {
@@ -616,22 +640,36 @@ input[type="number"] {
 
   #info-form-submit-btn,
   #booking-form-submit-btn {
-    padding: 0.9rem 5rem;
-    font-size: 1.65rem;
-    border-radius: 1rem;
+    padding: 0.8rem 4.5rem;
+    font-size: 1.35rem;
+    border-radius: 0.85rem;
   }
 }
 
 @media (min-width: 1500px) {
-  #info-form-container,
-  #booking-form-container {
-    padding: 5rem 0;
+  .info-form-title,
+  .booking-form-title {
+    font-size: 2.25rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .infoForm,
+  .bookingForm {
+    max-width: 780px;
+    max-width: 50rem;
+    gap: 0.8rem;
   }
 }
 
 @media (min-width: 1900px) {
+  .info-form-input,
+  .booking-form-input {
+    padding: 0.8rem 1.15rem;
+    font-size: 1.05rem;
+  }
+  
   #info-form-container,
   #booking-form-container {
-    padding: 6rem 0;
+    padding: 4rem 0;
   }
 }

@@ -23,13 +23,9 @@
   padding: 2rem 1.5rem 1rem;
   font-family: var(--main-font);
   text-align: center;
-  /* scroll-margin-top: 150px; */
 }
 
 .offer-card {
-  /* transition: all 0.3s ease-in-out;
-  flex: 1 1 calc(100% - 20px);
-  max-width: 100%; */
   background-color: var(--text-light);
   border: 2px solid var(--text-dark);
   border-radius: 0.5rem;
@@ -42,10 +38,10 @@
   align-items: flex-start;
   gap: 0.65rem;
   padding: 0.75rem 1rem;
+  max-width: 24rem;
 }
 
 .offer-header {
-  /* padding: 10px; */
   text-align: left;
   position: relative;
 }
@@ -57,24 +53,16 @@
   font-weight: 700;
   padding: 0.25rem 0.5rem;
   border-radius: 0.5rem;
-  /* margin-bottom: 20px; */
   max-width: fit-content;
 }
 
 .offer-title {
-  font-size: 1.125rem;
+  font-size: 1.075rem;
   font-weight: 600;
   margin: 0;
   text-align: start;
+  color: var(--text-dark);
 }
-
-/* .offer-price {
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin: 10px 0;
-  text-align: justify;
-  padding: 0 10px 0;
-} */
 
 .offer-price-box {
   padding: 0.125rem 0.5rem;
@@ -82,9 +70,13 @@
   background-color: #E7E7E7;
 }
 
+.dark-mode .offer-price-box {
+  background-color: #333;
+}
+
 .price-content {
   margin: 0;
-  font-size: 1.5rem;
+  font-size: 1.35rem;
   font-weight: 700;
   color: var(--text-dark);
 }
@@ -108,18 +100,6 @@
   margin: 0.5rem 0 0;
 }
 
-/* .offer-footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-} */
-
-/* .offer-summary {
-  font-size: 0.9rem;
-  color: #333;
-} */
-
 .offer-desc {
   font-size: 0.875rem;
   font-weight: 500;
@@ -132,7 +112,7 @@
   background: none;
   border: none;
   cursor: pointer;
-  padding: 0.5rem;
+  padding: 0.35rem 0.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -143,10 +123,18 @@
   margin-top: 0.5rem;
 }
 
+.dark-mode .offer-toggle {
+  background-color: #333;
+}
+
 .offer-arrow {
   height: 0.45rem;
   width: 1.85rem;
   transition: transform 0.3s ease-in-out;
+}
+
+.dark-mode .offer-arrow {
+  filter: invert(1);
 }
 
 .offer-card.open .offer-arrow {
@@ -206,15 +194,13 @@
 
 .offer-ask-info-btn a:hover {
   background-color: var(--brand-pink);
-  color: var(--text-light);
+  color: #fafafa;
 }
 
 .news-offers {
   background-color: rgba(255, 221, 7, 0.40);;
   width: 100%;
-  /* margin: 0 auto; */
   border-radius: 0.5rem;
-  /* height: 116px; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -250,11 +236,13 @@
   display: block;
   text-align: center;
   margin: 1rem 0;
+  color: var(--text-dark);
 }
 
 .payment-methods-title {
   font-size: 1.25rem;
   margin: 1.5rem 0 1rem;
+  color: var(--text-dark);
 }
 
 .payment-methods-buttons {
@@ -282,9 +270,14 @@
   box-shadow: 2px 4px 6px 1px rgba(0, 0, 0, 0.25);
 }
 
-.payment-methods-buttons button img {
+.payment-methods-buttons button svg {
   width: 2.15rem;
   height: 2.15rem;
+  color: var(--text-dark);
+}
+
+.payment-methods-buttons button.clicked svg {
+  color: var(--brand-pink);
 }
 
 .payment-methods-buttons button p {
@@ -344,29 +337,29 @@
 @media (min-width: 500px) and (max-width: 768px) {
 
   .offers-section-title {
-    font-size: 1.9rem;
+    font-size: 1.85rem;
   }
   
   #offers-section {
-    gap: 1.75rem;
+    gap: 1.55rem;
     padding: 2.5rem 1.75rem 1.5rem;
   }
   
   .offer-card {
     border-radius: 0.5rem;
-    gap: 0.75rem;
-    padding: 0.85rem 1.1rem;
-    max-width: 30rem;
+    gap: 0.7rem;
+    padding: 0.8rem 1.05rem;
+    max-width: 26rem;
   }
 
   .offer-duration {
-    font-size: 1.1rem;
+    font-size: 1rem;
     padding: 0.25rem 0.5rem;
     border-radius: 0.5rem;
   }
 
   .offer-title {
-    font-size: 1.135rem;
+    font-size: 1.075rem;
   }
 
   .offer-price-box {
@@ -375,15 +368,15 @@
   }
 
   .price-content {
-    font-size: 1.65rem;
+    font-size: 1.45rem;
   }
 
   .offers-group { 
-    font-size: 0.925rem;
+    font-size: 0.9rem;
   }
 
   .offer-more-details {
-    font-size: 0.925rem;
+    font-size: 0.9rem;
   } 
 
   .offer-divider {
@@ -393,13 +386,13 @@
   }
 
   .offer-desc {
-    font-size: 0.925rem;
+    font-size: 0.9rem;
   }
 
   .offer-toggle {
-    padding: 0.5rem;
+    padding: 0.4rem 0.55rem;
     border-radius: 0.25rem;
-    margin-top: 0.65rem;
+    margin-top: 0.5rem;
   }
 
   .offer-arrow {
@@ -409,7 +402,7 @@
 
   .offer-details {
     padding: 0.5rem;
-    font-size: 0.925rem;
+    font-size: 0.9rem;
   }
 
   .offer-details p {
@@ -423,7 +416,7 @@
   .offer-ask-info-btn a {
     font-size: 1.1rem;
     border-radius: 0.5rem;
-    padding: 0.65rem 1rem;
+    padding: 0.6rem 1rem;
   }
 
   .news-offers {
@@ -499,64 +492,64 @@
 @media (min-width: 769px) and (max-width: 1200px) {
 
   .offers-section-title {
-    font-size: 2.05rem;
+    font-size: 2rem;
     width: 100%;
   }
   
   #offers-section {
     flex-wrap: wrap;
-    gap: 2.5rem;
-    padding: 3rem 2rem 2.5rem;
+    gap: 1.25rem;
+    padding: 2.5rem 1rem;
   }
   
   .offer-card {
     border-radius: 0.5rem;
-    gap: 1rem;
-    padding: 1.05rem 1.25rem;
+    gap: 0.75rem;
+    padding: 0.9rem 1.15rem;
     max-width: 25rem;
   }
 
   .offer-duration {
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     padding: 0.25rem 0.5rem;
     border-radius: 0.5rem;
   }
 
   .offer-title {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
 
   .offer-price-box {
-    padding: 0.3rem 0.8rem;
+    padding: 0.25rem 0.7rem;
     border-radius: 0.25rem;
   }
 
   .price-content {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
 
   .offers-group { 
-    font-size: 1.05rem;
+    font-size: 1rem;
   }
 
   .offer-more-details {
-    font-size:  0.95rem;
+    font-size:  0.9rem;
   } 
 
   .offer-divider {
     border-width: 1px;
     border-radius: 1rem;
-    margin: 0.65rem 0 0;
+    margin: 0.5rem 0 0;
   }
 
   .offer-desc {
-    font-size: 1.05rem;
+    font-size: 1rem;
   }
 
   .offer-toggle {
-    padding: 0.65rem;
+    padding: 0.5rem 0.7rem;
     border-radius: 0.25rem;
-    margin-top: 0.65rem;
+    margin-top: 0.5rem;
   }
 
   .offer-arrow {
@@ -566,11 +559,11 @@
 
   .offer-details {
     padding: 0.5rem;
-    font-size: 1.05rem;
+    font-size: 1rem;
   }
 
   .offer-details p {
-    line-height: 1.18rem;
+    line-height: 1.15rem;
   }
 
   .offer-ask-info-btn {
@@ -578,7 +571,7 @@
   }
 
   .offer-ask-info-btn a {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     border-radius: 0.5rem;
     padding: 0.65rem 1rem;
   }
@@ -589,7 +582,7 @@
   }
 
   .news-offer {
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
   
   .offer-details .news-offer-details {
@@ -623,7 +616,7 @@
     padding: 0.4rem;
   }
 
-  .payment-methods-buttons button img {
+  .payment-methods-buttons button svg {
     width: 2.75rem;
     height: 2.75rem;
   }
@@ -660,77 +653,82 @@
 /* Tablet Small */
 @media (min-width: 769px) and (max-width: 904px) {
   .offer-card {
-    max-width: 30rem;
+    max-width: 24rem;
   }
 }
 
 /* Tablet Large */
 @media (min-width: 1000px) {
+  #offers-section {
+    gap: 2rem;
+    padding: 2.5rem 2rem;
+  }
+
   .offer-card {
-    max-width: 28rem;
+    max-width: 26rem;
   }
 }
 
 /* Desktop */
 @media (min-width: 1201px) {
   .offers-section-title {
-    font-size: 2.25rem;
+    font-size: 2.15rem;
     width: 100%;
   }
   
   #offers-section {
     flex-wrap: wrap;
     gap: 2.5rem;
-    padding: 3rem 2rem 2.5rem;
+    padding: 3rem 2rem 2rem;
   }
   
   .offer-card {
     border-radius: 0.5rem;
-    gap: 1rem;
-    padding: 1.12rem 1.5rem;
-    max-width: 25rem; /* magari meno */
+    gap: 0.85rem;
+    padding: 0.9rem 1.2rem;
+    max-width: 25rem;
   }
 
   .offer-duration {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     padding: 0.25rem 0.5rem;
     border-radius: 0.5rem;
   }
 
   .offer-title {
-    font-size: 1.65rem;
+    font-size: 1.15rem;
   }
 
   .offer-price-box {
-    padding: 0.3rem 0.8rem;
+    padding: 0.2rem 0.7rem;
     border-radius: 0.25rem;
   }
 
   .price-content {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
   .offers-group { 
-    font-size: 1.125rem;
+    font-size: 1rem;
   }
 
   .offer-more-details {
-    font-size:  1.075rem;
+    font-size:  0.925rem;
   } 
 
   .offer-divider {
     border-width: 1px;
     border-radius: 1rem;
-    margin: 0.75rem 0 0;
+    margin: 0.5rem 0 0;
   }
 
   .offer-desc {
-    font-size: 1.125rem;
+    font-size: 1rem;
   }
 
   .offer-toggle {
-    padding: 0.65rem;
-    border-radius: 0.25rem;
+    padding: 0.55rem 0.75rem; 
+    border-radius: 0.3rem;
     margin-top: 0.65rem;
   }
 
@@ -741,11 +739,11 @@
 
   .offer-details {
     padding: 0.65rem;
-    font-size: 1.125rem;
+    font-size: 1rem;
   }
 
   .offer-details p {
-    line-height: 1.25rem;
+    line-height: 1.175rem;
   }
 
   .offer-ask-info-btn {
@@ -753,14 +751,14 @@
   }
 
   .offer-ask-info-btn a {
-    font-size: 1.25rem;
+    font-size: 1.05rem;
     border-radius: 0.5rem;
     padding: 0.65rem 1rem;
   }
 
   .news-offers {
     border-radius: 0.5rem;
-    padding: 0.65rem 0.75rem;
+    padding: 0.5rem 0.65rem;
   }
 
   .news-offer {
@@ -768,8 +766,8 @@
   }
   
   .offer-details .news-offer-details {
-    margin-top: 0.35rem; 
-    font-size: 0.85rem;
+    margin-top: 0.5rem; 
+    font-size: 0.8rem;
   }
 
   /* Payment Methods */
@@ -780,16 +778,16 @@
 
   .offer-specific {
     font-size: 0.95rem;
-    margin: 1.3rem 0;
+    margin: 1rem 0;
   }
 
   .payment-methods-title {
     font-size: 1.75rem;
-    margin: 4rem 0 2.25rem;
+    margin: 2.5rem 0 2rem;
   }
 
   .payment-methods-buttons {
-    gap: 1.35rem;
+    gap: 1.25rem;
     margin-bottom: 1.5rem;
   }
 
@@ -798,9 +796,158 @@
     padding: 0.5rem;
   }
 
-  .payment-methods-buttons button img {
-    width: 3rem;
-    height: 3rem;
+  .payment-methods-buttons button svg {
+    width: 2.75rem;
+    height: 2.75rem;
+  }
+
+  .payment-methods-buttons button p {
+    font-size: 0.85rem;
+  }
+
+  .payment-methods-details {
+    padding: 1rem 0.5rem;
+    gap: 1.25rem;
+  }
+
+  #payment-method-instructions {
+    font-size: 1.05rem;
+  }
+
+  .bonifico-list-title {
+    font-size: 1.1rem;
+    margin: 0 0 1.25rem;
+  }
+
+  .bonifico-details-list li {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .bonifico-details-list li strong {
+    font-size: 1rem;
+    margin-right: 0.65rem;
+  }
+}
+
+@media (min-width: 1500px) {
+  .offers-section-title {
+    font-size: 2.25rem;
+    width: 100%;
+  }
+  
+  #offers-section {
+    gap: 3rem;
+    padding: 4rem 3rem 1.5rem;
+  }
+  
+  .offer-card {
+    border-radius: 0.75rem;
+    /* gap: 1rem; */
+    padding: 1.1rem 1.5rem;
+    border-width: 2.5px;
+    max-width: 25rem;
+  }
+
+  .offer-duration {
+    font-size: 1.15rem;
+  }
+
+  .offer-title {
+    font-size: 1.3rem;
+  }
+
+  .offer-price-box {
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.35rem;
+  }
+
+  .price-content {
+    font-size: 1.7rem;
+  }
+
+  .offers-group { 
+    font-size: 1.05rem;
+  }
+
+  .offer-more-details {
+    font-size:  0.975rem;
+  } 
+
+  .offer-divider {
+    border-width: 1px;
+    border-radius: 1rem;
+    margin: 0.5rem 0 0;
+  }
+
+  .offer-desc {
+    font-size: 1.05rem;
+  }
+
+  .offer-toggle {
+    padding: 0.65rem 0.85rem;;
+    border-radius: 0.275rem;
+    margin-top: 0.5rem;
+  }
+
+  /* .offer-arrow {
+    height: 0.77rem;
+    width: 3.25rem;
+  } */
+
+  .offer-details {
+    padding: 0.5rem;
+    font-size: 1.05rem;
+  }
+
+  .offer-details p {
+    line-height: 1.25rem;
+  }
+
+  .offer-ask-info-btn {
+    border-radius: 0.6rem;
+  }
+
+  .offer-ask-info-btn a {
+    font-size: 1.1rem;
+    border-radius: 0.6rem;
+    padding: 0.7rem 1.1rem;
+    border-width: 2.5px;
+  }
+
+  .news-offers {
+    border-radius: 0.5rem;
+    padding: 0.65rem 0.75rem;
+  }
+
+  .news-offer {
+    font-size: 1.05rem;
+  }
+  
+  .offer-details .news-offer-details {
+    margin-top: 0.5rem; 
+    font-size: 0.9rem;
+  }
+
+  /* Payment Methods */
+
+  #payment-methods {
+    padding: 0 7.5rem 4rem;
+  }
+
+  .offer-specific {
+    font-size: 1rem;
+  }
+
+  .payment-methods-title {
+    font-size: 1.5rem;
+    margin: 2.5rem 0 2.5rem;
+  }
+
+
+  .payment-methods-buttons button svg {
+    width: 2.85rem;
+    height: 2.85rem;
   }
 
   .payment-methods-buttons button p {
@@ -808,7 +955,6 @@
   }
 
   .payment-methods-details {
-    padding: 1rem 0.5rem;
     gap: 1.5rem;
   }
 
@@ -817,169 +963,14 @@
   }
 
   .bonifico-list-title {
-    font-size: 1.15rem;
-    margin: 0 0 1.25rem;
+    font-size: 1.2rem;
   }
 
   .bonifico-details-list li {
-    font-size: 1.1rem;
-    margin-bottom: 0.8rem;
+    font-size: 1.05rem;
   }
 
   .bonifico-details-list li strong {
-    font-size: 1.1rem;
-    margin-right: 0.65rem;
-  }
-}
-
-@media (min-width: 1500px) {
-  .offer-card {
-    max-width: 32rem;
-  }
-
-  .offers-section-title {
-    font-size: 2.35rem;
-    width: 100%;
-  }
-  
-  #offers-section {
-    flex-wrap: wrap;
-    gap: 3.5rem;
-    padding: 6rem 4rem 4.5rem;
-  }
-  
-  .offer-card {
-    border-radius: 0.75rem;
-    gap: 1.25rem;
-    padding: 1.25rem 1.75rem;
-    border-width: 2.5px;
-    max-width: 28rem; /* 30?? */
-  }
-
-  .offer-duration {
-    font-size: 1.35rem;
-    padding: 0.25rem 0.5rem;
-    border-radius: 0.5rem;
-  }
-
-  .offer-title {
-    font-size: 1.75rem;
-  }
-
-  .offer-price-box {
-    padding: 0.5rem 1rem;
-    border-radius: 0.35rem;
-  }
-
-  .price-content {
-    font-size: 2rem;
-  }
-
-  .offers-group { 
-    font-size: 1.25rem;
-  }
-
-  .offer-more-details {
-    font-size:  1.15rem;
-  } 
-
-  .offer-divider {
-    border-width: 1px;
-    border-radius: 1rem;
-    margin: 0.75rem 0 0;
-  }
-
-  .offer-desc {
-    font-size: 1.25rem;
-  }
-
-  .offer-toggle {
-    padding: 0.75rem;
-    border-radius: 0.275rem;
-    margin-top: 0.75rem;
-  }
-
-  .offer-arrow {
-    height: 0.77rem;
-    width: 3.25rem;
-  }
-
-  .offer-details {
-    padding: 0.5rem;
-    font-size: 1.25rem;
-  }
-
-  .offer-details p {
-    line-height: 1.4rem;
-  }
-
-  .offer-ask-info-btn {
-    border-radius: 0.6rem;
-  }
-
-  .offer-ask-info-btn a {
-    font-size: 1.25rem;
-    border-radius: 0.6rem;
-    padding: 0.75rem 1.15rem;
-    border-width: 2.5px;
-  }
-
-  .news-offers {
-    border-radius: 0.5rem;
-    padding: 0.8rem 1.1rem;
-  }
-
-  .news-offer {
-    font-size: 1.15rem;
-  }
-  
-  .offer-details .news-offer-details {
-    margin-top: 0.5rem; 
-    font-size: 0.95rem;
-  }
-
-  /* Payment Methods */
-
-  #payment-methods {
-    padding: 0 7.5rem 3.5rem;
-  }
-
-  .offer-specific {
-    font-size: 1rem;
-  }
-
-  .payment-methods-title {
-    font-size: 1.85rem;
-    margin: 5rem 0 2.5rem;
-  }
-
-
-  .payment-methods-buttons button img {
-    width: 3.2rem;
-    height: 3.2rem;
-  }
-
-  .payment-methods-buttons button p {
-    font-size: 1rem;
-  }
-
-  .payment-methods-details {
-    gap: 1.75rem;
-  }
-
-  #payment-method-instructions {
-    font-size: 1.25rem;
-  }
-
-  .bonifico-list-title {
-    font-size: 1.3rem;
-  }
-
-  .bonifico-details-list li {
-    font-size: 1.15rem;
-  }
-
-  .bonifico-details-list li strong {
-    font-size: 1.15rem;
+    font-size: 1.05rem;
   }
 }
