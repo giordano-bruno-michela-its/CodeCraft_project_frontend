@@ -8,6 +8,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: "index.html",
+        backoffice: 'src/backoffice/index.html',
         retrieveReservation: "src/Pages/retrieve-reservation.html",
       },
       output: {
