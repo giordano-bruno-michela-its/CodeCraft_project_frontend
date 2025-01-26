@@ -2,7 +2,7 @@
 #booking-form-container {
   padding: 1.5rem 1.75rem;
   font-family: var(--main-font);
-  background-image: url("../../public/assets/bookingForm/cascinaIMG.webp");
+  background-image: url("../../public/assets/formsSection/background-info-form-image.webp");
   scroll-margin-top: 60px;
   background-repeat: no-repeat;
   background-size: cover;
