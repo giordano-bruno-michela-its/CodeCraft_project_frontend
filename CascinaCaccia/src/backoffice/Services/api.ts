@@ -110,7 +110,7 @@ export async function submitPrenotation(formData: any, token: string) {
     console.log(token);
 
 
-    const response = await fetch(`http://localhost:8080/api/formreq/updatebooking/${formData.id}`, {
+    const response = await fetch(`http://localhost:8080/api/formreq/updatebookingnomail/${formData.id}`, {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json',
