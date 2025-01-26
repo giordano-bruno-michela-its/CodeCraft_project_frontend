@@ -5,7 +5,7 @@
     --text-dark: #3d3c3c;
     --text-light: #fafafa;
     --success-color: #34c724;
-    --danger-color: #ff5733;
+    --danger-color: #EF233C;
     --main-font: "Montserrat", sans-serif;
 }
 
@@ -14,6 +14,7 @@ body {
     background-color: var(--text-light);
     margin: 0;
     padding: 0;
+    height: 100vh;
 }
 
 .registration-login-page {
@@ -121,7 +122,7 @@ button[type="submit"] {
     }
 
     .logo-cont h1 {
-        font-size: 1.65rem;
+        font-size: 1.6rem;
     }
 
     .description {
@@ -134,5 +135,15 @@ button[type="submit"] {
 
     button[type="submit"] {
         font-size: 1rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .form-container {
+        padding: 0.75rem 1.25rem;
+        margin: 0 1.5rem;
+        width: 100%;
+        max-width: none;
+        /* max-width: 22rem; */
     }
 }
