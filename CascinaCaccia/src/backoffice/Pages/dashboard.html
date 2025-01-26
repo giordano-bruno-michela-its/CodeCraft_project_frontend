@@ -11,47 +11,99 @@
   </head>
   <body>
     <div id="navbar" class="navbar">
-         <div class="logo">Dashboard</div>
+      <div class="navbar-container">
+        <div class="logo-cont">
+          <img src="../../../public/assets/navbar/Logo-agora.svg" alt="agorà logo">
+          <h1>Backoffice</h1>
+        </div>
+        <button class="hamburger-toggle" aria-label="Apri il menu" aria-expanded="false" aria-controls="navbar-menu">
+          <span class="navbar-hamburger"></span>
+        </button>
+      </div>
+      <div id="navbar-menu" class="navbar-menu"></div>
     </div>
 
     <div class="main-container">
         <div id="card-container" class="container">
+          <div class="cont-header">
+            <h2>Lista Richieste</h2>
+          </div>
         </div>
   
         <div id="card-container-right" class="container">
+          <div class="cont-header">
+            <h2>Prossime Prenotazioni</h2>
+          </div>
         </div>
       </div>
 
        <div id="loading-modal" class="loading-modal">
         <div class="loading-content">
-            <p>Operazione in corso, attendere...</p>
+            <p>Spostamento in corso...</p>
             <div class="spinner"></div>
             <p id="text-error"></p>
         </div>
-    </div>
+      </div>
 
       <div id="modal" class="modal">
         <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2 id="modal-title">Dettagli Prenotazione</h2>
-            <p id="modal-email"></p>
-            <p id="modal-association"></p>
-            <p id="modal-contact-date"></p>
-            <p id="modal-phone-number"></p>
-            
-            <p id="modal-booking-duration"></p>
-            <p id="modal-age-group"></p>
-            <p id="modal-guides-quantity"></p>
-            <p id="modal-participants-quantity"></p>
-            <p id="modal-begin-time"></p>
-            <p id="modal-end-time"></p>
-            
-            <div id="modal-activity-type"></div>
-            
-            <p id="modal-additional-info"></p>
-            
-            <div id="modal-buttons">
+            <div class="modal-header">
+              <h4>Dettagli Prenotazione</h4>
+              <div class="close">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 1L18.9688 18.9706" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M19 1L1.03117 18.9706" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>                  
+              </div>
             </div>
+            <div class="modal-highlight">
+              <div class="modal-higlight-top">
+                <p class="small-txt">Prenotato da</p>
+                <p id="modal-contact-date" class="small-txt"></p>
+              </div>
+              <h2 id="modal-title"></h2>
+            </div>
+            <div class="modal-body">
+              <div class="modal-row">
+                <p class="field-name">Ente</p>
+                <p id="modal-association"></p>
+              </div>
+              <div class="modal-row">
+                <h5 class="modal-group-title">Dettagli visita</h5>
+              </div>
+              <div class="modal-row">
+                <p class="field-name">Date</p>
+                <p id="modal-prenotation-date"></p>
+              </div>
+              <div class="modal-row">
+                <p class="field-name">Durata visita</p>
+                <p id="modal-booking-duration"></p>
+              </div>
+              <div class="modal-row">
+                <p class="field-name">Numero visitatori</p>
+                <p id="modal-quantity"></p>
+              </div>
+              <div class="modal-row">
+                <p class="field-name">Attività selezionate</p>
+                <div id="modal-activity-type"></div>
+              </div>
+              <div class="modal-row">
+                <p class="field-name">Messaggio</p>
+                <p id="modal-additional-info"></p>
+              </div>
+              <div class="modal-row">
+                <h5 class="modal-group-title">Contatti</h5>
+              </div>
+              <div class="modal-row">
+                <p class="field-name">Email</p>
+                <a id="modal-email"></a>
+              </div>
+              <div class="modal-row">
+                <p class="field-name">Telefono</p>
+                <a id="modal-phone-number"></a>
+              </div>
+            </div>            
+            <div id="modal-buttons"></div>
         </div>
     </div>
     

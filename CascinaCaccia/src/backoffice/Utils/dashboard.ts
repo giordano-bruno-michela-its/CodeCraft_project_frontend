@@ -1,4 +1,5 @@
 import { checkAdmin, downloadEmail, getAllForms, submitPrenotation } from "../Services/api";
+import { initNavbar } from "../../Components/navbar";
 
 const token = sessionStorage.getItem('authToken');
 
@@ -13,7 +14,12 @@ if (!token) {
     const dataAdmin = await checkAdmin(token)
     console.log(dataAdmin);
 
-    const navbar = document.getElementById("navbar");
+    const navbarContainer = document.getElementById("navbar-menu");
+    const dashboardList = document.createElement("ul");
+
+    navbarContainer?.appendChild(dashboardList);
+
+    initNavbar();
 
     function downloadMail() {
         if (token) {
@@ -27,29 +33,30 @@ if (!token) {
 
     if (dataAdmin.status == 200) {
 
-
+        
         const dashboardItem = document.createElement("li");
         const dashboardLink = document.createElement("a");
         dashboardLink.href = "../Pages/dashboard.html";
         dashboardLink.textContent = "Dashboard";
         dashboardItem.appendChild(dashboardLink);
-        navbar?.appendChild(dashboardItem);
-
+        dashboardList?.appendChild(dashboardItem);
+        dashboardItem.classList.add('navbar-link');
 
         const registerItem = document.createElement("li");
         const registerLink = document.createElement("a");
         registerLink.href = "../Pages/registrationUser.html";
         registerLink.textContent = "Registra Nuova Utenza";
         registerItem.appendChild(registerLink);
-        navbar?.appendChild(registerItem);
+        dashboardList?.appendChild(registerItem);
+        registerItem.classList.add('navbar-link');
 
         const editMailItem = document.createElement("li");
         const editMailLink = document.createElement("a");
         editMailLink.href = "../Pages/registrationMail.html";
         editMailLink.textContent = "Modifica Mail Cascina";
         editMailItem.appendChild(editMailLink);
-        navbar?.appendChild(editMailItem);
-
+        dashboardList?.appendChild(editMailItem);
+        editMailItem.classList.add('navbar-link');
 
     }
 
@@ -59,16 +66,17 @@ if (!token) {
     mailLink.textContent = "Scarica Mail";
     mailLink.addEventListener("click", downloadMail);
     mailItem.appendChild(mailLink);
-    navbar?.appendChild(mailItem);
+    dashboardList?.appendChild(mailItem);
+    mailItem.classList.add('navbar-link');
 
     const logoutItem = document.createElement("li");
     const logoutLink = document.createElement("a");
+    logoutLink.id = 'logoutBtn';
     logoutLink.href = "../Pages/logout.html";
     logoutLink.textContent = "Logout";
     logoutItem.appendChild(logoutLink);
-    navbar?.appendChild(logoutItem);
-
-
+    dashboardList?.appendChild(logoutItem);
+    logoutItem.classList.add('navbar-link');
 
     const data = getAllForms(token);
 
@@ -98,57 +106,70 @@ if (!token) {
                     card.id = `prenotazione-${prenotazione.id}`;
 
 
-                    const title = document.createElement('h2');
+                    const title = document.createElement('h3');
                     title.textContent = `${prenotazione.name} ${prenotazione.surname}`;
 
                     const email = document.createElement('p');
                     email.textContent = `Email: ${prenotazione.email}`;
 
+                    const entityName = document.createElement('p');
+                    entityName.textContent = `${prenotazione.association}`;
+
+                    const cardFooter = document.createElement('div');
+                    cardFooter.classList.add('card-footer');
+
+                    const cardStatus = document.createElement('div');
+                    cardStatus.classList.add('status-box');
+                    cardFooter.appendChild(cardStatus);
+                    
                     const contactDate = document.createElement('p');
                     const formattedDate = new Date(prenotazione.contactDate).toLocaleDateString('it-IT');
-                    contactDate.textContent = `Data di contatto: ${formattedDate}`;
+                    contactDate.classList.add('date');
+                    contactDate.textContent = `${formattedDate}`;
 
-                    card.appendChild(title);
-                    card.appendChild(email);
                     card.appendChild(contactDate);
+                    card.appendChild(title);
+                    card.appendChild(entityName);
+                    card.appendChild(email);
+                    card.appendChild(cardFooter);
 
                     card.addEventListener('click', () => {
-                        modal.style.display = "block";
+                        modal.style.display = "flex";
 
                         document.getElementById('modal-title')!.textContent = `${prenotazione.name} ${prenotazione.surname}`;
-                        document.getElementById('modal-email')!.textContent = `Email: ${prenotazione.email}`;
-                        document.getElementById('modal-association')!.textContent = `Associazione: ${prenotazione.association}`;
-                        document.getElementById('modal-contact-date')!.textContent = `Data di contatto: ${formattedDate}`;
-                        document.getElementById('modal-phone-number')!.textContent = `Telefono: ${prenotazione.phoneNumber}`;
-                        document.getElementById('modal-booking-duration')!.textContent = `Durata prenotazione: ${prenotazione.bookingDuration.name} - ${prenotazione.bookingDuration.description}`;
-                        document.getElementById('modal-age-group')!.textContent = `Fascia di età: ${prenotazione.ageGroup ? prenotazione.ageGroup : 'Non specificata'}`;
-                        document.getElementById('modal-guides-quantity')!.textContent = `Quantità guide: ${prenotazione.guidesQuantity}`;
-                        document.getElementById('modal-participants-quantity')!.textContent = `Quantità partecipanti: ${prenotazione.participantsQuantity}`;
-                        document.getElementById('modal-begin-time')!.textContent = `Inizio: ${prenotazione.beginTime}`;
-                        document.getElementById('modal-end-time')!.textContent = `Fine: ${prenotazione.endTime}`;
+                        document.getElementById('modal-association')!.textContent = `${prenotazione.association}`;
+                        document.getElementById('modal-contact-date')!.textContent = `in data ${formattedDate}`;
+                        document.getElementById('modal-prenotation-date')!.textContent = `${prenotazione.beginTime} - ${prenotazione.endTime}`;
+                        document.getElementById('modal-booking-duration')!.textContent = `${prenotazione.bookingDuration.name} - ${prenotazione.bookingDuration.description}`;
+                        document.getElementById('modal-quantity')!.textContent = `${prenotazione.participantsQuantity} partecipanti, ${prenotazione.guidesQuantity} tutor`;
+                        const modalEmail = document.getElementById('modal-email') as HTMLAnchorElement;
+                        modalEmail!.textContent = `${prenotazione.email}`;
+                        modalEmail!.href = `mailto:${prenotazione.email}`;
+                        const modalTelephone = document.getElementById('modal-phone-number') as HTMLAnchorElement;
+                        modalTelephone!.textContent = `${prenotazione.phoneNumber}`;
+                        modalTelephone!.href = `tel:${prenotazione.phoneNumber}`;
 
                         const modalActivityType = document.getElementById('modal-activity-type')!;
                         modalActivityType.innerHTML = '';
 
                         prenotazione.activityType.forEach((activity: { name: string, description: string }) => {
                             const activityP = document.createElement('p');
-                            activityP.textContent = `Attività: ${activity.name}`;
+                            activityP.textContent = `${activity.name}`;
                             modalActivityType.appendChild(activityP);
                         });
 
-                        document.getElementById('modal-additional-info')!.textContent = `Info aggiuntive: ${prenotazione.additionalInfo || 'Nessuna'}`;
+                        document.getElementById('modal-additional-info')!.textContent = `${prenotazione.additionalInfo || 'Nessuna'}`;
 
                         const modalButtons = document.getElementById('modal-buttons')!;
                         modalButtons.innerHTML = '';
 
                         if (prenotazione.bookingStatus === "PENDING") {
                             modalButtons.innerHTML = `
-                            <button id="close-modal">Annulla</button>
-                            <button id="confirm-booking">Conferma prenotazione</button>`;
+                            <button id="close-modal">Rifiuta</button>
+                            <button id="confirm-booking">Conferma</button>`;
                         } else if (prenotazione.bookingStatus === "CONFIRMED") {
                             modalButtons.innerHTML = `
-                            <button id="close-modal">Chiudi</button>
-                            <button id="cancel-booking">Annulla Prenotazione</button>`;
+                            <button id="cancel-booking">Cancella Prenotazione</button>`;
                         }
 
                         closeModal.addEventListener('click', () => {
@@ -253,8 +274,12 @@ if (!token) {
 
                     if (prenotazione.bookingStatus === "PENDING") {
                         containerLeft.appendChild(card);
+                        cardStatus.textContent = 'DA CONFERMARE';
+                        cardStatus.classList.add('pending');
                     } else if (prenotazione.bookingStatus === "CONFIRMED") {
                         containerRight.appendChild(card);
+                        cardStatus.textContent = 'CONFERMATO';
+                        cardStatus.classList.add('confirmed');
                     }
                 }
             });
