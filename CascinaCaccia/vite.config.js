@@ -1,5 +1,7 @@
 import { defineConfig } from "vite";
 import { resolve } from "path";
+import sitemap from 'vite-plugin-sitemap';
+
 
 export default defineConfig({
   preview: {
@@ -46,4 +48,15 @@ export default defineConfig({
     cssCodeSplit: true, // Divides css files separately
     outDir: "dist", // main output folder
   },
+  plugins: [
+    sitemap({
+      hostname: 'https://cascinacaccia.com',
+      routes: [
+        { url: '/', changefreq: 'weekly', priority: 1.0 },
+        { url: '/src/Pages/retrieveReservation/retrieve-reservation.html', changefreq: 'weekly', priority: 0.8 },
+        { url: '/src/Pages/updateBooking/update-booking.html', changefreq: 'monthly', priority: 0.6 },
+        { url: '/src/Pages/privacyPolicy.html', changefreq: 'yearly', priority: 0.5 },
+      ],
+    }),
+  ],
 });
