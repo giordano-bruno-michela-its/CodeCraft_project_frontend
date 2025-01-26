@@ -63,8 +63,39 @@ vai su `http://localhost:3000/src/backoffice/index.html`
 verrai reindirizzato al login o alla registrazione a seconda se è presente o meno almeno un utenza nel database
 ```
 
+## jsDoc
 
-## 5. Struttura del Progetto 
+1. Clona il repository (se non è gia stato fatto):
+   ```bash
+   git clone https://github.com/giordano-bruno-michela-its/CodeCraft_project_frontend
+ 
+2. Vai nella directory del progetto (se non è gia stato fatto):
+
+```bash
+cd CascinaCaccia
+```
+ 
+3. Installa le dipendenze (se non è gia stato fatto):
+
+```bash
+npm install
+```
+ 
+3. scrivi il seguente comando in console per generare la cartella docs:
+
+```bash
+npm run generate-docs
+```
+ 
+4. scrivi il seguente comando in console per servire la cartella.
+```bash
+npm run serve-docs
+
+```
+5. apri il link fornito in console per vedere la documentazione.
+
+
+##  Struttura del Progetto 
 
 
 ```bash
@@ -72,52 +103,47 @@ verrai reindirizzato al login o alla registrazione a seconda se è presente o me
 CascinaCaccia/               
 
 
-├── index.html                         # Punto di ingresso HTML principale per il progetto, la struttura base della tua applicazione.
-├── package-lock.json                  # File che contiene la versione esatta delle dipendenze installate tramite npm, da includere nel controllo versione.
-├── package.json                       # File di configurazione di npm che definisce le dipendenze, gli script e altre configurazioni del progetto.
-├── public                             # Cartella per risorse pubbliche, come immagini, font e altri file statici accessibili dal browser.
-├── src                                # Cartella che contiene il codice sorgente dell'applicazione.
-│   ├── components                     # Cartella per i componenti TypeScript, gestisce la logica per diverse parti del sito (form, navbar, ecc.).
+├── index.html                         # Punto di ingresso del il progetto
+├── public                             # Cartella per risorse come immagini
+├── src                                # Cartella che contiene il codice sorgente.
+│   ├── components                     # Cartella per la gestione dei dati inseriti nei form dagli utenti
 │   │   ├── bookingFormHandler.ts              # Gestisce la logica per il modulo di prenotazione.
 │   │   ├── getRetrieveReservationFormData.ts  # Funzione per ottenere i dati del modulo di recupero prenotazione.
 │   │   ├── getUpdateBookingFormData.ts        # Funzione per ottenere i dati del modulo di aggiornamento prenotazione.
 │   │   ├── infoFormHandler.ts                 # Gestisce la logica per il modulo informativo.
 │   │   ├── navbar.ts                          # Gestisce la logica per la barra di navigazione.
 │   │   └── newsletterFormHandler.ts           # Gestisce la logica per il modulo di iscrizione alla newsletter.
-│   ├── main.ts                        # File principale che potrebbe inizializzare i componenti, gestire la logica centrale dell'applicazione.
+│   ├── main.ts                        # File che gestire la logica centrale dell'applicazione.
 │   ├── pages                           # Cartella per le diverse pagine del sito.
 │   │   ├── privacyPolicy.html         # Pagina per la privacy policy.
-│   │   ├── retrieveReservation        # Directory per la pagina di recupero prenotazione 
-│   │   └── updateBooking              # Directory per la pagina di aggiornamento prenotazione
-│   ├── services                        # Cartella per la logica di comunicazione con il backend o per gestire l'API.
-│   │   └── api.ts                     # Gestisce le chiamate API, probabilmente per recuperare o inviare dati al server.
-│   ├── styles                          # Cartella per i file CSS, che definiscono lo stile del sito.
+│   │   ├── retrieveReservation/        # Directory per la pagina di recupero prenotazione 
+│   │   └── updateBooking/              # Directory per la pagina di aggiornamento prenotazione
+│   ├── services                        # Cartella gestire l'API.
+│   │   └── api.ts                     # Gestisce le chiamate API.
+│   ├── style.css                       # File che contiene gli import di tutti gli style dell'applicazione contenuti nella cartella styles
+│   ├── styles                          # Cartella per i file CSS.
 │   │   ├── activitiesSection.css      # Stile per la sezione delle attività.
 │   │   ├── faqSection.css             # Stile per la sezione delle FAQ.
 │   │   ├── footer.css                 # Stile per il footer del sito.
-│   │   ├── forms.css                  # Stile per i moduli.
-│   │   ├── heroSection.css            # Stile per la sezione hero (probabilmente la parte superiore della pagina).
+│   │   ├── forms.css                  # Stile per i form.
+│   │   ├── heroSection.css            # Stile per la sezione introduttiva
 │   │   ├── navbar.css                 # Stile per la barra di navigazione.
 │   │   ├── newsletter.css             # Stile per la sezione della newsletter.
 │   │   ├── offersSection.css          # Stile per la sezione delle offerte.
 │   │   ├── privacyPolicy.css          # Stile per la pagina della politica sulla privacy.
-│   │   ├── toast.css                  # Stile per i messaggi di toast (popup o notifiche).
+│   │   ├── toast.css                  # Stile per i messaggi di toast.
 │   │   └── visitSection.css           # Stile per la sezione delle visite.
-│   ├── types                           # Cartella per i tipi TypeScript personalizzati.
-│   │   └── types.ts                   # Definisce i tipi personalizzati per l'applicazione, utile per la tipizzazione dei dati.
-│   ├── utils                           # Cartella per funzioni di utilità, generalmente riutilizzabili in tutto il progetto.
+│   ├── types                           # Cartella per i tipi TypeScript.
+│   │   └── types.ts                   # Definisce i tipi personalizzati.
+│   ├── utils                           # Cartella per funzioni di utilità.
 │   │   ├── colorBlindFilter.ts        # Funzione per il filtro per daltonici (accessibilità).
 │   │   ├── darkMode.ts                # Funzione per la gestione della modalità scura.
 │   │   ├── updateBookingReservationPrefill.ts # Funzione per precompilare i dati di prenotazione.
-│   │   └── utils.ts                   # Funzioni generali di utilità, che potrebbero includere manipolazioni di stringhe, numeri, ecc.
-│   ├── vite-env.d.ts                  # Definisce le variabili ambientali per Vite (strumento di build).
-├── tsconfig.json                      # File di configurazione di TypeScript, specifica le opzioni di compilazione.
-├── vite.config.js                     # Configurazione di Vite, lo strumento di build, per la gestione delle impostazioni di sviluppo e produzione.
-└── .gitignore                         # File per indicare a Git quali file e cartelle ignorare, come node_modules, dist, log, ecc.
+│   │   └── utils.ts                   # Funzioni generali di utilità
+│   └── vite-env.d.ts                 
+├── tsconfig.json                     
+├── vite.config.js                    
+└── .gitignore                        
 
-
-
-
-README.md                      #file che stai leggendo in questo momento
         
 ```
