@@ -65,6 +65,7 @@
 }
 
 .offer-price-box {
+  margin-top: 0.25rem;
   padding: 0.125rem 0.5rem;
   border-radius: 0.25rem;
   background-color: #E7E7E7;
@@ -76,6 +77,7 @@
 
 .price-content {
   margin: 0;
+  line-height: normal !important;
   font-size: 1.35rem;
   font-weight: 700;
   color: var(--text-dark);
@@ -144,7 +146,7 @@
 .offer-details {
   display: none;
   padding: 0.5rem;
-  font-size: 0.875rem;;
+  font-size: 0.875rem;
   color: var(--text-dark);
 }
 
@@ -155,17 +157,23 @@
 }
 
 .offer-details p a {
-  color: var(--brand-pink);
+  /* color: var(--brand-pink); */
+  color: var(--text-dark);
   font-weight: 500;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.2s ease-in;
 }
 
-.offer-details p a:hover {
-  color: #e3007d8c;
+.offer-details p a:hover,
+.offer-details p a:active {
+  /* color: #e3007d8c; */
+  color: var(--brand-pink);
 }
 
 .offer-card.open .offer-details {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: flex-start;
 }
 
 .offer-ask-info-btn {
@@ -177,6 +185,7 @@
   border-radius: 0.5rem;
   overflow: hidden;
   padding: 0;
+  margin-top: 0.35rem;
 }
 
 .offer-ask-info-btn a {
