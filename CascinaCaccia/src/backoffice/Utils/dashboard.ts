@@ -14,6 +14,9 @@ if (!token) {
     console.log(dataAdmin);
 
     const navbar = document.getElementById("navbar");
+    const dashboardList = document.createElement("ul");
+
+    navbar?.appendChild(dashboardList);
 
     function downloadMail() {
         if (token) {
@@ -27,13 +30,13 @@ if (!token) {
 
     if (dataAdmin.status == 200) {
 
-
+        
         const dashboardItem = document.createElement("li");
         const dashboardLink = document.createElement("a");
         dashboardLink.href = "../Pages/dashboard.html";
         dashboardLink.textContent = "Dashboard";
         dashboardItem.appendChild(dashboardLink);
-        navbar?.appendChild(dashboardItem);
+        dashboardList?.appendChild(dashboardItem);
 
 
         const registerItem = document.createElement("li");
@@ -41,14 +44,14 @@ if (!token) {
         registerLink.href = "../Pages/registrationUser.html";
         registerLink.textContent = "Registra Nuova Utenza";
         registerItem.appendChild(registerLink);
-        navbar?.appendChild(registerItem);
+        dashboardList?.appendChild(registerItem);
 
         const editMailItem = document.createElement("li");
         const editMailLink = document.createElement("a");
         editMailLink.href = "../Pages/registrationMail.html";
         editMailLink.textContent = "Modifica Mail Cascina";
         editMailItem.appendChild(editMailLink);
-        navbar?.appendChild(editMailItem);
+        dashboardList?.appendChild(editMailItem);
 
 
     }
@@ -59,14 +62,14 @@ if (!token) {
     mailLink.textContent = "Scarica Mail";
     mailLink.addEventListener("click", downloadMail);
     mailItem.appendChild(mailLink);
-    navbar?.appendChild(mailItem);
+    dashboardList?.appendChild(mailItem);
 
     const logoutItem = document.createElement("li");
     const logoutLink = document.createElement("a");
     logoutLink.href = "../Pages/logout.html";
     logoutLink.textContent = "Logout";
     logoutItem.appendChild(logoutLink);
-    navbar?.appendChild(logoutItem);
+    dashboardList?.appendChild(logoutItem);
 
 
 
