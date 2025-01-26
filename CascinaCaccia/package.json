@@ -11,7 +11,8 @@
   },
   "devDependencies": {
     "typescript": "~5.6.2",
-    "vite": "^6.0.3"
+    "vite": "^6.0.3",
+    "vite-plugin-sitemap": "^0.7.1"
   },
   "dependencies": {
     "swiper": "^11.2.1"

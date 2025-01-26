@@ -2,7 +2,7 @@
 #booking-form-container {
   padding: 1.5rem 1.75rem;
   font-family: var(--main-font);
-  background-image: url("../../public/assets/bookingForm/cascinaIMG.webp");
+  background-image: url("/public/assets/bookingForm/cascinaIMG.webp");
   scroll-margin-top: 60px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -187,7 +187,6 @@ input[type="number"] {
 #info-form-activitiesToggle:hover {
   background-color: rgba(241 146 31 / 0.25);
 }
-
 
 #infoActivitiesContainer,
 #activitiesContainer {
@@ -384,7 +383,7 @@ input[type="number"] {
   .consent-checkbox-container div {
     gap: 0.65rem;
   }
-  
+
   #infoActivitiesContainer,
   #activitiesContainer {
     padding: 0.85rem 0.5rem 0;

@@ -1,45 +1,40 @@
+// Components
 import { getBookingFormData } from "./Components/bookingFormHandler";
 import { getFormDataInfo } from "./Components/infoFormHandler";
 import { initNavbar } from "./Components/navbar";
-import { submitBookingForm, submitNewsletterData } from "./Services/api";
-import { toggleColorblindFilter } from "./Utils/colorBlindFilter";
-import { toggleDarkMode } from "./Utils/darkMode";
+import { getNewsletterFormData } from "./Components/newsletterFormHandler";
+
+// Services
+import { submitBookingForm, submitNewsletterData, submitFormData } from "./Services/api";
+
+// Generic Utilities
 import {
   controlCheckboxForm,
-  enableDisableSbmtBtnBookingForm,
-  enableDisableSbmtBtnInfoForm,
   setupActivitiesToggle,
   setupOfferCards,
   setUpPaymentMethodsBtns,
   showToast,
+  toggleAnswer,
+  activityCards,
 } from "./Utils/utils";
-import { toggleAnswer } from "./Utils/utils";
-import { submitFormData } from "./Services/api";
-import { activityCards } from "./Utils/utils";
-// import { activityCarousel } from "./Utils/utils"
-import { getNewsletterFormData } from "./Components/newsletterFormHandler";
 
-// import Swiper JS
-import Swiper from "swiper";
-import { Navigation, Pagination } from "swiper/modules";
+// Styles Utilities
+import { toggleColorblindFilter } from "./Utils/colorBlindFilter";
+import { toggleDarkMode } from "./Utils/darkMode";
 
+// External Utilities
+import { initSwiper } from "./Utils/swiperUtils";
+
+// Entry point
 document.addEventListener("DOMContentLoaded", () => {
-  //Navbar:
   initNavbar();
-
-  // Darkmode:
   toggleDarkMode();
-
-  // Colorblind Filter
   toggleColorblindFilter();
-
+  initSwiper();
   activityCards();
-  // activityCarousel()
-
-  // Offers Section
   setupOfferCards();
-
   setUpPaymentMethodsBtns();
+  controlCheckboxForm();
 
   // Faq Section
   const faqQuestions = document.querySelectorAll(".faq-question");
@@ -48,9 +43,6 @@ document.addEventListener("DOMContentLoaded", () => {
     question.addEventListener("click", () => toggleAnswer(index));
   });
 
-  // Privacy checkbox control
-  controlCheckboxForm();
-
   // BOOKING FORM
   const bookingForm = document.getElementById("bookingForm") as HTMLFormElement;
   const activitiesToggle = document.getElementById("activitiesToggle") as HTMLButtonElement;
@@ -58,14 +50,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // toggles the activity age limit banner when the checkbox is checked
   const limitedActivityCheck = document.querySelector('#bookingForm #activitiesContainer input[value="8"]') as HTMLInputElement;
-  const limiteActivityBanner = document.querySelector('#bookingForm .activity-age-warning') as HTMLDivElement;
+  const limiteActivityBanner = document.querySelector("#bookingForm .activity-age-warning") as HTMLDivElement;
 
-  limitedActivityCheck.addEventListener('change', () => {
-    limiteActivityBanner.classList.toggle('hidden');
+  limitedActivityCheck.addEventListener("change", () => {
+    limiteActivityBanner.classList.toggle("hidden");
   });
 
   setupActivitiesToggle(activitiesToggle, activitiesContainer);
-  enableDisableSbmtBtnBookingForm();
 
   bookingForm.addEventListener("validatedSubmit", async (event) => {
     event.preventDefault();
@@ -75,8 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Handling form data (submit)
     try {
-      const result = await submitBookingForm(formData);
-      console.log("Dati inviati con successo:", result);
+      await submitBookingForm(formData);
       showToast("Richiesta inoltrata con successo!", "success");
       bookingForm.reset();
     } catch (error) {
@@ -97,7 +87,6 @@ document.addEventListener("DOMContentLoaded", () => {
   activitiesToggle.setAttribute("aria-expanded", (!isHidden).toString());
 
   setupActivitiesToggle(activitiesToggle, activitiesContainer);
-  enableDisableSbmtBtnInfoForm();
 
   infoForm.addEventListener("validatedSubmit", async (event) => {
     event.preventDefault();
@@ -107,8 +96,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Handling form data (submit)
     try {
-      const result = await submitFormData(formData);
-      console.log("Dati inviati con successo:", result);
+      await submitFormData(formData);
       showToast("Richiesta inoltrata con successo!", "success");
       infoForm.reset();
     } catch (error) {
@@ -116,10 +104,8 @@ document.addEventListener("DOMContentLoaded", () => {
       showToast("Problemi durante l'invio della richiesta, riprova tra poco!", "error");
     }
   });
-});
 
-//  NEWSLETTER FORM
-document.addEventListener("DOMContentLoaded", () => {
+  //  NEWSLETTER FORM
   const newsletterForm = document.getElementById("newsletter-email-form") as HTMLFormElement;
 
   newsletterForm.addEventListener("validatedSubmit", async (event) => {
@@ -130,8 +116,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Handling form data (submit)
     try {
-      const result = await submitNewsletterData(newsletterData);
-      console.log("Dati inviati con successo:", result);
+      await submitNewsletterData(newsletterData);
       showToast("Richiesta inoltrata con successo!", "success");
       newsletterForm.reset();
     } catch (error) {
@@ -139,53 +124,4 @@ document.addEventListener("DOMContentLoaded", () => {
       showToast("Problemi durante l'invio della richiesta, riprova tra poco!", "error");
     }
   });
-});
-
-// Retrieve Reservation Form
-/* 
-document.addEventListener("DOMContentLoaded", () => {
-  const retrieveResForm = document.getElementById("retrieve-reservation-form") as HTMLFormElement;
-
-  retrieveResForm.addEventListener("submit", async (e) => {
-    e.preventDefault();
-
-    const { email, code } = getRetrieveReservationFormData();
-
-    try {
-      const result = await submitRetrieveReservationForm(email, code);
-      console.log("Codice iviato con successo!", result);
-      // Salva i dati della prenotazione in localStorage
-      localStorage.setItem("reservationDetails", JSON.stringify(result));
-      alert("Codice inviato con succeso");
-      window.location.href = "./update-booking.html"; // url to the page that allow the user to modify booking
-      // retrieveResForm.reset();
-    } catch (error) {
-      console.error("Errore durante l'invio dei dati", error);
-      alert("Errore durante l'invio dei dati");
-    }
-  });
-}); */
-
-// Swiper.js carousel script
-
-new Swiper(".activity-img-swiper", {
-  modules: [Navigation, Pagination],
-  slidesPerView: "auto",
-  centeredSlides: true,
-  spaceBetween: 16,
-  loop: true,
-  grabCursor: true,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  breakpoints: {
-    500: {
-      spaceBetween: 24,
-    },
-  },
 });

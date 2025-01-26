@@ -2,7 +2,6 @@
  * Toggles the visibility of the answer for a specific FAQ item.
  * @param {number} index - The index of the FAQ item to toggle.
  */
-
 export function toggleAnswer(index: number): void {
   const faqCards = document.querySelectorAll(".faq-card");
   const faqCard = faqCards[index];
@@ -64,7 +63,6 @@ export const getElement = <T extends HTMLElement>(selector: string): T => {
  */
 export function activityCards(): void {
   const activitiesCardHeaders = document.querySelectorAll(".activity-card-header");
-  // const activitiesCard = document.querySelectorAll(".activity-card");
   activitiesCardHeaders.forEach((cardHead) => {
     cardHead.addEventListener("click", () => {
       if (cardHead.parentElement) {
@@ -75,7 +73,6 @@ export function activityCards(): void {
     });
   });
 }
-
 
 /**
  * Sets up event listeners on each of the offer cards to toggle the
@@ -93,21 +90,28 @@ export function setupOfferCards(): void {
   });
 }
 
+/**
+ * Sets up event listeners for payment method buttons to toggle between "Bonifico" and "Contanti" payment options.
+ * Updates the button styles, icons, and instructions based on the selected payment method.
+ * When the "Bonifico" button is clicked, it highlights the button, changes the icon, updates the instructions,
+ * and displays the bonifico data. When the "Contanti" button is clicked, it highlights the button, changes the icon,
+ * updates the instructions, and hides the bonifico data.
+ */
 export function setUpPaymentMethodsBtns() {
   const bonificoBtn = document.getElementById('bonifico-btn') as HTMLButtonElement;
   const contantiBtn = document.getElementById('contanti-btn') as HTMLButtonElement;
   const instructionsParagraph = document.getElementById('payment-method-instructions') as HTMLParagraphElement;
   const bonificoData = document.getElementById('bonifico-only-text') as HTMLDivElement;
 
-  bonificoBtn.addEventListener('click', () => {
-    if(!bonificoBtn.classList.contains('clicked')) {
+  bonificoBtn.addEventListener("click", () => {
+    if (!bonificoBtn.classList.contains("clicked")) {
       // add and removes clicked class
-      bonificoBtn.classList.add('clicked');
-      contantiBtn.classList.remove('clicked');
+      bonificoBtn.classList.add("clicked");
+      contantiBtn.classList.remove("clicked");
 
       // changes the content of the instructions paragraph and shows / hides the bonifico data
-      instructionsParagraph.textContent = 'Pagamento entro 30 giorni prima del soggiorno.';
-      bonificoData.classList.remove('hidden');
+      instructionsParagraph.textContent = "Pagamento entro 30 giorni prima del soggiorno.";
+      bonificoData.classList.remove("hidden");
     }
   })
 
@@ -124,33 +128,7 @@ export function setUpPaymentMethodsBtns() {
   })
 }
 
-/**
- * Enables or disables the submit button of the booking form depending on the
- *  checked state of the consent checkbox.
- */
-export function enableDisableSbmtBtnBookingForm(): void {
-  const submitButton = document.getElementById("booking-form-submit-btn") as HTMLButtonElement;
-  const consentCheckbox = document.getElementById("option1") as HTMLInputElement;
 
-  // Enable and disable submit form btn
-  consentCheckbox.addEventListener("change", () => {
-    submitButton.disabled = !consentCheckbox.checked;
-  });
-}
-
-/**
- * Enables or disables the submit button of the info form depending on the
- * checked state of the newsletter consent checkbox.
- */
-export function enableDisableSbmtBtnInfoForm(): void {
-  const submitButton = document.getElementById("info-form-submit-btn") as HTMLButtonElement;
-  const consentCheckbox = document.getElementById("info-form-input") as HTMLInputElement;
-
-  // Enable and disable submit form btn
-  consentCheckbox.addEventListener("change", () => {
-    submitButton.disabled = !consentCheckbox.checked;
-  });
-}
 
 /**
  * Shows a toast notification with the given message and type.
@@ -243,6 +221,7 @@ export function controlCheckboxForm() {
         if (!checkbox.checked) {
           messageElement.textContent = "Devi accettare i termini di privacy per continuare.";
           messageElement.style.color = "red";
+          messageElement.style.display = "block";
           return;
         } else {
           messageElement.textContent = "";
@@ -250,12 +229,8 @@ export function controlCheckboxForm() {
         }
       }
 
-      // Se la validazione passa, inviamo un evento personalizzato per il submit dei form nel main.ts
+      // if validation is ok, we send a custom event for submit forms in main.ts
       form.dispatchEvent(new Event("validatedSubmit"));
     });
   });
 }
-/* In pratica, quando event.preventDefault() viene chiamato, impediamo l'invio del form immediatamente ma,
- per continuare con la logica di submit (solo se la validazione è passata), dobbiamo creare 
- un altro evento che viene attivato dopo che la validazione è andata a buon fine e lo andiamo a richiamare nel main.ts 
- su tutti i form. */

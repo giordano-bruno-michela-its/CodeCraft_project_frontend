@@ -7,7 +7,8 @@
 #faq-section {
   padding: 2rem 1.75rem 1.5rem;
   font-family: var(--main-font);
-  background-image: url("../../public/assets/faqSection/faq-section.webp");
+  scroll-margin-top: 60px;
+  background-image: url("/public/assets/faqSection/faq-section.webp");
   background-size: cover;
   background-position: center;
   position: relative;

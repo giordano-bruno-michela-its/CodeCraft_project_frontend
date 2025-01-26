@@ -3,11 +3,82 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="CodeCraft" />
-    <meta name="description" content="landing page" />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="CodeCraft Web Agency" />
+    <meta name="description" content="Scopri Agora, la landing page di Cascina Caccia: visita un bene confiscato alla mafia, partecipa a attività educative e prenota un periodo di visita!"  />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" as="style" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" />
+   
+
     <link rel="stylesheet" href="./src/style.css" />
+    <link rel="icon" href="./public/assets/favicon/cropped-favicon-1-32x32.jpg" sizes="32x32" />
+    <link rel="icon" href="./public/assets/favicon/cropped-favicon-1-192x192.jpg" sizes="192x192" />
+    <link rel="apple-touch-icon-precomposed" href="./public/assets/favicon/cropped-favicon-1-180x180.jpg" />
     <script type="module" src="./src/main.ts"></script>
-    <title>Cascina Caccia</title>
+    <title>Agorà</title>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Agorà",
+        "url": "https://www.tuosito.it",
+        "description": "Agora: landing page per Cascina Caccia, per promuovere visite educative in un bene confiscato alla mafia e favorire prenotazioni e richieste di informazioni.",
+        "mainEntity": {
+          "@type": "Organization",
+          "name": "Cascina Caccia",
+          "url": "https://cascinacaccia.net/",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+393486425023",
+            "contactType": "customer service",
+            "email": "cascina.caccia@acmos.net"
+          }
+        },
+        "hasPart": [
+          {
+            "@type": "WebPageElement",
+            "name": "Home",
+            "url": "https://www.tuosito.it/#hero-section"
+          },
+          {
+            "@type": "WebPageElement",
+            "name": "Informazioni",
+            "url": "https://www.tuosito.it/#info-form-container"
+          },
+          {
+            "@type": "WebPageElement",
+            "name": "Prenotazioni",
+            "url": "https://www.tuosito.it/#booking-form-container"
+          },
+          {
+            "@type": "WebPageElement",
+            "name": "Attività",
+            "url": "https://www.tuosito.it/#activities-section"
+          },
+          {
+            "@type": "WebPageElement",
+            "name": "Offerte",
+            "url": "https://www.tuosito.it/#offers-section"
+          },
+          {
+            "@type": "WebPageElement",
+            "name": "Newsletter",
+            "url": "https://www.tuosito.it/#newsletter-container"
+          },
+          {
+            "@type": "WebPageElement",
+            "name": "Faq",
+            "url": "https://www.tuosito.it/#faq-section"
+          },
+          {
+            "@type": "WebPageElement",
+            "name": "Contatti",
+            "url": "https://www.tuosito.it/#footer"
+          }
+        ]
+      }
+    </script>
   </head>
 
   <body>
@@ -818,7 +889,8 @@
             <div>
               <input type="checkbox" id="info-form-input" name="options" value="option1" />
               <label for="info-form-input"
-                >Accetto che i miei dati personali vengano raccolti e trattati secondo la <a href="./src/pages/privacyPolicy.html" target="_blank"> Privacy Policy</a> di Cascina Caccia.</label
+                >Accetto che i miei dati personali vengano raccolti e trattati secondo la
+                <a href="./src/pages/privacyPolicy.html" target="_blank"> Privacy Policy</a> di Cascina Caccia.</label
               >
             </div>
             <div>
@@ -1028,7 +1100,7 @@
         </button>
       </div>
       <div class="payment-methods-details">
-        <p id="payment-method-instructions">Pagamento entro 30 giorni prima del soggiorno.</p> 
+        <p id="payment-method-instructions">Pagamento entro 30 giorni prima del soggiorno.</p>
         <div id="bonifico-only-text">
           <h6 class="bonifico-list-title">Dati per il bonifico:</h6>
           <ul class="bonifico-details-list">
@@ -1222,7 +1294,10 @@
           <div class="consent-checkbox-container">
             <div>
               <input type="checkbox" id="option1" name="options" value="option1" />
-              <label for="option1">Accetto che i miei dati personali vengano raccolti e trattati secondo la <a href="./src/pages/privacyPolicy.html" target="_blank"> Privacy Policy</a> di Cascina Caccia.</label>
+              <label for="option1"
+                >Accetto che i miei dati personali vengano raccolti e trattati secondo la
+                <a href="./src/pages/privacyPolicy.html" target="_blank"> Privacy Policy</a> di Cascina Caccia.</label
+              >
             </div>
             <div>
               <input type="checkbox" id="booking-form-newsletter" name="options" value="option2" />
@@ -1288,7 +1363,8 @@
           <div class="newsletter-checkbox-container">
             <input type="checkbox" id="newsletter-checkbox" />
             <label for="newsletter-checkbox"
-              >Accetto che i miei dati personali vengano raccolti e trattati secondo la <a href="./src/pages/privacyPolicy.html" target="_blank"> Privacy Policy</a> di Cascina Caccia.</label
+              >Accetto che i miei dati personali vengano raccolti e trattati secondo la
+              <a href="./src/pages/privacyPolicy.html" target="_blank"> Privacy Policy</a> di Cascina Caccia.</label
             >
           </div>
           <p class="checkbox-message"></p>

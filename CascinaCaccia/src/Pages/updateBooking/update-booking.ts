@@ -1,8 +1,8 @@
-// Update booking form after retrieve reservation
-
 import { getUpdateBknFormData } from "../../Components/getUpdateBookingFormData";
 import { prefillFields } from "../../Utils/update-booking-reservation-prefill";
+import { showToast } from "../../Utils/utils";
 
+// Update booking form after retrieve reservation
 document.addEventListener("DOMContentLoaded", () => {
   const reservationDetails = JSON.parse(localStorage.getItem("reservationDetails") || "{}");
 
@@ -25,14 +25,16 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
       if (response.ok) {
-        alert("Prenotazione aggiornata con successo!");
+        showToast("Richiesta inoltrata con successo!", "success");
         form.reset();
         window.location.href = "../../../index.html";
       } else {
         throw new Error("Errore durante l'aggiornamento della prenotazione");
       }
     } catch (error) {
-      alert("Errore durante l'aggiornamento: ");
+      showToast("Problemi durante l'invio della richiesta, riprova tra poco!", "error");
+      console.error(error);
     }
   });
+  localStorage.removeItem("reservationDetails");
 });
