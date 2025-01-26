@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
       console.log("Codice iviato con successo!", result);
       localStorage.setItem("reservationDetails", JSON.stringify(result));
       showToast("Richiesta inoltrata con successo!", "success");
-      window.location.href = "./update-booking.html"; // url to the page that allow the user to modify booking
+      window.location.href = "/src/Pages/updateBooking/update-booking.html"; // url to the page that allow the user to modify booking
       retrieveResForm.reset();
     } catch (error) {
       showToast("Problemi durante l'invio della richiesta, riprova tra poco!", "error");
