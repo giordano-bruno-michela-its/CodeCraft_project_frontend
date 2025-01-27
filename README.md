@@ -107,38 +107,38 @@ CascinaCaccia/
 ├── public                             # Cartella per risorse come immagini
 ├── src                                # Cartella che contiene il codice sorgente.
 │   ├── components                     # Cartella per la gestione dei dati inseriti nei form dagli utenti
-│   │   ├── bookingFormHandler.ts              # Gestisce la logica per il modulo di prenotazione.
-│   │   ├── getRetrieveReservationFormData.ts  # Funzione per ottenere i dati del modulo di recupero prenotazione.
-│   │   ├── getUpdateBookingFormData.ts        # Funzione per ottenere i dati del modulo di aggiornamento prenotazione.
-│   │   ├── infoFormHandler.ts                 # Gestisce la logica per il modulo informativo.
-│   │   ├── navbar.ts                          # Gestisce la logica per la barra di navigazione.
-│   │   └── newsletterFormHandler.ts           # Gestisce la logica per il modulo di iscrizione alla newsletter.
+│   │   ├── bookingFormHandler.ts              
+│   │   ├── getRetrieveReservationFormData.ts 
+│   │   ├── getUpdateBookingFormData.ts       
+│   │   ├── infoFormHandler.ts                 
+│   │   ├── navbar.ts                          
+│   │   └── newsletterFormHandler.ts           
 │   ├── main.ts                        # File che gestire la logica centrale dell'applicazione.
 │   ├── pages                           # Cartella per le diverse pagine del sito.
 │   │   ├── privacyPolicy.html         # Pagina per la privacy policy.
 │   │   ├── retrieveReservation/        # Directory per la pagina di recupero prenotazione 
 │   │   └── updateBooking/              # Directory per la pagina di aggiornamento prenotazione
-│   ├── services                        # Cartella gestire l'API.
-│   │   └── api.ts                     # Gestisce le chiamate API.
+│   ├── services                        # Cartella contenente file per gestire API.
+│   │   └── api.ts                     
 │   ├── style.css                       # File che contiene gli import di tutti gli style dell'applicazione contenuti nella cartella styles
 │   ├── styles                          # Cartella per i file CSS.
-│   │   ├── activitiesSection.css      # Stile per la sezione delle attività.
-│   │   ├── faqSection.css             # Stile per la sezione delle FAQ.
-│   │   ├── footer.css                 # Stile per il footer del sito.
-│   │   ├── forms.css                  # Stile per i form.
-│   │   ├── heroSection.css            # Stile per la sezione introduttiva
-│   │   ├── navbar.css                 # Stile per la barra di navigazione.
-│   │   ├── newsletter.css             # Stile per la sezione della newsletter.
-│   │   ├── offersSection.css          # Stile per la sezione delle offerte.
-│   │   ├── privacyPolicy.css          # Stile per la pagina della politica sulla privacy.
-│   │   ├── toast.css                  # Stile per i messaggi di toast.
-│   │   └── visitSection.css           # Stile per la sezione delle visite.
+│   │   ├── activitiesSection.css      
+│   │   ├── faqSection.css            
+│   │   ├── footer.css                 
+│   │   ├── forms.css                  
+│   │   ├── heroSection.css            
+│   │   ├── navbar.css                 
+│   │   ├── newsletter.css             
+│   │   ├── offersSection.css          
+│   │   ├── privacyPolicy.css          
+│   │   ├── toast.css                  
+│   │   └── visitSection.css          
 │   ├── types                           # Cartella per i tipi TypeScript.
-│   │   └── types.ts                   # Definisce i tipi personalizzati.
+│   │   └── types.ts                   
 │   ├── utils                           # Cartella per funzioni di utilità.
-│   │   ├── colorBlindFilter.ts        # Funzione per il filtro per daltonici (accessibilità).
-│   │   ├── darkMode.ts                # Funzione per la gestione della modalità scura.
-│   │   ├── updateBookingReservationPrefill.ts # Funzione per precompilare i dati di prenotazione.
+│   │   ├── colorBlindFilter.ts        # Gestione filtro per daltonici.
+│   │   ├── darkMode.ts                # Gestione della modalità scura.
+│   │   ├── updateBookingReservationPrefill.ts # Gestione precompilazione dati di prenotazione.
 │   │   └── utils.ts                   # Funzioni generali di utilità
 │   └── vite-env.d.ts                 
 ├── tsconfig.json                     
