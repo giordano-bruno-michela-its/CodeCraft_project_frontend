@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="CodeCraft" />
+    <meta name="description" content="retrieve reservation page" />
+    <meta name="robots" content="index, follow">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" as="style" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" />
+    <link rel="icon" href="/assets/cropped-favicon-1-32x32.jpg" sizes="32x32" />
+    <link rel="icon" href="/assets/cropped-favicon-1-192x192.jpg" sizes="192x192" />
+    <link rel="apple-touch-icon-precomposed" href="/assets/cropped-favicon-1-180x180.jpg" />
+
+    <title>Retrieve Reservation</title>
+    <script type="module" crossorigin src="/js/retrieveReservation.9B7zygog.js"></script>
+    <link rel="modulepreload" crossorigin href="/js/modulepreload-polyfill.B5Qt9EMX.js">
+    <link rel="modulepreload" crossorigin href="/js/api.C1yY_2iX.js">
+    <link rel="modulepreload" crossorigin href="/js/utils.DWPHOh8N.js">
+    <link rel="stylesheet" crossorigin href="/styles/retrieveReservation.css">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+  </head>
+
+  <body>
+    <div class="container">
+      <img src="/assets/Logo-agora.svg" alt="Logo Agorà" class="logo" />
+      <h1 class="title">Recupera Prenotazione</h1>
+      <p class="subtitle">Inserisci l'indirizzo email e il codice di 6 cifre per proseguire</p>
+
+      <form id="retrieve-reservation-form" method="post">
+        <div class="input-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Email" required />
+        </div>
+
+        <div class="input-group code-group">
+          <label for="code">Codice di verifica</label>
+          <div class="code-inputs">
+            <input type="number" min="0" max="9" id="code-1" required />
+            <input type="number" min="0" max="9" id="code-2" required />
+            <input type="number" min="0" max="9" id="code-3" required />
+            <input type="number" min="0" max="9" id="code-4" required />
+            <input type="number" min="0" max="9" id="code-5" required />
+            <input type="number" min="0" max="9" id="code-6" required />
+          </div>
+        </div>
+
+        <button type="submit" class="submit-btn">Continua</button>
+      </form>
+    </div>
+    <!-- Toast Feedback -->
+    <div id="toast-container"></div>
+  </body>
+</html>
