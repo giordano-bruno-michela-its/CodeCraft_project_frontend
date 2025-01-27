@@ -3,6 +3,14 @@
  * @returns The values of the form
  */
 export function getUpdateBknFormData() {
+
+  const logParseChildren =  parseInt((document.getElementById("nChildren") as HTMLInputElement).value);
+  const logNoParseChildren =  ((document.getElementById("nChildren") as HTMLInputElement).value);
+console.log(logParseChildren);
+console.log(logNoParseChildren);
+
+  
+
   return {
     startDate: (document.getElementById("startDate") as HTMLInputElement).value,
     endDate: (document.getElementById("endDate") as HTMLInputElement).value,
@@ -14,5 +22,14 @@ export function getUpdateBknFormData() {
     nChildren: parseInt((document.getElementById("nChildren") as HTMLInputElement).value),
     nAdults: parseInt((document.getElementById("nAdults") as HTMLInputElement).value),
     additionalInfo: (document.getElementById("additionalInfo") as HTMLTextAreaElement).value,
+    
   };
+
+
+
+
+
+
+
+  
 }

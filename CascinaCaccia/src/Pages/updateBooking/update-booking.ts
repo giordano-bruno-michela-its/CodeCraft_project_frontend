@@ -5,6 +5,7 @@ import { showToast } from "../../Utils/utils";
 // Update booking form after retrieve reservation
 document.addEventListener("DOMContentLoaded", () => {
   const reservationDetails = JSON.parse(localStorage.getItem("reservationDetails") || "{}");
+  const reservationData = JSON.parse(sessionStorage.getItem("reservationData") || "{}");
 
   prefillFields(reservationDetails);
 
@@ -13,21 +14,34 @@ document.addEventListener("DOMContentLoaded", () => {
     e.preventDefault();
 
     const updatedData = getUpdateBknFormData();
+    console.log(updatedData);
+    
+
+    const body = {
+      codeEmailRequest: {
+        email: reservationData.email,
+        code: reservationData.code,
+      },
+      formBooking: updatedData,
+    };
+
+    console.log(body);
+    
 
     try {
-      const URL = `http://localhost:8080/api/formreq/updatebooking/${reservationDetails.id}`;
+      const URL = `http://localhost:8080/api/formreq/updatefromcode`;
       const response = await fetch(URL, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(updatedData),
+        body: JSON.stringify(body),
       });
 
       if (response.ok) {
         showToast("Richiesta inoltrata con successo!", "success");
         form.reset();
-        window.location.href = "../../../index.html";
+        // window.location.href = "../../../index.html";
       } else {
         throw new Error("Errore durante l'aggiornamento della prenotazione");
       }
