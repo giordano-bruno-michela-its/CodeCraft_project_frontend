@@ -4,29 +4,29 @@
  * Content: css files import
  */
 
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap"); */
 
 @import "../node_modules/swiper/swiper-bundle.min.css";
 
-@import "./styles/navbar.css";
-@import "./styles/heroSection.css";
-@import "./styles/visitSection.css";
-@import "./styles/forms.css";
-@import "./styles/offersSection.css";
-@import "./styles/newsletter.css";
-@import "./styles/faqSection.css";
-@import "./styles/footer.css";
-@import "./styles/accessibilityFilters.css";
-@import "./styles/activitiesSection.css";
-@import "./styles/toast.css";
+@import "./styles/main/navbar.css";
+@import "./styles/main/heroSection.css";
+@import "./styles/main/visitSection.css";
+@import "./styles/main/forms.css";
+@import "./styles/main/offersSection.css";
+@import "./styles/main/newsletter.css";
+@import "./styles/main/faqSection.css";
+@import "./styles/main/footer.css";
+@import "./styles/main/activitiesSection.css";
+@import "./styles/main/toast.css";
 
 /* custom properties */
-:root {
+:root  {
   --brand-yellow: #ffdd07;
   --brand-pink: #e3007e;
   --brand-orange: #f1921f;
   --text-dark: #3d3c3c;
   --text-light: #fafafa;
+  --danger-color: #EF233C;
   --success-color: #34c724;
   --brand-gradient: linear-gradient(to right, #e3007e 0%, #f1921f 50%, #ffdd07 100%);
   --main-font: "Montserrat", sans-serif;
@@ -48,7 +48,11 @@ body {
   margin: 0;
   font-family: var(--main-font);
   background-color: var(--text-light);
-  padding-top: 6rem; /* Header height */
+}
+
+/* Daltonism Filter */
+.colorblind-mode {
+  filter: grayscale(100%);
 }
 
 .bg-img-overlay {

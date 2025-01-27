@@ -5,7 +5,6 @@ const colorblindFilter = document.getElementById("colorblind-filter") as HTMLInp
  * When the checkbox state changes, it toggles the "colorblind-mode" class on the document body.
  * Enabling the filter applies a grayscale style to the page for better accessibility.
  */
-
 export const toggleColorblindFilter = () => {
   if (colorblindFilter) {
     colorblindFilter.addEventListener("change", () => {

@@ -1,0 +1,15 @@
+@import "../style.css";
+
+  .form-row {
+    width: 100%;
+    display: flex;
+    gap: 0.75rem;
+  }
+
+  .form-row .form-input {
+    width: 100%;
+  }
+
+  #errorTextRegistrationUser{
+    text-align: center;
+  }

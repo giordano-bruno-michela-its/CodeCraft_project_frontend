@@ -7,11 +7,17 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "generate-docs": "jsdoc -c jsdoc.config.json",
+    "serve-docs": "npx serve docs -l 4000"
   },
   "devDependencies": {
+    "better-docs": "^2.7.3",
+    "jsdoc": "^4.0.4",
+    "serve": "^14.2.4",
     "typescript": "~5.6.2",
-    "vite": "^6.0.3"
+    "vite": "^6.0.3",
+    "vite-plugin-sitemap": "^0.7.1"
   },
   "dependencies": {
     "swiper": "^11.2.1"

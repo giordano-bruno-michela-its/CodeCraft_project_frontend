@@ -1,0 +1,674 @@
+#info-form-container,
+#booking-form-container {
+  padding: 1.5rem 1.75rem;
+  font-family: var(--main-font);
+  background-image: url("/public/assets/bookingForm/cascinaIMG.webp");
+  scroll-margin-top: 60px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.infoForm,
+.bookingForm {
+  z-index: 2;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  background-color: var(--text-light);
+  border-radius: 1rem;
+  padding: 1rem 0.75rem;
+  box-shadow: 2px 4px 12px 1px rgba(0, 0, 0, 0.5);
+}
+
+.input-container {
+  width: 100%;
+}
+
+.info-form-title,
+.booking-form-title {
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 1.25rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.info-form-input,
+.booking-form-input {
+  width: 100%;
+  padding: 0.625rem 1rem;
+  border-radius: 0.625rem;
+  border: 2px solid var(--text-dark);
+  background-color: var(--text-light);
+  font-family: var(--main-font);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+#start-date-label,
+#end-date-label {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--text-dark);
+}
+
+.booking-form-input[type="date"] {
+  margin-top: 0.25rem;
+}
+
+.booking-form-input[type="date"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.info-form-input:focus,
+.booking-form-input:focus {
+  outline: 2px solid var(--brand-orange); /* anche rosa è ok */
+  /* outline: none; */
+  /* border: 2px solid var(--brand-pink); */
+}
+
+.info-form-input::placeholder,
+.booking-form-input::placeholder {
+  color: rgba(61, 60, 60, 0.6);
+}
+
+.dark-mode .info-form-input::placeholder,
+.dark-mode .booking-form-input::placeholder {
+  color: rgba(250 250 250 / 0.6);
+}
+
+#duration {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: transparent;
+  background-image: url("/assets/bookingForm/dropdown-icon.svg");
+  background-repeat: no-repeat;
+  background-position-x: calc(100% - 0.5rem);
+  background-position-y: center;
+  cursor: pointer;
+}
+
+#duration option:not(:disabled) {
+  color: #3d3c3c;
+}
+
+.dark-mode #duration {
+  background-image: url("/assets/bookingForm/dropdown-icon-light.svg");
+}
+
+.additional-info {
+  height: 15vh;
+}
+
+.info-form-name-surname-container,
+.booking-form-tel-duration-container,
+.booking-form-name-surname-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 0.64rem;
+}
+
+.multiple-input-wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 0.65rem;
+}
+
+.adults-input-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  width: 65%;
+}
+
+.promo-bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 80%;
+  height: 100%;
+  z-index: 0;
+  background-color: var(--brand-yellow);
+  border-radius: 0rem 0.5rem 0.5rem 0rem;
+  border: 1px solid var(--text-dark);
+}
+
+.multiple-input-wrapper .input-container {
+  width: 36%;
+}
+
+.adults-input-wrapper .input-container {
+  width: 55%;
+  z-index: 1;
+}
+
+#adults-promo p {
+  font-size: 0.675rem;
+  margin: 0;
+  text-align: end;
+}
+
+#adults-promo {
+  z-index: 1;
+  padding: 0 0.2rem;
+  width: 45%;
+}
+
+#activitiesToggle,
+#info-form-activitiesToggle {
+  cursor: pointer;
+  background-color: var(--text-light);
+  /* background-color: rgba(241 146 31 / 0.25); */
+  transition: all 300ms ease-in-out;
+}
+
+#activitiesToggle:hover,
+#info-form-activitiesToggle:hover {
+  background-color: rgba(241 146 31 / 0.25);
+}
+
+#infoActivitiesContainer,
+#activitiesContainer {
+  display: none;
+  flex-direction: column;
+  padding: 0.75rem 0.5rem 0;
+  gap: 0.5rem;
+}
+
+#infoActivitiesContainer {
+  margin-bottom: 0.5rem;
+}
+
+#infoActivitiesContainer label,
+#activitiesContainer label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  font-family: var(--main-font);
+  font-weight: 500;
+  color: var(--text-dark);
+  cursor: pointer;
+}
+
+#infoActivitiesContainer label input[type="checkbox"],
+#activitiesContainer label input[type="checkbox"] {
+  margin: 0;
+  width: 1.15rem;
+  height: 1.15rem;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.activity-age-warning {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  gap: 0.5rem;
+  background-color: rgba(255, 221, 7, 0.4);
+  border-radius: 0.75rem;
+}
+
+.activity-age-warning img {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: block;
+}
+
+.activity-age-warning p {
+  margin: 0;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #3d3c3c;
+}
+
+.booking-form-activity-text {
+  margin: 0;
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: rgba(61, 60, 60, 0.6);
+  text-align: center;
+}
+
+.dark-mode .booking-form-activity-text {
+  color: rgba(250 250 250 / 0.6);
+}
+
+.consent-checkbox-container {
+  display: flex;
+  gap: 0.6rem;
+  flex-direction: column;
+  margin-bottom: 0.5rem;
+}
+
+.consent-checkbox-container > div {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.consent-checkbox-container div label {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--text-dark);
+}
+
+.consent-checkbox-container div input[type="checkbox"] {
+  margin: 0;
+  margin-top: 0.15rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.info-form-container-btn,
+.booking-form-container-btn {
+  display: flex;
+  justify-content: center;
+}
+
+#info-form-submit-btn,
+#booking-form-submit-btn {
+  padding: 0.75rem 3.25rem;
+  border: 3px solid var(--brand-pink);
+  border-radius: 0.75rem;
+  font-weight: 700;
+  font-size: 1.25rem;
+  font-family: var(--main-font);
+  background-color: var(--text-light);
+  color: var(--text-dark);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.25);
+}
+
+#info-form-submit-btn:hover,
+#booking-form-submit-btn:hover {
+  background-color: var(--brand-pink);
+  color: #fafafa;
+}
+
+#booking-form-submit-btn:disabled,
+#info-form-submit-btn:disabled {
+  background-color: var(--text-light);
+  color: var(--text-dark);
+}
+
+.consent-checkbox-container label a {
+  color: var(--text-dark);
+}
+
+.consent-checkbox-container label a:hover {
+  color: var(--brand-pink);
+}
+
+/* Media Queries */
+
+/* Adults promo specific fix */
+@media (max-width: 420px) {
+  .multiple-input-wrapper {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .multiple-input-wrapper .adults-input-wrapper,
+  .multiple-input-wrapper .input-container {
+    width: 100%;
+  }
+
+  .adults-input-wrapper .input-container,
+  .adults-input-wrapper #adults-promo {
+    width: 50%;
+  }
+
+  #adults-promo {
+    padding: 0 0.5rem;
+  }
+}
+
+/* Mobile Large */
+@media (min-width: 500px) and (max-width: 768px) {
+  .infoForm,
+  .bookingForm {
+    padding: 1.75rem 1.5rem;
+    max-width: 500px;
+    max-width: 31.25rem;
+    margin: 0 auto;
+    gap: 0.65rem;
+  }
+
+  .info-form-title,
+  .booking-form-title {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .booking-form-input[type="date"] {
+    margin-top: 0.5rem;
+  }
+
+  .consent-checkbox-container {
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .consent-checkbox-container div label {
+    font-size: 0.8rem;
+  }
+
+  .consent-checkbox-container div {
+    gap: 0.65rem;
+  }
+
+  #infoActivitiesContainer,
+  #activitiesContainer {
+    padding: 0.85rem 0.5rem 0;
+    gap: 0.55rem;
+  }
+
+  #infoActivitiesContainer label,
+  #activitiesContainer label {
+    gap: 0.6rem;
+    font-size: 1rem;
+  }
+
+  #infoActivitiesContainer label input[type="checkbox"],
+  #activitiesContainer label input[type="checkbox"] {
+    width: 1.15rem;
+    height: 1.15rem;
+    border-radius: 0.375rem;
+  }
+
+  .activity-age-warning p {
+    font-size: 0.8rem;
+  }
+
+  .booking-form-activity-text {
+    font-size: 0.85rem;
+  }
+}
+
+/* Tablet */
+@media (min-width: 769px) and (max-width: 1200px) {
+  #info-form-container,
+  #booking-form-container {
+    padding: 3rem 0;
+  }
+
+  .infoForm,
+  .bookingForm {
+    padding: 2rem 2.25rem;
+    max-width: 560px;
+    max-width: 35rem;
+    margin: 0 auto;
+    gap: 0.8rem;
+  }
+
+  .info-form-title,
+  .booking-form-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  #start-date-label,
+  #end-date-label {
+    font-size: 0.95rem;
+  }
+
+  .booking-form-input[type="date"] {
+    margin-top: 0.35rem;
+  }
+
+  .info-form-input,
+  .booking-form-input {
+    padding: 0.65rem 1.15rem;
+    font-size: 1rem;
+  }
+
+  .additional-info {
+    height: 15vh;
+  }
+
+  .info-form-name-surname-container,
+  .booking-form-tel-duration-container,
+  .booking-form-name-surname-container {
+    gap: 0.75rem;
+  }
+
+  .multiple-input-wrapper {
+    gap: 0.75rem;
+  }
+
+  #adults-promo {
+    padding: 0 0.5rem;
+  }
+
+  #adults-promo p {
+    font-size: 0.74rem;
+  }
+
+  #infoActivitiesContainer,
+  #activitiesContainer {
+    padding: 1rem 0.5rem 0;
+    gap: 0.5rem;
+  }
+
+  #infoActivitiesContainer label,
+  #activitiesContainer label {
+    gap: 0.7rem;
+    font-size: 1rem;
+  }
+
+  #infoActivitiesContainer label input[type="checkbox"],
+  #activitiesContainer label input[type="checkbox"] {
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 0.375rem;
+  }
+
+  .activity-age-warning {
+    padding: 0.7rem;
+    gap: 0.75rem;
+  }
+
+  .activity-age-warning p {
+    font-size: 0.8rem;
+  }
+
+  .booking-form-activity-text {
+    font-size: 0.9rem;
+  }
+
+  .consent-checkbox-container {
+    gap: 0.9rem;
+    margin-bottom: 1rem;
+  }
+
+  .consent-checkbox-container div label {
+    font-size: 0.85rem;
+  }
+
+  .consent-checkbox-container div input[type="checkbox"] {
+    width: 1.4rem;
+    height: 1.4rem;
+  }
+
+  .consent-checkbox-container div {
+    gap: 0.75rem;
+  }
+
+  #info-form-submit-btn,
+  #booking-form-submit-btn {
+    padding: 0.75rem 3.5rem;
+    font-size: 1.3rem;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1201px) {
+  #info-form-container,
+  #booking-form-container {
+    padding: 3rem 0;
+  }
+
+  .infoForm,
+  .bookingForm {
+    padding: 3rem 3.5rem;
+    max-width: 768px;
+    max-width: 48rem;
+    margin: 0 auto;
+    gap: 0.75rem;
+  }
+
+  .info-form-title,
+  .booking-form-title {
+    font-size: 2.15rem;
+    margin-bottom: 1.25rem;
+  }
+
+  #start-date-label,
+  #end-date-label {
+    font-size: 1rem;
+  }
+
+  .booking-form-input[type="date"] {
+    margin-top: 0.5rem;
+  }
+
+  .info-form-input,
+  .booking-form-input {
+    padding: 0.75rem 1.15rem;
+    font-size: 1rem;
+  }
+
+  .additional-info {
+    height: 15vh;
+  }
+
+  .info-form-name-surname-container,
+  .booking-form-tel-duration-container,
+  .booking-form-name-surname-container {
+    gap: 1rem;
+  }
+
+  .multiple-input-wrapper {
+    gap: 1rem;
+  }
+
+  #adults-promo {
+    padding: 0 0.75rem;
+  }
+
+  #adults-promo p {
+    font-size: 0.8rem;
+  }
+
+  #infoActivitiesContainer,
+  #activitiesContainer {
+    padding: 1rem 0.75rem 0;
+    gap: 0.65rem;
+  }
+
+  #infoActivitiesContainer label,
+  #activitiesContainer label {
+    gap: 0.85rem;
+    font-size: 1rem;
+  }
+
+  #infoActivitiesContainer label input[type="checkbox"],
+  #activitiesContainer label input[type="checkbox"] {
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 0.5rem;
+  }
+
+  .activity-age-warning {
+    padding: 0.65rem 1rem;
+    gap: 1rem;
+  }
+
+  .activity-age-warning p {
+    font-size: 0.9rem;
+  }
+
+  .booking-form-activity-text {
+    font-size: 0.95rem;
+  }
+
+  .consent-checkbox-container {
+    gap: 0.65rem;
+    margin-bottom: 1rem;
+  }
+
+  .consent-checkbox-container div label {
+    font-size: 0.9rem;
+  }
+
+  .consent-checkbox-container div input[type="checkbox"] {
+    width: 1.35rem;
+    height: 1.35rem;
+  }
+
+  .consent-checkbox-container div {
+    gap: 0.75rem;
+  }
+
+  #info-form-submit-btn,
+  #booking-form-submit-btn {
+    padding: 0.8rem 4.5rem;
+    font-size: 1.35rem;
+    border-radius: 0.85rem;
+  }
+}
+
+@media (min-width: 1500px) {
+  .info-form-title,
+  .booking-form-title {
+    font-size: 2.25rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .infoForm,
+  .bookingForm {
+    max-width: 780px;
+    max-width: 50rem;
+    gap: 0.8rem;
+  }
+}
+
+@media (min-width: 1900px) {
+  .info-form-input,
+  .booking-form-input {
+    padding: 0.8rem 1.15rem;
+    font-size: 1.05rem;
+  }
+  
+  #info-form-container,
+  #booking-form-container {
+    padding: 4rem 0;
+  }
+}

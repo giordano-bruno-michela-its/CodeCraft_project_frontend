@@ -1,0 +1,247 @@
+/*
+ * File Name: style.css
+ * Author: CodeCraft
+ * Content: heroSection Styles
+ */
+
+#hero-section {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  /* margin-top: 6rem; */
+  padding: 3rem 0;
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  /* align-items: stretch; */
+  text-align: center;
+  overflow: hidden;
+  font-family: var(--main-font);
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.hero-content {
+  flex-grow: 1;
+  position: relative;
+  z-index: 3;
+  color: #fafafa;
+  padding: 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hero-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.4;
+  margin: 0;
+  margin-bottom: 1.5rem;
+  font-variant: all-small-caps;
+}
+
+.hero-subtitle {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+.hero-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  flex: 1;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  padding: 0.62rem 0;
+}
+
+.hero-btn-book {
+  background-color: var(--brand-yellow);
+  color: var(--text-dark);
+  border-color: var(--text-dark);
+}
+
+.dark-mode .hero-btn-book {
+  color: var(--text-light);
+  border-color: var(--text-light);
+}
+
+.hero-btn-book:hover,
+.hero-btn-book:focus,
+.hero-btn-book:active {
+  background-color: #bfa600;
+}
+
+.hero-btn-info {
+  background: transparent;
+  color: #fafafa;
+  border-color: #fafafa;
+}
+
+.hero-btn-info:hover,
+.hero-btn-info:focus,
+.hero-btn-info:active {
+  background-color: #fafafa;
+  color: var(--text-dark);
+}
+
+.dark-mode .hero-btn-info:hover,
+.dark-mode .hero-btn-info:focus,
+.dark-mode .hero-btn-info:active {
+  color: var(--text-light);
+}
+
+
+/* Media Queries */
+
+/* Mobile Large */
+@media (min-width: 500px) and (max-width: 768px) {
+  #hero-section {
+    padding: 4rem 0;
+  }
+
+  .hero-content {
+    padding: 0 3.5rem;
+  }
+
+  .hero-title {
+    font-size: 1.75rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.05rem;
+  }
+
+  .hero-buttons {
+    gap: 1.5rem;
+  }
+
+  .hero-btn {
+    padding: 0.65rem 0;
+  }
+}
+
+/* Tablet */
+@media (min-width: 769px) and (max-width: 1200px) {
+  #hero-section {
+    padding: 6rem 0;
+  }
+
+  .hero-content {
+    padding: 0 7rem;
+  }
+
+  .hero-title {
+    font-size: 2.1rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.15rem;
+  }
+
+  .hero-buttons {
+    gap: 2.5rem;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .hero-btn {
+    border-radius: 0.6rem;
+    padding: 0.8rem 0;
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 930px) and (max-width: 1200px) {
+  .hero-title {
+    font-size: 2.2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .hero-btn {
+    border-radius: 0.65rem;
+  }
+
+  .hero-buttons {
+    width: 75%;
+    margin: 0 auto;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1201px) {
+  #hero-section {
+    padding: 7.5rem 0;
+  }
+
+  .hero-content {
+    padding: 0 12rem;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.3rem;
+  }
+
+  .hero-buttons {
+    gap: 3.5rem;
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .hero-btn {
+    border-radius: 0.75rem;
+    padding: 0.75rem 0;
+    font-size: 1.25rem;
+    border-width: 2px;
+  }
+}
+
+ @media (min-width: 1500px) {
+  .hero-title {
+    font-size: 2.75rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.35rem;
+  }
+
+    .hero-buttons {
+      width: 50%;
+      margin: 0 auto;
+      gap: 4rem;
+    }
+
+    .hero-btn {
+      padding: 0.75rem 0;
+      font-size: 1.25rem;
+      border-width: 3px;
+    }
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="CodeCraft" />
+  <meta name="description" content="registration user page" />
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="stylesheet" href="../styles/registrationUser.css" />
+  <title>Registrazione</title>
+</head>
+
+<body class="registration-login-page">
+  <div class="form-container">
+    <div class="logo-cont">
+      <img src="../../../public/assets/navbar/Logo-agora.svg" alt="agorà logo">
+      <h1>Backoffice</h1>
+    </div>
+    <p class="description">Crea un nuovo account</p>
+    <form class="registration-login-form" id="registrationUserForm">
+      <div class="form-row">
+
+        <input type="text" id="usernameRegistrationForm" class="form-input" name="nome" placeholder="Nome" required />
+
+        <input type="text" id="surnameRegistrationForm" class="form-input" name="cognome" placeholder="Cognome"
+          required />
+
+      </div>
+
+      <input type="email" id="emailRegistrationUserForm" class="form-input" name="email" placeholder="Email" required />
+
+      <input type="password" id="passwordRegistrationForm" class="form-input" name="password" placeholder="Password"
+        required />
+
+      <button type="submit">
+        Crea
+        <svg width="25" height="16" viewBox="0 0 25 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path id="Arrow 3"
+            d="M24.7071 8.70711C25.0976 8.31658 25.0976 7.68342 24.7071 7.29289L18.3431 0.928932C17.9526 0.538408 17.3195 0.538408 16.9289 0.928932C16.5384 1.31946 16.5384 1.95262 16.9289 2.34315L22.5858 8L16.9289 13.6569C16.5384 14.0474 16.5384 14.6805 16.9289 15.0711C17.3195 15.4616 17.9526 15.4616 18.3431 15.0711L24.7071 8.70711ZM0 9H24V7H0V9Z"
+            fill="currentColor" />
+        </svg>
+      </button>
+      <p id="errorTextRegistrationUser"></p>
+    </form>
+  </div>
+
+  <script type="module" src="../Utils/registrationUser.ts"></script>
+</body>
+
+</html>

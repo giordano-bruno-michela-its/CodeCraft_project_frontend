@@ -1,0 +1,56 @@
+@import "../style.css";
+
+
+#logoutContainer{
+border: 1px solid gray;
+padding: 30px;
+
+}
+
+.confirmLogout{
+    font-size: x-large;
+}
+
+.btn-container{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+#logoutButton {
+    margin-top: 1.5rem;
+    padding: 0.65rem 1rem;
+    border: none;
+    border-radius: 1250rem;
+    background-color: var(--danger-color);
+    color: var(--text-light);
+    font-family: var(--main-font);
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#cancelLogoutButton{
+    margin-top: 1.5rem;
+    padding: 0.65rem 1rem;
+    border: 1px solid red;
+    border-radius: 1250rem;
+    background-color: white;
+    color: red;
+    font-family: var(--main-font);
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#logoutButton:hover {
+    background-color: #e74c3c;
+}
+
+@media (max-width: 768px) {
+    #logoutButton {
+        font-size: 1rem;
+    }
+}

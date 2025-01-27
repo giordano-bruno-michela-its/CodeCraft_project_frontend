@@ -1,37 +1,40 @@
+// Components
 import { getBookingFormData } from "./Components/bookingFormHandler";
 import { getFormDataInfo } from "./Components/infoFormHandler";
 import { initNavbar } from "./Components/navbar";
-import { submitBookingForm, submitNewsletterData } from "./Services/api";
-import { toggleColorblindFilter } from "./Utils/colorBlindFilter";
-import { toggleDarkMode } from "./Utils/darkMode";
-import { enableDisableSbmtBtnBookingForm, enableDisableSbmtBtnInfoForm, setupActivitiesToggle, setupOfferCards, setUpPaymentMethodsBtns, showToast } from "./Utils/utils";
-import { toggleAnswer } from "./Utils/utils";
-import { submitFormData } from "./Services/api";
-import { activityCards } from "./Utils/utils";
-// import { activityCarousel } from "./Utils/utils"
 import { getNewsletterFormData } from "./Components/newsletterFormHandler";
 
-// import Swiper JS
-import Swiper from "swiper";
-import { Navigation, Pagination } from "swiper/modules";
+// Services
+import { submitBookingForm, submitNewsletterData, submitFormData } from "./Services/api";
 
+// Generic Utilities
+import {
+  controlCheckboxForm,
+  setupActivitiesToggle,
+  setupOfferCards,
+  setUpPaymentMethodsBtns,
+  showToast,
+  toggleAnswer,
+  activityCards,
+} from "./Utils/utils";
+
+// Styles Utilities
+import { toggleColorblindFilter } from "./Utils/colorBlindFilter";
+import { toggleDarkMode } from "./Utils/darkMode";
+
+// External Utilities
+import { initSwiper } from "./Utils/swiperUtils";
+
+// Entry point
 document.addEventListener("DOMContentLoaded", () => {
-  //Navbar:
   initNavbar();
-
-  // Darkmode:
   toggleDarkMode();
-
-  // Colorblind Filter
   toggleColorblindFilter();
-
+  initSwiper();
   activityCards();
-  // activityCarousel()
-
-  // Offers Section
   setupOfferCards();
-
   setUpPaymentMethodsBtns();
+  controlCheckboxForm();
 
   // Faq Section
   const faqQuestions = document.querySelectorAll(".faq-question");
@@ -44,19 +47,18 @@ document.addEventListener("DOMContentLoaded", () => {
   const bookingForm = document.getElementById("bookingForm") as HTMLFormElement;
   const activitiesToggle = document.getElementById("activitiesToggle") as HTMLButtonElement;
   const activitiesContainer = document.getElementById("activitiesContainer") as HTMLDivElement;
-  
+
   // toggles the activity age limit banner when the checkbox is checked
   const limitedActivityCheck = document.querySelector('#bookingForm #activitiesContainer input[value="8"]') as HTMLInputElement;
-  const limiteActivityBanner = document.querySelector('#bookingForm .activity-age-warning') as HTMLDivElement;
+  const limiteActivityBanner = document.querySelector("#bookingForm .activity-age-warning") as HTMLDivElement;
 
-  limitedActivityCheck.addEventListener('change', () => {
-    limiteActivityBanner.classList.toggle('hidden');
+  limitedActivityCheck.addEventListener("change", () => {
+    limiteActivityBanner.classList.toggle("hidden");
   });
 
   setupActivitiesToggle(activitiesToggle, activitiesContainer);
-  enableDisableSbmtBtnBookingForm();
 
-  bookingForm.addEventListener("submit", async (event) => {
+  bookingForm.addEventListener("validatedSubmit", async (event) => {
     event.preventDefault();
 
     // get data from the html Form
@@ -64,8 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Handling form data (submit)
     try {
-      const result = await submitBookingForm(formData);
-      console.log("Dati inviati con successo:", result);
+      await submitBookingForm(formData);
       showToast("Richiesta inoltrata con successo!", "success");
       bookingForm.reset();
     } catch (error) {
@@ -86,9 +87,8 @@ document.addEventListener("DOMContentLoaded", () => {
   activitiesToggle.setAttribute("aria-expanded", (!isHidden).toString());
 
   setupActivitiesToggle(activitiesToggle, activitiesContainer);
-  enableDisableSbmtBtnInfoForm();
 
-  infoForm.addEventListener("submit", async (event) => {
+  infoForm.addEventListener("validatedSubmit", async (event) => {
     event.preventDefault();
 
     // get data from the html Form
@@ -96,8 +96,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Handling form data (submit)
     try {
-      const result = await submitFormData(formData);
-      console.log("Dati inviati con successo:", result);
+      await submitFormData(formData);
       showToast("Richiesta inoltrata con successo!", "success");
       infoForm.reset();
     } catch (error) {
@@ -105,13 +104,11 @@ document.addEventListener("DOMContentLoaded", () => {
       showToast("Problemi durante l'invio della richiesta, riprova tra poco!", "error");
     }
   });
-});
 
-//  NEWSLETTER FORM
-document.addEventListener("DOMContentLoaded", () => {
+  //  NEWSLETTER FORM
   const newsletterForm = document.getElementById("newsletter-email-form") as HTMLFormElement;
 
-  newsletterForm.addEventListener("submit", async (event) => {
+  newsletterForm.addEventListener("validatedSubmit", async (event) => {
     event.preventDefault();
 
     // get data from the html Form
@@ -119,8 +116,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Handling form data (submit)
     try {
-      const result = await submitNewsletterData(newsletterData);
-      console.log("Dati inviati con successo:", result);
+      await submitNewsletterData(newsletterData);
       showToast("Richiesta inoltrata con successo!", "success");
       newsletterForm.reset();
     } catch (error) {
@@ -128,28 +124,4 @@ document.addEventListener("DOMContentLoaded", () => {
       showToast("Problemi durante l'invio della richiesta, riprova tra poco!", "error");
     }
   });
-});
-
-// Swiper.js carousel script
-
-new Swiper(".activity-img-swiper", {
-  modules: [Navigation, Pagination],
-  slidesPerView: "auto",
-  centeredSlides: true,
-  spaceBetween: 16,
-  loop: true,
-  grabCursor: true,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  breakpoints: {
-    500: {
-      spaceBetween: 20,
-    },
-  },
 });

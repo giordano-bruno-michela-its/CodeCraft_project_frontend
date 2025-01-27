@@ -1,0 +1,21 @@
+{
+  "tags": {
+    "allowUnknownTags": true
+  },
+  "source": {
+    "include": ["src"],
+    "includePattern": ".+\\.ts$",
+    "excludePattern": "(node_modules|dist)"
+  },
+  "plugins": ["node_modules/better-docs/typescript"],
+  "opts": {
+    "destination": "./docs",
+    "recurse": true,
+    "template": "node_modules/better-docs"
+  },
+  "templates": {
+    "better-docs": {
+      "name": "Cascina Caccia Documentation"
+    }
+  }
+}
