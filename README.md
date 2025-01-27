@@ -222,25 +222,55 @@ npm run serve-docs
 CascinaCaccia/
 
 
-├── index.html                         # Punto di ingresso del il progetto
+├── index.html                         # Punto di ingresso del progetto
 ├── public                             # Cartella per risorse come immagini
 ├── src                                # Cartella che contiene il codice sorgente.
-│   ├── components                     # Cartella per la gestione dei dati inseriti nei form dagli utenti
+│   ├── backoffice                     # Cartella dedicata al backoffice
+│   │   ├── Components                 # Componenti per gestire moduli e funzionalità
+│   │   │   ├── loginFormHandler.ts
+│   │   │   ├── registrationFormHandler.ts
+│   │   │   └── registrationOfficialEmailHandler.ts
+│   │   ├── index.html                 # Pagina principale del backoffice
+│   │   ├── main.ts                    # File che gestisce la logica del backoffice
+│   │   ├── Pages                      # Pagine del backoffice
+│   │   │   ├── dashboard.html         # Pagina per la dashboard
+│   │   │   ├── login.html             # Pagina di login
+│   │   │   ├── logout.html            # Pagina di logout
+│   │   │   ├── registrationMail.html  # Pagina per registrare una mail ufficiale
+│   │   │   └── registrationUser.html  # Pagina per registrare un nuovo utente
+│   │   ├── Services                   # Servizi per le chiamate API del backoffice
+│   │   │   └── api.ts
+│   │   ├── style.css                  # Import dei file CSS del backoffice
+│   │   ├── styles                     # Cartella per i file CSS specifici
+│   │   │   ├── dashboard.css
+│   │   │   ├── login.css
+│   │   │   ├── logout.css
+│   │   │   ├── registrationMail.css
+│   │   │   └── registrationUser.css
+│   │   ├── Types                      # Tipi TypeScript per il backoffice
+│   │   │   └── types.ts
+│   │   └── Utils                      # Funzioni di utilità per il backoffice
+│   │       ├── dashboard.ts
+│   │       ├── login.ts
+│   │       ├── logout.ts
+│   │       ├── registrationEmail.ts
+│   │       └── registrationUser.ts
+│   ├── components                     # Componenti per la gestione dei dati dei form
 │   │   ├── bookingFormHandler.ts
 │   │   ├── getRetrieveReservationFormData.ts
 │   │   ├── getUpdateBookingFormData.ts
 │   │   ├── infoFormHandler.ts
 │   │   ├── navbar.ts
 │   │   └── newsletterFormHandler.ts
-│   ├── main.ts                        # File che gestire la logica centrale dell'applicazione.
-│   ├── pages                           # Cartella per le diverse pagine del sito.
-│   │   ├── privacyPolicy.html         # Pagina per la privacy policy.
-│   │   ├── retrieveReservation/        # Directory per la pagina di recupero prenotazione
-│   │   └── updateBooking/              # Directory per la pagina di aggiornamento prenotazione
-│   ├── services                        # Cartella contenente file per gestire API.
+│   ├── main.ts                        # File che gestisce la logica centrale dell'applicazione
+│   ├── pages                          # Cartella per le diverse pagine del sito
+│   │   ├── privacyPolicy.html         # Pagina per la privacy policy
+│   │   ├── retrieveReservation        # Directory per la pagina di recupero prenotazione
+│   │   └── updateBooking              # Directory per la pagina di aggiornamento prenotazione
+│   ├── services                       # Servizi per le chiamate API generali
 │   │   └── api.ts
-│   ├── style.css                       # File che contiene gli import di tutti gli style dell'applicazione contenuti nella cartella styles
-│   ├── styles                          # Cartella per i file CSS.
+│   ├── style.css                      # File che importa tutti gli stili dell'applicazione
+│   ├── styles                         # Cartella per i file CSS
 │   │   ├── activitiesSection.css
 │   │   ├── faqSection.css
 │   │   ├── footer.css
@@ -252,17 +282,18 @@ CascinaCaccia/
 │   │   ├── privacyPolicy.css
 │   │   ├── toast.css
 │   │   └── visitSection.css
-│   ├── types                           # Cartella per i tipi TypeScript.
+│   ├── types                          # Tipi TypeScript generali
 │   │   └── types.ts
-│   ├── utils                           # Cartella per funzioni di utilità.
-│   │   ├── colorBlindFilter.ts        # Gestione filtro per daltonici.
-│   │   ├── darkMode.ts                # Gestione della modalità scura.
-│   │   ├── updateBookingReservationPrefill.ts # Gestione precompilazione dati di prenotazione.
+│   ├── utils                          # Funzioni di utilità generali
+│   │   ├── colorBlindFilter.ts        # Gestione filtro per daltonici
+│   │   ├── darkMode.ts                # Gestione della modalità scura
+│   │   ├── updateBookingReservationPrefill.ts # Gestione precompilazione dati di prenotazione
 │   │   └── utils.ts                   # Funzioni generali di utilità
 │   └── vite-env.d.ts
 ├── tsconfig.json
 ├── vite.config.js
 └── .gitignore
+
 
 
 ```
