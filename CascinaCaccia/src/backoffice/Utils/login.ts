@@ -18,7 +18,15 @@ loginForm.addEventListener('submit', async (event) => {
 
   } catch (error) {
     console.error("Login errato:", error);
-    alert("Login errato");
+    const textErrorLogin = document.getElementById('textErrorLogin')
+
+
+    if (textErrorLogin) {
+      textErrorLogin.textContent = 'Login errato !'
+    }
+
+
+
   }
 
 

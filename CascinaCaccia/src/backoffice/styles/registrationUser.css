@@ -9,3 +9,7 @@
   .form-row .form-input {
     width: 100%;
   }
+
+  #errorTextRegistrationUser{
+    text-align: center;
+  }

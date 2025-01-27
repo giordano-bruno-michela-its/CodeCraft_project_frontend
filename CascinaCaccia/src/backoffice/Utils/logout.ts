@@ -13,5 +13,13 @@ if (!token) {
         window.location.href = '../Pages/login.html';
     });
 
+
+    const cancelLogoutButton = document.getElementById('cancelLogoutButton') as HTMLButtonElement;
+
+    cancelLogoutButton.addEventListener('click', () => {
+      
+        window.location.href = '../Pages/dashboard.html';
+    });
+
 }
 

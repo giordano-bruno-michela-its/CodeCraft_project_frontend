@@ -37,26 +37,43 @@ if (resultAuth == false) {
 
   if (token) {
 
+    console.log(token);
+    
+
     const resultAuth = await checkAdmin(token);
     console.log("Stato admin:", await resultAuth.text());
 
     if (resultAuth.status == 200) {
+      
       const registerForm = document.getElementById('registrationUserForm') as HTMLFormElement;
-
+      
       registerForm.addEventListener('submit', async (event) => {
         event.preventDefault();
-
+        
         const formData = getRegistrationUserFormData();
         console.log(formData);
-
+        
+        console.log('dentro');
 
         try {
           const result = await submitRegistrationUserForm(formData);
           console.log("Registrazione effettuata con successo:", result);
+         const errorTextRegistrationUser = document.getElementById('errorTextRegistrationUser');
+         if (errorTextRegistrationUser) {
+          errorTextRegistrationUser.textContent='Registrazione effettuata con successo !'
+         }
 
-          window.location.href = '../Pages/dashboard.html';
+         setTimeout(() => {
+         window.location.href = '../Pages/dashboard.html';
+          
+         }, 2000);
+
 
         } catch (error) {
+          const errorTextRegistrationUser = document.getElementById('errorTextRegistrationUser');
+         if (errorTextRegistrationUser) {
+          errorTextRegistrationUser.textContent='Errore durante la registrazione, riprovare'
+         }
           console.error("Errore durante la registrazione:", error);
         }
       });

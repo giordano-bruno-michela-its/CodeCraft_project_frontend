@@ -28,13 +28,23 @@ if (!token) {
       try {
         const result = await submitRegistrationOfficialMailForm(formData, token);
         console.log("Email sostituita con successo:", result);
-        alert("Registrazione effettuata con successo!");
-        window.location.href = '../Pages/dashboard.html';
+        const errorTextRegistrationMail = document.getElementById('errorTextRegistrationMail');
+        if (errorTextRegistrationMail) {
+         errorTextRegistrationMail.textContent='Registrazione della mail effettuata con successo!'
+        }
+
+        setTimeout(() => {
+          window.location.href = '../Pages/dashboard.html';
+        }, 2000);
+
 
 
       } catch (error) {
+        const errorTextRegistrationMail = document.getElementById('errorTextRegistrationMail');
+        if (errorTextRegistrationMail) {
+         errorTextRegistrationMail.textContent='Si è verificato un errore durante la registrazione della mail, riprovare'
+        }
         console.error("Errore durante il cambio della mail:", error);
-        alert("Errore durante la registrazione.");
       }
     });
 

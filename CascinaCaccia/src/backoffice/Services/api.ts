@@ -63,7 +63,7 @@ export async function submitRegistrationUserForm(formData: RegistrationUser): Pr
     }
 
     const data = await response.text();
-    window.location.href = '../Pages/dashboard.html';
+    // window.location.href = '../Pages/dashboard.html';
 
     return data;
 }
