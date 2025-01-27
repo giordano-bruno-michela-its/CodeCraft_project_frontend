@@ -15,7 +15,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const updatedData = getUpdateBknFormData();
     console.log(updatedData);
-    
 
     const body = {
       codeEmailRequest: {
@@ -26,7 +25,6 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     console.log(body);
-    
 
     try {
       const URL = `http://localhost:8080/api/formreq/updatefromcode`;
@@ -39,9 +37,11 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
       if (response.ok) {
-        showToast("Richiesta inoltrata con successo!", "success");
+        showToast("Prenotazione modificata con successo!", "success");
         form.reset();
-        // window.location.href = "../../../index.html";
+        setTimeout(() => {
+          window.location.href = "../../../index.html";
+        }, 2500);
       } else {
         throw new Error("Errore durante l'aggiornamento della prenotazione");
       }
