@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
         showToast("Prenotazione modificata con successo!", "success");
         form.reset();
         setTimeout(() => {
-          window.location.href = "../../../index.html";
+          // window.location.href = "../../../index.html";
         }, 2500);
       } else {
         throw new Error("Errore durante l'aggiornamento della prenotazione");

@@ -79,8 +79,8 @@ export function getUpdateBknFormData() {
     email: (document.getElementById("boking-form-email") as HTMLInputElement).value,
     association: (document.getElementById("association") as HTMLInputElement).value,
     phoneNumber: (document.getElementById("phoneNumber") as HTMLInputElement).value,
-    nChildren: parseInt((document.getElementById("nChildren") as HTMLInputElement).value),
-    nAdults: parseInt((document.getElementById("nAdults") as HTMLInputElement).value),
+    participantsQuantity: parseInt((document.getElementById("nChildren") as HTMLInputElement).value),
+    guidesQuantity: parseInt((document.getElementById("nAdults") as HTMLInputElement).value),
     additionalInfo: (document.getElementById("additionalInfo") as HTMLTextAreaElement).value,
     activityType: selectedActivities,
   };
