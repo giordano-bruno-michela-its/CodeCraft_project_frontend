@@ -10,12 +10,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const { email, code } = getRetrieveReservationFormData();
 
+    const reservationData = {
+      email: email,
+      code: code,
+    };
+
+    sessionStorage.setItem('reservationData', JSON.stringify(reservationData));
+
     try {
       const result = await submitRetrieveReservationForm(email, code);
       console.log("Codice iviato con successo!", result);
       localStorage.setItem("reservationDetails", JSON.stringify(result));
       showToast("Richiesta inoltrata con successo!", "success");
-      window.location.href = "/src/Pages/updateBooking/update-booking.html"; // url to the page that allow the user to modify booking
+      window.location.href = "/src/Pages/updateBooking/update-booking.html";
       retrieveResForm.reset();
     } catch (error) {
       showToast("Problemi durante l'invio della richiesta, riprova tra poco!", "error");
