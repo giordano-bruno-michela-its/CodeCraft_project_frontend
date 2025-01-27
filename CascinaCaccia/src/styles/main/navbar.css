@@ -222,9 +222,7 @@ input:checked+.slider:before {
   background-color: var(--brand-yellow);
 }
 
-.dark-mode .navbar-item:hover .navbar-link {
-  color: var(--text-light);
-}
+
 
 .dark-mode .navbar-item:hover .navbar-arrow {
   filter: none;
